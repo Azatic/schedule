@@ -1,0 +1,315 @@
+(lang dune 3.6)
+(name OCanren-ppx)
+(version 0.3.0)
+(sections (lib .) (libexec .) (bin ../../bin) (doc ../../doc/OCanren-ppx))
+(files
+ (lib
+  (META
+   dune-package
+   internals/myhelpers.a
+   internals/myhelpers.cma
+   internals/myhelpers.cmi
+   internals/myhelpers.cmt
+   internals/myhelpers.cmx
+   internals/myhelpers.cmxa
+   internals/myhelpers.ml
+   opam
+   ppx_deriving_reify/deriving_reify.ml
+   ppx_deriving_reify/ppx_deriving_reify.a
+   ppx_deriving_reify/ppx_deriving_reify.cma
+   ppx_deriving_reify/ppx_deriving_reify.cmi
+   ppx_deriving_reify/ppx_deriving_reify.cmt
+   ppx_deriving_reify/ppx_deriving_reify.cmx
+   ppx_deriving_reify/ppx_deriving_reify.cmxa
+   ppx_deriving_reify/ppx_deriving_reify.ml
+   ppx_deriving_reify/ppx_deriving_reify__Deriving_reify.cmi
+   ppx_deriving_reify/ppx_deriving_reify__Deriving_reify.cmt
+   ppx_deriving_reify/ppx_deriving_reify__Deriving_reify.cmx
+   ppx_distrib/ppx_distrib.a
+   ppx_distrib/ppx_distrib.cma
+   ppx_distrib/ppx_distrib.cmi
+   ppx_distrib/ppx_distrib.cmt
+   ppx_distrib/ppx_distrib.cmti
+   ppx_distrib/ppx_distrib.cmx
+   ppx_distrib/ppx_distrib.cmxa
+   ppx_distrib/ppx_distrib.ml
+   ppx_distrib/ppx_distrib.mli
+   ppx_distrib/ppx_distrib__.cmi
+   ppx_distrib/ppx_distrib__.cmt
+   ppx_distrib/ppx_distrib__.cmx
+   ppx_distrib/ppx_distrib__.ml
+   ppx_distrib/ppx_distrib__Ppx_distrib_expander.cmi
+   ppx_distrib/ppx_distrib__Ppx_distrib_expander.cmt
+   ppx_distrib/ppx_distrib__Ppx_distrib_expander.cmx
+   ppx_distrib/ppx_distrib_expander.ml
+   ppx_fresh/ppx_fresh.a
+   ppx_fresh/ppx_fresh.cma
+   ppx_fresh/ppx_fresh.cmi
+   ppx_fresh/ppx_fresh.cmt
+   ppx_fresh/ppx_fresh.cmx
+   ppx_fresh/ppx_fresh.cmxa
+   ppx_fresh/ppx_fresh.ml
+   ppx_repr/ppx_repr.a
+   ppx_repr/ppx_repr.cma
+   ppx_repr/ppx_repr.cmi
+   ppx_repr/ppx_repr.cmt
+   ppx_repr/ppx_repr.cmx
+   ppx_repr/ppx_repr.cmxa
+   ppx_repr/ppx_repr.ml
+   ppx_tester/ppx_tester.a
+   ppx_tester/ppx_tester.cma
+   ppx_tester/ppx_tester.cmi
+   ppx_tester/ppx_tester.cmt
+   ppx_tester/ppx_tester.cmx
+   ppx_tester/ppx_tester.cmxa
+   ppx_tester/ppx_tester.ml
+   ppx_wildcard/ppx_wildcard.a
+   ppx_wildcard/ppx_wildcard.cma
+   ppx_wildcard/ppx_wildcard.cmi
+   ppx_wildcard/ppx_wildcard.cmt
+   ppx_wildcard/ppx_wildcard.cmx
+   ppx_wildcard/ppx_wildcard.cmxa
+   ppx_wildcard/ppx_wildcard.ml
+   prepare_fully_abstract/prepare_fully_abstract.a
+   prepare_fully_abstract/prepare_fully_abstract.cma
+   prepare_fully_abstract/prepare_fully_abstract.cmi
+   prepare_fully_abstract/prepare_fully_abstract.cmt
+   prepare_fully_abstract/prepare_fully_abstract.cmti
+   prepare_fully_abstract/prepare_fully_abstract.cmx
+   prepare_fully_abstract/prepare_fully_abstract.cmxa
+   prepare_fully_abstract/prepare_fully_abstract.ml
+   prepare_fully_abstract/prepare_fully_abstract.mli
+   reify_impl/reify_impl.a
+   reify_impl/reify_impl.cma
+   reify_impl/reify_impl.cmi
+   reify_impl/reify_impl.cmt
+   reify_impl/reify_impl.cmx
+   reify_impl/reify_impl.cmxa
+   reify_impl/reify_impl.ml))
+ (libexec
+  (internals/myhelpers.cmxs
+   ppx_deriving_reify/ppx.exe
+   ppx_deriving_reify/ppx_deriving_reify.cmxs
+   ppx_distrib/ppx.exe
+   ppx_distrib/ppx_distrib.cmxs
+   ppx_fresh/ppx.exe
+   ppx_fresh/ppx_fresh.cmxs
+   ppx_repr/ppx.exe
+   ppx_repr/ppx_repr.cmxs
+   ppx_tester/ppx.exe
+   ppx_tester/ppx_tester.cmxs
+   ppx_wildcard/ppx.exe
+   ppx_wildcard/ppx_wildcard.cmxs
+   prepare_fully_abstract/prepare_fully_abstract.cmxs
+   reify_impl/reify_impl.cmxs))
+ (bin (pp_deriving_reify pp_distrib pp_fresh pp_ocanren_all pp_repr))
+ (doc (CHANGES LICENSE README.md odoc-pages/index.mld)))
+(library
+ (name OCanren-ppx.internals)
+ (kind normal)
+ (archives (byte internals/myhelpers.cma) (native internals/myhelpers.cmxa))
+ (plugins (byte internals/myhelpers.cma) (native internals/myhelpers.cmxs))
+ (native_archives internals/myhelpers.a)
+ (requires ppxlib.ast ppxlib ppxlib.stdppx)
+ (modes byte native)
+ (modules
+  (singleton (name Myhelpers) (obj_name myhelpers) (visibility public) (impl))))
+(library
+ (name OCanren-ppx.ppx_deriving_reify)
+ (kind ppx_rewriter)
+ (archives
+  (byte ppx_deriving_reify/ppx_deriving_reify.cma)
+  (native ppx_deriving_reify/ppx_deriving_reify.cmxa))
+ (plugins
+  (byte ppx_deriving_reify/ppx_deriving_reify.cma)
+  (native ppx_deriving_reify/ppx_deriving_reify.cmxs))
+ (native_archives ppx_deriving_reify/ppx_deriving_reify.a)
+ (requires
+  ppxlib.ast
+  ppxlib
+  ppxlib.stdppx
+  OCanren-ppx.internals
+  OCanren-ppx.reify_impl
+  ppx_inline_test.config
+  ppx_inline_test.runtime-lib
+  ppx_here.runtime-lib
+  ppx_expect.collector
+  ppx_expect.config)
+ (main_module_name Ppx_deriving_reify)
+ (modes byte native)
+ (modules
+  (wrapped
+   (main_module_name Ppx_deriving_reify)
+   (modules
+    ((name Deriving_reify)
+     (obj_name ppx_deriving_reify__Deriving_reify)
+     (visibility public)
+     (impl)))
+   (alias_module
+    (name Ppx_deriving_reify)
+    (obj_name ppx_deriving_reify)
+    (visibility public)
+    (kind alias)
+    (impl))
+   (wrapped true))))
+(library
+ (name OCanren-ppx.ppx_distrib)
+ (kind ppx_rewriter)
+ (archives
+  (byte ppx_distrib/ppx_distrib.cma)
+  (native ppx_distrib/ppx_distrib.cmxa))
+ (plugins
+  (byte ppx_distrib/ppx_distrib.cma)
+  (native ppx_distrib/ppx_distrib.cmxs))
+ (native_archives ppx_distrib/ppx_distrib.a)
+ (requires
+  ppxlib.stdppx
+  ppxlib.ast
+  ppxlib
+  OCanren-ppx.internals
+  OCanren-ppx.reify_impl
+  OCanren-ppx.prepare_fully_abstract
+  ppx_inline_test.config
+  ppx_inline_test.runtime-lib
+  ppx_here.runtime-lib
+  ppx_expect.collector
+  ppx_expect.config)
+ (main_module_name Ppx_distrib)
+ (modes byte native)
+ (modules
+  (wrapped
+   (main_module_name Ppx_distrib)
+   (modules
+    ((name Ppx_distrib)
+     (obj_name ppx_distrib)
+     (visibility public)
+     (impl)
+     (intf))
+    ((name Ppx_distrib_expander)
+     (obj_name ppx_distrib__Ppx_distrib_expander)
+     (visibility public)
+     (impl)))
+   (alias_module
+    (name Ppx_distrib__)
+    (obj_name ppx_distrib__)
+    (visibility public)
+    (kind alias)
+    (impl))
+   (wrapped true))))
+(library
+ (name OCanren-ppx.ppx_fresh)
+ (kind ppx_rewriter)
+ (archives (byte ppx_fresh/ppx_fresh.cma) (native ppx_fresh/ppx_fresh.cmxa))
+ (plugins (byte ppx_fresh/ppx_fresh.cma) (native ppx_fresh/ppx_fresh.cmxs))
+ (native_archives ppx_fresh/ppx_fresh.a)
+ (requires ppxlib.stdppx ppxlib.ast ppxlib)
+ (main_module_name Ppx_fresh)
+ (modes byte native)
+ (modules
+  (singleton (name Ppx_fresh) (obj_name ppx_fresh) (visibility public) (impl))))
+(library
+ (name OCanren-ppx.ppx_repr)
+ (kind ppx_rewriter)
+ (archives (byte ppx_repr/ppx_repr.cma) (native ppx_repr/ppx_repr.cmxa))
+ (plugins (byte ppx_repr/ppx_repr.cma) (native ppx_repr/ppx_repr.cmxs))
+ (native_archives ppx_repr/ppx_repr.a)
+ (requires ppxlib.ast ppxlib ppxlib.stdppx)
+ (main_module_name Ppx_repr)
+ (modes byte native)
+ (modules
+  (singleton (name Ppx_repr) (obj_name ppx_repr) (visibility public) (impl))))
+(library
+ (name OCanren-ppx.ppx_tester)
+ (kind ppx_rewriter)
+ (archives
+  (byte ppx_tester/ppx_tester.cma)
+  (native ppx_tester/ppx_tester.cmxa))
+ (plugins
+  (byte ppx_tester/ppx_tester.cma)
+  (native ppx_tester/ppx_tester.cmxs))
+ (native_archives ppx_tester/ppx_tester.a)
+ (requires ppxlib.ast ppxlib)
+ (main_module_name Ppx_tester)
+ (modes byte native)
+ (modules
+  (singleton
+   (name Ppx_tester)
+   (obj_name ppx_tester)
+   (visibility public)
+   (impl))))
+(library
+ (name OCanren-ppx.ppx_wildcard)
+ (kind ppx_rewriter)
+ (archives
+  (byte ppx_wildcard/ppx_wildcard.cma)
+  (native ppx_wildcard/ppx_wildcard.cmxa))
+ (plugins
+  (byte ppx_wildcard/ppx_wildcard.cma)
+  (native ppx_wildcard/ppx_wildcard.cmxs))
+ (native_archives ppx_wildcard/ppx_wildcard.a)
+ (requires base ppxlib.ast ppxlib)
+ (main_module_name Ppx_wildcard)
+ (modes byte native)
+ (modules
+  (singleton
+   (name Ppx_wildcard)
+   (obj_name ppx_wildcard)
+   (visibility public)
+   (impl))))
+(library
+ (name OCanren-ppx.prepare_fully_abstract)
+ (kind normal)
+ (archives
+  (byte prepare_fully_abstract/prepare_fully_abstract.cma)
+  (native prepare_fully_abstract/prepare_fully_abstract.cmxa))
+ (plugins
+  (byte prepare_fully_abstract/prepare_fully_abstract.cma)
+  (native prepare_fully_abstract/prepare_fully_abstract.cmxs))
+ (native_archives prepare_fully_abstract/prepare_fully_abstract.a)
+ (requires
+  ppxlib.ast
+  ppxlib
+  OCanren-ppx.internals
+  OCanren-ppx.reify_impl
+  ppx_inline_test.config
+  ppx_inline_test.runtime-lib
+  ppx_here.runtime-lib
+  ppx_expect.collector
+  ppx_expect.config)
+ (main_module_name Prepare_fully_abstract)
+ (modes byte native)
+ (modules
+  (singleton
+   (name Prepare_fully_abstract)
+   (obj_name prepare_fully_abstract)
+   (visibility public)
+   (impl)
+   (intf))))
+(library
+ (name OCanren-ppx.reify_impl)
+ (kind normal)
+ (archives
+  (byte reify_impl/reify_impl.cma)
+  (native reify_impl/reify_impl.cmxa))
+ (plugins
+  (byte reify_impl/reify_impl.cma)
+  (native reify_impl/reify_impl.cmxs))
+ (native_archives reify_impl/reify_impl.a)
+ (requires
+  ppxlib.ast
+  ppxlib
+  ppxlib.stdppx
+  OCanren-ppx.internals
+  ppx_inline_test.config
+  ppx_inline_test.runtime-lib
+  ppx_here.runtime-lib
+  ppx_expect.collector
+  ppx_expect.config)
+ (main_module_name Reify_impl)
+ (modes byte native)
+ (modules
+  (singleton
+   (name Reify_impl)
+   (obj_name reify_impl)
+   (visibility public)
+   (impl))))

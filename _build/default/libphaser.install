@@ -1,0 +1,5 @@
+lib: [
+  "_build/install/default/lib/libphaser/META"
+  "_build/install/default/lib/libphaser/dune-package"
+  "_build/install/default/lib/libphaser/opam"
+]

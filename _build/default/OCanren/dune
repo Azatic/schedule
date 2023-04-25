@@ -1,0 +1,15 @@
+(env
+ (dev
+  (flags
+   (:standard -short-paths -warn-error -A -w -K-9)))
+ (release
+  (flags
+   (:standard -warn-error -A -w -K-9))
+  (ocamlopt_flags -O3)))
+
+(alias
+ (name default)
+ (deps
+  src/OCanren.cmxa
+  (alias samples/all)
+  (package OCanren)))

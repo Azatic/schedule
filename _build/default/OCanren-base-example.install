@@ -1,0 +1,5 @@
+lib: [
+  "_build/install/default/lib/OCanren-base-example/META"
+  "_build/install/default/lib/OCanren-base-example/dune-package"
+  "_build/install/default/lib/OCanren-base-example/opam"
+]

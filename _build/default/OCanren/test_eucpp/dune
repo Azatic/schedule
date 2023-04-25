@@ -1,0 +1,38 @@
+(library
+ (name lib)
+ (package OCanren)
+ (modules lib)
+ (wrapped false)
+ (enabled_if
+  ;(>= %{ocaml_version} 4.12)
+  false
+  ;
+  )
+ ; I get some compilation issues with explicit polymorphism on 4.10. So disabled
+ (inline_tests)
+ (libraries OCanren OCanren.tester)
+ (preprocess
+  (pps OCanren-ppx.ppx_fresh OCanren-ppx.ppx_repr ppx_inline_test GT.ppx_all)))
+
+(executables
+ (names main)
+ (modules main)
+ (package OCanren)
+ (public_names -)
+ (enabled_if
+  ;(>= %{ocaml_version} 4.12)
+  false
+  ;
+  )
+ (libraries OCanren OCanren.tester lib)
+ (preprocess
+  (pps OCanren-ppx.ppx_fresh OCanren-ppx.ppx_repr)))
+
+(cram
+ (package OCanren)
+ (deps ./main.exe)
+ (enabled_if
+  ;(>= %{ocaml_version} 4.12)
+  false
+  ;
+  ))
