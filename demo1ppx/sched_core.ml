@@ -1,173 +1,10 @@
 open OCanren
 open OCanren.Std
+open Constraint_core
+open Init_core
+open Type_core
 
-let insert_first_lesson q =
-  conde [ fresh (s w e r) (q === Std.list Fun.id [ s; w; e; r ]) (s === !!"werty") ]
-;;
 let rec membero x l = conde [ List.caro l x; fresh d (List.cdro l d) (membero x d) ]
-let ins_first_lesson q lesson =
-  conde [ fresh (s w e r) (q === Std.list Fun.id [ s; w; e; r ]) (s === lesson) ]
-;;
-
-let ins_second_lesson q lesson =
-  conde [ fresh (s w e r) (q === Std.list Fun.id [ s; w; e; r ]) (w === lesson) ]
-;;
-
-
-let ins_monday_1 q lesson =
-  conde
-    [ fresh
-        (a1 a2 a3 a4 a5 b1 b2 b3 b4)
-        (q === Std.list Fun.id [ a1; a2; a3; a4; a5 ])
-        (a1 === Std.list Fun.id [ b1; b2; b3; b4 ])
-        (b1 === lesson)
-    ]
-;;
-
-let ins_monday_2 q lesson =
-  conde
-    [ fresh
-        (a1 a2 a3 a4 a5 b1 b2 b3 b4)
-        (q === Std.list Fun.id [ a1; a2; a3; a4; a5 ])
-        (a1 === Std.list Fun.id [ b1; b2; b3; b4 ])
-        (b2 === lesson)
-    ]
-;;
-
-let ins_monday_3 q lesson =
-  conde
-    [ fresh
-        (a1 a2 a3 a4 a5 b1 b2 b3 b4)
-        (q === Std.list Fun.id [ a1; a2; a3; a4; a5 ])
-        (a1 === Std.list Fun.id [ b1; b2; b3; b4 ])
-        (b3 === lesson)
-    ]
-;;
-
-let ins_monday_4 q lesson =
-  conde
-    [ fresh
-        (a1 a2 a3 a4 a5 b1 b2 b3 b4)
-        (q === Std.list Fun.id [ a1; a2; a3; a4; a5 ])
-        (a1 === Std.list Fun.id [ b1; b2; b3; b4 ])
-        (b4 === lesson)
-    ]
-;;
-
-let ins_tuesday_1 q lesson =
-  conde
-    [ fresh
-        (a1 a2 a3 a4 a5 b1 b2 b3 b4)
-        (q === Std.list Fun.id [ a1; a2; a3; a4; a5 ])
-        (a2 === Std.list Fun.id [ b1; b2; b3; b4 ])
-        (b1 === lesson)
-    ]
-;;
-
-let ins_tuesday_2 q lesson =
-  conde
-    [ fresh
-        (a1 a2 a3 a4 a5 b1 b2 b3 b4)
-        (q === Std.list Fun.id [ a1; a2; a3; a4; a5 ])
-        (a2 === Std.list Fun.id [ b1; b2; b3; b4 ])
-        (b2 === lesson)
-    ]
-;;
-
-let ins_tuesday_3 q lesson =
-  conde
-    [ fresh
-        (a1 a2 a3 a4 a5 b1 b2 b3 b4)
-        (q === Std.list Fun.id [ a1; a2; a3; a4; a5 ])
-        (a2 === Std.list Fun.id [ b1; b2; b3; b4 ])
-        (b3 === lesson)
-    ]
-;;
-
-let ins_tuesday_4 q lesson =
-  conde
-    [ fresh
-        (a1 a2 a3 a4 a5 b1 b2 b3 b4)
-        (q === Std.list Fun.id [ a1; a2; a3; a4; a5 ])
-        (a2 === Std.list Fun.id [ b1; b2; b3; b4 ])
-        (b4 === lesson)
-    ]
-;;
-
-let insert_lesson q lesson =
-  conde
-    [ ins_monday_1 q lesson
-    ; ins_monday_2 q lesson
-    ; ins_monday_3 q lesson
-    ; ins_monday_4 q lesson
-    ; ins_tuesday_1 q lesson
-    ; ins_tuesday_2 q lesson
-    ; ins_tuesday_3 q lesson
-    ; ins_tuesday_4 q lesson
-    ]
-;;
-
-let init_sched_one_day s =
-  conde [ fresh (q w e r) (s === Std.list Fun.id [ q; w; e; r ]) ]
-;;
-
-type ischedule = string ilogic Std.List.injected Std.List.injected
-type schedule_logic = string logic Std.List.logic Std.List.logic
-
-let init_sched_a_week : ischedule -> goal =
- fun q ->
-  let ( ** ) = ( % ) in
-  conde
-    [ fresh
-        (w e r t y)
-        (init_sched_one_day w)
-        (init_sched_one_day e)
-        (init_sched_one_day r)
-        (init_sched_one_day t)
-        (init_sched_one_day y)
-        (q === w ** e ** r ** t ** !<y)
-    ]
-;;
-
-let ins_sched1 subj group_sched teacher_sched class_sched =
-  conde
-    [ fresh
-        (a2 a3 a4 b2 b3 b4 c2 c3 c4)
-        (group_sched === Std.list Fun.id [ subj; a2; a3; a4 ])
-        (teacher_sched === Std.list Fun.id [ subj; b2; b3; b4 ])
-        (class_sched === Std.list Fun.id [ subj; c2; c3; c4 ])
-    ]
-;;
-
-let ins_sched2 subj group_sched teacher_sched class_sched =
-  conde
-    [ fresh
-        (a2 a3 a4 b2 b3 b4 c2 c3 c4)
-        (group_sched === Std.list Fun.id [ a2; subj; a3; a4 ])
-        (teacher_sched === Std.list Fun.id [ b2; subj; b3; b4 ])
-        (class_sched === Std.list Fun.id [ c2; subj; c3; c4 ])
-    ]
-;;
-
-let ins_sched3 subj group_sched teacher_sched class_sched =
-  conde
-    [ fresh
-        (a2 a3 a4 b2 b3 b4 c2 c3 c4)
-        (group_sched === Std.list Fun.id [ a2; a3; subj; a4 ])
-        (teacher_sched === Std.list Fun.id [ b2; b3; subj; b4 ])
-        (class_sched === Std.list Fun.id [ c2; c3; subj; c4 ])
-    ]
-;;
-
-let ins_sched4 subj group_sched teacher_sched class_sched =
-  conde
-    [ fresh
-        (a2 a3 a4 b2 b3 b4 c2 c3 c4)
-        (group_sched === Std.list Fun.id [ a2; a3; a4; subj ])
-        (teacher_sched === Std.list Fun.id [ b2; b3; b4; subj ])
-        (class_sched === Std.list Fun.id [ c2; c3; c4; subj ])
-    ]
-;;
 
 let insert_all_sched subj group_sched teacher_sched class_sched =
   fresh
@@ -176,7 +13,7 @@ let insert_all_sched subj group_sched teacher_sched class_sched =
     (teacher_sched === Std.list Fun.id [ b1; b2; b3; b4; b5 ])
     (class_sched === Std.list Fun.id [ c1; c2; c3; c4; c5 ])
     (conde
-       [ ins_sched1 subj a1 b1 c1
+       [ Init_core.ins_sched1 subj a1 b1 c1
        ; ins_sched2 subj a1 b1 c1
        ; ins_sched3 subj a1 b1 c1
        ; ins_sched4 subj a1 b1 c1
@@ -251,61 +88,12 @@ let rec sched studyplanallgroup schedallgroup allteachersched schedclass classes
         (sched studyplanost schedost ostteacher schedclass classessubj)
     ]
 ;;
-type week_day =
-  | Monday
-  | Tuesday
-  | Wednesday
-  | Thursday
-  | Friday
-
-type group_or_teacher =
-  | Teacher of { name : string }
-  | Group of { number : int }
-
-type user_constraints =
-  | Group_not_learning of
-      { number_lesson : int
-      ; day : week_day
-      }
-
-type user_constraints_1 =
-  | Not_learning of
-      { number_lesson : int
-      ; day : week_day
-      ; group_or_teacher : group_or_teacher
-      }
 
 [@@@ocaml.warnerror "-27"]
-let delete_monday_1 q =
-  conde
-    [ fresh
-        (a1 a2 a3 a4 a5 b1 b2 b3 b4 b5 b6 b7 b8)
-        (q === Std.list Fun.id [ a1; a2; a3; a4; a5 ])
-        (a1 === Std.list Fun.id [ !!"window"; b5; b6; b7 ])
-    ]
-;;
-
-let delete_monday q =
-  conde
-    [ fresh
-        (a1 a2 a3 a4 a5 b1 b2 b3 b4)
-        (q === Std.list Fun.id [ a1; a2; a3; a4; a5 ])
-        (a1 === Std.list Fun.id [ !!"window"; !!"window"; !!"window"; !!"window" ])
-    ]
-;;
-
-let delete_tuesday q =
-  conde
-    [ fresh
-        (a1 a2 a3 a4 a5 b1 b2 b3 b4)
-        (q === Std.list Fun.id [ a1; a2; a3; a4; a5 ])
-        (a2 === Std.list Fun.id [ !!"window"; !!"window"; !!"window"; !!"window" ])
-    ]
-;;
 
 let delete_day day q =
   match day with
-  | Monday -> delete_monday q
+  | Type_core.Monday -> Constraint_core.delete_monday q
   | Tuesday -> delete_tuesday q
   | _ -> failure
 ;;
@@ -376,53 +164,11 @@ let rec myassoco key xs v =
   Fresh.three (fun a b tl ->
     xs
     === Std.pair a b % tl
-    &&& conde [ a === key &&& (b === v); a =/= key &&& myassoco key tl v ; (xs === List.nil ()) &&& failure])
-;;
-
-module IAssoc = struct
-  type key = string ilogic
-  type 'a t = (key, 'a) Std.Pair.injected Std.List.injected
-
-  let findo : key -> 'a ilogic t -> 'a ilogic -> goal = myassoco
-
-  let addo k v map map_new =
-    (* TODO: don't allow duplicate keys? *)
-    Std.List.cons (Std.pair k v) map === map_new
-  ;;
-end
-
-let reifier ()
-  : ( 'a ilogic Std.List.injected Std.List.injected Std.List.injected
-  , 'a logic Std.List.logic Std.List.logic Std.List.logic ) Reifier.t
-  =
-  Std.List.reify (Std.List.reify (Std.List.reify OCanren.reify))
-;;
-
-let storage_reifier
-  : ( (IAssoc.key, ischedule) Pair.groundi Std.List.injected
-  , (string logic, schedule_logic) Pair.logic Std.List.logic ) Reifier.t
-  =
-  Std.List.reify
-    (Std.Pair.reify OCanren.reify (Std.List.reify (Std.List.reify OCanren.reify)))
-;;
-
-let shower =
-  GT.show
-    Std.List.logic
-    (GT.show
-       Std.List.logic
-       (GT.show Std.List.logic (GT.show OCanren.logic @@ GT.show GT.string)))
-;;
-
-let show_storage =
-  GT.show
-    Std.List.logic
-    (GT.show
-       Std.Pair.logic
-       (GT.show OCanren.logic @@ GT.show GT.string)
-       (GT.show
-          Std.List.logic
-          (GT.show Std.List.logic (GT.show OCanren.logic @@ GT.show GT.string))))
+    &&& conde
+          [ a === key &&& (b === v)
+          ; a =/= key &&& myassoco key tl v
+          ; xs === List.nil () &&& failure
+          ])
 ;;
 
 let string_alg_type string =
@@ -453,7 +199,7 @@ let string_alg_type string =
       ; day = Monday
       ; group_or_teacher = Teacher { name = "teacher2" }
       }
-  ;;
+;;
 
 let ttt t1 t2 t3 = conde [ failure ]
 
@@ -490,14 +236,13 @@ let rec relation_for_all_group_or_teacher _constaints group1 group2 teacher1 =
     use_new_alg_const (string_alg_type hd) group1 group2 teacher1
     &&& relation_for_all_group_or_teacher tl group1 group2 teacher1
 ;;
-let equal_log_str str = conde [ !!"matan" === !!str ]
 
 let searcho _constaints answer =
   fresh
     (group1 group2 teacher1 t)
     (answer === Std.list Fun.id [ group1; group2; teacher1; t ])
     (relation_for_all_group_or_teacher _constaints group1 group2 teacher1)
-    (init_sched_a_week group1)
+    (Init_core.init_sched_a_week group1)
     (init_sched_a_week t)
     (init_sched_a_week group2)
     (init_sched_a_week teacher1)
@@ -532,45 +277,53 @@ let searcho _constaints answer =
               ]
           ]))
 ;;
+
 let insert_sched_to_pair pair = conde [ fresh (group subj teacher) success ]
 
 let ins_store q =
-  conde [fresh (a1 name) (init_sched_a_week a1) (q === Std.list Fun.id [Std.pair name a1])]
+  conde
+    [ fresh (a1 name) (init_sched_a_week a1) (q === Std.list Fun.id [ Std.pair name a1 ])
+    ]
+;;
 
-  let rec appendo a b ab =
-    conde
-      [ a === nil () &&& (b === ab)
-      ; fresh (h t ab') (a === h % t) (h % ab' === ab) (appendo t b ab')
-      ]
-  ;;
+let rec appendo a b ab =
+  conde
+    [ a === nil () &&& (b === ab)
+    ; fresh (h t ab') (a === h % t) (h % ab' === ab) (appendo t b ab')
+    ]
+;;
+
 let rec insert_storage n q =
   match n with
   | 0 -> success
   | 1 -> ins_store q
-  | _ -> fresh (a b) (insert_storage (n-1) a) (ins_store b) (appendo a b q)
+  | _ -> fresh (a b) (insert_storage (n - 1) a) (ins_store b) (appendo a b q)
 ;;
 
 let rec insert_sched_in_storage group_name group_sched storage =
-  conde [fresh (a1 a2) (List.caro storage a1) (a1 === Std.pair group_name group_sched);
-  fresh (a3) (List.cdro storage a3) (insert_sched_in_storage group_name group_sched a3)]
+  conde
+    [ fresh (a1 a2) (List.caro storage a1) (a1 === Std.pair group_name group_sched)
+    ; fresh a3 (List.cdro storage a3) (insert_sched_in_storage group_name group_sched a3)
+    ]
+;;
+
 let rec init_sched (list_pair : string list list) storage =
   match list_pair with
   | [] -> success
   | hd :: tl ->
     conde
       [ fresh
-      (groupname teachername subjname group_sched teacher_sched aud new_storage)
-      (init_sched_a_week teacher_sched)
-      (init_sched_a_week group_sched)
-      (init_sched_a_week aud)
-      (Std.list ( !! ) hd === Std.list Fun.id [ groupname; teachername; subjname ])
-      (myassoco groupname (storage : ischedule IAssoc.t) group_sched)
-      (myassoco teachername storage (teacher_sched : ischedule))
-      (insert_all_sched subjname group_sched teacher_sched aud)
-      (insert_sched_in_storage groupname group_sched storage)
-      (insert_sched_in_storage teachername teacher_sched storage)
-      (init_sched tl storage)
-          
+          (groupname teachername subjname group_sched teacher_sched aud new_storage)
+          (init_sched_a_week teacher_sched)
+          (init_sched_a_week group_sched)
+          (init_sched_a_week aud)
+          (Std.list ( !! ) hd === Std.list Fun.id [ groupname; teachername; subjname ])
+          (myassoco groupname storage group_sched)
+          (myassoco teachername storage (teacher_sched : ischedule))
+          (insert_all_sched subjname group_sched teacher_sched aud)
+          (insert_sched_in_storage groupname group_sched storage)
+          (insert_sched_in_storage teachername teacher_sched storage)
+          (init_sched tl storage)
       ; fresh
           (groupname teachername subjname group_sched teacher_sched aud new_storage)
           (Std.list ( !! ) hd === Std.list Fun.id [ groupname; teachername; subjname ])
@@ -580,12 +333,10 @@ let rec init_sched (list_pair : string list list) storage =
           (init_sched_a_week aud)
           (insert_all_sched subjname group_sched teacher_sched aud)
           (insert_sched_in_storage groupname group_sched storage)
-           (insert_sched_in_storage teachername teacher_sched storage)
-           (init_sched tl storage)
-          
+          (insert_sched_in_storage teachername teacher_sched storage)
+          (init_sched tl storage)
       ]
 ;;
-
 
 let finish _constaints answer =
   conde
@@ -602,66 +353,34 @@ let finish _constaints answer =
     ]
 ;;
 
-(* let test1 _constaints answer =
-  conde
-    [ fresh
-        (storage)
-        (init_sched
-          [ [ "b-10"; "teacher"; "matan" ]
-           (* ; [ "b-10"; "teacher"; "matan2" ] *)
-           (* ; [ "b-10"; "teacher"; "alg" ]
-           ; [ "b-10"; "teacher"; "matan3" ]
-           ; [ "b-10"; "teacher"; "matan4" ]
-           ; [ "b-10"; "teacher"; "alg2" ] *)
-           ]
-           storage)
-        (storage === answer)
-    ]
-;; *)
-
 let schedo _constraints =
-  (* [%tester run_r reifier shower 1 (* принимает расписание qtrs *) searcho]
-     *)
   OCanren.run
     OCanren.q
     (fun x -> finish _constraints x)
-    (fun rr -> rr#reify storage_reifier)
+    (fun rr -> rr#reify Type_core.storage_reifier)
   |> OCanren.Stream.take ~n:1
   |> Stdlib.List.iteri (fun i ans -> Format.printf "%d: %s\n%!" i (show_storage ans))
 ;;
 
-(* let mytype () = Std.List.reify (Std.Pair.reify OCanren.reify (Std.List.reify OCanren.reify)) *)
-
-
 let rec init_sched_new (list_pair : string list list) storage n =
   match n with
   | 0 -> success
-  | n -> (insert_storage n storage) &&& 
-  match list_pair with
-  | [] -> success
-  | hd::tl -> (init_sched list_pair storage) 
-    
-   
+  | n ->
+    insert_storage n storage
+    &&&
+    (match list_pair with
+     | [] -> success
+     | hd :: tl -> init_sched list_pair storage)
+;;
+
+let rec len q =
+  match q with
+  | [] -> 0
+  | hd :: tl -> 1 + len tl
 ;;
 
 let test1 _constaints schedule answer =
   conde
-    [ fresh
-        (storage )
-
-        (init_sched_new 
-          (* [ [ "b-10"; "teacher"; "matan" ]
-            ; [ "b-10"; "teacher"; "matan2" ] 
-            ; [ "b-10"; "teacher"; "alg" ]
-           ; [ "b-10"; "teacher"; "matan3" ]
-           ; [ "b-10"; "teacher"; "matan4" ]
-           ; [ "b-10"; "teacher"; "alg2" ] 
-           ; ["b-07" ; "viden" ; "matan"]
-           ; ["b-08"; "teacher2"; "eng"]
-           ; ["b-08" ; "teacher"; "eng10"]] *)
-           schedule
-           storage 10)
-        (storage === answer)
+    [ fresh storage (init_sched_new schedule storage (len schedule)) (storage === answer)
     ]
 ;;
-
