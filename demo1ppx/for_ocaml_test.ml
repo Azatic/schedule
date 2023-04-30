@@ -11,15 +11,16 @@ let schedo _constraints schedule =
 
 let _ =
   schedo
-    []
-    [ [ "b-10"; "teacher"; "matan" ]
+    [ [ "b-07"; "monday"; "1" ] ]
+    (* [] *)
+    [ (* [ [ "b-10"; "teacher"; "matan" ]
     ; [ "b-10"; "teacher"; "matan2" ]
     ; [ "b-10"; "teacher"; "alg" ]
     ; [ "b-10"; "teacher"; "matan3" ]
     ; [ "b-10"; "teacher"; "matan4" ]
-    ; [ "b-10"; "teacher"; "alg2" ]
-    ; [ "b-07"; "viden"; "matan" ]
-    ; [ "b-08"; "teacher2"; "eng" ]
-    ; [ "b-08"; "teacher"; "eng10" ]
+    ; [ "b-10"; "teacher"; "alg2" ] *)
+      [ "b-07"; "viden"; "matan" ]
+      (* ; [ "b-08"; "teacher2"; "eng" ]
+    ; [ "b-08"; "teacher"; "eng10" ] *)
     ]
 ;;

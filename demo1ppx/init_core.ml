@@ -20,86 +20,6 @@ let init_sched_a_week : Type_core.ischedule -> goal =
     ]
 ;;
 
-let ins_monday_1 q lesson =
-  conde
-    [ fresh
-        (a1 a2 a3 a4 a5 b1 b2 b3 b4)
-        (q === Std.list Fun.id [ a1; a2; a3; a4; a5 ])
-        (a1 === Std.list Fun.id [ b1; b2; b3; b4 ])
-        (b1 === lesson)
-    ]
-;;
-
-let ins_monday_2 q lesson =
-  conde
-    [ fresh
-        (a1 a2 a3 a4 a5 b1 b2 b3 b4)
-        (q === Std.list Fun.id [ a1; a2; a3; a4; a5 ])
-        (a1 === Std.list Fun.id [ b1; b2; b3; b4 ])
-        (b2 === lesson)
-    ]
-;;
-
-let ins_monday_3 q lesson =
-  conde
-    [ fresh
-        (a1 a2 a3 a4 a5 b1 b2 b3 b4)
-        (q === Std.list Fun.id [ a1; a2; a3; a4; a5 ])
-        (a1 === Std.list Fun.id [ b1; b2; b3; b4 ])
-        (b3 === lesson)
-    ]
-;;
-
-let ins_monday_4 q lesson =
-  conde
-    [ fresh
-        (a1 a2 a3 a4 a5 b1 b2 b3 b4)
-        (q === Std.list Fun.id [ a1; a2; a3; a4; a5 ])
-        (a1 === Std.list Fun.id [ b1; b2; b3; b4 ])
-        (b4 === lesson)
-    ]
-;;
-
-let ins_tuesday_1 q lesson =
-  conde
-    [ fresh
-        (a1 a2 a3 a4 a5 b1 b2 b3 b4)
-        (q === Std.list Fun.id [ a1; a2; a3; a4; a5 ])
-        (a2 === Std.list Fun.id [ b1; b2; b3; b4 ])
-        (b1 === lesson)
-    ]
-;;
-
-let ins_tuesday_2 q lesson =
-  conde
-    [ fresh
-        (a1 a2 a3 a4 a5 b1 b2 b3 b4)
-        (q === Std.list Fun.id [ a1; a2; a3; a4; a5 ])
-        (a2 === Std.list Fun.id [ b1; b2; b3; b4 ])
-        (b2 === lesson)
-    ]
-;;
-
-let ins_tuesday_3 q lesson =
-  conde
-    [ fresh
-        (a1 a2 a3 a4 a5 b1 b2 b3 b4)
-        (q === Std.list Fun.id [ a1; a2; a3; a4; a5 ])
-        (a2 === Std.list Fun.id [ b1; b2; b3; b4 ])
-        (b3 === lesson)
-    ]
-;;
-
-let ins_tuesday_4 q lesson =
-  conde
-    [ fresh
-        (a1 a2 a3 a4 a5 b1 b2 b3 b4)
-        (q === Std.list Fun.id [ a1; a2; a3; a4; a5 ])
-        (a2 === Std.list Fun.id [ b1; b2; b3; b4 ])
-        (b4 === lesson)
-    ]
-;;
-
 let ins_sched1 subj group_sched teacher_sched class_sched =
   conde
     [ fresh
@@ -138,4 +58,24 @@ let ins_sched4 subj group_sched teacher_sched class_sched =
         (teacher_sched === Std.list Fun.id [ b2; b3; b4; subj ])
         (class_sched === Std.list Fun.id [ c2; c3; c4; subj ])
     ]
+;;
+
+let init_store q =
+  conde
+    [ fresh (a1 name) (init_sched_a_week a1) (q === Std.list Fun.id [ Std.pair name a1 ])
+    ]
+;;
+
+let rec appendo a b ab =
+  conde
+    [ a === nil () &&& (b === ab)
+    ; fresh (h t ab') (a === h % t) (h % ab' === ab) (appendo t b ab')
+    ]
+;;
+
+let rec init_storage n q =
+  match n with
+  | 0 -> success
+  | 1 -> init_store q
+  | _ -> fresh (a b) (init_storage (n - 1) a) (init_store b) (appendo a b q)
 ;;
