@@ -24,7 +24,7 @@
  (name sched_lib)
  (modules sched_core)
  (flags (-rectypes))
- (libraries OCanren OCanren.tester)
+ (libraries OCanren OCanren.tester constraint_lib init_lib)
  (inline_tests)
  (wrapped false)
  (preprocess
@@ -43,7 +43,7 @@
  (modes js exe)
  (flags
   (:standard -rectypes))
- (libraries lib1 js_of_ocaml sched_lib)
+ (libraries lib1 js_of_ocaml sched_lib constraint_lib)
  (preprocess
   (pps
    OCanren-ppx.ppx_repr
@@ -64,3 +64,77 @@
  (libraries lib1 sched_lib)
  (preprocess
   (pps OCanren-ppx.ppx_repr OCanren-ppx.ppx_fresh GT.ppx GT.ppx_all)))
+
+(library
+ (name constraint_lib)
+ (modules constraint_core)
+ (flags (-rectypes))
+ (libraries OCanren OCanren.tester init_lib)
+ (inline_tests)
+ (wrapped false)
+ (preprocess
+  (pps
+   OCanren-ppx.ppx_repr
+   OCanren-ppx.ppx_fresh
+   OCanren-ppx.ppx_distrib
+   OCanren-ppx.ppx_wildcard
+   GT.ppx
+   GT.ppx_all
+   ppx_inline_test)))
+
+(library
+ (name init_lib)
+ (modules init_core)
+ (flags (-rectypes))
+ (libraries OCanren OCanren.tester type_lib)
+ (inline_tests)
+ (wrapped false)
+ (preprocess
+  (pps
+   OCanren-ppx.ppx_repr
+   OCanren-ppx.ppx_fresh
+   OCanren-ppx.ppx_distrib
+   OCanren-ppx.ppx_wildcard
+   GT.ppx
+   GT.ppx_all
+   ppx_inline_test)))
+
+(library
+ (name type_lib)
+ (modules type_core)
+ (flags (-rectypes))
+ (libraries OCanren OCanren.tester)
+ (inline_tests)
+ (wrapped false)
+ (preprocess
+  (pps
+   OCanren-ppx.ppx_repr
+   OCanren-ppx.ppx_fresh
+   OCanren-ppx.ppx_distrib
+   OCanren-ppx.ppx_wildcard
+   GT.ppx
+   GT.ppx_all
+   ppx_inline_test)))
+
+(library
+ (name alg_lib)
+ (modules alg_type_example)
+ (flags (-rectypes))
+ (libraries
+  OCanren
+  OCanren.tester
+  type_lib
+  constraint_lib
+  init_lib
+  sched_lib)
+ (inline_tests)
+ (wrapped false)
+ (preprocess
+  (pps
+   OCanren-ppx.ppx_repr
+   OCanren-ppx.ppx_fresh
+   OCanren-ppx.ppx_distrib
+   OCanren-ppx.ppx_wildcard
+   GT.ppx
+   GT.ppx_all
+   ppx_inline_test)))

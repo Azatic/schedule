@@ -68,19 +68,11 @@
      cst_lib1$0=caml_string_of_jsbytes("lib1"),
      OCanren=global_data.OCanren,
      OCanren_List=global_data.OCanren__List,
-     Stdlib_Format=global_data.Stdlib__Format,
-     OCanren_Stream=global_data.OCanren__Stream,
-     Stdlib_List=global_data.Stdlib__List,
      Ppx_inline_test_lib_Runtime=global_data.Ppx_inline_test_lib__Runtime,
      OCanren_Pair=global_data.OCanren__Pair,
      GT=global_data.GT;
     caml_call2(Ppx_inline_test_lib_Runtime[2],cst_lib1,cst);
     var
-     _y_=
-      [0,
-       [4,0,0,0,[11,caml_string_of_jsbytes(": "),[2,0,[12,10,[10,0]]]]],
-       caml_string_of_jsbytes("%d: %s\n%!")],
-     _x_=[0,1],
      _w_=
       [0,
        [0,
@@ -144,408 +136,408 @@
      _d_=[0,1,0,[0,caml_string_of_jsbytes("teacher1")]],
      _a_=[0,1,0,[0,caml_string_of_jsbytes("teacher2")]];
     function membero(x,l)
-     {var _lK_=0;
-      function _lL_(d)
-       {function _lO_(param)
+     {var _lC_=0;
+      function _lD_(d)
+       {function _lG_(param)
          {var
-           _lP_=[0,membero(x,d),0],
-           _lQ_=[0,caml_call2(OCanren_List[125],l,d),_lP_];
-          return caml_call1(OCanren[44],_lQ_)}
-        return caml_call1(OCanren[48],_lO_)}
+           _lH_=[0,membero(x,d),0],
+           _lI_=[0,caml_call2(OCanren_List[125],l,d),_lH_];
+          return caml_call1(OCanren[44],_lI_)}
+        return caml_call1(OCanren[48],_lG_)}
       var
-       _lM_=[0,caml_call1(OCanren[47][3],_lL_),_lK_],
-       _lN_=[0,caml_call2(OCanren_List[123],l,x),_lM_];
-      return caml_call1(OCanren[43],_lN_)}
+       _lE_=[0,caml_call1(OCanren[47][3],_lD_),_lC_],
+       _lF_=[0,caml_call2(OCanren_List[123],l,x),_lE_];
+      return caml_call1(OCanren[43],_lF_)}
     function insert_first_lesson(q)
-     {var _lw_=0;
-      function _lx_(s)
-       {function _lz_(w)
-         {function _lA_(e)
-           {function _lB_(r)
-             {function _lC_(param)
+     {var _lo_=0;
+      function _lp_(s)
+       {function _lr_(w)
+         {function _ls_(e)
+           {function _lt_(r)
+             {function _lu_(param)
                {var
-                 _lD_=caml_call1(OCanren[25],cst_werty),
-                 _lE_=[0,caml_call2(OCanren[33],s,_lD_),0],
-                 _lF_=[0,s,[0,w,[0,e,[0,r,0]]]];
-                function _lG_(_lJ_){return _lJ_}
+                 _lv_=caml_call1(OCanren[25],cst_werty),
+                 _lw_=[0,caml_call2(OCanren[33],s,_lv_),0],
+                 _lx_=[0,s,[0,w,[0,e,[0,r,0]]]];
+                function _ly_(_lB_){return _lB_}
                 var
-                 _lH_=caml_call2(OCanren[64][8],_lG_,_lF_),
-                 _lI_=[0,caml_call2(OCanren[33],q,_lH_),_lE_];
-                return caml_call1(OCanren[44],_lI_)}
-              return caml_call1(OCanren[48],_lC_)}
-            return caml_call1(OCanren[47][3],_lB_)}
-          return caml_call1(OCanren[47][3],_lA_)}
-        return caml_call1(OCanren[47][3],_lz_)}
-      var _ly_=[0,caml_call1(OCanren[47][3],_lx_),_lw_];
-      return caml_call1(OCanren[43],_ly_)}
+                 _lz_=caml_call2(OCanren[64][8],_ly_,_lx_),
+                 _lA_=[0,caml_call2(OCanren[33],q,_lz_),_lw_];
+                return caml_call1(OCanren[44],_lA_)}
+              return caml_call1(OCanren[48],_lu_)}
+            return caml_call1(OCanren[47][3],_lt_)}
+          return caml_call1(OCanren[47][3],_ls_)}
+        return caml_call1(OCanren[47][3],_lr_)}
+      var _lq_=[0,caml_call1(OCanren[47][3],_lp_),_lo_];
+      return caml_call1(OCanren[43],_lq_)}
     function ins_first_lesson(q,lesson)
-     {var _lj_=0;
-      function _lk_(s)
-       {function _lm_(w)
-         {function _ln_(e)
-           {function _lo_(r)
-             {function _lp_(param)
+     {var _lb_=0;
+      function _lc_(s)
+       {function _le_(w)
+         {function _lf_(e)
+           {function _lg_(r)
+             {function _lh_(param)
                {var
-                 _lq_=[0,caml_call2(OCanren[33],s,lesson),0],
-                 _lr_=[0,s,[0,w,[0,e,[0,r,0]]]];
-                function _ls_(_lv_){return _lv_}
+                 _li_=[0,caml_call2(OCanren[33],s,lesson),0],
+                 _lj_=[0,s,[0,w,[0,e,[0,r,0]]]];
+                function _lk_(_ln_){return _ln_}
                 var
-                 _lt_=caml_call2(OCanren[64][8],_ls_,_lr_),
-                 _lu_=[0,caml_call2(OCanren[33],q,_lt_),_lq_];
-                return caml_call1(OCanren[44],_lu_)}
-              return caml_call1(OCanren[48],_lp_)}
-            return caml_call1(OCanren[47][3],_lo_)}
-          return caml_call1(OCanren[47][3],_ln_)}
-        return caml_call1(OCanren[47][3],_lm_)}
-      var _ll_=[0,caml_call1(OCanren[47][3],_lk_),_lj_];
-      return caml_call1(OCanren[43],_ll_)}
+                 _ll_=caml_call2(OCanren[64][8],_lk_,_lj_),
+                 _lm_=[0,caml_call2(OCanren[33],q,_ll_),_li_];
+                return caml_call1(OCanren[44],_lm_)}
+              return caml_call1(OCanren[48],_lh_)}
+            return caml_call1(OCanren[47][3],_lg_)}
+          return caml_call1(OCanren[47][3],_lf_)}
+        return caml_call1(OCanren[47][3],_le_)}
+      var _ld_=[0,caml_call1(OCanren[47][3],_lc_),_lb_];
+      return caml_call1(OCanren[43],_ld_)}
     function ins_second_lesson(q,lesson)
-     {var _k8_=0;
-      function _k9_(s)
-       {function _k$_(w)
-         {function _la_(e)
-           {function _lb_(r)
-             {function _lc_(param)
+     {var _k0_=0;
+      function _k1_(s)
+       {function _k3_(w)
+         {function _k4_(e)
+           {function _k5_(r)
+             {function _k6_(param)
                {var
-                 _ld_=[0,caml_call2(OCanren[33],w,lesson),0],
-                 _le_=[0,s,[0,w,[0,e,[0,r,0]]]];
-                function _lf_(_li_){return _li_}
+                 _k7_=[0,caml_call2(OCanren[33],w,lesson),0],
+                 _k8_=[0,s,[0,w,[0,e,[0,r,0]]]];
+                function _k9_(_la_){return _la_}
                 var
-                 _lg_=caml_call2(OCanren[64][8],_lf_,_le_),
-                 _lh_=[0,caml_call2(OCanren[33],q,_lg_),_ld_];
-                return caml_call1(OCanren[44],_lh_)}
-              return caml_call1(OCanren[48],_lc_)}
-            return caml_call1(OCanren[47][3],_lb_)}
-          return caml_call1(OCanren[47][3],_la_)}
-        return caml_call1(OCanren[47][3],_k$_)}
-      var _k__=[0,caml_call1(OCanren[47][3],_k9_),_k8_];
-      return caml_call1(OCanren[43],_k__)}
+                 _k__=caml_call2(OCanren[64][8],_k9_,_k8_),
+                 _k$_=[0,caml_call2(OCanren[33],q,_k__),_k7_];
+                return caml_call1(OCanren[44],_k$_)}
+              return caml_call1(OCanren[48],_k6_)}
+            return caml_call1(OCanren[47][3],_k5_)}
+          return caml_call1(OCanren[47][3],_k4_)}
+        return caml_call1(OCanren[47][3],_k3_)}
+      var _k2_=[0,caml_call1(OCanren[47][3],_k1_),_k0_];
+      return caml_call1(OCanren[43],_k2_)}
     function ins_monday_1(q,lesson)
-     {var _kL_=0;
-      function _kM_(a1)
-       {function _kO_(a2)
-         {function _kP_(a3)
-           {function _kQ_(a4)
-             {function _kR_(a5)
-               {function _kS_(b1)
-                 {function _kT_(b2)
-                   {function _kU_(b3)
-                     {function _kV_(b4)
-                       {function _kW_(param)
+     {var _kD_=0;
+      function _kE_(a1)
+       {function _kG_(a2)
+         {function _kH_(a3)
+           {function _kI_(a4)
+             {function _kJ_(a5)
+               {function _kK_(b1)
+                 {function _kL_(b2)
+                   {function _kM_(b3)
+                     {function _kN_(b4)
+                       {function _kO_(param)
                          {var
-                           _kX_=[0,caml_call2(OCanren[33],b1,lesson),0],
-                           _kY_=[0,b1,[0,b2,[0,b3,[0,b4,0]]]];
-                          function _kZ_(_k7_){return _k7_}
+                           _kP_=[0,caml_call2(OCanren[33],b1,lesson),0],
+                           _kQ_=[0,b1,[0,b2,[0,b3,[0,b4,0]]]];
+                          function _kR_(_kZ_){return _kZ_}
                           var
-                           _k0_=caml_call2(OCanren[64][8],_kZ_,_kY_),
-                           _k1_=[0,caml_call2(OCanren[33],a1,_k0_),_kX_],
-                           _k2_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
-                          function _k3_(_k6_){return _k6_}
+                           _kS_=caml_call2(OCanren[64][8],_kR_,_kQ_),
+                           _kT_=[0,caml_call2(OCanren[33],a1,_kS_),_kP_],
+                           _kU_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
+                          function _kV_(_kY_){return _kY_}
                           var
-                           _k4_=caml_call2(OCanren[64][8],_k3_,_k2_),
-                           _k5_=[0,caml_call2(OCanren[33],q,_k4_),_k1_];
-                          return caml_call1(OCanren[44],_k5_)}
-                        return caml_call1(OCanren[48],_kW_)}
-                      return caml_call1(OCanren[47][3],_kV_)}
-                    return caml_call1(OCanren[47][3],_kU_)}
-                  return caml_call1(OCanren[47][3],_kT_)}
-                return caml_call1(OCanren[47][3],_kS_)}
-              return caml_call1(OCanren[47][3],_kR_)}
-            return caml_call1(OCanren[47][3],_kQ_)}
-          return caml_call1(OCanren[47][3],_kP_)}
-        return caml_call1(OCanren[47][3],_kO_)}
-      var _kN_=[0,caml_call1(OCanren[47][3],_kM_),_kL_];
-      return caml_call1(OCanren[43],_kN_)}
+                           _kW_=caml_call2(OCanren[64][8],_kV_,_kU_),
+                           _kX_=[0,caml_call2(OCanren[33],q,_kW_),_kT_];
+                          return caml_call1(OCanren[44],_kX_)}
+                        return caml_call1(OCanren[48],_kO_)}
+                      return caml_call1(OCanren[47][3],_kN_)}
+                    return caml_call1(OCanren[47][3],_kM_)}
+                  return caml_call1(OCanren[47][3],_kL_)}
+                return caml_call1(OCanren[47][3],_kK_)}
+              return caml_call1(OCanren[47][3],_kJ_)}
+            return caml_call1(OCanren[47][3],_kI_)}
+          return caml_call1(OCanren[47][3],_kH_)}
+        return caml_call1(OCanren[47][3],_kG_)}
+      var _kF_=[0,caml_call1(OCanren[47][3],_kE_),_kD_];
+      return caml_call1(OCanren[43],_kF_)}
     function ins_monday_2(q,lesson)
-     {var _ko_=0;
-      function _kp_(a1)
-       {function _kr_(a2)
-         {function _ks_(a3)
-           {function _kt_(a4)
-             {function _ku_(a5)
-               {function _kv_(b1)
-                 {function _kw_(b2)
-                   {function _kx_(b3)
-                     {function _ky_(b4)
-                       {function _kz_(param)
+     {var _kg_=0;
+      function _kh_(a1)
+       {function _kj_(a2)
+         {function _kk_(a3)
+           {function _kl_(a4)
+             {function _km_(a5)
+               {function _kn_(b1)
+                 {function _ko_(b2)
+                   {function _kp_(b3)
+                     {function _kq_(b4)
+                       {function _kr_(param)
                          {var
-                           _kA_=[0,caml_call2(OCanren[33],b2,lesson),0],
-                           _kB_=[0,b1,[0,b2,[0,b3,[0,b4,0]]]];
-                          function _kC_(_kK_){return _kK_}
+                           _ks_=[0,caml_call2(OCanren[33],b2,lesson),0],
+                           _kt_=[0,b1,[0,b2,[0,b3,[0,b4,0]]]];
+                          function _ku_(_kC_){return _kC_}
                           var
-                           _kD_=caml_call2(OCanren[64][8],_kC_,_kB_),
-                           _kE_=[0,caml_call2(OCanren[33],a1,_kD_),_kA_],
-                           _kF_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
-                          function _kG_(_kJ_){return _kJ_}
+                           _kv_=caml_call2(OCanren[64][8],_ku_,_kt_),
+                           _kw_=[0,caml_call2(OCanren[33],a1,_kv_),_ks_],
+                           _kx_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
+                          function _ky_(_kB_){return _kB_}
                           var
-                           _kH_=caml_call2(OCanren[64][8],_kG_,_kF_),
-                           _kI_=[0,caml_call2(OCanren[33],q,_kH_),_kE_];
-                          return caml_call1(OCanren[44],_kI_)}
-                        return caml_call1(OCanren[48],_kz_)}
-                      return caml_call1(OCanren[47][3],_ky_)}
-                    return caml_call1(OCanren[47][3],_kx_)}
-                  return caml_call1(OCanren[47][3],_kw_)}
-                return caml_call1(OCanren[47][3],_kv_)}
-              return caml_call1(OCanren[47][3],_ku_)}
-            return caml_call1(OCanren[47][3],_kt_)}
-          return caml_call1(OCanren[47][3],_ks_)}
-        return caml_call1(OCanren[47][3],_kr_)}
-      var _kq_=[0,caml_call1(OCanren[47][3],_kp_),_ko_];
-      return caml_call1(OCanren[43],_kq_)}
+                           _kz_=caml_call2(OCanren[64][8],_ky_,_kx_),
+                           _kA_=[0,caml_call2(OCanren[33],q,_kz_),_kw_];
+                          return caml_call1(OCanren[44],_kA_)}
+                        return caml_call1(OCanren[48],_kr_)}
+                      return caml_call1(OCanren[47][3],_kq_)}
+                    return caml_call1(OCanren[47][3],_kp_)}
+                  return caml_call1(OCanren[47][3],_ko_)}
+                return caml_call1(OCanren[47][3],_kn_)}
+              return caml_call1(OCanren[47][3],_km_)}
+            return caml_call1(OCanren[47][3],_kl_)}
+          return caml_call1(OCanren[47][3],_kk_)}
+        return caml_call1(OCanren[47][3],_kj_)}
+      var _ki_=[0,caml_call1(OCanren[47][3],_kh_),_kg_];
+      return caml_call1(OCanren[43],_ki_)}
     function ins_monday_3(q,lesson)
-     {var _j3_=0;
-      function _j4_(a1)
-       {function _j6_(a2)
-         {function _j7_(a3)
-           {function _j8_(a4)
-             {function _j9_(a5)
-               {function _j__(b1)
-                 {function _j$_(b2)
-                   {function _ka_(b3)
-                     {function _kb_(b4)
-                       {function _kc_(param)
+     {var _jV_=0;
+      function _jW_(a1)
+       {function _jY_(a2)
+         {function _jZ_(a3)
+           {function _j0_(a4)
+             {function _j1_(a5)
+               {function _j2_(b1)
+                 {function _j3_(b2)
+                   {function _j4_(b3)
+                     {function _j5_(b4)
+                       {function _j6_(param)
                          {var
-                           _kd_=[0,caml_call2(OCanren[33],b3,lesson),0],
-                           _ke_=[0,b1,[0,b2,[0,b3,[0,b4,0]]]];
-                          function _kf_(_kn_){return _kn_}
+                           _j7_=[0,caml_call2(OCanren[33],b3,lesson),0],
+                           _j8_=[0,b1,[0,b2,[0,b3,[0,b4,0]]]];
+                          function _j9_(_kf_){return _kf_}
                           var
-                           _kg_=caml_call2(OCanren[64][8],_kf_,_ke_),
-                           _kh_=[0,caml_call2(OCanren[33],a1,_kg_),_kd_],
-                           _ki_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
-                          function _kj_(_km_){return _km_}
+                           _j__=caml_call2(OCanren[64][8],_j9_,_j8_),
+                           _j$_=[0,caml_call2(OCanren[33],a1,_j__),_j7_],
+                           _ka_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
+                          function _kb_(_ke_){return _ke_}
                           var
-                           _kk_=caml_call2(OCanren[64][8],_kj_,_ki_),
-                           _kl_=[0,caml_call2(OCanren[33],q,_kk_),_kh_];
-                          return caml_call1(OCanren[44],_kl_)}
-                        return caml_call1(OCanren[48],_kc_)}
-                      return caml_call1(OCanren[47][3],_kb_)}
-                    return caml_call1(OCanren[47][3],_ka_)}
-                  return caml_call1(OCanren[47][3],_j$_)}
-                return caml_call1(OCanren[47][3],_j__)}
-              return caml_call1(OCanren[47][3],_j9_)}
-            return caml_call1(OCanren[47][3],_j8_)}
-          return caml_call1(OCanren[47][3],_j7_)}
-        return caml_call1(OCanren[47][3],_j6_)}
-      var _j5_=[0,caml_call1(OCanren[47][3],_j4_),_j3_];
-      return caml_call1(OCanren[43],_j5_)}
+                           _kc_=caml_call2(OCanren[64][8],_kb_,_ka_),
+                           _kd_=[0,caml_call2(OCanren[33],q,_kc_),_j$_];
+                          return caml_call1(OCanren[44],_kd_)}
+                        return caml_call1(OCanren[48],_j6_)}
+                      return caml_call1(OCanren[47][3],_j5_)}
+                    return caml_call1(OCanren[47][3],_j4_)}
+                  return caml_call1(OCanren[47][3],_j3_)}
+                return caml_call1(OCanren[47][3],_j2_)}
+              return caml_call1(OCanren[47][3],_j1_)}
+            return caml_call1(OCanren[47][3],_j0_)}
+          return caml_call1(OCanren[47][3],_jZ_)}
+        return caml_call1(OCanren[47][3],_jY_)}
+      var _jX_=[0,caml_call1(OCanren[47][3],_jW_),_jV_];
+      return caml_call1(OCanren[43],_jX_)}
     function ins_monday_4(q,lesson)
-     {var _jG_=0;
-      function _jH_(a1)
-       {function _jJ_(a2)
-         {function _jK_(a3)
-           {function _jL_(a4)
-             {function _jM_(a5)
-               {function _jN_(b1)
-                 {function _jO_(b2)
-                   {function _jP_(b3)
-                     {function _jQ_(b4)
-                       {function _jR_(param)
+     {var _jy_=0;
+      function _jz_(a1)
+       {function _jB_(a2)
+         {function _jC_(a3)
+           {function _jD_(a4)
+             {function _jE_(a5)
+               {function _jF_(b1)
+                 {function _jG_(b2)
+                   {function _jH_(b3)
+                     {function _jI_(b4)
+                       {function _jJ_(param)
                          {var
-                           _jS_=[0,caml_call2(OCanren[33],b4,lesson),0],
-                           _jT_=[0,b1,[0,b2,[0,b3,[0,b4,0]]]];
-                          function _jU_(_j2_){return _j2_}
+                           _jK_=[0,caml_call2(OCanren[33],b4,lesson),0],
+                           _jL_=[0,b1,[0,b2,[0,b3,[0,b4,0]]]];
+                          function _jM_(_jU_){return _jU_}
                           var
-                           _jV_=caml_call2(OCanren[64][8],_jU_,_jT_),
-                           _jW_=[0,caml_call2(OCanren[33],a1,_jV_),_jS_],
-                           _jX_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
-                          function _jY_(_j1_){return _j1_}
+                           _jN_=caml_call2(OCanren[64][8],_jM_,_jL_),
+                           _jO_=[0,caml_call2(OCanren[33],a1,_jN_),_jK_],
+                           _jP_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
+                          function _jQ_(_jT_){return _jT_}
                           var
-                           _jZ_=caml_call2(OCanren[64][8],_jY_,_jX_),
-                           _j0_=[0,caml_call2(OCanren[33],q,_jZ_),_jW_];
-                          return caml_call1(OCanren[44],_j0_)}
-                        return caml_call1(OCanren[48],_jR_)}
-                      return caml_call1(OCanren[47][3],_jQ_)}
-                    return caml_call1(OCanren[47][3],_jP_)}
-                  return caml_call1(OCanren[47][3],_jO_)}
-                return caml_call1(OCanren[47][3],_jN_)}
-              return caml_call1(OCanren[47][3],_jM_)}
-            return caml_call1(OCanren[47][3],_jL_)}
-          return caml_call1(OCanren[47][3],_jK_)}
-        return caml_call1(OCanren[47][3],_jJ_)}
-      var _jI_=[0,caml_call1(OCanren[47][3],_jH_),_jG_];
-      return caml_call1(OCanren[43],_jI_)}
+                           _jR_=caml_call2(OCanren[64][8],_jQ_,_jP_),
+                           _jS_=[0,caml_call2(OCanren[33],q,_jR_),_jO_];
+                          return caml_call1(OCanren[44],_jS_)}
+                        return caml_call1(OCanren[48],_jJ_)}
+                      return caml_call1(OCanren[47][3],_jI_)}
+                    return caml_call1(OCanren[47][3],_jH_)}
+                  return caml_call1(OCanren[47][3],_jG_)}
+                return caml_call1(OCanren[47][3],_jF_)}
+              return caml_call1(OCanren[47][3],_jE_)}
+            return caml_call1(OCanren[47][3],_jD_)}
+          return caml_call1(OCanren[47][3],_jC_)}
+        return caml_call1(OCanren[47][3],_jB_)}
+      var _jA_=[0,caml_call1(OCanren[47][3],_jz_),_jy_];
+      return caml_call1(OCanren[43],_jA_)}
     function ins_tuesday_1(q,lesson)
-     {var _jj_=0;
-      function _jk_(a1)
-       {function _jm_(a2)
-         {function _jn_(a3)
-           {function _jo_(a4)
-             {function _jp_(a5)
-               {function _jq_(b1)
-                 {function _jr_(b2)
-                   {function _js_(b3)
-                     {function _jt_(b4)
-                       {function _ju_(param)
+     {var _jb_=0;
+      function _jc_(a1)
+       {function _je_(a2)
+         {function _jf_(a3)
+           {function _jg_(a4)
+             {function _jh_(a5)
+               {function _ji_(b1)
+                 {function _jj_(b2)
+                   {function _jk_(b3)
+                     {function _jl_(b4)
+                       {function _jm_(param)
                          {var
-                           _jv_=[0,caml_call2(OCanren[33],b1,lesson),0],
-                           _jw_=[0,b1,[0,b2,[0,b3,[0,b4,0]]]];
-                          function _jx_(_jF_){return _jF_}
+                           _jn_=[0,caml_call2(OCanren[33],b1,lesson),0],
+                           _jo_=[0,b1,[0,b2,[0,b3,[0,b4,0]]]];
+                          function _jp_(_jx_){return _jx_}
                           var
-                           _jy_=caml_call2(OCanren[64][8],_jx_,_jw_),
-                           _jz_=[0,caml_call2(OCanren[33],a2,_jy_),_jv_],
-                           _jA_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
-                          function _jB_(_jE_){return _jE_}
+                           _jq_=caml_call2(OCanren[64][8],_jp_,_jo_),
+                           _jr_=[0,caml_call2(OCanren[33],a2,_jq_),_jn_],
+                           _js_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
+                          function _jt_(_jw_){return _jw_}
                           var
-                           _jC_=caml_call2(OCanren[64][8],_jB_,_jA_),
-                           _jD_=[0,caml_call2(OCanren[33],q,_jC_),_jz_];
-                          return caml_call1(OCanren[44],_jD_)}
-                        return caml_call1(OCanren[48],_ju_)}
-                      return caml_call1(OCanren[47][3],_jt_)}
-                    return caml_call1(OCanren[47][3],_js_)}
-                  return caml_call1(OCanren[47][3],_jr_)}
-                return caml_call1(OCanren[47][3],_jq_)}
-              return caml_call1(OCanren[47][3],_jp_)}
-            return caml_call1(OCanren[47][3],_jo_)}
-          return caml_call1(OCanren[47][3],_jn_)}
-        return caml_call1(OCanren[47][3],_jm_)}
-      var _jl_=[0,caml_call1(OCanren[47][3],_jk_),_jj_];
-      return caml_call1(OCanren[43],_jl_)}
+                           _ju_=caml_call2(OCanren[64][8],_jt_,_js_),
+                           _jv_=[0,caml_call2(OCanren[33],q,_ju_),_jr_];
+                          return caml_call1(OCanren[44],_jv_)}
+                        return caml_call1(OCanren[48],_jm_)}
+                      return caml_call1(OCanren[47][3],_jl_)}
+                    return caml_call1(OCanren[47][3],_jk_)}
+                  return caml_call1(OCanren[47][3],_jj_)}
+                return caml_call1(OCanren[47][3],_ji_)}
+              return caml_call1(OCanren[47][3],_jh_)}
+            return caml_call1(OCanren[47][3],_jg_)}
+          return caml_call1(OCanren[47][3],_jf_)}
+        return caml_call1(OCanren[47][3],_je_)}
+      var _jd_=[0,caml_call1(OCanren[47][3],_jc_),_jb_];
+      return caml_call1(OCanren[43],_jd_)}
     function ins_tuesday_2(q,lesson)
-     {var _iY_=0;
-      function _iZ_(a1)
-       {function _i1_(a2)
-         {function _i2_(a3)
-           {function _i3_(a4)
-             {function _i4_(a5)
-               {function _i5_(b1)
-                 {function _i6_(b2)
-                   {function _i7_(b3)
-                     {function _i8_(b4)
-                       {function _i9_(param)
+     {var _iQ_=0;
+      function _iR_(a1)
+       {function _iT_(a2)
+         {function _iU_(a3)
+           {function _iV_(a4)
+             {function _iW_(a5)
+               {function _iX_(b1)
+                 {function _iY_(b2)
+                   {function _iZ_(b3)
+                     {function _i0_(b4)
+                       {function _i1_(param)
                          {var
-                           _i__=[0,caml_call2(OCanren[33],b2,lesson),0],
-                           _i$_=[0,b1,[0,b2,[0,b3,[0,b4,0]]]];
-                          function _ja_(_ji_){return _ji_}
+                           _i2_=[0,caml_call2(OCanren[33],b2,lesson),0],
+                           _i3_=[0,b1,[0,b2,[0,b3,[0,b4,0]]]];
+                          function _i4_(_ja_){return _ja_}
                           var
-                           _jb_=caml_call2(OCanren[64][8],_ja_,_i$_),
-                           _jc_=[0,caml_call2(OCanren[33],a2,_jb_),_i__],
-                           _jd_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
-                          function _je_(_jh_){return _jh_}
+                           _i5_=caml_call2(OCanren[64][8],_i4_,_i3_),
+                           _i6_=[0,caml_call2(OCanren[33],a2,_i5_),_i2_],
+                           _i7_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
+                          function _i8_(_i$_){return _i$_}
                           var
-                           _jf_=caml_call2(OCanren[64][8],_je_,_jd_),
-                           _jg_=[0,caml_call2(OCanren[33],q,_jf_),_jc_];
-                          return caml_call1(OCanren[44],_jg_)}
-                        return caml_call1(OCanren[48],_i9_)}
-                      return caml_call1(OCanren[47][3],_i8_)}
-                    return caml_call1(OCanren[47][3],_i7_)}
-                  return caml_call1(OCanren[47][3],_i6_)}
-                return caml_call1(OCanren[47][3],_i5_)}
-              return caml_call1(OCanren[47][3],_i4_)}
-            return caml_call1(OCanren[47][3],_i3_)}
-          return caml_call1(OCanren[47][3],_i2_)}
-        return caml_call1(OCanren[47][3],_i1_)}
-      var _i0_=[0,caml_call1(OCanren[47][3],_iZ_),_iY_];
-      return caml_call1(OCanren[43],_i0_)}
+                           _i9_=caml_call2(OCanren[64][8],_i8_,_i7_),
+                           _i__=[0,caml_call2(OCanren[33],q,_i9_),_i6_];
+                          return caml_call1(OCanren[44],_i__)}
+                        return caml_call1(OCanren[48],_i1_)}
+                      return caml_call1(OCanren[47][3],_i0_)}
+                    return caml_call1(OCanren[47][3],_iZ_)}
+                  return caml_call1(OCanren[47][3],_iY_)}
+                return caml_call1(OCanren[47][3],_iX_)}
+              return caml_call1(OCanren[47][3],_iW_)}
+            return caml_call1(OCanren[47][3],_iV_)}
+          return caml_call1(OCanren[47][3],_iU_)}
+        return caml_call1(OCanren[47][3],_iT_)}
+      var _iS_=[0,caml_call1(OCanren[47][3],_iR_),_iQ_];
+      return caml_call1(OCanren[43],_iS_)}
     function ins_tuesday_3(q,lesson)
-     {var _iB_=0;
-      function _iC_(a1)
-       {function _iE_(a2)
-         {function _iF_(a3)
-           {function _iG_(a4)
-             {function _iH_(a5)
-               {function _iI_(b1)
-                 {function _iJ_(b2)
-                   {function _iK_(b3)
-                     {function _iL_(b4)
-                       {function _iM_(param)
+     {var _it_=0;
+      function _iu_(a1)
+       {function _iw_(a2)
+         {function _ix_(a3)
+           {function _iy_(a4)
+             {function _iz_(a5)
+               {function _iA_(b1)
+                 {function _iB_(b2)
+                   {function _iC_(b3)
+                     {function _iD_(b4)
+                       {function _iE_(param)
                          {var
-                           _iN_=[0,caml_call2(OCanren[33],b3,lesson),0],
-                           _iO_=[0,b1,[0,b2,[0,b3,[0,b4,0]]]];
-                          function _iP_(_iX_){return _iX_}
+                           _iF_=[0,caml_call2(OCanren[33],b3,lesson),0],
+                           _iG_=[0,b1,[0,b2,[0,b3,[0,b4,0]]]];
+                          function _iH_(_iP_){return _iP_}
                           var
-                           _iQ_=caml_call2(OCanren[64][8],_iP_,_iO_),
-                           _iR_=[0,caml_call2(OCanren[33],a2,_iQ_),_iN_],
-                           _iS_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
-                          function _iT_(_iW_){return _iW_}
+                           _iI_=caml_call2(OCanren[64][8],_iH_,_iG_),
+                           _iJ_=[0,caml_call2(OCanren[33],a2,_iI_),_iF_],
+                           _iK_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
+                          function _iL_(_iO_){return _iO_}
                           var
-                           _iU_=caml_call2(OCanren[64][8],_iT_,_iS_),
-                           _iV_=[0,caml_call2(OCanren[33],q,_iU_),_iR_];
-                          return caml_call1(OCanren[44],_iV_)}
-                        return caml_call1(OCanren[48],_iM_)}
-                      return caml_call1(OCanren[47][3],_iL_)}
-                    return caml_call1(OCanren[47][3],_iK_)}
-                  return caml_call1(OCanren[47][3],_iJ_)}
-                return caml_call1(OCanren[47][3],_iI_)}
-              return caml_call1(OCanren[47][3],_iH_)}
-            return caml_call1(OCanren[47][3],_iG_)}
-          return caml_call1(OCanren[47][3],_iF_)}
-        return caml_call1(OCanren[47][3],_iE_)}
-      var _iD_=[0,caml_call1(OCanren[47][3],_iC_),_iB_];
-      return caml_call1(OCanren[43],_iD_)}
+                           _iM_=caml_call2(OCanren[64][8],_iL_,_iK_),
+                           _iN_=[0,caml_call2(OCanren[33],q,_iM_),_iJ_];
+                          return caml_call1(OCanren[44],_iN_)}
+                        return caml_call1(OCanren[48],_iE_)}
+                      return caml_call1(OCanren[47][3],_iD_)}
+                    return caml_call1(OCanren[47][3],_iC_)}
+                  return caml_call1(OCanren[47][3],_iB_)}
+                return caml_call1(OCanren[47][3],_iA_)}
+              return caml_call1(OCanren[47][3],_iz_)}
+            return caml_call1(OCanren[47][3],_iy_)}
+          return caml_call1(OCanren[47][3],_ix_)}
+        return caml_call1(OCanren[47][3],_iw_)}
+      var _iv_=[0,caml_call1(OCanren[47][3],_iu_),_it_];
+      return caml_call1(OCanren[43],_iv_)}
     function ins_tuesday_4(q,lesson)
-     {var _ie_=0;
-      function _if_(a1)
-       {function _ih_(a2)
-         {function _ii_(a3)
-           {function _ij_(a4)
-             {function _ik_(a5)
-               {function _il_(b1)
-                 {function _im_(b2)
-                   {function _in_(b3)
-                     {function _io_(b4)
-                       {function _ip_(param)
+     {var _h8_=0;
+      function _h9_(a1)
+       {function _h$_(a2)
+         {function _ia_(a3)
+           {function _ib_(a4)
+             {function _ic_(a5)
+               {function _id_(b1)
+                 {function _ie_(b2)
+                   {function _if_(b3)
+                     {function _ig_(b4)
+                       {function _ih_(param)
                          {var
-                           _iq_=[0,caml_call2(OCanren[33],b4,lesson),0],
-                           _ir_=[0,b1,[0,b2,[0,b3,[0,b4,0]]]];
-                          function _is_(_iA_){return _iA_}
+                           _ii_=[0,caml_call2(OCanren[33],b4,lesson),0],
+                           _ij_=[0,b1,[0,b2,[0,b3,[0,b4,0]]]];
+                          function _ik_(_is_){return _is_}
                           var
-                           _it_=caml_call2(OCanren[64][8],_is_,_ir_),
-                           _iu_=[0,caml_call2(OCanren[33],a2,_it_),_iq_],
-                           _iv_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
-                          function _iw_(_iz_){return _iz_}
+                           _il_=caml_call2(OCanren[64][8],_ik_,_ij_),
+                           _im_=[0,caml_call2(OCanren[33],a2,_il_),_ii_],
+                           _in_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
+                          function _io_(_ir_){return _ir_}
                           var
-                           _ix_=caml_call2(OCanren[64][8],_iw_,_iv_),
-                           _iy_=[0,caml_call2(OCanren[33],q,_ix_),_iu_];
-                          return caml_call1(OCanren[44],_iy_)}
-                        return caml_call1(OCanren[48],_ip_)}
-                      return caml_call1(OCanren[47][3],_io_)}
-                    return caml_call1(OCanren[47][3],_in_)}
-                  return caml_call1(OCanren[47][3],_im_)}
-                return caml_call1(OCanren[47][3],_il_)}
-              return caml_call1(OCanren[47][3],_ik_)}
-            return caml_call1(OCanren[47][3],_ij_)}
-          return caml_call1(OCanren[47][3],_ii_)}
-        return caml_call1(OCanren[47][3],_ih_)}
-      var _ig_=[0,caml_call1(OCanren[47][3],_if_),_ie_];
-      return caml_call1(OCanren[43],_ig_)}
+                           _ip_=caml_call2(OCanren[64][8],_io_,_in_),
+                           _iq_=[0,caml_call2(OCanren[33],q,_ip_),_im_];
+                          return caml_call1(OCanren[44],_iq_)}
+                        return caml_call1(OCanren[48],_ih_)}
+                      return caml_call1(OCanren[47][3],_ig_)}
+                    return caml_call1(OCanren[47][3],_if_)}
+                  return caml_call1(OCanren[47][3],_ie_)}
+                return caml_call1(OCanren[47][3],_id_)}
+              return caml_call1(OCanren[47][3],_ic_)}
+            return caml_call1(OCanren[47][3],_ib_)}
+          return caml_call1(OCanren[47][3],_ia_)}
+        return caml_call1(OCanren[47][3],_h$_)}
+      var _h__=[0,caml_call1(OCanren[47][3],_h9_),_h8_];
+      return caml_call1(OCanren[43],_h__)}
     function insert_lesson(q,lesson)
      {var
-       _h8_=[0,ins_tuesday_4(q,lesson),0],
-       _h9_=[0,ins_tuesday_3(q,lesson),_h8_],
-       _h__=[0,ins_tuesday_2(q,lesson),_h9_],
-       _h$_=[0,ins_tuesday_1(q,lesson),_h__],
-       _ia_=[0,ins_monday_4(q,lesson),_h$_],
-       _ib_=[0,ins_monday_3(q,lesson),_ia_],
-       _ic_=[0,ins_monday_2(q,lesson),_ib_],
-       _id_=[0,ins_monday_1(q,lesson),_ic_];
-      return caml_call1(OCanren[43],_id_)}
+       _h0_=[0,ins_tuesday_4(q,lesson),0],
+       _h1_=[0,ins_tuesday_3(q,lesson),_h0_],
+       _h2_=[0,ins_tuesday_2(q,lesson),_h1_],
+       _h3_=[0,ins_tuesday_1(q,lesson),_h2_],
+       _h4_=[0,ins_monday_4(q,lesson),_h3_],
+       _h5_=[0,ins_monday_3(q,lesson),_h4_],
+       _h6_=[0,ins_monday_2(q,lesson),_h5_],
+       _h7_=[0,ins_monday_1(q,lesson),_h6_];
+      return caml_call1(OCanren[43],_h7_)}
     function init_sched_one_day(s)
-     {var _hX_=0;
-      function _hY_(q)
-       {function _h0_(w)
-         {function _h1_(e)
-           {function _h2_(r)
-             {function _h3_(param)
-               {var _h4_=[0,q,[0,w,[0,e,[0,r,0]]]];
-                function _h5_(_h7_){return _h7_}
-                var _h6_=caml_call2(OCanren[64][8],_h5_,_h4_);
-                return caml_call2(OCanren[33],s,_h6_)}
-              return caml_call1(OCanren[48],_h3_)}
-            return caml_call1(OCanren[47][3],_h2_)}
-          return caml_call1(OCanren[47][3],_h1_)}
-        return caml_call1(OCanren[47][3],_h0_)}
-      var _hZ_=[0,caml_call1(OCanren[47][3],_hY_),_hX_];
-      return caml_call1(OCanren[43],_hZ_)}
+     {var _hP_=0;
+      function _hQ_(q)
+       {function _hS_(w)
+         {function _hT_(e)
+           {function _hU_(r)
+             {function _hV_(param)
+               {var _hW_=[0,q,[0,w,[0,e,[0,r,0]]]];
+                function _hX_(_hZ_){return _hZ_}
+                var _hY_=caml_call2(OCanren[64][8],_hX_,_hW_);
+                return caml_call2(OCanren[33],s,_hY_)}
+              return caml_call1(OCanren[48],_hV_)}
+            return caml_call1(OCanren[47][3],_hU_)}
+          return caml_call1(OCanren[47][3],_hT_)}
+        return caml_call1(OCanren[47][3],_hS_)}
+      var _hR_=[0,caml_call1(OCanren[47][3],_hQ_),_hP_];
+      return caml_call1(OCanren[43],_hR_)}
     function init_sched_a_week(q)
-     {var symbol=OCanren[64][4],_hI_=0;
-      function _hJ_(w)
-       {function _hL_(e)
-         {function _hM_(r)
-           {function _hN_(t)
-             {function _hO_(y)
-               {function _hP_(param)
+     {var symbol=OCanren[64][4],_hA_=0;
+      function _hB_(w)
+       {function _hD_(e)
+         {function _hE_(r)
+           {function _hF_(t)
+             {function _hG_(y)
+               {function _hH_(param)
                  {var
-                   _hQ_=
+                   _hI_=
                     caml_call2
                      (symbol,
                       w,
@@ -554,278 +546,278 @@
                         e,
                         caml_call2
                          (symbol,r,caml_call2(symbol,t,caml_call1(OCanren[64][6],y))))),
-                   _hR_=[0,caml_call2(OCanren[33],q,_hQ_),0],
-                   _hS_=[0,init_sched_one_day(y),_hR_],
-                   _hT_=[0,init_sched_one_day(t),_hS_],
-                   _hU_=[0,init_sched_one_day(r),_hT_],
-                   _hV_=[0,init_sched_one_day(e),_hU_],
-                   _hW_=[0,init_sched_one_day(w),_hV_];
-                  return caml_call1(OCanren[44],_hW_)}
-                return caml_call1(OCanren[48],_hP_)}
-              return caml_call1(OCanren[47][3],_hO_)}
-            return caml_call1(OCanren[47][3],_hN_)}
-          return caml_call1(OCanren[47][3],_hM_)}
-        return caml_call1(OCanren[47][3],_hL_)}
-      var _hK_=[0,caml_call1(OCanren[47][3],_hJ_),_hI_];
-      return caml_call1(OCanren[43],_hK_)}
+                   _hJ_=[0,caml_call2(OCanren[33],q,_hI_),0],
+                   _hK_=[0,init_sched_one_day(y),_hJ_],
+                   _hL_=[0,init_sched_one_day(t),_hK_],
+                   _hM_=[0,init_sched_one_day(r),_hL_],
+                   _hN_=[0,init_sched_one_day(e),_hM_],
+                   _hO_=[0,init_sched_one_day(w),_hN_];
+                  return caml_call1(OCanren[44],_hO_)}
+                return caml_call1(OCanren[48],_hH_)}
+              return caml_call1(OCanren[47][3],_hG_)}
+            return caml_call1(OCanren[47][3],_hF_)}
+          return caml_call1(OCanren[47][3],_hE_)}
+        return caml_call1(OCanren[47][3],_hD_)}
+      var _hC_=[0,caml_call1(OCanren[47][3],_hB_),_hA_];
+      return caml_call1(OCanren[43],_hC_)}
     function ins_sched1(subj,group_sched,teacher_sched,class_sched)
-     {var _hg_=0;
-      function _hh_(a2)
-       {function _hj_(a3)
-         {function _hk_(a4)
-           {function _hl_(b2)
-             {function _hm_(b3)
-               {function _hn_(b4)
-                 {function _ho_(c2)
-                   {function _hp_(c3)
-                     {function _hq_(c4)
-                       {function _hr_(param)
-                         {var _hs_=0,_ht_=[0,subj,[0,c2,[0,c3,[0,c4,0]]]];
-                          function _hu_(_hH_){return _hH_}
+     {var _g__=0;
+      function _g$_(a2)
+       {function _hb_(a3)
+         {function _hc_(a4)
+           {function _hd_(b2)
+             {function _he_(b3)
+               {function _hf_(b4)
+                 {function _hg_(c2)
+                   {function _hh_(c3)
+                     {function _hi_(c4)
+                       {function _hj_(param)
+                         {var _hk_=0,_hl_=[0,subj,[0,c2,[0,c3,[0,c4,0]]]];
+                          function _hm_(_hz_){return _hz_}
+                          var
+                           _hn_=caml_call2(OCanren[64][8],_hm_,_hl_),
+                           _ho_=[0,caml_call2(OCanren[33],class_sched,_hn_),_hk_],
+                           _hp_=[0,subj,[0,b2,[0,b3,[0,b4,0]]]];
+                          function _hq_(_hy_){return _hy_}
+                          var
+                           _hr_=caml_call2(OCanren[64][8],_hq_,_hp_),
+                           _hs_=[0,caml_call2(OCanren[33],teacher_sched,_hr_),_ho_],
+                           _ht_=[0,subj,[0,a2,[0,a3,[0,a4,0]]]];
+                          function _hu_(_hx_){return _hx_}
                           var
                            _hv_=caml_call2(OCanren[64][8],_hu_,_ht_),
-                           _hw_=[0,caml_call2(OCanren[33],class_sched,_hv_),_hs_],
-                           _hx_=[0,subj,[0,b2,[0,b3,[0,b4,0]]]];
-                          function _hy_(_hG_){return _hG_}
-                          var
-                           _hz_=caml_call2(OCanren[64][8],_hy_,_hx_),
-                           _hA_=[0,caml_call2(OCanren[33],teacher_sched,_hz_),_hw_],
-                           _hB_=[0,subj,[0,a2,[0,a3,[0,a4,0]]]];
-                          function _hC_(_hF_){return _hF_}
-                          var
-                           _hD_=caml_call2(OCanren[64][8],_hC_,_hB_),
-                           _hE_=[0,caml_call2(OCanren[33],group_sched,_hD_),_hA_];
-                          return caml_call1(OCanren[44],_hE_)}
-                        return caml_call1(OCanren[48],_hr_)}
-                      return caml_call1(OCanren[47][3],_hq_)}
-                    return caml_call1(OCanren[47][3],_hp_)}
-                  return caml_call1(OCanren[47][3],_ho_)}
-                return caml_call1(OCanren[47][3],_hn_)}
-              return caml_call1(OCanren[47][3],_hm_)}
-            return caml_call1(OCanren[47][3],_hl_)}
-          return caml_call1(OCanren[47][3],_hk_)}
-        return caml_call1(OCanren[47][3],_hj_)}
-      var _hi_=[0,caml_call1(OCanren[47][3],_hh_),_hg_];
-      return caml_call1(OCanren[43],_hi_)}
+                           _hw_=[0,caml_call2(OCanren[33],group_sched,_hv_),_hs_];
+                          return caml_call1(OCanren[44],_hw_)}
+                        return caml_call1(OCanren[48],_hj_)}
+                      return caml_call1(OCanren[47][3],_hi_)}
+                    return caml_call1(OCanren[47][3],_hh_)}
+                  return caml_call1(OCanren[47][3],_hg_)}
+                return caml_call1(OCanren[47][3],_hf_)}
+              return caml_call1(OCanren[47][3],_he_)}
+            return caml_call1(OCanren[47][3],_hd_)}
+          return caml_call1(OCanren[47][3],_hc_)}
+        return caml_call1(OCanren[47][3],_hb_)}
+      var _ha_=[0,caml_call1(OCanren[47][3],_g$_),_g__];
+      return caml_call1(OCanren[43],_ha_)}
     function ins_sched2(subj,group_sched,teacher_sched,class_sched)
-     {var _gQ_=0;
-      function _gR_(a2)
-       {function _gT_(a3)
-         {function _gU_(a4)
-           {function _gV_(b2)
-             {function _gW_(b3)
-               {function _gX_(b4)
-                 {function _gY_(c2)
-                   {function _gZ_(c3)
-                     {function _g0_(c4)
-                       {function _g1_(param)
-                         {var _g2_=0,_g3_=[0,c2,[0,subj,[0,c3,[0,c4,0]]]];
-                          function _g4_(_hf_){return _hf_}
+     {var _gI_=0;
+      function _gJ_(a2)
+       {function _gL_(a3)
+         {function _gM_(a4)
+           {function _gN_(b2)
+             {function _gO_(b3)
+               {function _gP_(b4)
+                 {function _gQ_(c2)
+                   {function _gR_(c3)
+                     {function _gS_(c4)
+                       {function _gT_(param)
+                         {var _gU_=0,_gV_=[0,c2,[0,subj,[0,c3,[0,c4,0]]]];
+                          function _gW_(_g9_){return _g9_}
+                          var
+                           _gX_=caml_call2(OCanren[64][8],_gW_,_gV_),
+                           _gY_=[0,caml_call2(OCanren[33],class_sched,_gX_),_gU_],
+                           _gZ_=[0,b2,[0,subj,[0,b3,[0,b4,0]]]];
+                          function _g0_(_g8_){return _g8_}
+                          var
+                           _g1_=caml_call2(OCanren[64][8],_g0_,_gZ_),
+                           _g2_=[0,caml_call2(OCanren[33],teacher_sched,_g1_),_gY_],
+                           _g3_=[0,a2,[0,subj,[0,a3,[0,a4,0]]]];
+                          function _g4_(_g7_){return _g7_}
                           var
                            _g5_=caml_call2(OCanren[64][8],_g4_,_g3_),
-                           _g6_=[0,caml_call2(OCanren[33],class_sched,_g5_),_g2_],
-                           _g7_=[0,b2,[0,subj,[0,b3,[0,b4,0]]]];
-                          function _g8_(_he_){return _he_}
-                          var
-                           _g9_=caml_call2(OCanren[64][8],_g8_,_g7_),
-                           _g__=[0,caml_call2(OCanren[33],teacher_sched,_g9_),_g6_],
-                           _g$_=[0,a2,[0,subj,[0,a3,[0,a4,0]]]];
-                          function _ha_(_hd_){return _hd_}
-                          var
-                           _hb_=caml_call2(OCanren[64][8],_ha_,_g$_),
-                           _hc_=[0,caml_call2(OCanren[33],group_sched,_hb_),_g__];
-                          return caml_call1(OCanren[44],_hc_)}
-                        return caml_call1(OCanren[48],_g1_)}
-                      return caml_call1(OCanren[47][3],_g0_)}
-                    return caml_call1(OCanren[47][3],_gZ_)}
-                  return caml_call1(OCanren[47][3],_gY_)}
-                return caml_call1(OCanren[47][3],_gX_)}
-              return caml_call1(OCanren[47][3],_gW_)}
-            return caml_call1(OCanren[47][3],_gV_)}
-          return caml_call1(OCanren[47][3],_gU_)}
-        return caml_call1(OCanren[47][3],_gT_)}
-      var _gS_=[0,caml_call1(OCanren[47][3],_gR_),_gQ_];
-      return caml_call1(OCanren[43],_gS_)}
+                           _g6_=[0,caml_call2(OCanren[33],group_sched,_g5_),_g2_];
+                          return caml_call1(OCanren[44],_g6_)}
+                        return caml_call1(OCanren[48],_gT_)}
+                      return caml_call1(OCanren[47][3],_gS_)}
+                    return caml_call1(OCanren[47][3],_gR_)}
+                  return caml_call1(OCanren[47][3],_gQ_)}
+                return caml_call1(OCanren[47][3],_gP_)}
+              return caml_call1(OCanren[47][3],_gO_)}
+            return caml_call1(OCanren[47][3],_gN_)}
+          return caml_call1(OCanren[47][3],_gM_)}
+        return caml_call1(OCanren[47][3],_gL_)}
+      var _gK_=[0,caml_call1(OCanren[47][3],_gJ_),_gI_];
+      return caml_call1(OCanren[43],_gK_)}
     function ins_sched3(subj,group_sched,teacher_sched,class_sched)
-     {var _go_=0;
-      function _gp_(a2)
-       {function _gr_(a3)
-         {function _gs_(a4)
-           {function _gt_(b2)
-             {function _gu_(b3)
-               {function _gv_(b4)
-                 {function _gw_(c2)
-                   {function _gx_(c3)
-                     {function _gy_(c4)
-                       {function _gz_(param)
-                         {var _gA_=0,_gB_=[0,c2,[0,c3,[0,subj,[0,c4,0]]]];
-                          function _gC_(_gP_){return _gP_}
+     {var _gg_=0;
+      function _gh_(a2)
+       {function _gj_(a3)
+         {function _gk_(a4)
+           {function _gl_(b2)
+             {function _gm_(b3)
+               {function _gn_(b4)
+                 {function _go_(c2)
+                   {function _gp_(c3)
+                     {function _gq_(c4)
+                       {function _gr_(param)
+                         {var _gs_=0,_gt_=[0,c2,[0,c3,[0,subj,[0,c4,0]]]];
+                          function _gu_(_gH_){return _gH_}
+                          var
+                           _gv_=caml_call2(OCanren[64][8],_gu_,_gt_),
+                           _gw_=[0,caml_call2(OCanren[33],class_sched,_gv_),_gs_],
+                           _gx_=[0,b2,[0,b3,[0,subj,[0,b4,0]]]];
+                          function _gy_(_gG_){return _gG_}
+                          var
+                           _gz_=caml_call2(OCanren[64][8],_gy_,_gx_),
+                           _gA_=[0,caml_call2(OCanren[33],teacher_sched,_gz_),_gw_],
+                           _gB_=[0,a2,[0,a3,[0,subj,[0,a4,0]]]];
+                          function _gC_(_gF_){return _gF_}
                           var
                            _gD_=caml_call2(OCanren[64][8],_gC_,_gB_),
-                           _gE_=[0,caml_call2(OCanren[33],class_sched,_gD_),_gA_],
-                           _gF_=[0,b2,[0,b3,[0,subj,[0,b4,0]]]];
-                          function _gG_(_gO_){return _gO_}
-                          var
-                           _gH_=caml_call2(OCanren[64][8],_gG_,_gF_),
-                           _gI_=[0,caml_call2(OCanren[33],teacher_sched,_gH_),_gE_],
-                           _gJ_=[0,a2,[0,a3,[0,subj,[0,a4,0]]]];
-                          function _gK_(_gN_){return _gN_}
-                          var
-                           _gL_=caml_call2(OCanren[64][8],_gK_,_gJ_),
-                           _gM_=[0,caml_call2(OCanren[33],group_sched,_gL_),_gI_];
-                          return caml_call1(OCanren[44],_gM_)}
-                        return caml_call1(OCanren[48],_gz_)}
-                      return caml_call1(OCanren[47][3],_gy_)}
-                    return caml_call1(OCanren[47][3],_gx_)}
-                  return caml_call1(OCanren[47][3],_gw_)}
-                return caml_call1(OCanren[47][3],_gv_)}
-              return caml_call1(OCanren[47][3],_gu_)}
-            return caml_call1(OCanren[47][3],_gt_)}
-          return caml_call1(OCanren[47][3],_gs_)}
-        return caml_call1(OCanren[47][3],_gr_)}
-      var _gq_=[0,caml_call1(OCanren[47][3],_gp_),_go_];
-      return caml_call1(OCanren[43],_gq_)}
+                           _gE_=[0,caml_call2(OCanren[33],group_sched,_gD_),_gA_];
+                          return caml_call1(OCanren[44],_gE_)}
+                        return caml_call1(OCanren[48],_gr_)}
+                      return caml_call1(OCanren[47][3],_gq_)}
+                    return caml_call1(OCanren[47][3],_gp_)}
+                  return caml_call1(OCanren[47][3],_go_)}
+                return caml_call1(OCanren[47][3],_gn_)}
+              return caml_call1(OCanren[47][3],_gm_)}
+            return caml_call1(OCanren[47][3],_gl_)}
+          return caml_call1(OCanren[47][3],_gk_)}
+        return caml_call1(OCanren[47][3],_gj_)}
+      var _gi_=[0,caml_call1(OCanren[47][3],_gh_),_gg_];
+      return caml_call1(OCanren[43],_gi_)}
     function ins_sched4(subj,group_sched,teacher_sched,class_sched)
-     {var _fY_=0;
-      function _fZ_(a2)
-       {function _f1_(a3)
-         {function _f2_(a4)
-           {function _f3_(b2)
-             {function _f4_(b3)
-               {function _f5_(b4)
-                 {function _f6_(c2)
-                   {function _f7_(c3)
-                     {function _f8_(c4)
-                       {function _f9_(param)
-                         {var _f__=0,_f$_=[0,c2,[0,c3,[0,c4,[0,subj,0]]]];
-                          function _ga_(_gn_){return _gn_}
+     {var _fQ_=0;
+      function _fR_(a2)
+       {function _fT_(a3)
+         {function _fU_(a4)
+           {function _fV_(b2)
+             {function _fW_(b3)
+               {function _fX_(b4)
+                 {function _fY_(c2)
+                   {function _fZ_(c3)
+                     {function _f0_(c4)
+                       {function _f1_(param)
+                         {var _f2_=0,_f3_=[0,c2,[0,c3,[0,c4,[0,subj,0]]]];
+                          function _f4_(_gf_){return _gf_}
+                          var
+                           _f5_=caml_call2(OCanren[64][8],_f4_,_f3_),
+                           _f6_=[0,caml_call2(OCanren[33],class_sched,_f5_),_f2_],
+                           _f7_=[0,b2,[0,b3,[0,b4,[0,subj,0]]]];
+                          function _f8_(_ge_){return _ge_}
+                          var
+                           _f9_=caml_call2(OCanren[64][8],_f8_,_f7_),
+                           _f__=[0,caml_call2(OCanren[33],teacher_sched,_f9_),_f6_],
+                           _f$_=[0,a2,[0,a3,[0,a4,[0,subj,0]]]];
+                          function _ga_(_gd_){return _gd_}
                           var
                            _gb_=caml_call2(OCanren[64][8],_ga_,_f$_),
-                           _gc_=[0,caml_call2(OCanren[33],class_sched,_gb_),_f__],
-                           _gd_=[0,b2,[0,b3,[0,b4,[0,subj,0]]]];
-                          function _ge_(_gm_){return _gm_}
-                          var
-                           _gf_=caml_call2(OCanren[64][8],_ge_,_gd_),
-                           _gg_=[0,caml_call2(OCanren[33],teacher_sched,_gf_),_gc_],
-                           _gh_=[0,a2,[0,a3,[0,a4,[0,subj,0]]]];
-                          function _gi_(_gl_){return _gl_}
-                          var
-                           _gj_=caml_call2(OCanren[64][8],_gi_,_gh_),
-                           _gk_=[0,caml_call2(OCanren[33],group_sched,_gj_),_gg_];
-                          return caml_call1(OCanren[44],_gk_)}
-                        return caml_call1(OCanren[48],_f9_)}
-                      return caml_call1(OCanren[47][3],_f8_)}
-                    return caml_call1(OCanren[47][3],_f7_)}
-                  return caml_call1(OCanren[47][3],_f6_)}
-                return caml_call1(OCanren[47][3],_f5_)}
-              return caml_call1(OCanren[47][3],_f4_)}
-            return caml_call1(OCanren[47][3],_f3_)}
-          return caml_call1(OCanren[47][3],_f2_)}
-        return caml_call1(OCanren[47][3],_f1_)}
-      var _f0_=[0,caml_call1(OCanren[47][3],_fZ_),_fY_];
-      return caml_call1(OCanren[43],_f0_)}
+                           _gc_=[0,caml_call2(OCanren[33],group_sched,_gb_),_f__];
+                          return caml_call1(OCanren[44],_gc_)}
+                        return caml_call1(OCanren[48],_f1_)}
+                      return caml_call1(OCanren[47][3],_f0_)}
+                    return caml_call1(OCanren[47][3],_fZ_)}
+                  return caml_call1(OCanren[47][3],_fY_)}
+                return caml_call1(OCanren[47][3],_fX_)}
+              return caml_call1(OCanren[47][3],_fW_)}
+            return caml_call1(OCanren[47][3],_fV_)}
+          return caml_call1(OCanren[47][3],_fU_)}
+        return caml_call1(OCanren[47][3],_fT_)}
+      var _fS_=[0,caml_call1(OCanren[47][3],_fR_),_fQ_];
+      return caml_call1(OCanren[43],_fS_)}
     function insert_all_sched(subj,group_sched,teacher_sched,class_sched)
-     {function _fc_(a1)
-       {function _fd_(a2)
-         {function _fe_(a3)
-           {function _ff_(a4)
-             {function _fg_(a5)
-               {function _fh_(b1)
-                 {function _fi_(b2)
-                   {function _fj_(b3)
-                     {function _fk_(b4)
-                       {function _fl_(b5)
-                         {function _fm_(c1)
-                           {function _fn_(c2)
-                             {function _fo_(c3)
-                               {function _fp_(c4)
-                                 {function _fq_(c5)
-                                   {function _fr_(param)
+     {function _e6_(a1)
+       {function _e7_(a2)
+         {function _e8_(a3)
+           {function _e9_(a4)
+             {function _e__(a5)
+               {function _e$_(b1)
+                 {function _fa_(b2)
+                   {function _fb_(b3)
+                     {function _fc_(b4)
+                       {function _fd_(b5)
+                         {function _fe_(c1)
+                           {function _ff_(c2)
+                             {function _fg_(c3)
+                               {function _fh_(c4)
+                                 {function _fi_(c5)
+                                   {function _fj_(param)
                                      {var
-                                       _fs_=[0,ins_sched4(subj,a4,b4,c4),0],
-                                       _ft_=[0,ins_sched3(subj,a4,b4,c4),_fs_],
-                                       _fu_=[0,ins_sched2(subj,a4,b4,c4),_ft_],
-                                       _fv_=[0,ins_sched1(subj,a4,b4,c4),_fu_],
-                                       _fw_=[0,ins_sched4(subj,a3,b3,c3),_fv_],
-                                       _fx_=[0,ins_sched3(subj,a3,b3,c3),_fw_],
-                                       _fy_=[0,ins_sched2(subj,a3,b3,c3),_fx_],
-                                       _fz_=[0,ins_sched1(subj,a3,b3,c3),_fy_],
-                                       _fA_=[0,ins_sched4(subj,a2,b2,c2),_fz_],
-                                       _fB_=[0,ins_sched3(subj,a2,b2,c2),_fA_],
-                                       _fC_=[0,ins_sched2(subj,a2,b2,c2),_fB_],
-                                       _fD_=[0,ins_sched1(subj,a2,b2,c2),_fC_],
-                                       _fE_=[0,ins_sched4(subj,a1,b1,c1),_fD_],
-                                       _fF_=[0,ins_sched3(subj,a1,b1,c1),_fE_],
-                                       _fG_=[0,ins_sched2(subj,a1,b1,c1),_fF_],
-                                       _fH_=[0,ins_sched1(subj,a1,b1,c1),_fG_],
-                                       _fI_=[0,caml_call1(OCanren[43],_fH_),0],
-                                       _fJ_=[0,c1,[0,c2,[0,c3,[0,c4,[0,c5,0]]]]];
-                                      function _fK_(_fX_){return _fX_}
+                                       _fk_=[0,ins_sched4(subj,a4,b4,c4),0],
+                                       _fl_=[0,ins_sched3(subj,a4,b4,c4),_fk_],
+                                       _fm_=[0,ins_sched2(subj,a4,b4,c4),_fl_],
+                                       _fn_=[0,ins_sched1(subj,a4,b4,c4),_fm_],
+                                       _fo_=[0,ins_sched4(subj,a3,b3,c3),_fn_],
+                                       _fp_=[0,ins_sched3(subj,a3,b3,c3),_fo_],
+                                       _fq_=[0,ins_sched2(subj,a3,b3,c3),_fp_],
+                                       _fr_=[0,ins_sched1(subj,a3,b3,c3),_fq_],
+                                       _fs_=[0,ins_sched4(subj,a2,b2,c2),_fr_],
+                                       _ft_=[0,ins_sched3(subj,a2,b2,c2),_fs_],
+                                       _fu_=[0,ins_sched2(subj,a2,b2,c2),_ft_],
+                                       _fv_=[0,ins_sched1(subj,a2,b2,c2),_fu_],
+                                       _fw_=[0,ins_sched4(subj,a1,b1,c1),_fv_],
+                                       _fx_=[0,ins_sched3(subj,a1,b1,c1),_fw_],
+                                       _fy_=[0,ins_sched2(subj,a1,b1,c1),_fx_],
+                                       _fz_=[0,ins_sched1(subj,a1,b1,c1),_fy_],
+                                       _fA_=[0,caml_call1(OCanren[43],_fz_),0],
+                                       _fB_=[0,c1,[0,c2,[0,c3,[0,c4,[0,c5,0]]]]];
+                                      function _fC_(_fP_){return _fP_}
+                                      var
+                                       _fD_=caml_call2(OCanren[64][8],_fC_,_fB_),
+                                       _fE_=[0,caml_call2(OCanren[33],class_sched,_fD_),_fA_],
+                                       _fF_=[0,b1,[0,b2,[0,b3,[0,b4,[0,b5,0]]]]];
+                                      function _fG_(_fO_){return _fO_}
+                                      var
+                                       _fH_=caml_call2(OCanren[64][8],_fG_,_fF_),
+                                       _fI_=[0,caml_call2(OCanren[33],teacher_sched,_fH_),_fE_],
+                                       _fJ_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
+                                      function _fK_(_fN_){return _fN_}
                                       var
                                        _fL_=caml_call2(OCanren[64][8],_fK_,_fJ_),
-                                       _fM_=[0,caml_call2(OCanren[33],class_sched,_fL_),_fI_],
-                                       _fN_=[0,b1,[0,b2,[0,b3,[0,b4,[0,b5,0]]]]];
-                                      function _fO_(_fW_){return _fW_}
-                                      var
-                                       _fP_=caml_call2(OCanren[64][8],_fO_,_fN_),
-                                       _fQ_=[0,caml_call2(OCanren[33],teacher_sched,_fP_),_fM_],
-                                       _fR_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
-                                      function _fS_(_fV_){return _fV_}
-                                      var
-                                       _fT_=caml_call2(OCanren[64][8],_fS_,_fR_),
-                                       _fU_=[0,caml_call2(OCanren[33],group_sched,_fT_),_fQ_];
-                                      return caml_call1(OCanren[44],_fU_)}
-                                    return caml_call1(OCanren[48],_fr_)}
-                                  return caml_call1(OCanren[47][3],_fq_)}
-                                return caml_call1(OCanren[47][3],_fp_)}
-                              return caml_call1(OCanren[47][3],_fo_)}
-                            return caml_call1(OCanren[47][3],_fn_)}
-                          return caml_call1(OCanren[47][3],_fm_)}
-                        return caml_call1(OCanren[47][3],_fl_)}
-                      return caml_call1(OCanren[47][3],_fk_)}
-                    return caml_call1(OCanren[47][3],_fj_)}
-                  return caml_call1(OCanren[47][3],_fi_)}
-                return caml_call1(OCanren[47][3],_fh_)}
-              return caml_call1(OCanren[47][3],_fg_)}
-            return caml_call1(OCanren[47][3],_ff_)}
-          return caml_call1(OCanren[47][3],_fe_)}
-        return caml_call1(OCanren[47][3],_fd_)}
-      return caml_call1(OCanren[47][3],_fc_)}
+                                       _fM_=[0,caml_call2(OCanren[33],group_sched,_fL_),_fI_];
+                                      return caml_call1(OCanren[44],_fM_)}
+                                    return caml_call1(OCanren[48],_fj_)}
+                                  return caml_call1(OCanren[47][3],_fi_)}
+                                return caml_call1(OCanren[47][3],_fh_)}
+                              return caml_call1(OCanren[47][3],_fg_)}
+                            return caml_call1(OCanren[47][3],_ff_)}
+                          return caml_call1(OCanren[47][3],_fe_)}
+                        return caml_call1(OCanren[47][3],_fd_)}
+                      return caml_call1(OCanren[47][3],_fc_)}
+                    return caml_call1(OCanren[47][3],_fb_)}
+                  return caml_call1(OCanren[47][3],_fa_)}
+                return caml_call1(OCanren[47][3],_e$_)}
+              return caml_call1(OCanren[47][3],_e__)}
+            return caml_call1(OCanren[47][3],_e9_)}
+          return caml_call1(OCanren[47][3],_e8_)}
+        return caml_call1(OCanren[47][3],_e7_)}
+      return caml_call1(OCanren[47][3],_e6_)}
     function insert_sched_to_one_group
      (lessons,all_teacher_sched,sched_all_class,group_sched,class_subj)
-     {var _eF_=0;
-      function _eG_(sched_first_class)
-       {function _e5_(ost)
-         {function _e6_(subj_first)
-           {function _e7_(subj_ost)
-             {function _e8_(param)
+     {var _ex_=0;
+      function _ey_(sched_first_class)
+       {function _eX_(ost)
+         {function _eY_(subj_first)
+           {function _eZ_(subj_ost)
+             {function _e0_(param)
                {var
-                 _e9_=
+                 _e1_=
                   [0,
                    insert_sched_to_one_group
                     (lessons,all_teacher_sched,ost,group_sched,subj_ost),
                    0],
-                 _e__=caml_call2(OCanren_List[101],subj_first,subj_ost),
-                 _e$_=[0,caml_call2(OCanren[33],class_subj,_e__),_e9_],
-                 _fa_=caml_call2(OCanren_List[101],sched_first_class,ost),
-                 _fb_=[0,caml_call2(OCanren[33],sched_all_class,_fa_),_e$_];
-                return caml_call1(OCanren[44],_fb_)}
-              return caml_call1(OCanren[48],_e8_)}
-            return caml_call1(OCanren[47][3],_e7_)}
-          return caml_call1(OCanren[47][3],_e6_)}
-        return caml_call1(OCanren[47][3],_e5_)}
-      var _eH_=[0,caml_call1(OCanren[47][3],_eG_),_eF_];
-      function _eI_(teacher_sched)
-       {function _eM_(lesson)
-         {function _eN_(tail_teacher)
-           {function _eO_(tail_lessons)
-             {function _eP_(sched_class)
-               {function _eQ_(ost)
-                 {function _eR_(class_first)
-                   {function _eS_(class_ost)
-                     {function _eT_(param)
+                 _e2_=caml_call2(OCanren_List[101],subj_first,subj_ost),
+                 _e3_=[0,caml_call2(OCanren[33],class_subj,_e2_),_e1_],
+                 _e4_=caml_call2(OCanren_List[101],sched_first_class,ost),
+                 _e5_=[0,caml_call2(OCanren[33],sched_all_class,_e4_),_e3_];
+                return caml_call1(OCanren[44],_e5_)}
+              return caml_call1(OCanren[48],_e0_)}
+            return caml_call1(OCanren[47][3],_eZ_)}
+          return caml_call1(OCanren[47][3],_eY_)}
+        return caml_call1(OCanren[47][3],_eX_)}
+      var _ez_=[0,caml_call1(OCanren[47][3],_ey_),_ex_];
+      function _eA_(teacher_sched)
+       {function _eE_(lesson)
+         {function _eF_(tail_teacher)
+           {function _eG_(tail_lessons)
+             {function _eH_(sched_class)
+               {function _eI_(ost)
+                 {function _eJ_(class_first)
+                   {function _eK_(class_ost)
+                     {function _eL_(param)
                        {var
-                         _eU_=
+                         _eM_=
                           [0,
                            insert_sched_to_one_group
                             (tail_lessons,
@@ -834,52 +826,52 @@
                              group_sched,
                              class_subj),
                            0],
-                         _eV_=
+                         _eN_=
                           [0,
                            insert_all_sched
                             (lesson,group_sched,teacher_sched,sched_class),
-                           _eU_],
-                         _eW_=[0,membero(lesson,class_first),_eV_],
-                         _eX_=caml_call2(OCanren_List[101],class_first,class_ost),
-                         _eY_=[0,caml_call2(OCanren[33],class_subj,_eX_),_eW_],
-                         _eZ_=caml_call2(OCanren_List[101],sched_class,ost),
-                         _e0_=[0,caml_call2(OCanren[33],sched_all_class,_eZ_),_eY_],
-                         _e1_=caml_call2(OCanren_List[101],lesson,tail_lessons),
-                         _e2_=[0,caml_call2(OCanren[33],lessons,_e1_),_e0_],
-                         _e3_=
+                           _eM_],
+                         _eO_=[0,membero(lesson,class_first),_eN_],
+                         _eP_=caml_call2(OCanren_List[101],class_first,class_ost),
+                         _eQ_=[0,caml_call2(OCanren[33],class_subj,_eP_),_eO_],
+                         _eR_=caml_call2(OCanren_List[101],sched_class,ost),
+                         _eS_=[0,caml_call2(OCanren[33],sched_all_class,_eR_),_eQ_],
+                         _eT_=caml_call2(OCanren_List[101],lesson,tail_lessons),
+                         _eU_=[0,caml_call2(OCanren[33],lessons,_eT_),_eS_],
+                         _eV_=
                           caml_call2(OCanren_List[101],teacher_sched,tail_teacher),
-                         _e4_=[0,caml_call2(OCanren[33],all_teacher_sched,_e3_),_e2_];
-                        return caml_call1(OCanren[44],_e4_)}
-                      return caml_call1(OCanren[48],_eT_)}
-                    return caml_call1(OCanren[47][3],_eS_)}
-                  return caml_call1(OCanren[47][3],_eR_)}
-                return caml_call1(OCanren[47][3],_eQ_)}
-              return caml_call1(OCanren[47][3],_eP_)}
-            return caml_call1(OCanren[47][3],_eO_)}
-          return caml_call1(OCanren[47][3],_eN_)}
-        return caml_call1(OCanren[47][3],_eM_)}
+                         _eW_=[0,caml_call2(OCanren[33],all_teacher_sched,_eV_),_eU_];
+                        return caml_call1(OCanren[44],_eW_)}
+                      return caml_call1(OCanren[48],_eL_)}
+                    return caml_call1(OCanren[47][3],_eK_)}
+                  return caml_call1(OCanren[47][3],_eJ_)}
+                return caml_call1(OCanren[47][3],_eI_)}
+              return caml_call1(OCanren[47][3],_eH_)}
+            return caml_call1(OCanren[47][3],_eG_)}
+          return caml_call1(OCanren[47][3],_eF_)}
+        return caml_call1(OCanren[47][3],_eE_)}
       var
-       _eJ_=[0,caml_call1(OCanren[47][3],_eI_),_eH_],
-       _eK_=caml_call1(OCanren_List[100],0),
-       _eL_=[0,caml_call2(OCanren[33],lessons,_eK_),_eJ_];
-      return caml_call1(OCanren[43],_eL_)}
+       _eB_=[0,caml_call1(OCanren[47][3],_eA_),_ez_],
+       _eC_=caml_call1(OCanren_List[100],0),
+       _eD_=[0,caml_call2(OCanren[33],lessons,_eC_),_eB_];
+      return caml_call1(OCanren[43],_eD_)}
     function sched
      (studyplanallgroup,schedallgroup,allteachersched,schedclass,classessubj)
-     {var _ek_=0;
-      function _el_(studyplanonegroup)
-       {function _er_(studyplanost)
-         {function _es_(schedonegroup)
-           {function _et_(schedost)
-             {function _eu_(oneteacher)
-               {function _ev_(ostteacher)
-                 {function _ew_(param)
+     {var _ec_=0;
+      function _ed_(studyplanonegroup)
+       {function _ej_(studyplanost)
+         {function _ek_(schedonegroup)
+           {function _el_(schedost)
+             {function _em_(oneteacher)
+               {function _en_(ostteacher)
+                 {function _eo_(param)
                    {var
-                     _ex_=
+                     _ep_=
                       [0,
                        sched
                         (studyplanost,schedost,ostteacher,schedclass,classessubj),
                        0],
-                     _ey_=
+                     _eq_=
                       [0,
                        insert_sched_to_one_group
                         (studyplanonegroup,
@@ -887,153 +879,153 @@
                          schedclass,
                          schedonegroup,
                          classessubj),
-                       _ex_],
-                     _ez_=caml_call2(OCanren_List[101],oneteacher,ostteacher),
-                     _eA_=[0,caml_call2(OCanren[33],allteachersched,_ez_),_ey_],
-                     _eB_=caml_call2(OCanren_List[101],schedonegroup,schedost),
-                     _eC_=[0,caml_call2(OCanren[33],schedallgroup,_eB_),_eA_],
-                     _eD_=
+                       _ep_],
+                     _er_=caml_call2(OCanren_List[101],oneteacher,ostteacher),
+                     _es_=[0,caml_call2(OCanren[33],allteachersched,_er_),_eq_],
+                     _et_=caml_call2(OCanren_List[101],schedonegroup,schedost),
+                     _eu_=[0,caml_call2(OCanren[33],schedallgroup,_et_),_es_],
+                     _ev_=
                       caml_call2(OCanren_List[101],studyplanonegroup,studyplanost),
-                     _eE_=[0,caml_call2(OCanren[33],studyplanallgroup,_eD_),_eC_];
-                    return caml_call1(OCanren[44],_eE_)}
-                  return caml_call1(OCanren[48],_ew_)}
-                return caml_call1(OCanren[47][3],_ev_)}
-              return caml_call1(OCanren[47][3],_eu_)}
-            return caml_call1(OCanren[47][3],_et_)}
-          return caml_call1(OCanren[47][3],_es_)}
-        return caml_call1(OCanren[47][3],_er_)}
+                     _ew_=[0,caml_call2(OCanren[33],studyplanallgroup,_ev_),_eu_];
+                    return caml_call1(OCanren[44],_ew_)}
+                  return caml_call1(OCanren[48],_eo_)}
+                return caml_call1(OCanren[47][3],_en_)}
+              return caml_call1(OCanren[47][3],_em_)}
+            return caml_call1(OCanren[47][3],_el_)}
+          return caml_call1(OCanren[47][3],_ek_)}
+        return caml_call1(OCanren[47][3],_ej_)}
       var
-       _em_=[0,caml_call1(OCanren[47][3],_el_),_ek_],
-       _en_=caml_call1(OCanren_List[100],0),
-       _eo_=[0,caml_call2(OCanren[33],schedallgroup,_en_),_em_],
-       _ep_=caml_call1(OCanren_List[100],0),
-       _eq_=[0,caml_call2(OCanren[33],studyplanallgroup,_ep_),_eo_];
-      return caml_call1(OCanren[43],_eq_)}
+       _ee_=[0,caml_call1(OCanren[47][3],_ed_),_ec_],
+       _ef_=caml_call1(OCanren_List[100],0),
+       _eg_=[0,caml_call2(OCanren[33],schedallgroup,_ef_),_ee_],
+       _eh_=caml_call1(OCanren_List[100],0),
+       _ei_=[0,caml_call2(OCanren[33],studyplanallgroup,_eh_),_eg_];
+      return caml_call1(OCanren[43],_ei_)}
     function delete_monday_1(q)
-     {var _dV_=0;
-      function _dW_(a1)
-       {function _dY_(a2)
-         {function _dZ_(a3)
-           {function _d0_(a4)
-             {function _d1_(a5)
-               {function _d2_(b1)
-                 {function _d3_(b2)
-                   {function _d4_(b3)
-                     {function _d5_(b4)
-                       {function _d6_(b5)
-                         {function _d7_(b6)
-                           {function _d8_(b7)
-                             {function _d9_(b8)
-                               {function _d__(param)
+     {var _dN_=0;
+      function _dO_(a1)
+       {function _dQ_(a2)
+         {function _dR_(a3)
+           {function _dS_(a4)
+             {function _dT_(a5)
+               {function _dU_(b1)
+                 {function _dV_(b2)
+                   {function _dW_(b3)
+                     {function _dX_(b4)
+                       {function _dY_(b5)
+                         {function _dZ_(b6)
+                           {function _d0_(b7)
+                             {function _d1_(b8)
+                               {function _d2_(param)
                                  {var
-                                   _d$_=0,
-                                   _ea_=
+                                   _d3_=0,
+                                   _d4_=
                                     [0,
                                      caml_call1(OCanren[25],cst_window),
                                      [0,b5,[0,b6,[0,b7,0]]]];
-                                  function _eb_(_ej_){return _ej_}
+                                  function _d5_(_eb_){return _eb_}
                                   var
-                                   _ec_=caml_call2(OCanren[64][8],_eb_,_ea_),
-                                   _ed_=[0,caml_call2(OCanren[33],a1,_ec_),_d$_],
-                                   _ee_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
-                                  function _ef_(_ei_){return _ei_}
+                                   _d6_=caml_call2(OCanren[64][8],_d5_,_d4_),
+                                   _d7_=[0,caml_call2(OCanren[33],a1,_d6_),_d3_],
+                                   _d8_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
+                                  function _d9_(_ea_){return _ea_}
                                   var
-                                   _eg_=caml_call2(OCanren[64][8],_ef_,_ee_),
-                                   _eh_=[0,caml_call2(OCanren[33],q,_eg_),_ed_];
-                                  return caml_call1(OCanren[44],_eh_)}
-                                return caml_call1(OCanren[48],_d__)}
-                              return caml_call1(OCanren[47][3],_d9_)}
-                            return caml_call1(OCanren[47][3],_d8_)}
-                          return caml_call1(OCanren[47][3],_d7_)}
-                        return caml_call1(OCanren[47][3],_d6_)}
-                      return caml_call1(OCanren[47][3],_d5_)}
-                    return caml_call1(OCanren[47][3],_d4_)}
-                  return caml_call1(OCanren[47][3],_d3_)}
-                return caml_call1(OCanren[47][3],_d2_)}
-              return caml_call1(OCanren[47][3],_d1_)}
-            return caml_call1(OCanren[47][3],_d0_)}
-          return caml_call1(OCanren[47][3],_dZ_)}
-        return caml_call1(OCanren[47][3],_dY_)}
-      var _dX_=[0,caml_call1(OCanren[47][3],_dW_),_dV_];
-      return caml_call1(OCanren[43],_dX_)}
+                                   _d__=caml_call2(OCanren[64][8],_d9_,_d8_),
+                                   _d$_=[0,caml_call2(OCanren[33],q,_d__),_d7_];
+                                  return caml_call1(OCanren[44],_d$_)}
+                                return caml_call1(OCanren[48],_d2_)}
+                              return caml_call1(OCanren[47][3],_d1_)}
+                            return caml_call1(OCanren[47][3],_d0_)}
+                          return caml_call1(OCanren[47][3],_dZ_)}
+                        return caml_call1(OCanren[47][3],_dY_)}
+                      return caml_call1(OCanren[47][3],_dX_)}
+                    return caml_call1(OCanren[47][3],_dW_)}
+                  return caml_call1(OCanren[47][3],_dV_)}
+                return caml_call1(OCanren[47][3],_dU_)}
+              return caml_call1(OCanren[47][3],_dT_)}
+            return caml_call1(OCanren[47][3],_dS_)}
+          return caml_call1(OCanren[47][3],_dR_)}
+        return caml_call1(OCanren[47][3],_dQ_)}
+      var _dP_=[0,caml_call1(OCanren[47][3],_dO_),_dN_];
+      return caml_call1(OCanren[43],_dP_)}
     function delete_monday(q)
-     {var _dv_=0;
-      function _dw_(a1)
-       {function _dy_(a2)
-         {function _dz_(a3)
-           {function _dA_(a4)
-             {function _dB_(a5)
-               {function _dC_(b1)
-                 {function _dD_(b2)
-                   {function _dE_(b3)
-                     {function _dF_(b4)
-                       {function _dG_(param)
+     {var _dn_=0;
+      function _do_(a1)
+       {function _dq_(a2)
+         {function _dr_(a3)
+           {function _ds_(a4)
+             {function _dt_(a5)
+               {function _du_(b1)
+                 {function _dv_(b2)
+                   {function _dw_(b3)
+                     {function _dx_(b4)
+                       {function _dy_(param)
                          {var
-                           _dI_=[0,caml_call1(OCanren[25],cst_window$0),0],
-                           _dJ_=[0,caml_call1(OCanren[25],cst_window$1),_dI_],
-                           _dK_=[0,caml_call1(OCanren[25],cst_window$2),_dJ_],
-                           _dH_=0,
-                           _dL_=[0,caml_call1(OCanren[25],cst_window$3),_dK_];
-                          function _dM_(_dU_){return _dU_}
+                           _dA_=[0,caml_call1(OCanren[25],cst_window$0),0],
+                           _dB_=[0,caml_call1(OCanren[25],cst_window$1),_dA_],
+                           _dC_=[0,caml_call1(OCanren[25],cst_window$2),_dB_],
+                           _dz_=0,
+                           _dD_=[0,caml_call1(OCanren[25],cst_window$3),_dC_];
+                          function _dE_(_dM_){return _dM_}
                           var
-                           _dN_=caml_call2(OCanren[64][8],_dM_,_dL_),
-                           _dO_=[0,caml_call2(OCanren[33],a1,_dN_),_dH_],
-                           _dP_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
-                          function _dQ_(_dT_){return _dT_}
+                           _dF_=caml_call2(OCanren[64][8],_dE_,_dD_),
+                           _dG_=[0,caml_call2(OCanren[33],a1,_dF_),_dz_],
+                           _dH_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
+                          function _dI_(_dL_){return _dL_}
                           var
-                           _dR_=caml_call2(OCanren[64][8],_dQ_,_dP_),
-                           _dS_=[0,caml_call2(OCanren[33],q,_dR_),_dO_];
-                          return caml_call1(OCanren[44],_dS_)}
-                        return caml_call1(OCanren[48],_dG_)}
-                      return caml_call1(OCanren[47][3],_dF_)}
-                    return caml_call1(OCanren[47][3],_dE_)}
-                  return caml_call1(OCanren[47][3],_dD_)}
-                return caml_call1(OCanren[47][3],_dC_)}
-              return caml_call1(OCanren[47][3],_dB_)}
-            return caml_call1(OCanren[47][3],_dA_)}
-          return caml_call1(OCanren[47][3],_dz_)}
-        return caml_call1(OCanren[47][3],_dy_)}
-      var _dx_=[0,caml_call1(OCanren[47][3],_dw_),_dv_];
-      return caml_call1(OCanren[43],_dx_)}
+                           _dJ_=caml_call2(OCanren[64][8],_dI_,_dH_),
+                           _dK_=[0,caml_call2(OCanren[33],q,_dJ_),_dG_];
+                          return caml_call1(OCanren[44],_dK_)}
+                        return caml_call1(OCanren[48],_dy_)}
+                      return caml_call1(OCanren[47][3],_dx_)}
+                    return caml_call1(OCanren[47][3],_dw_)}
+                  return caml_call1(OCanren[47][3],_dv_)}
+                return caml_call1(OCanren[47][3],_du_)}
+              return caml_call1(OCanren[47][3],_dt_)}
+            return caml_call1(OCanren[47][3],_ds_)}
+          return caml_call1(OCanren[47][3],_dr_)}
+        return caml_call1(OCanren[47][3],_dq_)}
+      var _dp_=[0,caml_call1(OCanren[47][3],_do_),_dn_];
+      return caml_call1(OCanren[43],_dp_)}
     function delete_tuesday(q)
-     {var _c7_=0;
-      function _c8_(a1)
-       {function _c__(a2)
-         {function _c$_(a3)
-           {function _da_(a4)
-             {function _db_(a5)
-               {function _dc_(b1)
-                 {function _dd_(b2)
-                   {function _de_(b3)
-                     {function _df_(b4)
-                       {function _dg_(param)
+     {var _cZ_=0;
+      function _c0_(a1)
+       {function _c2_(a2)
+         {function _c3_(a3)
+           {function _c4_(a4)
+             {function _c5_(a5)
+               {function _c6_(b1)
+                 {function _c7_(b2)
+                   {function _c8_(b3)
+                     {function _c9_(b4)
+                       {function _c__(param)
                          {var
-                           _di_=[0,caml_call1(OCanren[25],cst_window$4),0],
-                           _dj_=[0,caml_call1(OCanren[25],cst_window$5),_di_],
-                           _dk_=[0,caml_call1(OCanren[25],cst_window$6),_dj_],
-                           _dh_=0,
-                           _dl_=[0,caml_call1(OCanren[25],cst_window$7),_dk_];
-                          function _dm_(_du_){return _du_}
+                           _da_=[0,caml_call1(OCanren[25],cst_window$4),0],
+                           _db_=[0,caml_call1(OCanren[25],cst_window$5),_da_],
+                           _dc_=[0,caml_call1(OCanren[25],cst_window$6),_db_],
+                           _c$_=0,
+                           _dd_=[0,caml_call1(OCanren[25],cst_window$7),_dc_];
+                          function _de_(_dm_){return _dm_}
                           var
-                           _dn_=caml_call2(OCanren[64][8],_dm_,_dl_),
-                           _do_=[0,caml_call2(OCanren[33],a2,_dn_),_dh_],
-                           _dp_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
-                          function _dq_(_dt_){return _dt_}
+                           _df_=caml_call2(OCanren[64][8],_de_,_dd_),
+                           _dg_=[0,caml_call2(OCanren[33],a2,_df_),_c$_],
+                           _dh_=[0,a1,[0,a2,[0,a3,[0,a4,[0,a5,0]]]]];
+                          function _di_(_dl_){return _dl_}
                           var
-                           _dr_=caml_call2(OCanren[64][8],_dq_,_dp_),
-                           _ds_=[0,caml_call2(OCanren[33],q,_dr_),_do_];
-                          return caml_call1(OCanren[44],_ds_)}
-                        return caml_call1(OCanren[48],_dg_)}
-                      return caml_call1(OCanren[47][3],_df_)}
-                    return caml_call1(OCanren[47][3],_de_)}
-                  return caml_call1(OCanren[47][3],_dd_)}
-                return caml_call1(OCanren[47][3],_dc_)}
-              return caml_call1(OCanren[47][3],_db_)}
-            return caml_call1(OCanren[47][3],_da_)}
-          return caml_call1(OCanren[47][3],_c$_)}
-        return caml_call1(OCanren[47][3],_c__)}
-      var _c9_=[0,caml_call1(OCanren[47][3],_c8_),_c7_];
-      return caml_call1(OCanren[43],_c9_)}
+                           _dj_=caml_call2(OCanren[64][8],_di_,_dh_),
+                           _dk_=[0,caml_call2(OCanren[33],q,_dj_),_dg_];
+                          return caml_call1(OCanren[44],_dk_)}
+                        return caml_call1(OCanren[48],_c__)}
+                      return caml_call1(OCanren[47][3],_c9_)}
+                    return caml_call1(OCanren[47][3],_c8_)}
+                  return caml_call1(OCanren[47][3],_c7_)}
+                return caml_call1(OCanren[47][3],_c6_)}
+              return caml_call1(OCanren[47][3],_c5_)}
+            return caml_call1(OCanren[47][3],_c4_)}
+          return caml_call1(OCanren[47][3],_c3_)}
+        return caml_call1(OCanren[47][3],_c2_)}
+      var _c1_=[0,caml_call1(OCanren[47][3],_c0_),_cZ_];
+      return caml_call1(OCanren[43],_c1_)}
     function delete_day(day,q)
      {return 1 === day?delete_tuesday(q):day?OCanren[46]:delete_monday(q)}
     function delete_day_with_number(day,number,q)
@@ -1055,9 +1047,9 @@
       var
        tl=user_const[2],
        hd=user_const[1],
-       _c5_=employ_constraint(tl,q),
-       _c6_=using_employ_user(hd,q);
-      return caml_call2(OCanren[39],_c6_,_c5_)}
+       _cX_=employ_constraint(tl,q),
+       _cY_=using_employ_user(hd,q);
+      return caml_call2(OCanren[39],_cY_,_cX_)}
     function use_user_constr(alg_type,q)
      {var day=alg_type[2],number_lesson=alg_type[1];
       return delete_day_with_number(day,number_lesson,q)}
@@ -1066,41 +1058,41 @@
       var
        tl=user_constraints[2],
        hd=user_constraints[1],
-       _c2_=alg_constaint(tl,q),
-       _c3_=
+       _cU_=alg_constaint(tl,q),
+       _cV_=
         caml_string_notequal(hd,cst_Delete_Monday_1_teacher1)
          ?caml_string_notequal(hd,cst_Delete_Monday_5_teacher1)
            ?caml_string_notequal(hd,cst_Delete_Tuesday_5_teacher1)?_a_:_b_
            :_c_
          :_d_,
-       _c4_=use_user_constr(_c3_,q);
-      return caml_call2(OCanren[39],_c4_,_c2_)}
+       _cW_=use_user_constr(_cV_,q);
+      return caml_call2(OCanren[39],_cW_,_cU_)}
     function myassoco(key,xs,v)
-     {function _cR_(a,b,tl)
+     {function _cJ_(a,b,tl)
        {var
-         _cS_=myassoco(key,tl,v),
-         _cT_=caml_call2(OCanren[35],a,key),
-         _cU_=[0,caml_call2(OCanren[39],_cT_,_cS_),0],
-         _cV_=caml_call2(OCanren[33],b,v),
-         _cW_=caml_call2(OCanren[33],a,key),
-         _cX_=[0,caml_call2(OCanren[39],_cW_,_cV_),_cU_],
-         _cY_=caml_call1(OCanren[43],_cX_),
-         _cZ_=caml_call2(OCanren[64][12],a,b),
-         _c0_=caml_call2(OCanren[64][4],_cZ_,tl),
-         _c1_=caml_call2(OCanren[33],xs,_c0_);
-        return caml_call2(OCanren[39],_c1_,_cY_)}
-      return caml_call1(OCanren[47][5],_cR_)}
+         _cK_=myassoco(key,tl,v),
+         _cL_=caml_call2(OCanren[35],a,key),
+         _cM_=[0,caml_call2(OCanren[39],_cL_,_cK_),0],
+         _cN_=caml_call2(OCanren[33],b,v),
+         _cO_=caml_call2(OCanren[33],a,key),
+         _cP_=[0,caml_call2(OCanren[39],_cO_,_cN_),_cM_],
+         _cQ_=caml_call1(OCanren[43],_cP_),
+         _cR_=caml_call2(OCanren[64][12],a,b),
+         _cS_=caml_call2(OCanren[64][4],_cR_,tl),
+         _cT_=caml_call2(OCanren[33],xs,_cS_);
+        return caml_call2(OCanren[39],_cT_,_cQ_)}
+      return caml_call1(OCanren[47][5],_cJ_)}
     function addo(k,v,map,map_new)
      {var
-       _cP_=caml_call2(OCanren[64][12],k,v),
-       _cQ_=caml_call2(OCanren_List[101],_cP_,map);
-      return caml_call2(OCanren[33],_cQ_,map_new)}
+       _cH_=caml_call2(OCanren[64][12],k,v),
+       _cI_=caml_call2(OCanren_List[101],_cH_,map);
+      return caml_call2(OCanren[33],_cI_,map_new)}
     var IAssoc=[0,myassoco,addo];
     function reifier(param)
      {var
-       _cN_=caml_call1(OCanren_List[105],OCanren[27]),
-       _cO_=caml_call1(OCanren_List[105],_cN_);
-      return caml_call1(OCanren_List[105],_cO_)}
+       _cF_=caml_call1(OCanren_List[105],OCanren[27]),
+       _cG_=caml_call1(OCanren_List[105],_cF_);
+      return caml_call1(OCanren_List[105],_cG_)}
     var
      _e_=caml_call1(OCanren_List[105],OCanren[27]),
      _f_=caml_call1(OCanren_List[105],_e_),
@@ -1129,29 +1121,29 @@
               :_v_}
     function ttt(t1,t2,t3){return caml_call1(OCanren[43],[0,OCanren[46],0])}
     function use_new_alg_const(const$0,group1,group2,teacher1)
-     {var _cH_=const$0[1];
-      if(1 === _cH_)
+     {var _cz_=const$0[1];
+      if(1 === _cz_)
        {if(! const$0[2])
-         {var _cI_=const$0[3];
-          if(0 === _cI_[0])
-           {if(! caml_string_notequal(_cI_[1],cst_teacher1))
+         {var _cA_=const$0[3];
+          if(0 === _cA_[0])
+           {if(! caml_string_notequal(_cA_[1],cst_teacher1))
              return delete_day_with_number(0,1,teacher1)}
           else
-           {var _cJ_=_cI_[1];
-            if(1 === _cJ_)return delete_day_with_number(0,1,group1);
-            if(2 === _cJ_)return delete_day_with_number(0,1,group2)}}}
+           {var _cB_=_cA_[1];
+            if(1 === _cB_)return delete_day_with_number(0,1,group1);
+            if(2 === _cB_)return delete_day_with_number(0,1,group2)}}}
       else
-       if(5 === _cH_)
-        {var _cK_=const$0[2];
-         if(1 === _cK_)
-          {var _cL_=const$0[3];
-           if(0 === _cL_[0] && ! caml_string_notequal(_cL_[1],cst_teacher1$0))
+       if(5 === _cz_)
+        {var _cC_=const$0[2];
+         if(1 === _cC_)
+          {var _cD_=const$0[3];
+           if(0 === _cD_[0] && ! caml_string_notequal(_cD_[1],cst_teacher1$0))
             return delete_day_with_number(1,5,teacher1)}
          else
-          if(! _cK_)
-           {var _cM_=const$0[3];
+          if(! _cC_)
+           {var _cE_=const$0[3];
             if
-             (0 === _cM_[0] && ! caml_string_notequal(_cM_[1],cst_teacher1$1))
+             (0 === _cE_[0] && ! caml_string_notequal(_cE_[1],cst_teacher1$1))
              return delete_day_with_number(0,5,teacher1)}}
       return OCanren[46]}
     function relation_for_all_group_or_teac(constaints,group1,group2,teacher1)
@@ -1159,301 +1151,287 @@
       var
        tl=constaints[2],
        hd=constaints[1],
-       _cF_=relation_for_all_group_or_teac(tl,group1,group2,teacher1),
-       _cG_=use_new_alg_const(string_alg_type(hd),group1,group2,teacher1);
-      return caml_call2(OCanren[39],_cG_,_cF_)}
+       _cx_=relation_for_all_group_or_teac(tl,group1,group2,teacher1),
+       _cy_=use_new_alg_const(string_alg_type(hd),group1,group2,teacher1);
+      return caml_call2(OCanren[39],_cy_,_cx_)}
     function equal_log_str(str)
      {var
-       _cC_=caml_call1(OCanren[25],str),
-       _cD_=caml_call1(OCanren[25],cst_matan),
-       _cE_=[0,caml_call2(OCanren[33],_cD_,_cC_),0];
-      return caml_call1(OCanren[43],_cE_)}
+       _cu_=caml_call1(OCanren[25],str),
+       _cv_=caml_call1(OCanren[25],cst_matan),
+       _cw_=[0,caml_call2(OCanren[33],_cv_,_cu_),0];
+      return caml_call1(OCanren[43],_cw_)}
     function searcho(constaints,answer)
-     {function _bu_(group1)
-       {function _bv_(group2)
-         {function _bw_(teacher1)
-           {function _bx_(t)
-             {function _by_(param)
+     {function _bm_(group1)
+       {function _bn_(group2)
+         {function _bo_(teacher1)
+           {function _bp_(t)
+             {function _bq_(param)
                {var
-                 _bB_=[0,caml_call1(OCanren[25],cst_alg1),0],
-                 _bC_=[0,caml_call1(OCanren[25],cst_geom2),_bB_],
-                 _bD_=[0,caml_call1(OCanren[25],cst_matan6),_bC_],
-                 _bE_=[0,caml_call1(OCanren[25],cst_matan2),_bD_],
-                 _bF_=[0,caml_call1(OCanren[25],cst_alg2),_bE_],
-                 _bG_=[0,caml_call1(OCanren[25],cst_geom2$0),_bF_],
-                 _bH_=[0,caml_call1(OCanren[25],cst_matan4),_bG_],
-                 _bI_=[0,caml_call1(OCanren[25],cst_matan3),_bH_],
-                 _bJ_=[0,caml_call1(OCanren[25],cst_eng1),_bI_],
-                 _bK_=[0,caml_call1(OCanren[25],cst_geom1),_bJ_],
-                 _bz_=0,
-                 _bA_=0,
-                 _bL_=[0,caml_call1(OCanren[25],cst_matan1),_bK_];
-                function _bM_(_cB_){return _cB_}
-                var _bN_=[0,caml_call2(OCanren[64][8],_bM_,_bL_),_bA_];
-                function _bO_(_cA_){return _cA_}
-                var _bP_=caml_call2(OCanren[64][8],_bO_,_bN_),_bQ_=[0,t,0];
-                function _bR_(_cz_){return _cz_}
+                 _bt_=[0,caml_call1(OCanren[25],cst_alg1),0],
+                 _bu_=[0,caml_call1(OCanren[25],cst_geom2),_bt_],
+                 _bv_=[0,caml_call1(OCanren[25],cst_matan6),_bu_],
+                 _bw_=[0,caml_call1(OCanren[25],cst_matan2),_bv_],
+                 _bx_=[0,caml_call1(OCanren[25],cst_alg2),_bw_],
+                 _by_=[0,caml_call1(OCanren[25],cst_geom2$0),_bx_],
+                 _bz_=[0,caml_call1(OCanren[25],cst_matan4),_by_],
+                 _bA_=[0,caml_call1(OCanren[25],cst_matan3),_bz_],
+                 _bB_=[0,caml_call1(OCanren[25],cst_eng1),_bA_],
+                 _bC_=[0,caml_call1(OCanren[25],cst_geom1),_bB_],
+                 _br_=0,
+                 _bs_=0,
+                 _bD_=[0,caml_call1(OCanren[25],cst_matan1),_bC_];
+                function _bE_(_ct_){return _ct_}
+                var _bF_=[0,caml_call2(OCanren[64][8],_bE_,_bD_),_bs_];
+                function _bG_(_cs_){return _cs_}
+                var _bH_=caml_call2(OCanren[64][8],_bG_,_bF_),_bI_=[0,t,0];
+                function _bJ_(_cr_){return _cr_}
                 var
-                 _bS_=caml_call2(OCanren[64][8],_bR_,_bQ_),
-                 _bT_=0,
-                 _bU_=[0,teacher1,[0,teacher1,[0,teacher1,[0,teacher1,0]]]];
-                function _bV_(_cy_){return _cy_}
+                 _bK_=caml_call2(OCanren[64][8],_bJ_,_bI_),
+                 _bL_=0,
+                 _bM_=[0,teacher1,[0,teacher1,[0,teacher1,[0,teacher1,0]]]];
+                function _bN_(_cq_){return _cq_}
                 var
-                 _bW_=[0,caml_call2(OCanren[64][8],_bV_,_bU_),_bT_],
-                 _bX_=[0,teacher1,[0,teacher1,[0,teacher1,[0,teacher1,0]]]];
-                function _bY_(_cx_){return _cx_}
-                var _bZ_=[0,caml_call2(OCanren[64][8],_bY_,_bX_),_bW_];
-                function _b0_(_cw_){return _cw_}
+                 _bO_=[0,caml_call2(OCanren[64][8],_bN_,_bM_),_bL_],
+                 _bP_=[0,teacher1,[0,teacher1,[0,teacher1,[0,teacher1,0]]]];
+                function _bQ_(_cp_){return _cp_}
+                var _bR_=[0,caml_call2(OCanren[64][8],_bQ_,_bP_),_bO_];
+                function _bS_(_co_){return _co_}
                 var
-                 _b1_=caml_call2(OCanren[64][8],_b0_,_bZ_),
-                 _b2_=[0,group1,[0,group2,0]];
-                function _b3_(_cv_){return _cv_}
+                 _bT_=caml_call2(OCanren[64][8],_bS_,_bR_),
+                 _bU_=[0,group1,[0,group2,0]];
+                function _bV_(_cn_){return _cn_}
                 var
-                 _b4_=caml_call2(OCanren[64][8],_b3_,_b2_),
-                 _b6_=[0,caml_call1(OCanren[25],cst_alg2$0),0],
-                 _b7_=[0,caml_call1(OCanren[25],cst_geom2$1),_b6_],
-                 _b8_=[0,caml_call1(OCanren[25],cst_matan4$0),_b7_],
-                 _b5_=0,
-                 _b9_=[0,caml_call1(OCanren[25],cst_matan3$0),_b8_];
-                function _b__(_cu_){return _cu_}
+                 _bW_=caml_call2(OCanren[64][8],_bV_,_bU_),
+                 _bY_=[0,caml_call1(OCanren[25],cst_alg2$0),0],
+                 _bZ_=[0,caml_call1(OCanren[25],cst_geom2$1),_bY_],
+                 _b0_=[0,caml_call1(OCanren[25],cst_matan4$0),_bZ_],
+                 _bX_=0,
+                 _b1_=[0,caml_call1(OCanren[25],cst_matan3$0),_b0_];
+                function _b2_(_cm_){return _cm_}
                 var
-                 _b$_=[0,caml_call2(OCanren[64][8],_b__,_b9_),_b5_],
-                 _ca_=[0,caml_call1(OCanren[25],cst_alg1$0),0],
-                 _cb_=[0,caml_call1(OCanren[25],cst_geom1$0),_ca_],
-                 _cc_=[0,caml_call1(OCanren[25],cst_matan2$0),_cb_],
-                 _cd_=[0,caml_call1(OCanren[25],cst_matan1$0),_cc_];
-                function _ce_(_ct_){return _ct_}
-                var _cf_=[0,caml_call2(OCanren[64][8],_ce_,_cd_),_b$_];
-                function _cg_(_cs_){return _cs_}
+                 _b3_=[0,caml_call2(OCanren[64][8],_b2_,_b1_),_bX_],
+                 _b4_=[0,caml_call1(OCanren[25],cst_alg1$0),0],
+                 _b5_=[0,caml_call1(OCanren[25],cst_geom1$0),_b4_],
+                 _b6_=[0,caml_call1(OCanren[25],cst_matan2$0),_b5_],
+                 _b7_=[0,caml_call1(OCanren[25],cst_matan1$0),_b6_];
+                function _b8_(_cl_){return _cl_}
+                var _b9_=[0,caml_call2(OCanren[64][8],_b8_,_b7_),_b3_];
+                function _b__(_ck_){return _ck_}
                 var
-                 _ch_=
+                 _b$_=
                   [0,
                    sched
-                    (caml_call2(OCanren[64][8],_cg_,_cf_),_b4_,_b1_,_bS_,_bP_),
-                   _bz_],
-                 _ci_=[0,init_sched_a_week(teacher1),_ch_],
-                 _cj_=[0,init_sched_a_week(group2),_ci_],
-                 _ck_=[0,init_sched_a_week(t),_cj_],
-                 _cl_=[0,init_sched_a_week(group1),_ck_],
-                 _cm_=
+                    (caml_call2(OCanren[64][8],_b__,_b9_),_bW_,_bT_,_bK_,_bH_),
+                   _br_],
+                 _ca_=[0,init_sched_a_week(teacher1),_b$_],
+                 _cb_=[0,init_sched_a_week(group2),_ca_],
+                 _cc_=[0,init_sched_a_week(t),_cb_],
+                 _cd_=[0,init_sched_a_week(group1),_cc_],
+                 _ce_=
                   [0,
                    relation_for_all_group_or_teac
                     (constaints,group1,group2,teacher1),
-                   _cl_],
-                 _cn_=[0,group1,[0,group2,[0,teacher1,[0,t,0]]]];
-                function _co_(_cr_){return _cr_}
+                   _cd_],
+                 _cf_=[0,group1,[0,group2,[0,teacher1,[0,t,0]]]];
+                function _cg_(_cj_){return _cj_}
                 var
-                 _cp_=caml_call2(OCanren[64][8],_co_,_cn_),
-                 _cq_=[0,caml_call2(OCanren[33],answer,_cp_),_cm_];
-                return caml_call1(OCanren[44],_cq_)}
-              return caml_call1(OCanren[48],_by_)}
-            return caml_call1(OCanren[47][3],_bx_)}
-          return caml_call1(OCanren[47][3],_bw_)}
-        return caml_call1(OCanren[47][3],_bv_)}
-      return caml_call1(OCanren[47][3],_bu_)}
+                 _ch_=caml_call2(OCanren[64][8],_cg_,_cf_),
+                 _ci_=[0,caml_call2(OCanren[33],answer,_ch_),_ce_];
+                return caml_call1(OCanren[44],_ci_)}
+              return caml_call1(OCanren[48],_bq_)}
+            return caml_call1(OCanren[47][3],_bp_)}
+          return caml_call1(OCanren[47][3],_bo_)}
+        return caml_call1(OCanren[47][3],_bn_)}
+      return caml_call1(OCanren[47][3],_bm_)}
     function insert_sched_to_pair(pair)
-     {var _bo_=0;
-      function _bp_(group)
-       {function _br_(subj)
-         {function _bs_(teacher)
-           {function _bt_(param){return OCanren[45]}
-            return caml_call1(OCanren[48],_bt_)}
-          return caml_call1(OCanren[47][3],_bs_)}
-        return caml_call1(OCanren[47][3],_br_)}
-      var _bq_=[0,caml_call1(OCanren[47][3],_bp_),_bo_];
-      return caml_call1(OCanren[43],_bq_)}
+     {var _bg_=0;
+      function _bh_(group)
+       {function _bj_(subj)
+         {function _bk_(teacher)
+           {function _bl_(param){return OCanren[45]}
+            return caml_call1(OCanren[48],_bl_)}
+          return caml_call1(OCanren[47][3],_bk_)}
+        return caml_call1(OCanren[47][3],_bj_)}
+      var _bi_=[0,caml_call1(OCanren[47][3],_bh_),_bg_];
+      return caml_call1(OCanren[43],_bi_)}
     function ins_store(q)
-     {var _bc_=0;
-      function _bd_(a1)
-       {function _bf_(name)
-         {function _bg_(param)
-           {var _bh_=0,_bi_=[0,caml_call2(OCanren[64][12],name,a1),0];
-            function _bj_(_bn_){return _bn_}
+     {var _a6_=0;
+      function _a7_(a1)
+       {function _a9_(name)
+         {function _a__(param)
+           {var _a$_=0,_ba_=[0,caml_call2(OCanren[64][12],name,a1),0];
+            function _bb_(_bf_){return _bf_}
             var
-             _bk_=caml_call2(OCanren[64][8],_bj_,_bi_),
-             _bl_=[0,caml_call2(OCanren[33],q,_bk_),_bh_],
-             _bm_=[0,init_sched_a_week(a1),_bl_];
-            return caml_call1(OCanren[44],_bm_)}
-          return caml_call1(OCanren[48],_bg_)}
-        return caml_call1(OCanren[47][3],_bf_)}
-      var _be_=[0,caml_call1(OCanren[47][3],_bd_),_bc_];
-      return caml_call1(OCanren[43],_be_)}
+             _bc_=caml_call2(OCanren[64][8],_bb_,_ba_),
+             _bd_=[0,caml_call2(OCanren[33],q,_bc_),_a$_],
+             _be_=[0,init_sched_a_week(a1),_bd_];
+            return caml_call1(OCanren[44],_be_)}
+          return caml_call1(OCanren[48],_a__)}
+        return caml_call1(OCanren[47][3],_a9_)}
+      var _a8_=[0,caml_call1(OCanren[47][3],_a7_),_a6_];
+      return caml_call1(OCanren[43],_a8_)}
     function appendo(a,b,ab)
-     {var _aZ_=0;
-      function _a0_(h)
-       {function _a6_(t)
-         {function _a7_(ab$0)
-           {function _a8_(param)
+     {var _aR_=0;
+      function _aS_(h)
+       {function _aY_(t)
+         {function _aZ_(ab$0)
+           {function _a0_(param)
              {var
-               _a9_=[0,appendo(t,b,ab$0),0],
-               _a__=caml_call2(OCanren[64][4],h,ab$0),
-               _a$_=[0,caml_call2(OCanren[33],_a__,ab),_a9_],
-               _ba_=caml_call2(OCanren[64][4],h,t),
-               _bb_=[0,caml_call2(OCanren[33],a,_ba_),_a$_];
-              return caml_call1(OCanren[44],_bb_)}
-            return caml_call1(OCanren[48],_a8_)}
-          return caml_call1(OCanren[47][3],_a7_)}
-        return caml_call1(OCanren[47][3],_a6_)}
+               _a1_=[0,appendo(t,b,ab$0),0],
+               _a2_=caml_call2(OCanren[64][4],h,ab$0),
+               _a3_=[0,caml_call2(OCanren[33],_a2_,ab),_a1_],
+               _a4_=caml_call2(OCanren[64][4],h,t),
+               _a5_=[0,caml_call2(OCanren[33],a,_a4_),_a3_];
+              return caml_call1(OCanren[44],_a5_)}
+            return caml_call1(OCanren[48],_a0_)}
+          return caml_call1(OCanren[47][3],_aZ_)}
+        return caml_call1(OCanren[47][3],_aY_)}
       var
-       _a1_=[0,caml_call1(OCanren[47][3],_a0_),_aZ_],
-       _a2_=caml_call2(OCanren[33],b,ab),
-       _a3_=caml_call1(OCanren[64][7],0),
-       _a4_=caml_call2(OCanren[33],a,_a3_),
-       _a5_=[0,caml_call2(OCanren[39],_a4_,_a2_),_a1_];
-      return caml_call1(OCanren[43],_a5_)}
+       _aT_=[0,caml_call1(OCanren[47][3],_aS_),_aR_],
+       _aU_=caml_call2(OCanren[33],b,ab),
+       _aV_=caml_call1(OCanren[64][7],0),
+       _aW_=caml_call2(OCanren[33],a,_aV_),
+       _aX_=[0,caml_call2(OCanren[39],_aW_,_aU_),_aT_];
+      return caml_call1(OCanren[43],_aX_)}
     function insert_storage(n,q)
      {if(0 === n)return OCanren[45];
       if(1 === n)return ins_store(q);
-      function _aT_(a)
-       {function _aU_(b)
-         {function _aV_(param)
+      function _aL_(a)
+       {function _aM_(b)
+         {function _aN_(param)
            {var
-             _aW_=[0,appendo(a,b,q),0],
-             _aX_=[0,ins_store(b),_aW_],
-             _aY_=[0,insert_storage(n - 1 | 0,a),_aX_];
-            return caml_call1(OCanren[44],_aY_)}
-          return caml_call1(OCanren[48],_aV_)}
-        return caml_call1(OCanren[47][3],_aU_)}
-      return caml_call1(OCanren[47][3],_aT_)}
+             _aO_=[0,appendo(a,b,q),0],
+             _aP_=[0,ins_store(b),_aO_],
+             _aQ_=[0,insert_storage(n - 1 | 0,a),_aP_];
+            return caml_call1(OCanren[44],_aQ_)}
+          return caml_call1(OCanren[48],_aN_)}
+        return caml_call1(OCanren[47][3],_aM_)}
+      return caml_call1(OCanren[47][3],_aL_)}
     function insert_sched_in_storage(group_name,group_sched,storage)
-     {var _aG_=0;
-      function _aH_(a3)
-       {function _aQ_(param)
+     {var _ay_=0;
+      function _az_(a3)
+       {function _aI_(param)
          {var
-           _aR_=[0,insert_sched_in_storage(group_name,group_sched,a3),0],
-           _aS_=[0,caml_call2(OCanren_List[125],storage,a3),_aR_];
-          return caml_call1(OCanren[44],_aS_)}
-        return caml_call1(OCanren[48],_aQ_)}
-      var _aI_=[0,caml_call1(OCanren[47][3],_aH_),_aG_];
-      function _aJ_(a1)
-       {function _aL_(a2)
-         {function _aM_(param)
+           _aJ_=[0,insert_sched_in_storage(group_name,group_sched,a3),0],
+           _aK_=[0,caml_call2(OCanren_List[125],storage,a3),_aJ_];
+          return caml_call1(OCanren[44],_aK_)}
+        return caml_call1(OCanren[48],_aI_)}
+      var _aA_=[0,caml_call1(OCanren[47][3],_az_),_ay_];
+      function _aB_(a1)
+       {function _aD_(a2)
+         {function _aE_(param)
            {var
-             _aN_=caml_call2(OCanren[64][12],group_name,group_sched),
-             _aO_=[0,caml_call2(OCanren[33],a1,_aN_),0],
-             _aP_=[0,caml_call2(OCanren_List[123],storage,a1),_aO_];
-            return caml_call1(OCanren[44],_aP_)}
-          return caml_call1(OCanren[48],_aM_)}
-        return caml_call1(OCanren[47][3],_aL_)}
-      var _aK_=[0,caml_call1(OCanren[47][3],_aJ_),_aI_];
-      return caml_call1(OCanren[43],_aK_)}
+             _aF_=caml_call2(OCanren[64][12],group_name,group_sched),
+             _aG_=[0,caml_call2(OCanren[33],a1,_aF_),0],
+             _aH_=[0,caml_call2(OCanren_List[123],storage,a1),_aG_];
+            return caml_call1(OCanren[44],_aH_)}
+          return caml_call1(OCanren[48],_aE_)}
+        return caml_call1(OCanren[47][3],_aD_)}
+      var _aC_=[0,caml_call1(OCanren[47][3],_aB_),_aA_];
+      return caml_call1(OCanren[43],_aC_)}
     function init_sched(list_pair,storage)
      {if(! list_pair)return OCanren[45];
-      var tl=list_pair[2],hd=list_pair[1],_N_=0;
-      function _O_(groupname)
-       {function _am_(teachername)
-         {function _an_(subjname)
-           {function _ao_(group_sched)
-             {function _ap_(teacher_sched)
-               {function _aq_(aud)
-                 {function _ar_(new_storage)
-                   {function _as_(param)
+      var tl=list_pair[2],hd=list_pair[1],_F_=0;
+      function _G_(groupname)
+       {function _ae_(teachername)
+         {function _af_(subjname)
+           {function _ag_(group_sched)
+             {function _ah_(teacher_sched)
+               {function _ai_(aud)
+                 {function _aj_(new_storage)
+                   {function _ak_(param)
                      {var
-                       _at_=[0,init_sched(tl,storage),0],
-                       _au_=
+                       _al_=[0,init_sched(tl,storage),0],
+                       _am_=
                         [0,
                          insert_sched_in_storage(teachername,teacher_sched,storage),
-                         _at_],
-                       _av_=
+                         _al_],
+                       _an_=
                         [0,
                          insert_sched_in_storage(groupname,group_sched,storage),
-                         _au_],
-                       _aw_=
+                         _am_],
+                       _ao_=
                         [0,
                          insert_all_sched(subjname,group_sched,teacher_sched,aud),
-                         _av_],
-                       _ax_=[0,init_sched_a_week(aud),_aw_],
-                       _ay_=[0,init_sched_a_week(group_sched),_ax_],
-                       _az_=[0,init_sched_a_week(teacher_sched),_ay_],
-                       _aA_=[0,groupname,[0,teachername,[0,subjname,0]]];
-                      function _aB_(_aF_){return _aF_}
+                         _an_],
+                       _ap_=[0,init_sched_a_week(aud),_ao_],
+                       _aq_=[0,init_sched_a_week(group_sched),_ap_],
+                       _ar_=[0,init_sched_a_week(teacher_sched),_aq_],
+                       _as_=[0,groupname,[0,teachername,[0,subjname,0]]];
+                      function _at_(_ax_){return _ax_}
                       var
-                       _aC_=caml_call2(OCanren[64][8],_aB_,_aA_),
-                       _aD_=caml_call2(OCanren[64][8],OCanren[25],hd),
-                       _aE_=[0,caml_call2(OCanren[33],_aD_,_aC_),_az_];
-                      return caml_call1(OCanren[44],_aE_)}
-                    return caml_call1(OCanren[48],_as_)}
-                  return caml_call1(OCanren[47][3],_ar_)}
-                return caml_call1(OCanren[47][3],_aq_)}
-              return caml_call1(OCanren[47][3],_ap_)}
-            return caml_call1(OCanren[47][3],_ao_)}
-          return caml_call1(OCanren[47][3],_an_)}
-        return caml_call1(OCanren[47][3],_am_)}
-      var _P_=[0,caml_call1(OCanren[47][3],_O_),_N_];
-      function _Q_(groupname)
-       {function _S_(teachername)
-         {function _T_(subjname)
-           {function _U_(group_sched)
-             {function _V_(teacher_sched)
-               {function _W_(aud)
-                 {function _X_(new_storage)
-                   {function _Y_(param)
+                       _au_=caml_call2(OCanren[64][8],_at_,_as_),
+                       _av_=caml_call2(OCanren[64][8],OCanren[25],hd),
+                       _aw_=[0,caml_call2(OCanren[33],_av_,_au_),_ar_];
+                      return caml_call1(OCanren[44],_aw_)}
+                    return caml_call1(OCanren[48],_ak_)}
+                  return caml_call1(OCanren[47][3],_aj_)}
+                return caml_call1(OCanren[47][3],_ai_)}
+              return caml_call1(OCanren[47][3],_ah_)}
+            return caml_call1(OCanren[47][3],_ag_)}
+          return caml_call1(OCanren[47][3],_af_)}
+        return caml_call1(OCanren[47][3],_ae_)}
+      var _H_=[0,caml_call1(OCanren[47][3],_G_),_F_];
+      function _I_(groupname)
+       {function _K_(teachername)
+         {function _L_(subjname)
+           {function _M_(group_sched)
+             {function _N_(teacher_sched)
+               {function _O_(aud)
+                 {function _P_(new_storage)
+                   {function _Q_(param)
                      {var
-                       _Z_=[0,init_sched(tl,storage),0],
-                       ___=
+                       _R_=[0,init_sched(tl,storage),0],
+                       _S_=
                         [0,
                          insert_sched_in_storage(teachername,teacher_sched,storage),
-                         _Z_],
-                       _$_=
+                         _R_],
+                       _T_=
                         [0,
                          insert_sched_in_storage(groupname,group_sched,storage),
-                         ___],
-                       _aa_=
+                         _S_],
+                       _U_=
                         [0,
                          insert_all_sched(subjname,group_sched,teacher_sched,aud),
-                         _$_],
-                       _ab_=[0,myassoco(teachername,storage,teacher_sched),_aa_],
-                       _ac_=[0,myassoco(groupname,storage,group_sched),_ab_],
-                       _ad_=[0,groupname,[0,teachername,[0,subjname,0]]];
-                      function _ae_(_al_){return _al_}
+                         _T_],
+                       _V_=[0,myassoco(teachername,storage,teacher_sched),_U_],
+                       _W_=[0,myassoco(groupname,storage,group_sched),_V_],
+                       _X_=[0,groupname,[0,teachername,[0,subjname,0]]];
+                      function _Y_(_ad_){return _ad_}
                       var
-                       _af_=caml_call2(OCanren[64][8],_ae_,_ad_),
-                       _ag_=caml_call2(OCanren[64][8],OCanren[25],hd),
-                       _ah_=[0,caml_call2(OCanren[33],_ag_,_af_),_ac_],
-                       _ai_=[0,init_sched_a_week(aud),_ah_],
-                       _aj_=[0,init_sched_a_week(group_sched),_ai_],
-                       _ak_=[0,init_sched_a_week(teacher_sched),_aj_];
-                      return caml_call1(OCanren[44],_ak_)}
-                    return caml_call1(OCanren[48],_Y_)}
-                  return caml_call1(OCanren[47][3],_X_)}
-                return caml_call1(OCanren[47][3],_W_)}
-              return caml_call1(OCanren[47][3],_V_)}
-            return caml_call1(OCanren[47][3],_U_)}
-          return caml_call1(OCanren[47][3],_T_)}
-        return caml_call1(OCanren[47][3],_S_)}
-      var _R_=[0,caml_call1(OCanren[47][3],_Q_),_P_];
-      return caml_call1(OCanren[43],_R_)}
+                       _Z_=caml_call2(OCanren[64][8],_Y_,_X_),
+                       ___=caml_call2(OCanren[64][8],OCanren[25],hd),
+                       _$_=[0,caml_call2(OCanren[33],___,_Z_),_W_],
+                       _aa_=[0,init_sched_a_week(aud),_$_],
+                       _ab_=[0,init_sched_a_week(group_sched),_aa_],
+                       _ac_=[0,init_sched_a_week(teacher_sched),_ab_];
+                      return caml_call1(OCanren[44],_ac_)}
+                    return caml_call1(OCanren[48],_Q_)}
+                  return caml_call1(OCanren[47][3],_P_)}
+                return caml_call1(OCanren[47][3],_O_)}
+              return caml_call1(OCanren[47][3],_N_)}
+            return caml_call1(OCanren[47][3],_M_)}
+          return caml_call1(OCanren[47][3],_L_)}
+        return caml_call1(OCanren[47][3],_K_)}
+      var _J_=[0,caml_call1(OCanren[47][3],_I_),_H_];
+      return caml_call1(OCanren[43],_J_)}
     function init_sched_new(list_pair,storage,n)
      {if(0 === n)return OCanren[45];
       var
-       _L_=list_pair?init_sched(list_pair,storage):OCanren[45],
-       _M_=insert_storage(n,storage);
-      return caml_call2(OCanren[39],_M_,_L_)}
+       _D_=list_pair?init_sched(list_pair,storage):OCanren[45],
+       _E_=insert_storage(n,storage);
+      return caml_call2(OCanren[39],_E_,_D_)}
     function test1(constaints,answer)
-     {var _F_=0;
-      function _G_(storage)
-       {function _I_(param)
+     {var _x_=0;
+      function _y_(storage)
+       {function _A_(param)
          {var
-           _J_=[0,caml_call2(OCanren[33],storage,answer),0],
-           _K_=[0,init_sched_new(_w_,storage,10),_J_];
-          return caml_call1(OCanren[44],_K_)}
-        return caml_call1(OCanren[48],_I_)}
-      var _H_=[0,caml_call1(OCanren[47][3],_G_),_F_];
-      return caml_call1(OCanren[43],_H_)}
-    function schedo(constraints)
-     {function _z_(rr)
-       {return caml_call2
-                (runtime.caml_get_public_method(rr,-423578583,1),
-                 rr,
-                 storage_reifier)}
-      function _A_(x){return test1(constraints,x)}
-      var
-       _B_=caml_call3(OCanren[49],OCanren[56],_A_,_z_),
-       _C_=caml_call1(caml_call1(OCanren_Stream[17],_x_),_B_);
-      function _D_(i,ans)
-       {var _E_=caml_call1(show_storage,ans);
-        return caml_call3(Stdlib_Format[130],_y_,i,_E_)}
-      return caml_call1(caml_call1(Stdlib_List[18],_D_),_C_)}
+           _B_=[0,caml_call2(OCanren[33],storage,answer),0],
+           _C_=[0,init_sched_new(_w_,storage,10),_B_];
+          return caml_call1(OCanren[44],_C_)}
+        return caml_call1(OCanren[48],_A_)}
+      var _z_=[0,caml_call1(OCanren[47][3],_y_),_x_];
+      return caml_call1(OCanren[43],_z_)}
     caml_call1(Ppx_inline_test_lib_Runtime[3],cst_lib1$0);
     var
      Lib=
@@ -1508,10 +1486,9 @@
        insert_sched_in_storage,
        init_sched,
        init_sched_new,
-       test1,
-       schedo];
-    runtime.caml_register_global(63,Lib,"Lib");
+       test1];
+    runtime.caml_register_global(58,Lib,"Lib");
     return}
   (globalThis));
 
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLjAsImZpbGUiOiIubGliMS5vYmpzL2xpYjEuY21hLmpzIiwic291cmNlUm9vdCI6IiIsIm5hbWVzIjpbIm1lbWJlcm8iLCJ4IiwibCIsImQiLCJpbnNlcnRfZmlyc3RfbGVzc29uIiwicSIsInMiLCJ3IiwiZSIsInIiLCJpbnNfZmlyc3RfbGVzc29uIiwibGVzc29uIiwiaW5zX3NlY29uZF9sZXNzb24iLCJpbnNfbW9uZGF5XzEiLCJhMSIsImEyIiwiYTMiLCJhNCIsImE1IiwiYjEiLCJiMiIsImIzIiwiYjQiLCJpbnNfbW9uZGF5XzIiLCJpbnNfbW9uZGF5XzMiLCJpbnNfbW9uZGF5XzQiLCJpbnNfdHVlc2RheV8xIiwiaW5zX3R1ZXNkYXlfMiIsImluc190dWVzZGF5XzMiLCJpbnNfdHVlc2RheV80IiwiaW5zZXJ0X2xlc3NvbiIsImluaXRfc2NoZWRfb25lX2RheSIsImluaXRfc2NoZWRfYV93ZWVrIiwic3ltYm9sIiwidCIsInkiLCJpbnNfc2NoZWQxIiwic3ViaiIsImdyb3VwX3NjaGVkIiwidGVhY2hlcl9zY2hlZCIsImNsYXNzX3NjaGVkIiwiYzIiLCJjMyIsImM0IiwiaW5zX3NjaGVkMiIsImluc19zY2hlZDMiLCJpbnNfc2NoZWQ0IiwiaW5zZXJ0X2FsbF9zY2hlZCIsImI1IiwiYzEiLCJjNSIsImluc2VydF9zY2hlZF90b19vbmVfZ3JvdXAiLCJsZXNzb25zIiwiYWxsX3RlYWNoZXJfc2NoZWQiLCJzY2hlZF9hbGxfY2xhc3MiLCJjbGFzc19zdWJqIiwic2NoZWRfZmlyc3RfY2xhc3MiLCJvc3QiLCJzdWJqX2ZpcnN0Iiwic3Vial9vc3QiLCJ0YWlsX3RlYWNoZXIiLCJ0YWlsX2xlc3NvbnMiLCJzY2hlZF9jbGFzcyIsImNsYXNzX2ZpcnN0IiwiY2xhc3Nfb3N0Iiwic2NoZWQiLCJzdHVkeXBsYW5hbGxncm91cCIsInNjaGVkYWxsZ3JvdXAiLCJhbGx0ZWFjaGVyc2NoZWQiLCJzY2hlZGNsYXNzIiwiY2xhc3Nlc3N1YmoiLCJzdHVkeXBsYW5vbmVncm91cCIsInN0dWR5cGxhbm9zdCIsInNjaGVkb25lZ3JvdXAiLCJzY2hlZG9zdCIsIm9uZXRlYWNoZXIiLCJvc3R0ZWFjaGVyIiwiZGVsZXRlX21vbmRheV8xIiwiYjYiLCJiNyIsImI4IiwiZGVsZXRlX21vbmRheSIsImRlbGV0ZV90dWVzZGF5IiwiZGVsZXRlX2RheSIsImRheSIsImRlbGV0ZV9kYXlfd2l0aF9udW1iZXIiLCJudW1iZXIiLCJ1c2luZ19lbXBsb3lfdXNlciIsInVfYyIsImVtcGxveV9jb25zdHJhaW50IiwidXNlcl9jb25zdCIsInRsIiwiaGQiLCJ1c2VfdXNlcl9jb25zdHIiLCJhbGdfdHlwZSIsIm51bWJlcl9sZXNzb24iLCJhbGdfY29uc3RhaW50IiwidXNlcl9jb25zdHJhaW50cyIsIm15YXNzb2NvIiwia2V5IiwieHMiLCJ2IiwiYSIsImIiLCJhZGRvIiwiayIsIm1hcCIsIm1hcF9uZXciLCJyZWlmaWVyIiwic3RvcmFnZV9yZWlmaWVyIiwic2hvd2VyIiwic2hvd19zdG9yYWdlIiwic3RyaW5nX2FsZ190eXBlIiwic3RyaW5nIiwidHR0IiwidDEiLCJ0MiIsInQzIiwidXNlX25ld19hbGdfY29uc3QiLCJjb25zdCQwIiwiZ3JvdXAxIiwiZ3JvdXAyIiwidGVhY2hlcjEiLCJyZWxhdGlvbl9mb3JfYWxsX2dyb3VwX29yX3RlYWMiLCJjb25zdGFpbnRzIiwiZXF1YWxfbG9nX3N0ciIsInN0ciIsInNlYXJjaG8iLCJhbnN3ZXIiLCJpbnNlcnRfc2NoZWRfdG9fcGFpciIsInBhaXIiLCJncm91cCIsInRlYWNoZXIiLCJpbnNfc3RvcmUiLCJuYW1lIiwiYXBwZW5kbyIsImFiIiwiaCIsImFiJDAiLCJpbnNlcnRfc3RvcmFnZSIsIm4iLCJpbnNlcnRfc2NoZWRfaW5fc3RvcmFnZSIsImdyb3VwX25hbWUiLCJzdG9yYWdlIiwiaW5pdF9zY2hlZCIsImxpc3RfcGFpciIsImdyb3VwbmFtZSIsInRlYWNoZXJuYW1lIiwic3Viam5hbWUiLCJhdWQiLCJuZXdfc3RvcmFnZSIsImluaXRfc2NoZWRfbmV3IiwidGVzdDEiLCJzY2hlZG8iLCJjb25zdHJhaW50cyIsInJyIiwiaSIsImFucyJdLCJzb3VyY2VzIjpbIi9Vc2Vycy9hemF0L0Rlc2t0b3AvbXlfc2NoZWRfcHJvai9fYnVpbGQvZGVmYXVsdC9kZW1vMXBweC9saWIubWwiXSwibWFwcGluZ3MiOiI7Ozs7O0k7Ozs7Ozs7Ozs7SUFNTTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzthQUlFQSxRQUFRQyxFQUFFQztNQUFJO29CQUF1QkM7O1VBQXlCO21CQUE5REgsUUFBUUMsRUFBNkJFO1dBQVMscUNBQXBDRCxFQUEyQkM7VUFBUyxtQ0FBNEI7UUFBckMsbUNBQXFDO01BQXJDOztPQUFmLHFDQUFaRCxFQUFGRDtNQUFjLG1DQUFIO2FBcUR2Qkcsb0JBQW9CQztNQUN0QjtvQkFBUUM7Ozs7O2dCQUE4RDs7aUJBQVAsK0JBQXZEQTtpQkFBdUQsUUFBdkRBO2dCQUF1RCxvQkFBdkQsV0FBd0U7Z0JBQWpEOztpQkFBUCwrQkFERkQ7Z0JBQ0UsbUNBQXdEO2NBQXhFLG1DQUF3RTtZQUF4RSxzQ0FBd0U7VUFBeEUsc0NBQXdFO1FBQXhFLHNDQUF3RTtNQUF4RTt5Q0FBSDthQUdISyxpQkFBaUJMLEVBQUVNO01BQ3JCO29CQUFRTDs7Ozs7Z0JBQXVEO2dEQUF2REEsRUFEYUs7aUJBQzBDLFFBQXZETDtnQkFBdUQsb0JBQXZELFdBQXFFO2dCQUE5Qzs7aUJBQVAsK0JBRExEO2dCQUNLLG1DQUFxRDtjQUFyRSxtQ0FBcUU7WUFBckUsc0NBQXFFO1VBQXJFLHNDQUFxRTtRQUFyRSxzQ0FBcUU7TUFBckU7eUNBQUg7YUFHSE8sa0JBQWtCUCxFQUFFTTtNQUN0QjtvQkFBUUw7Ozs7O2dCQUF1RDtnREFBdkRDLEVBRGNJO2lCQUN5QyxRQUF2REw7Z0JBQXVELG9CQUF2RCxXQUFxRTtn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Q0FXcUI7VUFYckIscUNBV3FCO1FBWHJCLHFDQVdxQjtNQVhyQjt3Q0F1QkQ7SUF0TVAsU0EyTVFnSCxlQUFnQk4sVUFBOEJGLFFBR2xESDtNQUZGLFNBRUVBLEVBREs7TUFDMkI7V0FIWkssVUFqQ2hCRCxXQWlDZ0JDLFVBQThCRjtPQUc1QyxJQTlDRkosZUE4Q0pDLEVBSGtERztNQUc1QyxzQ0FHa0M7SUFqTjVDLFNBcU5JUyxNQUFNNUIsV0FBWUk7TUFDcEI7bUJBQ0llOztVQWNFO3lDQWRGQSxRQUZnQmY7V0FJYixPQWREdUIsbUJBWUZSO1VBRUcsa0NBWW1CO1FBZHRCLGtDQWNzQjtNQWR0Qjt3Q0FEQztJQXROUCxTQXlPSVUsT0FBT0M7TUFRVCxhQUZPQztRQUFNO2dEQUFOQTs7aUJBaFFQOUMsZ0JBZ1FxQjtNQUVyQixhQUhPNUcsR0FBSyxPQXpCVnVKLE1Bb0JPRSxZQUtGekosRUFBVTtNQUZqQjs7T0FJc0IsZUFBbkI7TUFBbUIsYUFDSTJKLEVBQUVDO1FBQXFDLG1CQWxQakU5QyxhQWtQNEI4QztRQUFxQyx5Q0FBdkNELE1BQXNCO01BQTdDLHNEQUFEOzs7OztPQXQ1QkU1SjtPQXFESkk7T0FJQU07T0FJQUU7T0FJQUM7T0FVQVU7T0FVQUM7T0FVQUM7T0FVQUM7T0FVQUM7T0FVQUM7T0FVQUM7T0FVQUM7T0FhQUM7T0FPQUM7T0FlQUk7T0FVQVE7T0FVQUM7T0FVQUM7T0FnQkFDO09BMEJJSTtPQTZEQWM7T0FxTkpZO09BU0FJO09BU0FDO09BU0FDO09BT0FFO09BUUFFO09BMENJRTtPQU1KSTtPQU1JRztPQU1BRTs7T0F5QkpVO09BT0FDO09BUUFDO09BUUFDO09BV0FDO09BOEJBRTtPQUVBSTtPQTBCSUs7T0FZSkU7T0FFQUU7T0FnREFFO09BcUJFSTtPQUdNRTtPQU1GSTtPQU1BRTtPQUlBRztPQWlDQU87T0FVSkM7T0FvQkFDOztVIiwic291cmNlc0NvbnRlbnQiOlsib3BlbiBPQ2FucmVuXG5vcGVuIE9DYW5yZW4uU3RkXG5cbmxldCByZWMgYXBwZW5kbyBhIGIgYWIgPVxuICBjb25kZVxuICAgIFsgYSA9PT0gbmlsICgpICYmJiAoYiA9PT0gYWIpXG4gICAgOyBmcmVzaCAoaCB0IGFiJykgKGEgPT09IGggJSB0KSAoaCAlIGFiJyA9PT0gYWIpIChhcHBlbmRvIHQgYiBhYicpXG4gICAgXVxuOztcblxubGV0IHJlYyBtZW1iZXJvIHggbCA9IGNvbmRlIFsgTGlzdC5jYXJvIGwgeDsgZnJlc2ggZCAoTGlzdC5jZHJvIGwgZCkgKG1lbWJlcm8geCBkKSBdXG5cbigqIGxldCByZWMgZXZhbG8gbSBuID1cbiAgY29uZGVcbiAgICBbIGZyZXNoIHggKG0gPT09IHYgeCkgKG4gPT09IG0pXG4gICAgOyBmcmVzaCAoeCBsKSAobSA9PT0gYWJzIHggbCkgKG4gPT09IG0pXG4gICAgOyBmcmVzaFxuICAgICAgICAoZiBhIGYnIGEnKVxuICAgICAgICAobSA9PT0gYXBwIGYgYSlcbiAgICAgICAgKGV2YWxvIGYgZicpXG4gICAgICAgIChldmFsbyBhIGEnKVxuICAgICAgICAoY29uZGVcbiAgICAgICAgICAgWyBmcmVzaCAoeCBsIGwnKSAoZicgPT09IGFicyB4IGwpIChzdWJzdG8gbCB4IGEnIGwnKSAoZXZhbG8gbCcgbilcbiAgICAgICAgICAgOyBmcmVzaCAocCBxKSAoZicgPT09IGFwcCBwIHEpIChuID09PSBhcHAgZicgYScpXG4gICAgICAgICAgIDsgZnJlc2ggeCAoZicgPT09IHYgeCkgKG4gPT09IGFwcCBmJyBhJylcbiAgICAgICAgICAgXSlcbiAgICBdXG47OyAqKVxuKCogXG5sZXQgYV9sYV9xdWluZSBxIHIgcyA9ID8mWyBldmFsbyAoYXBwIHEgcikgczsgZXZhbG8gKGFwcCByIHMpIHE7IGV2YWxvIChhcHAgcyBxKSByIF1cblxub3BlbiBUZXN0ZXJcblxubGV0IHJ1bkwgbiA9IHJ1bl9yIExhbS5yZWlmeSAoR1Quc2hvdyBMYW0ubG9naWMpIG5cbigqIGxldCBydW5fZXhuIGV0YSA9IHJ1bl9yIExhbS5wcmpfZXhuIGV0YSAqKVxuXG5sZXQgcnVuX2V4biBldGEgPVxuICBydW5fciAoU3RkLkxpc3QucHJqX2V4biBPQ2FucmVuLnByal9leG4pIChHVC5zaG93IFN0ZC5MaXN0Lmdyb3VuZCAoR1Quc2hvdyBHVC5pbnQpKSBldGFcbjs7XG5cbmxldCBfID0gcnVuX2V4biAoLTEpIHFyIHFyaCAoUkVQUiAoZnVuIHEgciAtPiBhcHBlbmRvIHEgciAobGlzdCAoICEhICkgWyAxOyAyOyAzOyA0IF0pKSlcbmxldCByZWxvIHMgPSBzID09PSBTdGQuTGlzdC5jb25zIF9fIF9fXG5sZXQgeCA9IEdULnNob3cgU3RkLkxpc3QubG9naWMgKEdULnNob3cgR1QuaW50KSAqKVxuXG4oKiBtb2R1bGUgUGFyYSA9IHN0cnVjdFxuICBbJSVkaXN0cmliXG4gIHR5cGUgbm9ucmVjICdhIHQgPVxuICAgIHwgTGVjdHVyZSBvZiAnYVxuICAgIHwgUHJhY3RpY2Ugb2YgJ2FcbiAgW0BAZGVyaXZpbmcgZ3QgfnBsdWdpbnM6eyBnbWFwOyBzaG93IH1dICopXG4oKiBcbiAgdHlwZSBub25yZWMgJ2EgZ3JvdW5kID0gJ2EgdF1cbmVuZCAqKVxuXG4oKiBsZXQgX3dpdGhGcmVlID1cbiAgWyV0ZXN0ZXJcbiAgICBydW5fclxuICAgICAgKFBhcmEucmVpZnkgT0NhbnJlbi5yZWlmeSlcbiAgICAgIChHVC5zaG93IFBhcmEubG9naWMgKEdULnNob3cgT0NhbnJlbi5sb2dpYyBAQCBHVC5zaG93IEdULnN0cmluZykpXG4gICAgICAzXG4gICAgICAoZnVuIHEgLT4gY29uZGUgWyBxID09PSBQYXJhLmxlY3R1cmUgX187IHEgPT09IFBhcmEucHJhY3RpY2UgX18gXSldXG47OyAqKVxuXG5sZXQgaW5zZXJ0X2ZpcnN0X2xlc3NvbiBxID1cbiAgY29uZGUgWyBmcmVzaCAocyB3IGUgcikgKHEgPT09IFN0ZC5saXN0IEZ1bi5pZCBbIHM7IHc7IGU7IHIgXSkgKHMgPT09ICEhXCJ3ZXJ0eVwiKSBdXG47O1xuXG5sZXQgaW5zX2ZpcnN0X2xlc3NvbiBxIGxlc3NvbiA9XG4gIGNvbmRlIFsgZnJlc2ggKHMgdyBlIHIpIChxID09PSBTdGQubGlzdCBGdW4uaWQgWyBzOyB3OyBlOyByIF0pIChzID09PSBsZXNzb24pIF1cbjs7XG5cbmxldCBpbnNfc2Vjb25kX2xlc3NvbiBxIGxlc3NvbiA9XG4gIGNvbmRlIFsgZnJlc2ggKHMgdyBlIHIpIChxID09PSBTdGQubGlzdCBGdW4uaWQgWyBzOyB3OyBlOyByIF0pICh3ID09PSBsZXNzb24pIF1cbjs7XG5cbmxldCBpbnNfbW9uZGF5XzEgcSBsZXNzb24gPVxuICBjb25kZVxuICAgIFsgZnJlc2hcbiAgICAgICAgKGExIGEyIGEzIGE0IGE1IGIxIGIyIGIzIGI0KVxuICAgICAgICAocSA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYTE7IGEyOyBhMzsgYTQ7IGE1IF0pXG4gICAgICAgIChhMSA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYjE7IGIyOyBiMzsgYjQgXSlcbiAgICAgICAgKGIxID09PSBsZXNzb24pXG4gICAgXVxuOztcblxubGV0IGluc19tb25kYXlfMiBxIGxlc3NvbiA9XG4gIGNvbmRlXG4gICAgWyBmcmVzaFxuICAgICAgICAoYTEgYTIgYTMgYTQgYTUgYjEgYjIgYjMgYjQpXG4gICAgICAgIChxID09PSBTdGQubGlzdCBGdW4uaWQgWyBhMTsgYTI7IGEzOyBhNDsgYTUgXSlcbiAgICAgICAgKGExID09PSBTdGQubGlzdCBGdW4uaWQgWyBiMTsgYjI7IGIzOyBiNCBdKVxuICAgICAgICAoYjIgPT09IGxlc3NvbilcbiAgICBdXG47O1xuXG5sZXQgaW5zX21vbmRheV8zIHEgbGVzc29uID1cbiAgY29uZGVcbiAgICBbIGZyZXNoXG4gICAgICAgIChhMSBhMiBhMyBhNCBhNSBiMSBiMiBiMyBiNClcbiAgICAgICAgKHEgPT09IFN0ZC5saXN0IEZ1bi5pZCBbIGExOyBhMjsgYTM7IGE0OyBhNSBdKVxuICAgICAgICAoYTEgPT09IFN0ZC5saXN0IEZ1bi5pZCBbIGIxOyBiMjsgYjM7IGI0IF0pXG4gICAgICAgIChiMyA9PT0gbGVzc29uKVxuICAgIF1cbjs7XG5cbmxldCBpbnNfbW9uZGF5XzQgcSBsZXNzb24gPVxuICBjb25kZVxuICAgIFsgZnJlc2hcbiAgICAgICAgKGExIGEyIGEzIGE0IGE1IGIxIGIyIGIzIGI0KVxuICAgICAgICAocSA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYTE7IGEyOyBhMzsgYTQ7IGE1IF0pXG4gICAgICAgIChhMSA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYjE7IGIyOyBiMzsgYjQgXSlcbiAgICAgICAgKGI0ID09PSBsZXNzb24pXG4gICAgXVxuOztcblxubGV0IGluc190dWVzZGF5XzEgcSBsZXNzb24gPVxuICBjb25kZVxuICAgIFsgZnJlc2hcbiAgICAgICAgKGExIGEyIGEzIGE0IGE1IGIxIGIyIGIzIGI0KVxuICAgICAgICAocSA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYTE7IGEyOyBhMzsgYTQ7IGE1IF0pXG4gICAgICAgIChhMiA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYjE7IGIyOyBiMzsgYjQgXSlcbiAgICAgICAgKGIxID09PSBsZXNzb24pXG4gICAgXVxuOztcblxubGV0IGluc190dWVzZGF5XzIgcSBsZXNzb24gPVxuICBjb25kZVxuICAgIFsgZnJlc2hcbiAgICAgICAgKGExIGEyIGEzIGE0IGE1IGIxIGIyIGIzIGI0KVxuICAgICAgICAocSA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYTE7IGEyOyBhMzsgYTQ7IGE1IF0pXG4gICAgICAgIChhMiA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYjE7IGIyOyBiMzsgYjQgXSlcbiAgICAgICAgKGIyID09PSBsZXNzb24pXG4gICAgXVxuOztcblxubGV0IGluc190dWVzZGF5XzMgcSBsZXNzb24gPVxuICBjb25kZVxuICAgIFsgZnJlc2hcbiAgICAgICAgKGExIGEyIGEzIGE0IGE1IGIxIGIyIGIzIGI0KVxuICAgICAgICAocSA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYTE7IGEyOyBhMzsgYTQ7IGE1IF0pXG4gICAgICAgIChhMiA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYjE7IGIyOyBiMzsgYjQgXSlcbiAgICAgICAgKGIzID09PSBsZXNzb24pXG4gICAgXVxuOztcblxubGV0IGluc190dWVzZGF5XzQgcSBsZXNzb24gPVxuICBjb25kZVxuICAgIFsgZnJlc2hcbiAgICAgICAgKGExIGEyIGEzIGE0IGE1IGIxIGIyIGIzIGI0KVxuICAgICAgICAocSA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYTE7IGEyOyBhMzsgYTQ7IGE1IF0pXG4gICAgICAgIChhMiA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYjE7IGIyOyBiMzsgYjQgXSlcbiAgICAgICAgKGI0ID09PSBsZXNzb24pXG4gICAgXVxuOztcblxubGV0IGluc2VydF9sZXNzb24gcSBsZXNzb24gPVxuICBjb25kZVxuICAgIFsgaW5zX21vbmRheV8xIHEgbGVzc29uXG4gICAgOyBpbnNfbW9uZGF5XzIgcSBsZXNzb25cbiAgICA7IGluc19tb25kYXlfMyBxIGxlc3NvblxuICAgIDsgaW5zX21vbmRheV80IHEgbGVzc29uXG4gICAgOyBpbnNfdHVlc2RheV8xIHEgbGVzc29uXG4gICAgOyBpbnNfdHVlc2RheV8yIHEgbGVzc29uXG4gICAgOyBpbnNfdHVlc2RheV8zIHEgbGVzc29uXG4gICAgOyBpbnNfdHVlc2RheV80IHEgbGVzc29uXG4gICAgXVxuOztcblxubGV0IGluaXRfc2NoZWRfb25lX2RheSBzID1cbiAgY29uZGUgWyBmcmVzaCAocSB3IGUgcikgKHMgPT09IFN0ZC5saXN0IEZ1bi5pZCBbIHE7IHc7IGU7IHIgXSkgXVxuOztcblxudHlwZSBpc2NoZWR1bGUgPSBzdHJpbmcgaWxvZ2ljIFN0ZC5MaXN0LmluamVjdGVkIFN0ZC5MaXN0LmluamVjdGVkXG50eXBlIHNjaGVkdWxlX2xvZ2ljID0gc3RyaW5nIGxvZ2ljIFN0ZC5MaXN0LmxvZ2ljIFN0ZC5MaXN0LmxvZ2ljXG5cbmxldCBpbml0X3NjaGVkX2Ffd2VlayA6IGlzY2hlZHVsZSAtPiBnb2FsID1cbiBmdW4gcSAtPlxuICBsZXQgKCAqKiApID0gKCAlICkgaW5cbiAgY29uZGVcbiAgICBbIGZyZXNoXG4gICAgICAgICh3IGUgciB0IHkpXG4gICAgICAgIChpbml0X3NjaGVkX29uZV9kYXkgdylcbiAgICAgICAgKGluaXRfc2NoZWRfb25lX2RheSBlKVxuICAgICAgICAoaW5pdF9zY2hlZF9vbmVfZGF5IHIpXG4gICAgICAgIChpbml0X3NjaGVkX29uZV9kYXkgdClcbiAgICAgICAgKGluaXRfc2NoZWRfb25lX2RheSB5KVxuICAgICAgICAocSA9PT0gdyAqKiBlICoqIHIgKiogdCAqKiAhPHkpXG4gICAgXVxuOztcblxubGV0IGluc19zY2hlZDEgc3ViaiBncm91cF9zY2hlZCB0ZWFjaGVyX3NjaGVkIGNsYXNzX3NjaGVkID1cbiAgY29uZGVcbiAgICBbIGZyZXNoXG4gICAgICAgIChhMiBhMyBhNCBiMiBiMyBiNCBjMiBjMyBjNClcbiAgICAgICAgKGdyb3VwX3NjaGVkID09PSBTdGQubGlzdCBGdW4uaWQgWyBzdWJqOyBhMjsgYTM7IGE0IF0pXG4gICAgICAgICh0ZWFjaGVyX3NjaGVkID09PSBTdGQubGlzdCBGdW4uaWQgWyBzdWJqOyBiMjsgYjM7IGI0IF0pXG4gICAgICAgIChjbGFzc19zY2hlZCA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgc3ViajsgYzI7IGMzOyBjNCBdKVxuICAgIF1cbjs7XG5cbmxldCBpbnNfc2NoZWQyIHN1YmogZ3JvdXBfc2NoZWQgdGVhY2hlcl9zY2hlZCBjbGFzc19zY2hlZCA9XG4gIGNvbmRlXG4gICAgWyBmcmVzaFxuICAgICAgICAoYTIgYTMgYTQgYjIgYjMgYjQgYzIgYzMgYzQpXG4gICAgICAgIChncm91cF9zY2hlZCA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYTI7IHN1Ymo7IGEzOyBhNCBdKVxuICAgICAgICAodGVhY2hlcl9zY2hlZCA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYjI7IHN1Ymo7IGIzOyBiNCBdKVxuICAgICAgICAoY2xhc3Nfc2NoZWQgPT09IFN0ZC5saXN0IEZ1bi5pZCBbIGMyOyBzdWJqOyBjMzsgYzQgXSlcbiAgICBdXG47O1xuXG5sZXQgaW5zX3NjaGVkMyBzdWJqIGdyb3VwX3NjaGVkIHRlYWNoZXJfc2NoZWQgY2xhc3Nfc2NoZWQgPVxuICBjb25kZVxuICAgIFsgZnJlc2hcbiAgICAgICAgKGEyIGEzIGE0IGIyIGIzIGI0IGMyIGMzIGM0KVxuICAgICAgICAoZ3JvdXBfc2NoZWQgPT09IFN0ZC5saXN0IEZ1bi5pZCBbIGEyOyBhMzsgc3ViajsgYTQgXSlcbiAgICAgICAgKHRlYWNoZXJfc2NoZWQgPT09IFN0ZC5saXN0IEZ1bi5pZCBbIGIyOyBiMzsgc3ViajsgYjQgXSlcbiAgICAgICAgKGNsYXNzX3NjaGVkID09PSBTdGQubGlzdCBGdW4uaWQgWyBjMjsgYzM7IHN1Ymo7IGM0IF0pXG4gICAgXVxuOztcblxubGV0IGluc19zY2hlZDQgc3ViaiBncm91cF9zY2hlZCB0ZWFjaGVyX3NjaGVkIGNsYXNzX3NjaGVkID1cbiAgY29uZGVcbiAgICBbIGZyZXNoXG4gICAgICAgIChhMiBhMyBhNCBiMiBiMyBiNCBjMiBjMyBjNClcbiAgICAgICAgKGdyb3VwX3NjaGVkID09PSBTdGQubGlzdCBGdW4uaWQgWyBhMjsgYTM7IGE0OyBzdWJqIF0pXG4gICAgICAgICh0ZWFjaGVyX3NjaGVkID09PSBTdGQubGlzdCBGdW4uaWQgWyBiMjsgYjM7IGI0OyBzdWJqIF0pXG4gICAgICAgIChjbGFzc19zY2hlZCA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYzI7IGMzOyBjNDsgc3ViaiBdKVxuICAgIF1cbjs7XG5cbigqIGxldCBpbnNfc2NoZWRfbW9uIHN1YmogZ3JvdXBfc2NoZWQgdGVhY2hlcl9zY2hlZCBjbGFzc19zY2hlZCA9XG4gIGNvbmRlIFxuICBbIGZyZXNoXG4gIFxuICBdICopXG5cbmxldCBpbnNlcnRfYWxsX3NjaGVkIHN1YmogZ3JvdXBfc2NoZWQgdGVhY2hlcl9zY2hlZCBjbGFzc19zY2hlZCA9XG4gIGZyZXNoXG4gICAgKGExIGEyIGEzIGE0IGE1IGIxIGIyIGIzIGI0IGI1IGMxIGMyIGMzIGM0IGM1KVxuICAgIChncm91cF9zY2hlZCA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYTE7IGEyOyBhMzsgYTQ7IGE1IF0pXG4gICAgKHRlYWNoZXJfc2NoZWQgPT09IFN0ZC5saXN0IEZ1bi5pZCBbIGIxOyBiMjsgYjM7IGI0OyBiNSBdKVxuICAgIChjbGFzc19zY2hlZCA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYzE7IGMyOyBjMzsgYzQ7IGM1IF0pXG4gICAgKGNvbmRlXG4gICAgICAgWyBpbnNfc2NoZWQxIHN1YmogYTEgYjEgYzFcbiAgICAgICA7IGluc19zY2hlZDIgc3ViaiBhMSBiMSBjMVxuICAgICAgIDsgaW5zX3NjaGVkMyBzdWJqIGExIGIxIGMxXG4gICAgICAgOyBpbnNfc2NoZWQ0IHN1YmogYTEgYjEgYzFcbiAgICAgICA7IGluc19zY2hlZDEgc3ViaiBhMiBiMiBjMlxuICAgICAgIDsgaW5zX3NjaGVkMiBzdWJqIGEyIGIyIGMyXG4gICAgICAgOyBpbnNfc2NoZWQzIHN1YmogYTIgYjIgYzJcbiAgICAgICA7IGluc19zY2hlZDQgc3ViaiBhMiBiMiBjMlxuICAgICAgIDsgaW5zX3NjaGVkMSBzdWJqIGEzIGIzIGMzXG4gICAgICAgOyBpbnNfc2NoZWQyIHN1YmogYTMgYjMgYzNcbiAgICAgICA7IGluc19zY2hlZDMgc3ViaiBhMyBiMyBjM1xuICAgICAgIDsgaW5zX3NjaGVkNCBzdWJqIGEzIGIzIGMzXG4gICAgICAgOyBpbnNfc2NoZWQxIHN1YmogYTQgYjQgYzRcbiAgICAgICA7IGluc19zY2hlZDIgc3ViaiBhNCBiNCBjNFxuICAgICAgIDsgaW5zX3NjaGVkMyBzdWJqIGE0IGI0IGM0XG4gICAgICAgOyBpbnNfc2NoZWQ0IHN1YmogYTQgYjQgYzRcbiAgICAgICBdKVxuOztcblxubGV0IHJlYyBpbnNlcnRfc2NoZWRfdG9fb25lX2dyb3VwXG4gIGxlc3NvbnNcbiAgYWxsX3RlYWNoZXJfc2NoZWRcbiAgc2NoZWRfYWxsX2NsYXNzXG4gIGdyb3VwX3NjaGVkXG4gIGNsYXNzX3N1YmpcbiAgPVxuICBjb25kZVxuICAgIFsgbGVzc29ucyA9PT0gTGlzdC5uaWwgKClcbiAgICA7IGZyZXNoXG4gICAgICAgICh0ZWFjaGVyX3NjaGVkXG4gICAgICAgICAgIGxlc3NvblxuICAgICAgICAgICB0YWlsX3RlYWNoZXJcbiAgICAgICAgICAgdGFpbF9sZXNzb25zXG4gICAgICAgICAgIHNjaGVkX2NsYXNzXG4gICAgICAgICAgIG9zdFxuICAgICAgICAgICBjbGFzc19maXJzdFxuICAgICAgICAgICBjbGFzc19vc3QpXG4gICAgICAgIChhbGxfdGVhY2hlcl9zY2hlZCA9PT0gTGlzdC5jb25zIHRlYWNoZXJfc2NoZWQgdGFpbF90ZWFjaGVyKVxuICAgICAgICAobGVzc29ucyA9PT0gTGlzdC5jb25zIGxlc3NvbiB0YWlsX2xlc3NvbnMpXG4gICAgICAgIChzY2hlZF9hbGxfY2xhc3MgPT09IExpc3QuY29ucyBzY2hlZF9jbGFzcyBvc3QpXG4gICAgICAgIChjbGFzc19zdWJqID09PSBMaXN0LmNvbnMgY2xhc3NfZmlyc3QgY2xhc3Nfb3N0KVxuICAgICAgICAobWVtYmVybyBsZXNzb24gY2xhc3NfZmlyc3QpXG4gICAgICAgIChpbnNlcnRfYWxsX3NjaGVkIGxlc3NvbiBncm91cF9zY2hlZCB0ZWFjaGVyX3NjaGVkIHNjaGVkX2NsYXNzKVxuICAgICAgICAoaW5zZXJ0X3NjaGVkX3RvX29uZV9ncm91cFxuICAgICAgICAgICB0YWlsX2xlc3NvbnNcbiAgICAgICAgICAgdGFpbF90ZWFjaGVyXG4gICAgICAgICAgIHNjaGVkX2FsbF9jbGFzc1xuICAgICAgICAgICBncm91cF9zY2hlZFxuICAgICAgICAgICBjbGFzc19zdWJqKVxuICAgIDsgZnJlc2hcbiAgICAgICAgKHNjaGVkX2ZpcnN0X2NsYXNzIG9zdCBzdWJqX2ZpcnN0IHN1Ympfb3N0KVxuICAgICAgICAoc2NoZWRfYWxsX2NsYXNzID09PSBMaXN0LmNvbnMgc2NoZWRfZmlyc3RfY2xhc3Mgb3N0KVxuICAgICAgICAoY2xhc3Nfc3ViaiA9PT0gTGlzdC5jb25zIHN1YmpfZmlyc3Qgc3Vial9vc3QpXG4gICAgICAgIChpbnNlcnRfc2NoZWRfdG9fb25lX2dyb3VwIGxlc3NvbnMgYWxsX3RlYWNoZXJfc2NoZWQgb3N0IGdyb3VwX3NjaGVkIHN1Ympfb3N0KVxuICAgIF1cbjs7XG5cbigqIGxldCByZWMgaW5zZXJ0X3NjaGVkIGFsbF90ZWFjaGVyX3NjaGVkIHNjaGVkX2NsYXNzIGdyb3VwX3NjaGVkIGFsbF9sZXNzb25zID1cbiAgY29uZGVcbiAgICBbIGFsbF9sZXNzb25zID09PSBMaXN0Lm5pbCAoKVxuICAgIDsgZnJlc2hcbiAgICAgICAgKHRlYWNoZXJfc2NoZWQgbGVzc29uIHRhaWxfdGVhY2hlciB0YWlsX2xlc3NvbnMpXG4gICAgICAgIChhbGxfdGVhY2hlcl9zY2hlZCA9PT0gTGlzdC5jb25zIHRlYWNoZXJfc2NoZWQgdGFpbF90ZWFjaGVyKVxuICAgICAgICAoYWxsX2xlc3NvbnMgPT09IExpc3QuY29ucyBsZXNzb24gdGFpbF9sZXNzb25zKVxuICAgICAgICAoaW5zZXJ0X2xlc3NvbiB0ZWFjaGVyX3NjaGVkIGxlc3NvbilcbiAgICAgICAgKGluc2VydF9sZXNzb24gZ3JvdXBfc2NoZWQgbGVzc29uKVxuICAgICAgICAoaW5zZXJ0X2xlc3NvbiBzY2hlZF9jbGFzcyBsZXNzb24pXG4gICAgICAgIChpbnNlcnRfc2NoZWQgdGFpbF90ZWFjaGVyIHNjaGVkX2NsYXNzIGdyb3VwX3NjaGVkIHRhaWxfbGVzc29ucylcbiAgICBdXG47OyAqKVxuXG4oKiAoZGVmaW5lIChzY2hlZCBzdHVkeXBsYW5hbGxncm91cCBzY2hlZGFsbGdyb3VwIGFsbHRlYWNoZXJzY2hlZCBzY2hlZGNsYXNzIGNsYXNzZXNzdWJqIGFsbG5hbWVncm91cCBhbGx0ZWFjaGVybmFtZSBhbGxjbGFzc251bWJlcikgO9GB0L7RgdGC0LDQstC70Y/QtdGCINGA0LDRgdC/0LjRgdCw0L3QuNC1INC90LAg0LLRgdC1INCz0YDRg9C/0L/Riywg0L3QviDRgtC+0LvRjNC60L4g0L/RgNCw0LrRgtC40LrQuFxuICAoY29uZGVcbiAgIFsoPT0gc3R1ZHlwbGFuYWxsZ3JvdXAgJygpKSBzdWNjZWVkXVxuICAgWyhmcmVzaCAoYTEgYTIgYTMgbmFtZWdyb3VwIHNjaGVkb25lIGM0IGM1KSAoY2FybyBzdHVkeXBsYW5hbGxncm91cCBhMSkgKGNhcm8gc2NoZWRhbGxncm91cCBzY2hlZG9uZSkgKGNhcm8gYWxsbmFtZWdyb3VwIG5hbWVncm91cCkgKGNhcm8gYWxsdGVhY2hlcnNjaGVkIGEzKSAoY2FybyBhbGx0ZWFjaGVybmFtZSBjNSkgXG4gICAgICAgICAgICh0aW1ldGFibGVvbmVncm91cCBhMSBzY2hlZG9uZSBhMyBzY2hlZGNsYXNzIGNsYXNzZXNzdWJqIG5hbWVncm91cCBjNSBhbGxjbGFzc251bWJlcikpXG4gICAgKGZyZXNoIChhNCBhNSBhNiBiMSBiMiBiMykgKGNkcm8gc3R1ZHlwbGFuYWxsZ3JvdXAgYTQpIChjZHJvIHNjaGVkYWxsZ3JvdXAgYTUpIChjZHJvIGFsbHRlYWNoZXJzY2hlZCBhNikgKGNkcm8gYWxsbmFtZWdyb3VwIGIxKSAoY2RybyBhbGx0ZWFjaGVybmFtZSBiMilcbiAgICAgICAgICAgKHNjaGVkIGE0IGE1IGE2IHNjaGVkY2xhc3MgY2xhc3Nlc3N1YmogYjEgYjIgYWxsY2xhc3NudW1iZXIpKVxuICAgICAgICAgICBdXG4gICApKSAqKVxubGV0IHJlYyBzY2hlZCBzdHVkeXBsYW5hbGxncm91cCBzY2hlZGFsbGdyb3VwIGFsbHRlYWNoZXJzY2hlZCBzY2hlZGNsYXNzIGNsYXNzZXNzdWJqID1cbiAgY29uZGVcbiAgICBbIHN0dWR5cGxhbmFsbGdyb3VwID09PSBMaXN0Lm5pbCAoKVxuICAgIDsgc2NoZWRhbGxncm91cCA9PT0gTGlzdC5uaWwgKClcbiAgICA7IGZyZXNoXG4gICAgICAgIChzdHVkeXBsYW5vbmVncm91cCBzdHVkeXBsYW5vc3Qgc2NoZWRvbmVncm91cCBzY2hlZG9zdCBvbmV0ZWFjaGVyIG9zdHRlYWNoZXIpXG4gICAgICAgIChzdHVkeXBsYW5hbGxncm91cCA9PT0gTGlzdC5jb25zIHN0dWR5cGxhbm9uZWdyb3VwIHN0dWR5cGxhbm9zdClcbiAgICAgICAgKHNjaGVkYWxsZ3JvdXAgPT09IExpc3QuY29ucyBzY2hlZG9uZWdyb3VwIHNjaGVkb3N0KVxuICAgICAgICAoYWxsdGVhY2hlcnNjaGVkID09PSBMaXN0LmNvbnMgb25ldGVhY2hlciBvc3R0ZWFjaGVyKVxuICAgICAgICAoaW5zZXJ0X3NjaGVkX3RvX29uZV9ncm91cFxuICAgICAgICAgICBzdHVkeXBsYW5vbmVncm91cFxuICAgICAgICAgICBvbmV0ZWFjaGVyXG4gICAgICAgICAgIHNjaGVkY2xhc3NcbiAgICAgICAgICAgc2NoZWRvbmVncm91cFxuICAgICAgICAgICBjbGFzc2Vzc3ViailcbiAgICAgICAgKHNjaGVkIHN0dWR5cGxhbm9zdCBzY2hlZG9zdCBvc3R0ZWFjaGVyIHNjaGVkY2xhc3MgY2xhc3Nlc3N1YmopXG4gICAgXVxuOztcblxuKCogbGV0IGRlbGV0ZV9tb25kYXkgPSAqKVxuXG4oKiBsZXQgX3dpdGhGcmVlID1cbiAgWyV0ZXN0ZXJcbiAgICBydW5fclxuICAgICAgKFN0ZC5MaXN0LnJlaWZ5IChTdGQuTGlzdC5yZWlmeSBPQ2FucmVuLnJlaWZ5KSlcbiAgICAgIChHVC5zaG93XG4gICAgICAgICBTdGQuTGlzdC5sb2dpY1xuICAgICAgICAgKEdULnNob3cgU3RkLkxpc3QubG9naWMgKEdULnNob3cgT0NhbnJlbi5sb2dpYyBAQCBHVC5zaG93IEdULnN0cmluZykpKVxuICAgICAgMVxuICAgICAgKGZ1biBxIHIgcyB0IC0+XG4gICAgICAgIGluaXRfc2NoZWRfYV93ZWVrIHFcbiAgICAgICAgJiYmIGluaXRfc2NoZWRfYV93ZWVrIHRcbiAgICAgICAgJiYmIGluaXRfc2NoZWRfYV93ZWVrIHJcbiAgICAgICAgJiYmIGluaXRfc2NoZWRfYV93ZWVrIHNcbiAgICAgICAgJiYmIGluc2VydF9zY2hlZF90b19vbmVfZ3JvdXBcbiAgICAgICAgICAgICAgKFN0ZC5saXN0IEZ1bi5pZCBbICEhXCJtYXRhbjFcIjsgISFcIm1hdGFuMlwiOyAhIVwiZ2VvbTFcIjsgISFcImFsZzFcIiBdKVxuICAgICAgICAgICAgICAoU3RkLmxpc3QgRnVuLmlkIFsgcTsgcTsgcTsgcSBdKVxuICAgICAgICAgICAgICAoU3RkLmxpc3QgRnVuLmlkIFsgcyBdKVxuICAgICAgICAgICAgICByXG4gICAgICAgICAgICAgIChTdGQubGlzdFxuICAgICAgICAgICAgICAgICBGdW4uaWRcbiAgICAgICAgICAgICAgICAgWyBTdGQubGlzdFxuICAgICAgICAgICAgICAgICAgICAgRnVuLmlkXG4gICAgICAgICAgICAgICAgICAgICBbICEhXCJtYXRhbjFcIlxuICAgICAgICAgICAgICAgICAgICAgOyAhIVwiZ2VvbTFcIlxuICAgICAgICAgICAgICAgICAgICAgOyAhIVwiZW5nMVwiXG4gICAgICAgICAgICAgICAgICAgICA7ICEhXCJtYXRhbjNcIlxuICAgICAgICAgICAgICAgICAgICAgOyAhIVwibWF0YW40XCJcbiAgICAgICAgICAgICAgICAgICAgIDsgISFcImdlb20yXCJcbiAgICAgICAgICAgICAgICAgICAgIDsgISFcImFsZzJcIlxuICAgICAgICAgICAgICAgICAgICAgOyAhIVwibWF0YW4yXCJcbiAgICAgICAgICAgICAgICAgICAgIDsgISFcIm1hdGFuNlwiXG4gICAgICAgICAgICAgICAgICAgICA7ICEhXCJnZW9tMlwiXG4gICAgICAgICAgICAgICAgICAgICA7ICEhXCJhbGcxXCJcbiAgICAgICAgICAgICAgICAgICAgIF1cbiAgICAgICAgICAgICAgICAgXSkpXVxuOzsgKilcblxuKCogbGV0IF93aXRoRnJlZSA9XG4gIFsldGVzdGVyXG4gICAgcnVuX3JcbiAgICAgIChTdGQuTGlzdC5yZWlmeSAoU3RkLkxpc3QucmVpZnkgT0NhbnJlbi5yZWlmeSkpXG4gICAgICAoR1Quc2hvd1xuICAgICAgICAgU3RkLkxpc3QubG9naWNcbiAgICAgICAgIChHVC5zaG93IFN0ZC5MaXN0LmxvZ2ljIChHVC5zaG93IE9DYW5yZW4ubG9naWMgQEAgR1Quc2hvdyBHVC5zdHJpbmcpKSlcbiAgICAgIDEwXG4gICAgICAoZnVuIHEgciBzIHQgLT5cbiAgICAgICAgaW5pdF9zY2hlZF9hX3dlZWsgcVxuICAgICAgICAmJiYgaW5pdF9zY2hlZF9hX3dlZWsgdFxuICAgICAgICAmJiYgaW5pdF9zY2hlZF9hX3dlZWsgclxuICAgICAgICAmJiYgaW5pdF9zY2hlZF9hX3dlZWsgc1xuICAgICAgICAmJiYgc2NoZWRcbiAgICAgICAgICAgICAgKFN0ZC5saXN0XG4gICAgICAgICAgICAgICAgIEZ1bi5pZFxuICAgICAgICAgICAgICAgICBbIFN0ZC5saXN0IEZ1bi5pZCBbICEhXCJtYXRhbjFcIjsgISFcIm1hdGFuMlwiOyAhIVwiZ2VvbTFcIjsgISFcImFsZzFcIiBdIF0pXG4gICAgICAgICAgICAgIChTdGQubGlzdCBGdW4uaWQgWyBxIF0pXG4gICAgICAgICAgICAgIChTdGQubGlzdCBGdW4uaWQgWyBTdGQubGlzdCBGdW4uaWQgWyB0OyB0OyB0OyB0IF0gXSlcbiAgICAgICAgICAgICAgKFN0ZC5saXN0IEZ1bi5pZCBbIHMgXSlcbiAgICAgICAgICAgICAgKFN0ZC5saXN0XG4gICAgICAgICAgICAgICAgIEZ1bi5pZFxuICAgICAgICAgICAgICAgICBbIFN0ZC5saXN0XG4gICAgICAgICAgICAgICAgICAgICBGdW4uaWRcbiAgICAgICAgICAgICAgICAgICAgIFsgISFcIm1hdGFuMVwiXG4gICAgICAgICAgICAgICAgICAgICA7ICEhXCJnZW9tMVwiXG4gICAgICAgICAgICAgICAgICAgICA7ICEhXCJlbmcxXCJcbiAgICAgICAgICAgICAgICAgICAgIDsgISFcIm1hdGFuM1wiXG4gICAgICAgICAgICAgICAgICAgICA7ICEhXCJtYXRhbjRcIlxuICAgICAgICAgICAgICAgICAgICAgOyAhIVwiZ2VvbTJcIlxuICAgICAgICAgICAgICAgICAgICAgOyAhIVwiYWxnMlwiXG4gICAgICAgICAgICAgICAgICAgICA7ICEhXCJtYXRhbjJcIlxuICAgICAgICAgICAgICAgICAgICAgOyAhIVwibWF0YW42XCJcbiAgICAgICAgICAgICAgICAgICAgIDsgISFcImdlb20yXCJcbiAgICAgICAgICAgICAgICAgICAgIDsgISFcImFsZzFcIlxuICAgICAgICAgICAgICAgICAgICAgXVxuICAgICAgICAgICAgICAgICBdKSldXG47OyAqKVxuXG4oKiBsZXQgcmVjIHNjaGVkIHN0dWR5cGxhbmFsbGdyb3VwIHNjaGVkYWxsZ3JvdXAgYWxsdGVhY2hlcnNjaGVkIHNjaGVkY2xhc3MgY2xhc3Nlc3N1YmogKilcbigqIGxldCBfd2l0aEZyZWUgPVxuICBbJXRlc3RlclxuICAgIHJ1bl9yXG4gICAgICAoU3RkLkxpc3QucmVpZnkgKFN0ZC5MaXN0LnJlaWZ5IE9DYW5yZW4ucmVpZnkpKVxuICAgICAgKEdULnNob3dcbiAgICAgICAgIFN0ZC5MaXN0LmxvZ2ljXG4gICAgICAgICAoR1Quc2hvdyBTdGQuTGlzdC5sb2dpYyAoR1Quc2hvdyBPQ2FucmVuLmxvZ2ljIEBAIEdULnNob3cgR1Quc3RyaW5nKSkpXG4gICAgICAxMFxuICAgICAgKGZ1biBxIHIgcyAtPlxuICAgICAgICBpbml0X3NjaGVkX2Ffd2VlayBxXG4gICAgICAgICYmJiBpbml0X3NjaGVkX2Ffd2VlayByXG4gICAgICAgICYmJiBpbml0X3NjaGVkX2Ffd2VlayBzXG4gICAgICAgICYmJiBpbnNlcnRfc2NoZWRcbiAgICAgICAgICAgICAgKFN0ZC5saXN0IEZ1bi5pZCBbIHE7IHE7IHEgXSlcbiAgICAgICAgICAgICAgclxuICAgICAgICAgICAgICBzXG4gICAgICAgICAgICAgIChTdGQubGlzdCBGdW4uaWQgWyAhIVwibWF0YW4xXCI7ICEhXCJnZW9tMVwiOyAhIVwiZW5nMVwiIF0pKV1cbjs7ICopXG5cbigqIGxldCBfd2l0aEZyZWUgPVxuICBbJXRlc3RlclxuICAgIHJ1bl9yXG4gICAgICAoU3RkLkxpc3QucmVpZnkgT0NhbnJlbi5yZWlmeSlcbiAgICAgIChHVC5zaG93IFN0ZC5MaXN0LmxvZ2ljIChHVC5zaG93IE9DYW5yZW4ubG9naWMgQEAgR1Quc2hvdyBHVC5zdHJpbmcpKVxuICAgICAgMVxuICAgICAgKGZ1biBxIHIgcyAtPiBtZW1iZXJvICEhXCJtYXRhblwiIChTdGQubGlzdCBGdW4uaWQgWyAhIVwibWF0YW5cIjsgISFcImdlb21cIjsgISFcImVuZ1wiIF0pKVxuICAgICYmJiBhcHBlbmRvIHEgciBzXVxuOzsgKilcbigqIGxldCBfd2l0aEZyZWUgPVxuICBbJXRlc3RlclxuICAgIHJ1bl9yXG4gICAgICAoU3RkLkxpc3QucmVpZnkgKFN0ZC5MaXN0LnJlaWZ5IE9DYW5yZW4ucmVpZnkpKVxuICAgICAgKEdULnNob3dcbiAgICAgICAgIFN0ZC5MaXN0LmxvZ2ljXG4gICAgICAgICAoR1Quc2hvdyBTdGQuTGlzdC5sb2dpYyAoR1Quc2hvdyBPQ2FucmVuLmxvZ2ljIEBAIEdULnNob3cgR1Quc3RyaW5nKSkpXG4gICAgICAxXG4gICAgICAoZnVuIHEgciBzIC0+XG4gICAgICAgIG1lbWJlcm8gISFcIm1hdGFuXCIgKFN0ZC5saXN0IEZ1bi5pZCBbICEhXCJhdGFuXCI7ICEhXCJnZW9tXCI7ICEhXCJlbmdcIiBdKVxuICAgICAgICAmJiYgYXBwZW5kbyBxIHIgcyldXG47OyAqKVxuKCogbGV0IF93aXRoRnJlZSA9XG4gIFsldGVzdGVyXG4gICAgcnVuX3JcbiAgICAgIChTdGQuTGlzdC5yZWlmeSAoU3RkLkxpc3QucmVpZnkgT0NhbnJlbi5yZWlmeSkpXG4gICAgICAoR1Quc2hvd1xuICAgICAgICAgU3RkLkxpc3QubG9naWNcbiAgICAgICAgIChHVC5zaG93IFN0ZC5MaXN0LmxvZ2ljIChHVC5zaG93IE9DYW5yZW4ubG9naWMgQEAgR1Quc2hvdyBHVC5zdHJpbmcpKSlcbiAgICAgIDEwXG4gICAgICAoZnVuIHEgciBzIHQgLT5cbiAgICAgICAgaW5pdF9zY2hlZF9hX3dlZWsgcVxuICAgICAgICAmJiYgU2NoZWRfY29yZS5pbml0X3NjaGVkX2Ffd2VlayBxXG4gICAgICAgICYmJiBpbml0X3NjaGVkX2Ffd2VlayB0XG4gICAgICAgICYmJiBpbml0X3NjaGVkX2Ffd2VlayBzXG4gICAgICAgICYmJiBpbnNlcnRfc2NoZWRfdG9fb25lX2dyb3VwXG4gICAgICAgICAgICAgIChTdGQubGlzdCBGdW4uaWQgWyAhIVwibWF0YW5cIjsgISFcImdlb21cIjsgISFcImVuZ1wiIF0pXG4gICAgICAgICAgICAgIChTdGQubGlzdCBGdW4uaWQgWyBxOyBxOyBxIF0pXG4gICAgICAgICAgICAgIChTdGQubGlzdCBGdW4uaWQgWyByIF0pXG4gICAgICAgICAgICAgIHNcbiAgICAgICAgICAgICAgKFN0ZC5saXN0IEZ1bi5pZCBbICEhXCJtYXRhblwiOyAhIVwiZ2VvbVwiOyAhIVwiZW5nXCIgXSkpXVxuOzsgKilcbigqIGxldCByZWMgaW5zZXJ0X3NjaGVkX3RvX29uZV9ncm91cCBsZXNzb25zIGFsbF90ZWFjaGVyX3NjaGVkIHNjaGVkX2FsbF9jbGFzcyBncm91cF9zY2hlZCA9XG4gIGNvbmRlXG4gICAgWyBsZXNzb25zID09PSBMaXN0Lm5pbCAoKTsgZnJlc2ggKHRlYWNoZXJfc2NoZWQgbGVzc29uIHRhaWxfdGVhY2hlciB0YWlsX2xlc3NvbnMgc2NoZWRfY2xhc3Mgb3N0KSBcbiAgICAoYWxsX3RlYWNoZXJfc2NoZWQgPT09IExpc3QuY29ucyB0ZWFjaGVyX3NjaGVkIHRhaWxfdGVhY2hlcilcbiAgICAobGVzc29ucyA9PT0gTGlzdC5jb25zIGxlc3NvbiB0YWlsX2xlc3NvbnMpXG4gICAgKHNjaGVkX2FsbF9jbGFzcyA9PT0gTGlzdC5jb25zIHNjaGVkX2NsYXNzIG9zdClcbiAgICAobWVtYmVybyBsZXNzb24gc2NoZWRfY2xhc3MpXG4gICAgKGluc2VydF9hbGxfc2NoZWQgbGVzc29uIGdyb3VwX3NjaGVkIHRlYWNoZXJfc2NoZWQgc2NoZWRfY2xhc3MpXG4gICAgKGluc2VydF9zY2hlZF90b19vbmVfZ3JvdXAgdGFpbF9sZXNzb25zIHRhaWxfdGVhY2hlciBzY2hlZF9hbGxfY2xhc3MgZ3JvdXBfc2NoZWQpO1xuICAgIFxuICAgIFxuICAgICBdXG47OyAqKVxuKCogbGV0IF93aXRoRnJlZSA9IHJ1bkwgMSBxIHFoIChSRVBSIChmdW4gcSAtPiBldmFsbyAoYXBwIHEgKHYgdmFyWCkpICh2IHZhclgpKSkgKilcblxuKCogbGV0IF93aXRoRnJlZSA9XG4gIHJ1bl9yXG4gICAgKFN0ZC5MaXN0LnJlaWZ5IChTdGQuTGlzdC5yZWlmeSBPQ2FucmVuLnJlaWZ5KSlcbiAgICAoR1Quc2hvd1xuICAgICAgIFN0ZC5MaXN0LmxvZ2ljXG4gICAgICAgKEdULnNob3cgU3RkLkxpc3QubG9naWMgKEdULnNob3cgT0NhbnJlbi5sb2dpYyBAQCBHVC5zaG93IEdULnN0cmluZykpKVxuICAgIDEwXG4gICAgcVxuXG5sZXQgcmVjIHNjaGVkIHN0dWR5cGxhbmFsbGdyb3VwIHNjaGVkYWxsZ3JvdXAgYWxsdGVhY2hlcnNjaGVkIHNjaGVkY2xhc3MgY2xhc3Nlc3N1YmogIDs7ICopXG50eXBlIHdlZWtfZGF5ID1cbiAgfCBNb25kYXlcbiAgfCBUdWVzZGF5XG4gIHwgV2VkbmVzZGF5XG4gIHwgVGh1cnNkYXlcbiAgfCBGcmlkYXlcblxudHlwZSBncm91cF9vcl90ZWFjaGVyID1cbiAgfCBUZWFjaGVyIG9mIHsgbmFtZSA6IHN0cmluZyB9XG4gIHwgR3JvdXAgb2YgeyBudW1iZXIgOiBpbnQgfVxuXG50eXBlIHVzZXJfY29uc3RyYWludHMgPVxuICB8IEdyb3VwX25vdF9sZWFybmluZyBvZlxuICAgICAgeyBudW1iZXJfbGVzc29uIDogaW50XG4gICAgICA7IGRheSA6IHdlZWtfZGF5XG4gICAgICB9XG5cbnR5cGUgdXNlcl9jb25zdHJhaW50c18xID1cbiAgfCBOb3RfbGVhcm5pbmcgb2ZcbiAgICAgIHsgbnVtYmVyX2xlc3NvbiA6IGludFxuICAgICAgOyBkYXkgOiB3ZWVrX2RheVxuICAgICAgOyBncm91cF9vcl90ZWFjaGVyIDogZ3JvdXBfb3JfdGVhY2hlclxuICAgICAgfVxuKCogbGV0IGNvbnN0ID0gR3JvdXBfbm90X2xlYXJuaW5nIHtudW1iZXJfbGVzc29uPTE7ZGF5PU1vbmRheX07ICopXG5cbltAQEBvY2FtbC53YXJuZXJyb3IgXCItMjdcIl1cblxuKCogbGV0IGVtcGxveV9jb25zdHJhaW50IHVzZXJfY29uc3QgcSA9XG4gIFN0ZGxpYi5MaXN0LmZvbGRfbGVmdCAoZnVuIGFjYyBfIC0+IGFjYykgc3VjY2VzcyB1c2VyX2NvbnN0XG47OyAqKVxubGV0IGRlbGV0ZV9tb25kYXlfMSBxID1cbiAgY29uZGVcbiAgICBbIGZyZXNoXG4gICAgICAgIChhMSBhMiBhMyBhNCBhNSBiMSBiMiBiMyBiNCBiNSBiNiBiNyBiOClcbiAgICAgICAgKHEgPT09IFN0ZC5saXN0IEZ1bi5pZCBbIGExOyBhMjsgYTM7IGE0OyBhNSBdKVxuICAgICAgICAoYTEgPT09IFN0ZC5saXN0IEZ1bi5pZCBbICEhXCJ3aW5kb3dcIjsgYjU7IGI2OyBiNyBdKVxuICAgIF1cbjs7XG5cbmxldCBkZWxldGVfbW9uZGF5IHEgPVxuICBjb25kZVxuICAgIFsgZnJlc2hcbiAgICAgICAgKGExIGEyIGEzIGE0IGE1IGIxIGIyIGIzIGI0KVxuICAgICAgICAocSA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYTE7IGEyOyBhMzsgYTQ7IGE1IF0pXG4gICAgICAgIChhMSA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgISFcIndpbmRvd1wiOyAhIVwid2luZG93XCI7ICEhXCJ3aW5kb3dcIjsgISFcIndpbmRvd1wiIF0pXG4gICAgXVxuOztcblxubGV0IGRlbGV0ZV90dWVzZGF5IHEgPVxuICBjb25kZVxuICAgIFsgZnJlc2hcbiAgICAgICAgKGExIGEyIGEzIGE0IGE1IGIxIGIyIGIzIGI0KVxuICAgICAgICAocSA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYTE7IGEyOyBhMzsgYTQ7IGE1IF0pXG4gICAgICAgIChhMiA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgISFcIndpbmRvd1wiOyAhIVwid2luZG93XCI7ICEhXCJ3aW5kb3dcIjsgISFcIndpbmRvd1wiIF0pXG4gICAgXVxuOztcblxubGV0IGRlbGV0ZV9kYXkgZGF5IHEgPVxuICBtYXRjaCBkYXkgd2l0aFxuICB8IE1vbmRheSAtPiBkZWxldGVfbW9uZGF5IHFcbiAgfCBUdWVzZGF5IC0+IGRlbGV0ZV90dWVzZGF5IHFcbiAgfCBfIC0+IGZhaWx1cmVcbjs7XG5cbmxldCBkZWxldGVfZGF5X3dpdGhfbnVtYmVyIGRheSBudW1iZXIgcSA9XG4gIG1hdGNoIGRheSwgbnVtYmVyIHdpdGhcbiAgfCBNb25kYXksIDUgLT4gZGVsZXRlX21vbmRheSBxXG4gIHwgVHVlc2RheSwgNSAtPiBkZWxldGVfdHVlc2RheSBxXG4gIHwgTW9uZGF5LCAxIC0+IGRlbGV0ZV9tb25kYXlfMSBxXG4gIHwgXywgXyAtPiBmYWlsdXJlXG47O1xuXG5sZXQgdXNpbmdfZW1wbG95X3VzZXIgdV9jIHEgPVxuICBtYXRjaCB1X2Mgd2l0aFxuICB8IFwiZGVsZXRlX21vbmRheVwiIC0+IGRlbGV0ZV9tb25kYXkgcVxuICB8IFwiZGVsZXRlX3R1ZXNkYXlcIiAtPiBkZWxldGVfdHVlc2RheSBxXG4gIHwgXyAtPiBmYWlsdXJlXG47O1xuXG5sZXQgc3RyaW5nX2FsZ190eXBlIHN0cmluZyA9XG4gIG1hdGNoIHN0cmluZyB3aXRoXG4gICgqIG1hdGNoIHN0cmluZyB3aXRoICopXG4gIHwgXCJEZWxldGVfTW9uZGF5XzVfdGVhY2hlcjFcIiAtPlxuICAgIE5vdF9sZWFybmluZ1xuICAgICAgeyBudW1iZXJfbGVzc29uID0gNVxuICAgICAgOyBkYXkgPSBNb25kYXlcbiAgICAgIDsgZ3JvdXBfb3JfdGVhY2hlciA9IFRlYWNoZXIgeyBuYW1lID0gXCJ0ZWFjaGVyMVwiIH1cbiAgICAgIH1cbiAgfCBcIkRlbGV0ZV9Nb25kYXlfMV90ZWFjaGVyMVwiIC0+XG4gICAgTm90X2xlYXJuaW5nXG4gICAgICB7IG51bWJlcl9sZXNzb24gPSAxXG4gICAgICA7IGRheSA9IE1vbmRheVxuICAgICAgOyBncm91cF9vcl90ZWFjaGVyID0gVGVhY2hlciB7IG5hbWUgPSBcInRlYWNoZXIxXCIgfVxuICAgICAgfVxuICB8IFwiRGVsZXRlX1R1ZXNkYXlfNV90ZWFjaGVyMVwiIC0+XG4gICAgTm90X2xlYXJuaW5nXG4gICAgICB7IG51bWJlcl9sZXNzb24gPSA1XG4gICAgICA7IGRheSA9IFR1ZXNkYXlcbiAgICAgIDsgZ3JvdXBfb3JfdGVhY2hlciA9IFRlYWNoZXIgeyBuYW1lID0gXCJ0ZWFjaGVyMVwiIH1cbiAgICAgIH1cbiAgfCBfIC0+XG4gICAgTm90X2xlYXJuaW5nXG4gICAgICB7IG51bWJlcl9sZXNzb24gPSAxXG4gICAgICA7IGRheSA9IE1vbmRheVxuICAgICAgOyBncm91cF9vcl90ZWFjaGVyID0gVGVhY2hlciB7IG5hbWUgPSBcInRlYWNoZXIyXCIgfVxuICAgICAgfVxuOztcblxuKCogbGV0IHVzZV9uZXdfYWxnX2NvbnN0IF9jb25zdCBncm91cDEgZ3JvdXAyIHRlYWNoZXIxID1cbiAgbWF0Y2ggX2NvbnN0IHdpdGhcbiAgfCBOb3RfbGVhcm5pbmd7bnVtYmVyX2xlc3NvbiA9IDUgOyBkYXkgPSBNb25kYXk7IGdyb3VwX29yX3RlYWNoZXI9IFRlYWNoZXIgeyBuYW1lPVwidGVhY2hlcjFcIn19IC0+IGRlbGV0ZV9kYXlfd2l0aF9udW1iZXIgIE1vbmRheSA1IHRlYWNoZXIxO1xuICB8IE5vdF9sZWFybmluZyB7bnVtYmVyX2xlc3NvbiA9IDEgOyBkYXkgPSBNb25kYXk7Z3JvdXBfb3JfdGVhY2hlcj0gVGVhY2hlciB7IG5hbWU9XCJ0ZWFjaGVyMVwifX0gLT4gZGVsZXRlX2RheV93aXRoX251bWJlciAgTW9uZGF5IDEgdGVhY2hlcjE7XG4gIHwgXyAtPiBmYWlsdXJlXG47OyAqKVxubGV0IHJlYyBlbXBsb3lfY29uc3RyYWludCB1c2VyX2NvbnN0IHEgPVxuICBtYXRjaCB1c2VyX2NvbnN0IHdpdGhcbiAgfCBbXSAtPiBzdWNjZXNzXG4gIHwgaGQgOjogdGwgLT4gdXNpbmdfZW1wbG95X3VzZXIgaGQgcSAmJiYgZW1wbG95X2NvbnN0cmFpbnQgdGwgcVxuOztcblxubGV0IHVzZV91c2VyX2NvbnN0ciBhbGdfdHlwZSBxID1cbiAgbWF0Y2ggYWxnX3R5cGUgd2l0aFxuICB8IE5vdF9sZWFybmluZyB7IG51bWJlcl9sZXNzb247IGRheTsgZ3JvdXBfb3JfdGVhY2hlciB9IC0+XG4gICAgZGVsZXRlX2RheV93aXRoX251bWJlciBkYXkgbnVtYmVyX2xlc3NvbiBxXG47O1xuXG5sZXQgcmVjIGFsZ19jb25zdGFpbnQgdXNlcl9jb25zdHJhaW50cyBxID1cbiAgbWF0Y2ggdXNlcl9jb25zdHJhaW50cyB3aXRoXG4gIHwgW10gLT4gc3VjY2Vzc1xuICB8IGhkIDo6IHRsIC0+IHVzZV91c2VyX2NvbnN0ciAoc3RyaW5nX2FsZ190eXBlIGhkKSBxICYmJiBhbGdfY29uc3RhaW50IHRsIHFcbjs7XG5cbmxldCByZWMgbXlhc3NvY28ga2V5IHhzIHYgPVxuICBGcmVzaC50aHJlZSAoZnVuIGEgYiB0bCAtPlxuICAgIHhzXG4gICAgPT09IFN0ZC5wYWlyIGEgYiAlIHRsXG4gICAgJiYmIGNvbmRlIFsgYSA9PT0ga2V5ICYmJiAoYiA9PT0gdik7IGEgPS89IGtleSAmJiYgbXlhc3NvY28ga2V5IHRsIHYgXSlcbjs7XG5cbm1vZHVsZSBJQXNzb2MgPSBzdHJ1Y3RcbiAgdHlwZSBrZXkgPSBzdHJpbmcgaWxvZ2ljXG4gIHR5cGUgJ2EgdCA9IChrZXksICdhKSBTdGQuUGFpci5pbmplY3RlZCBTdGQuTGlzdC5pbmplY3RlZFxuXG4gIGxldCBmaW5kbyA6IGtleSAtPiAnYSBpbG9naWMgdCAtPiAnYSBpbG9naWMgLT4gZ29hbCA9IG15YXNzb2NvXG5cbiAgbGV0IGFkZG8gayB2IG1hcCBtYXBfbmV3ID1cbiAgICAoKiBUT0RPOiBkb24ndCBhbGxvdyBkdXBsaWNhdGUga2V5cz8gKilcbiAgICBTdGQuTGlzdC5jb25zIChTdGQucGFpciBrIHYpIG1hcCA9PT0gbWFwX25ld1xuICA7O1xuZW5kXG5cbigqIGxldCByZWMgdXNlcl9jb25zdHJhaW50IHVzZXJfY29uc3QgcSA9IGNvbmRlXG4gWyB1c2VyX2NvbnN0ID09PSBuaWwgKClcbjtcbmZyZXNoKGZpcnN0IGxhc3QpICh1c2VyX2NvbnN0ID09PSBMaXN0LmNvbnMgZmlyc3QgbGFzdCkgKilcbigqIChmaXJzdCBxKSAobGFzdCBxKV0gKilcbigqINCt0KLQniDQndCj0JbQndCeINCX0JDQnNCV0KLQp9CY0KLQrCwg0KLQniDQldCh0KLQrCDQkdCV0KDQldCcINCh0J/QmNCh0J7QmiDQptCV0JvQldCZLCDQv9GA0L7QstC10YDRj9C10LwsINC10YHQu9C4INGG0LXQu9GMINGC0LDQutCw0Y8g0YLQviwg0YLQviDQstGL0LfRi9Cy0LDQtdC8INC+0L/RgNC10LTQtdC70LXQvdC90YPRjiDRgNC10LvRj9GG0LjRjiwg0YHQvNC10YHRjCDRhNGD0L3QutGG0LjQvtC90LDQu9GM0L3QvtCz0L4g0L/RgNC+0LPRgNCw0LzQvNC40YDQvtCy0LDQvdC40Y8g0Lgg0YDQtdC70Y/RhtC40L7QvdC90L7Qs9C+ICopXG5sZXQgcmVpZmllciAoKVxuICA6ICggJ2EgaWxvZ2ljIFN0ZC5MaXN0LmluamVjdGVkIFN0ZC5MaXN0LmluamVjdGVkIFN0ZC5MaXN0LmluamVjdGVkXG4gICwgJ2EgbG9naWMgU3RkLkxpc3QubG9naWMgU3RkLkxpc3QubG9naWMgU3RkLkxpc3QubG9naWMgKSBSZWlmaWVyLnRcbiAgPVxuICBTdGQuTGlzdC5yZWlmeSAoU3RkLkxpc3QucmVpZnkgKFN0ZC5MaXN0LnJlaWZ5IE9DYW5yZW4ucmVpZnkpKVxuOztcblxubGV0IHN0b3JhZ2VfcmVpZmllclxuICA6ICggKElBc3NvYy5rZXksIGlzY2hlZHVsZSkgUGFpci5ncm91bmRpIFN0ZC5MaXN0LmluamVjdGVkXG4gICwgKHN0cmluZyBsb2dpYywgc2NoZWR1bGVfbG9naWMpIFBhaXIubG9naWMgU3RkLkxpc3QubG9naWMgKSBSZWlmaWVyLnRcbiAgPVxuICBTdGQuTGlzdC5yZWlmeVxuICAgIChTdGQuUGFpci5yZWlmeSBPQ2FucmVuLnJlaWZ5IChTdGQuTGlzdC5yZWlmeSAoU3RkLkxpc3QucmVpZnkgT0NhbnJlbi5yZWlmeSkpKVxuOztcblxubGV0IHNob3dlciA9XG4gIEdULnNob3dcbiAgICBTdGQuTGlzdC5sb2dpY1xuICAgIChHVC5zaG93XG4gICAgICAgU3RkLkxpc3QubG9naWNcbiAgICAgICAoR1Quc2hvdyBTdGQuTGlzdC5sb2dpYyAoR1Quc2hvdyBPQ2FucmVuLmxvZ2ljIEBAIEdULnNob3cgR1Quc3RyaW5nKSkpXG47O1xuXG5sZXQgc2hvd19zdG9yYWdlID1cbiAgR1Quc2hvd1xuICAgIFN0ZC5MaXN0LmxvZ2ljXG4gICAgKEdULnNob3dcbiAgICAgICBTdGQuUGFpci5sb2dpY1xuICAgICAgIChHVC5zaG93IE9DYW5yZW4ubG9naWMgQEAgR1Quc2hvdyBHVC5zdHJpbmcpXG4gICAgICAgKEdULnNob3dcbiAgICAgICAgICBTdGQuTGlzdC5sb2dpY1xuICAgICAgICAgIChHVC5zaG93IFN0ZC5MaXN0LmxvZ2ljIChHVC5zaG93IE9DYW5yZW4ubG9naWMgQEAgR1Quc2hvdyBHVC5zdHJpbmcpKSkpXG47O1xuXG5sZXQgc3RyaW5nX2FsZ190eXBlIHN0cmluZyA9XG4gIG1hdGNoIHN0cmluZyB3aXRoXG4gICgqIG1hdGNoIHN0cmluZyB3aXRoICopXG4gIHwgXCJEZWxldGVfTW9uZGF5XzVfdGVhY2hlcjFcIiAtPlxuICAgIE5vdF9sZWFybmluZ1xuICAgICAgeyBudW1iZXJfbGVzc29uID0gNVxuICAgICAgOyBkYXkgPSBNb25kYXlcbiAgICAgIDsgZ3JvdXBfb3JfdGVhY2hlciA9IFRlYWNoZXIgeyBuYW1lID0gXCJ0ZWFjaGVyMVwiIH1cbiAgICAgIH1cbiAgfCBcIkRlbGV0ZV9Nb25kYXlfMV90ZWFjaGVyMVwiIC0+XG4gICAgTm90X2xlYXJuaW5nXG4gICAgICB7IG51bWJlcl9sZXNzb24gPSAxXG4gICAgICA7IGRheSA9IE1vbmRheVxuICAgICAgOyBncm91cF9vcl90ZWFjaGVyID0gVGVhY2hlciB7IG5hbWUgPSBcInRlYWNoZXIxXCIgfVxuICAgICAgfVxuICB8IFwiRGVsZXRlX1R1ZXNkYXlfNV90ZWFjaGVyMVwiIC0+XG4gICAgTm90X2xlYXJuaW5nXG4gICAgICB7IG51bWJlcl9sZXNzb24gPSA1XG4gICAgICA7IGRheSA9IFR1ZXNkYXlcbiAgICAgIDsgZ3JvdXBfb3JfdGVhY2hlciA9IFRlYWNoZXIgeyBuYW1lID0gXCJ0ZWFjaGVyMVwiIH1cbiAgICAgIH1cbiAgKCogfCBbfCBcImRlbGV0ZVwiOyBcIlR1ZXNkYXlcIjsgbiA7IFwidGVhY2hlclwifF0gLT4gYXNzZXJ0IGZhbHNlICAqKVxuICB8IF8gLT5cbiAgICBOb3RfbGVhcm5pbmdcbiAgICAgIHsgbnVtYmVyX2xlc3NvbiA9IDFcbiAgICAgIDsgZGF5ID0gTW9uZGF5XG4gICAgICA7IGdyb3VwX29yX3RlYWNoZXIgPSBUZWFjaGVyIHsgbmFtZSA9IFwidGVhY2hlcjJcIiB9XG4gICAgICB9XG4gIDs7XG5cbmxldCB0dHQgdDEgdDIgdDMgPSBjb25kZSBbIGZhaWx1cmUgXVxuXG5sZXQgdXNlX25ld19hbGdfY29uc3QgX2NvbnN0IGdyb3VwMSBncm91cDIgdGVhY2hlcjEgPVxuICBtYXRjaCBfY29uc3Qgd2l0aFxuICB8IE5vdF9sZWFybmluZ1xuICAgICAgeyBudW1iZXJfbGVzc29uID0gNVxuICAgICAgOyBkYXkgPSBNb25kYXlcbiAgICAgIDsgZ3JvdXBfb3JfdGVhY2hlciA9IFRlYWNoZXIgeyBuYW1lID0gXCJ0ZWFjaGVyMVwiIH1cbiAgICAgIH0gLT4gZGVsZXRlX2RheV93aXRoX251bWJlciBNb25kYXkgNSB0ZWFjaGVyMVxuICB8IE5vdF9sZWFybmluZ1xuICAgICAgeyBudW1iZXJfbGVzc29uID0gNVxuICAgICAgOyBkYXkgPSBUdWVzZGF5XG4gICAgICA7IGdyb3VwX29yX3RlYWNoZXIgPSBUZWFjaGVyIHsgbmFtZSA9IFwidGVhY2hlcjFcIiB9XG4gICAgICB9IC0+IGRlbGV0ZV9kYXlfd2l0aF9udW1iZXIgVHVlc2RheSA1IHRlYWNoZXIxXG4gIHwgTm90X2xlYXJuaW5nXG4gICAgICB7IG51bWJlcl9sZXNzb24gPSAxXG4gICAgICA7IGRheSA9IE1vbmRheVxuICAgICAgOyBncm91cF9vcl90ZWFjaGVyID0gVGVhY2hlciB7IG5hbWUgPSBcInRlYWNoZXIxXCIgfVxuICAgICAgfSAtPiBkZWxldGVfZGF5X3dpdGhfbnVtYmVyIE1vbmRheSAxIHRlYWNoZXIxXG4gIHwgTm90X2xlYXJuaW5nXG4gICAgICB7IG51bWJlcl9sZXNzb24gPSAxOyBkYXkgPSBNb25kYXk7IGdyb3VwX29yX3RlYWNoZXIgPSBHcm91cCB7IG51bWJlciA9IDEgfSB9IC0+XG4gICAgZGVsZXRlX2RheV93aXRoX251bWJlciBNb25kYXkgMSBncm91cDFcbiAgfCBOb3RfbGVhcm5pbmdcbiAgICAgIHsgbnVtYmVyX2xlc3NvbiA9IDE7IGRheSA9IE1vbmRheTsgZ3JvdXBfb3JfdGVhY2hlciA9IEdyb3VwIHsgbnVtYmVyID0gMiB9IH0gLT5cbiAgICBkZWxldGVfZGF5X3dpdGhfbnVtYmVyIE1vbmRheSAxIGdyb3VwMlxuICB8IE5vdF9sZWFybmluZyB7IG51bWJlcl9sZXNzb247IGRheTsgZ3JvdXBfb3JfdGVhY2hlciB9IC0+IGZhaWx1cmVcbjs7XG5cbmxldCByZWMgcmVsYXRpb25fZm9yX2FsbF9ncm91cF9vcl90ZWFjaGVyIF9jb25zdGFpbnRzIGdyb3VwMSBncm91cDIgdGVhY2hlcjEgPVxuICBtYXRjaCBfY29uc3RhaW50cyB3aXRoXG4gIHwgW10gLT4gc3VjY2Vzc1xuICB8IGhkIDo6IHRsIC0+XG4gICAgdXNlX25ld19hbGdfY29uc3QgKHN0cmluZ19hbGdfdHlwZSBoZCkgZ3JvdXAxIGdyb3VwMiB0ZWFjaGVyMVxuICAgICYmJiByZWxhdGlvbl9mb3JfYWxsX2dyb3VwX29yX3RlYWNoZXIgdGwgZ3JvdXAxIGdyb3VwMiB0ZWFjaGVyMVxuOztcblxuKCogU3RkLkxpc3QuYXNzb2NvIC0g0Y3RgtC+INC60LDQuiDRhNCw0LnQvdC0LCDQuNGJ0LXRgiDQv9C+INC60LvRjtGH0YMg0LfQvdCw0YfQtdC90LjQtSDQsiDRgdC/0LjRgdC60LUgKNC40LvQuCDQsiDQv9Cw0YDQtSwg0L3QtSDQv9C+0LzQvdGOKSAqKVxuKCog0KPRh9C10LHQvdGL0Lkg0L/Qu9Cw0L0g0YXRgNCw0L3QuNC8INCyINCy0LjQtNC1INC70LjRgdGC0LAg0L/QsNGAICgoKG1hdGFuLCBncm91cDEpLCB2aWRlbnNraXkpLCgoYWxnLGdyb3VwMSksIHp1a292KSksINGCINC1INC+0LTQvdC+INC30L3QsNGH0LXQvdC40LUgLSDQs9GA0YPQv9C/0LAgKyDQv9GA0LXQtNC80LXRgiwg0LTRgNGD0LPQvtC1IC0g0L/RgNC10L/QvtC0XG4gICAg0JTQsNC70LXQtSwg0L/QuNGI0YMg0YDQtdC70Y/RhtC40Y4sINC60L7RgtC+0YDQsNGPINC/0YDQuNC90LjQvNCw0LXRgiDRjdGC0L7RgiDQu9C40YHRgiDQuCDQvdCwINC70LXRgtGDINGB0L7Qt9C00LDQtdGCINC90L7QstGL0LUg0LvQvtCz0LjRh9C10YHQutC40LUg0L/QtdGA0LXQvNC10L3QvdGL0LUg0Lgg0LLRgdGC0LDQstC70Y/QtdGCINC40YUg0LIg0YDQsNGB0L/QuNGB0LDQvdC40LUgICopXG5cbmxldCBlcXVhbF9sb2dfc3RyIHN0ciA9IGNvbmRlIFsgISFcIm1hdGFuXCIgPT09ICEhc3RyIF1cblxubGV0IHNlYXJjaG8gX2NvbnN0YWludHMgYW5zd2VyID1cbiAgZnJlc2hcbiAgICAoZ3JvdXAxIGdyb3VwMiB0ZWFjaGVyMSB0KVxuICAgICgqIChhbGdfY29uc3RhaW50IF9jb25zdGFpbnRzIGdyb3VwMSkgKilcbiAgICAoKiAobmV3X3JlbGF0aW9uX2NvbnN0YWludHMgcSByIHMgdCkgKilcbiAgICAoYW5zd2VyID09PSBTdGQubGlzdCBGdW4uaWQgWyBncm91cDE7IGdyb3VwMjsgdGVhY2hlcjE7IHQgXSlcbiAgICAocmVsYXRpb25fZm9yX2FsbF9ncm91cF9vcl90ZWFjaGVyIF9jb25zdGFpbnRzIGdyb3VwMSBncm91cDIgdGVhY2hlcjEpXG4gICAgKGluaXRfc2NoZWRfYV93ZWVrIGdyb3VwMSlcbiAgICAoaW5pdF9zY2hlZF9hX3dlZWsgdClcbiAgICAoaW5pdF9zY2hlZF9hX3dlZWsgZ3JvdXAyKVxuICAgIChpbml0X3NjaGVkX2Ffd2VlayB0ZWFjaGVyMSlcbiAgICAoc2NoZWRcbiAgICAgICAoU3RkLmxpc3RcbiAgICAgICAgICBGdW4uaWRcbiAgICAgICAgICBbIFN0ZC5saXN0IEZ1bi5pZCBbICEhXCJtYXRhbjFcIjsgISFcIm1hdGFuMlwiOyAhIVwiZ2VvbTFcIjsgISFcImFsZzFcIiBdXG4gICAgICAgICAgOyBTdGQubGlzdCBGdW4uaWQgWyAhIVwibWF0YW4zXCI7ICEhXCJtYXRhbjRcIjsgISFcImdlb20yXCI7ICEhXCJhbGcyXCIgXVxuICAgICAgICAgIF0pXG4gICAgICAgKFN0ZC5saXN0IEZ1bi5pZCBbIGdyb3VwMTsgZ3JvdXAyIF0pXG4gICAgICAgKFN0ZC5saXN0XG4gICAgICAgICAgRnVuLmlkXG4gICAgICAgICAgWyBTdGQubGlzdCBGdW4uaWQgWyB0ZWFjaGVyMTsgdGVhY2hlcjE7IHRlYWNoZXIxOyB0ZWFjaGVyMSBdXG4gICAgICAgICAgOyBTdGQubGlzdCBGdW4uaWQgWyB0ZWFjaGVyMTsgdGVhY2hlcjE7IHRlYWNoZXIxOyB0ZWFjaGVyMSBdXG4gICAgICAgICAgXSlcbiAgICAgICAoU3RkLmxpc3QgRnVuLmlkIFsgdCBdKVxuICAgICAgIChTdGQubGlzdFxuICAgICAgICAgIEZ1bi5pZFxuICAgICAgICAgIFsgU3RkLmxpc3RcbiAgICAgICAgICAgICAgRnVuLmlkXG4gICAgICAgICAgICAgIFsgISFcIm1hdGFuMVwiXG4gICAgICAgICAgICAgIDsgISFcImdlb20xXCJcbiAgICAgICAgICAgICAgOyAhIVwiZW5nMVwiXG4gICAgICAgICAgICAgIDsgISFcIm1hdGFuM1wiXG4gICAgICAgICAgICAgIDsgISFcIm1hdGFuNFwiXG4gICAgICAgICAgICAgIDsgISFcImdlb20yXCJcbiAgICAgICAgICAgICAgOyAhIVwiYWxnMlwiXG4gICAgICAgICAgICAgIDsgISFcIm1hdGFuMlwiXG4gICAgICAgICAgICAgIDsgISFcIm1hdGFuNlwiXG4gICAgICAgICAgICAgIDsgISFcImdlb20yXCJcbiAgICAgICAgICAgICAgOyAhIVwiYWxnMVwiXG4gICAgICAgICAgICAgIF1cbiAgICAgICAgICBdKSlcbjs7XG5cbigqINGDINCy0LDRgSDQtdGB0YLRjCDRg9C90LjRhNC40LrQsNGG0LjRjyAtINGA0LDQsdC+0YLQsNC50YLQtSAqKVxuKCogZGJtc19yYW5kb20ucmFuZG9tICopXG5cbigqIGxldCByZWMgYXNzb2NvIGtleSB4cyB2YWx1ZSA9ICopXG5cbmxldCBpbnNlcnRfc2NoZWRfdG9fcGFpciBwYWlyID0gY29uZGUgWyBmcmVzaCAoZ3JvdXAgc3ViaiB0ZWFjaGVyKSBzdWNjZXNzIF1cblxuKCogc3RvcmFnZSAtIHBhaXIgbGlzdCA7IHBhaXIgPSAobG9naWNfdmFyLCB0ZWFjaGVyX25hbWUpICopXG4oKiBsZXQgcmVjIGxpc3Rfc3RyaW5nX3RvX2xvZ2ljX2xpc3QgbGlzdCBsb2dpYyA9XG4gIG1hdGNoIGxpc3Qgd2l0aFxuICB8IFtdIC0+IHN1Y2Nlc3NcbiAgfCBoZDo6dGwgLT4gZnJlc2goYSBiKSAoYSA9PT0gIWhkKSAoYXBwZW5kbyApXG4gIDs7ICopXG5cbigqIG9wZW4gTGlzdCAqKVxuKCogbGV0IGxpc3RfbGlzdF9zdHJpbmdfdG9fbG9naWNfbGlzdF9saXN0IGxpc3QgbG9naWNsaXN0PVxuICBjb25kZSBbZnJlc2ggKGhkIHRhaWwpIChsaXN0ID09PSBMaXN0LmNvbnMgaGQgdGFpbCkgKFN0ZGxpYi5MaXN0Lm1hcCAoISEpIGhkXSAqKVxuXG5cblxuKCogbGV0IGluc2VydF9hbGxfc2NoZWQgc3ViaiBncm91cF9zY2hlZCB0ZWFjaGVyX3NjaGVkIGNsYXNzX3NjaGVkID0gKilcblxuKCogXG5sZXQgc2VhcmNobyBfY29uc3RhaW50cyBhbnN3ZXIgPVxuICBmcmVzaCAoc3RvcmFnZSkgKGluaXRfc2NoZWQgW1soXCJiLTA3XCIsXCJ2aWRlblwiKSxcIm1hdGFuXCJdXSBzdG9yYWdlKTsgKilcblxuICBsZXQgaW5zX3N0b3JlIHEgPVxuICAgIGNvbmRlIFtmcmVzaCAoYTEgbmFtZSkgKGluaXRfc2NoZWRfYV93ZWVrIGExKSAocSA9PT0gU3RkLmxpc3QgRnVuLmlkIFtTdGQucGFpciBuYW1lIGExXSldXG4gIFxuICAgIGxldCByZWMgYXBwZW5kbyBhIGIgYWIgPVxuICAgICAgY29uZGVcbiAgICAgICAgWyBhID09PSBuaWwgKCkgJiYmIChiID09PSBhYilcbiAgICAgICAgOyBmcmVzaCAoaCB0IGFiJykgKGEgPT09IGggJSB0KSAoaCAlIGFiJyA9PT0gYWIpIChhcHBlbmRvIHQgYiBhYicpXG4gICAgICAgIF1cbiAgICA7O1xuICBsZXQgcmVjIGluc2VydF9zdG9yYWdlIG4gcSA9XG4gICAgbWF0Y2ggbiB3aXRoXG4gICAgfCAwIC0+IHN1Y2Nlc3NcbiAgICB8IDEgLT4gaW5zX3N0b3JlIHFcbiAgICB8IF8gLT4gZnJlc2ggKGEgYikgKGluc2VydF9zdG9yYWdlIChuLTEpIGEpIChpbnNfc3RvcmUgYikgKGFwcGVuZG8gYSBiIHEpXG4gIDs7XG4gIGxldCByZWMgaW5zZXJ0X3NjaGVkX2luX3N0b3JhZ2UgZ3JvdXBfbmFtZSBncm91cF9zY2hlZCBzdG9yYWdlID1cbiAgICBjb25kZSBbZnJlc2ggKGExIGEyKSAoTGlzdC5jYXJvIHN0b3JhZ2UgYTEpIChhMSA9PT0gU3RkLnBhaXIgZ3JvdXBfbmFtZSBncm91cF9zY2hlZCk7XG4gICAgZnJlc2ggKGEzKSAoTGlzdC5jZHJvIHN0b3JhZ2UgYTMpIChpbnNlcnRfc2NoZWRfaW5fc3RvcmFnZSBncm91cF9uYW1lIGdyb3VwX3NjaGVkIGEzKV1cblxuICBsZXQgcmVjIGluaXRfc2NoZWQgKGxpc3RfcGFpciA6IHN0cmluZyBsaXN0IGxpc3QpIHN0b3JhZ2UgPVxuICAgIG1hdGNoIGxpc3RfcGFpciB3aXRoXG4gICAgfCBbXSAtPiBzdWNjZXNzXG4gICAgfCBoZCA6OiB0bCAtPlxuICAgICAgY29uZGVcbiAgICAgICAgWyBmcmVzaFxuICAgICAgICAoZ3JvdXBuYW1lIHRlYWNoZXJuYW1lIHN1YmpuYW1lIGdyb3VwX3NjaGVkIHRlYWNoZXJfc2NoZWQgYXVkIG5ld19zdG9yYWdlKVxuICAgICAgICAoaW5pdF9zY2hlZF9hX3dlZWsgdGVhY2hlcl9zY2hlZClcbiAgICAgICAgKGluaXRfc2NoZWRfYV93ZWVrIGdyb3VwX3NjaGVkKVxuICAgICAgICAoaW5pdF9zY2hlZF9hX3dlZWsgYXVkKVxuICAgICAgICAoU3RkLmxpc3QgKCAhISApIGhkID09PSBTdGQubGlzdCBGdW4uaWQgWyBncm91cG5hbWU7IHRlYWNoZXJuYW1lOyBzdWJqbmFtZSBdKVxuICAgICAgICAobXlhc3NvY28gZ3JvdXBuYW1lIChzdG9yYWdlIDogaXNjaGVkdWxlIElBc3NvYy50KSBncm91cF9zY2hlZClcbiAgICAgICAgKG15YXNzb2NvIHRlYWNoZXJuYW1lIHN0b3JhZ2UgKHRlYWNoZXJfc2NoZWQgOiBpc2NoZWR1bGUpKVxuICAgICAgICAoaW5zZXJ0X2FsbF9zY2hlZCBzdWJqbmFtZSBncm91cF9zY2hlZCB0ZWFjaGVyX3NjaGVkIGF1ZClcbiAgICAgICAgKGluc2VydF9zY2hlZF9pbl9zdG9yYWdlIGdyb3VwbmFtZSBncm91cF9zY2hlZCBzdG9yYWdlKVxuICAgICAgICAoaW5zZXJ0X3NjaGVkX2luX3N0b3JhZ2UgdGVhY2hlcm5hbWUgdGVhY2hlcl9zY2hlZCBzdG9yYWdlKVxuICAgICAgICAoaW5pdF9zY2hlZCB0bCBzdG9yYWdlKVxuICAgICAgICAgICAgXG4gICAgICAgIDsgZnJlc2hcbiAgICAgICAgICAgIChncm91cG5hbWUgdGVhY2hlcm5hbWUgc3Viam5hbWUgZ3JvdXBfc2NoZWQgdGVhY2hlcl9zY2hlZCBhdWQgbmV3X3N0b3JhZ2UpXG4gICAgICAgICAgICAoU3RkLmxpc3QgKCAhISApIGhkID09PSBTdGQubGlzdCBGdW4uaWQgWyBncm91cG5hbWU7IHRlYWNoZXJuYW1lOyBzdWJqbmFtZSBdKVxuICAgICAgICAgICAgKGluaXRfc2NoZWRfYV93ZWVrIHRlYWNoZXJfc2NoZWQpXG4gICAgICAgICAgICAoaW5pdF9zY2hlZF9hX3dlZWsgZ3JvdXBfc2NoZWQpXG4gICAgICAgICAgICAoaW5pdF9zY2hlZF9hX3dlZWsgYXVkKVxuICAgICAgICAgICAgKGluc2VydF9hbGxfc2NoZWQgc3Viam5hbWUgZ3JvdXBfc2NoZWQgdGVhY2hlcl9zY2hlZCBhdWQpXG4gICAgICAgICAgICAoaW5zZXJ0X3NjaGVkX2luX3N0b3JhZ2UgZ3JvdXBuYW1lIGdyb3VwX3NjaGVkIHN0b3JhZ2UpXG4gICAgICAgICAgICAgKGluc2VydF9zY2hlZF9pbl9zdG9yYWdlIHRlYWNoZXJuYW1lIHRlYWNoZXJfc2NoZWQgc3RvcmFnZSlcbiAgICAgICAgICAgICAoaW5pdF9zY2hlZCB0bCBzdG9yYWdlKVxuICAgICAgICBdOztcblxuICAgICAgXG5cblxuICBsZXQgcmVjIGluaXRfc2NoZWRfbmV3IChsaXN0X3BhaXIgOiBzdHJpbmcgbGlzdCBsaXN0KSBzdG9yYWdlIG4gPVxuICAgIG1hdGNoIG4gd2l0aFxuICAgIHwgMCAtPiBzdWNjZXNzXG4gICAgfCBuIC0+IChpbnNlcnRfc3RvcmFnZSBuIHN0b3JhZ2UpICYmJiBcbiAgICBtYXRjaCBsaXN0X3BhaXIgd2l0aFxuICAgIHwgW10gLT4gc3VjY2Vzc1xuICAgIHwgaGQ6OnRsIC0+IChpbml0X3NjaGVkIGxpc3RfcGFpciBzdG9yYWdlKSBcbiAgICAgIFxuICAgICBcbiAgOztcbiAgbGV0IHRlc3QxIF9jb25zdGFpbnRzIGFuc3dlciA9XG4gICAgY29uZGVcbiAgICAgIFsgZnJlc2hcbiAgICAgICAgICAoc3RvcmFnZSlcbiAgICAgICAgICAoaW5pdF9zY2hlZF9uZXcgXG4gICAgICAgICAgICBbIFsgXCJiLTEwXCI7IFwidGVhY2hlclwiOyBcIm1hdGFuXCIgXVxuICAgICAgICAgICAgICA7IFsgXCJiLTEwXCI7IFwidGVhY2hlclwiOyBcIm1hdGFuMlwiIF0gXG4gICAgICAgICAgICAgIDsgWyBcImItMTBcIjsgXCJ0ZWFjaGVyXCI7IFwiYWxnXCIgXVxuICAgICAgICAgICAgIDsgWyBcImItMTBcIjsgXCJ0ZWFjaGVyXCI7IFwibWF0YW4zXCIgXVxuICAgICAgICAgICAgIDsgWyBcImItMTBcIjsgXCJ0ZWFjaGVyXCI7IFwibWF0YW40XCIgXVxuICAgICAgICAgICAgIDsgWyBcImItMTBcIjsgXCJ0ZWFjaGVyXCI7IFwiYWxnMlwiIF0gXG4gICAgICAgICAgICAgOyBbXCJiLTA3XCIgOyBcInZpZGVuXCIgOyBcIm1hdGFuXCJdXG4gICAgICAgICAgICAgOyBbXCJiLTA4XCI7IFwidGVhY2hlcjJcIjsgXCJlbmdcIl1cbiAgICAgICAgICAgICA7IFtcImItMDhcIiA7IFwidGVhY2hlclwiOyBcImVuZzEwXCJdXG4gICAgICAgICAgICAgXVxuICAgICAgICAgICAgIHN0b3JhZ2UgMTApXG4gICAgICAgICAgKHN0b3JhZ2UgPT09IGFuc3dlcilcbiAgICAgIF1cbiAgOztcbiAgXG4gIGxldCBzY2hlZG8gX2NvbnN0cmFpbnRzID1cbiAgICAoKiBbJXRlc3RlciBydW5fciByZWlmaWVyIHNob3dlciAxICgqINC/0YDQuNC90LjQvNCw0LXRgiDRgNCw0YHQv9C40YHQsNC90LjQtSBxdHJzICopIHNlYXJjaG9dXG4gICAgICopXG4gICAgT0NhbnJlbi5ydW5cbiAgICAgIE9DYW5yZW4ucVxuICAgICAgKGZ1biB4IC0+IHRlc3QxIF9jb25zdHJhaW50cyB4KVxuICAgICAgKGZ1biByciAtPiByciNyZWlmeSBzdG9yYWdlX3JlaWZpZXIpXG4gICAgfD4gT0NhbnJlbi5TdHJlYW0udGFrZSB+bjoxXG4gICAgfD4gU3RkbGliLkxpc3QuaXRlcmkgKGZ1biBpIGFucyAtPiBGb3JtYXQucHJpbnRmIFwiJWQ6ICVzXFxuJSFcIiBpIChzaG93X3N0b3JhZ2UgYW5zKSlcbiAgOzsiXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLjAsImZpbGUiOiIubGliMS5vYmpzL2xpYjEuY21hLmpzIiwic291cmNlUm9vdCI6IiIsIm5hbWVzIjpbIm1lbWJlcm8iLCJ4IiwibCIsImQiLCJpbnNlcnRfZmlyc3RfbGVzc29uIiwicSIsInMiLCJ3IiwiZSIsInIiLCJpbnNfZmlyc3RfbGVzc29uIiwibGVzc29uIiwiaW5zX3NlY29uZF9sZXNzb24iLCJpbnNfbW9uZGF5XzEiLCJhMSIsImEyIiwiYTMiLCJhNCIsImE1IiwiYjEiLCJiMiIsImIzIiwiYjQiLCJpbnNfbW9uZGF5XzIiLCJpbnNfbW9uZGF5XzMiLCJpbnNfbW9uZGF5XzQiLCJpbnNfdHVlc2RheV8xIiwiaW5zX3R1ZXNkYXlfMiIsImluc190dWVzZGF5XzMiLCJpbnNfdHVlc2RheV80IiwiaW5zZXJ0X2xlc3NvbiIsImluaXRfc2NoZWRfb25lX2RheSIsImluaXRfc2NoZWRfYV93ZWVrIiwic3ltYm9sIiwidCIsInkiLCJpbnNfc2NoZWQxIiwic3ViaiIsImdyb3VwX3NjaGVkIiwidGVhY2hlcl9zY2hlZCIsImNsYXNzX3NjaGVkIiwiYzIiLCJjMyIsImM0IiwiaW5zX3NjaGVkMiIsImluc19zY2hlZDMiLCJpbnNfc2NoZWQ0IiwiaW5zZXJ0X2FsbF9zY2hlZCIsImI1IiwiYzEiLCJjNSIsImluc2VydF9zY2hlZF90b19vbmVfZ3JvdXAiLCJsZXNzb25zIiwiYWxsX3RlYWNoZXJfc2NoZWQiLCJzY2hlZF9hbGxfY2xhc3MiLCJjbGFzc19zdWJqIiwic2NoZWRfZmlyc3RfY2xhc3MiLCJvc3QiLCJzdWJqX2ZpcnN0Iiwic3Vial9vc3QiLCJ0YWlsX3RlYWNoZXIiLCJ0YWlsX2xlc3NvbnMiLCJzY2hlZF9jbGFzcyIsImNsYXNzX2ZpcnN0IiwiY2xhc3Nfb3N0Iiwic2NoZWQiLCJzdHVkeXBsYW5hbGxncm91cCIsInNjaGVkYWxsZ3JvdXAiLCJhbGx0ZWFjaGVyc2NoZWQiLCJzY2hlZGNsYXNzIiwiY2xhc3Nlc3N1YmoiLCJzdHVkeXBsYW5vbmVncm91cCIsInN0dWR5cGxhbm9zdCIsInNjaGVkb25lZ3JvdXAiLCJzY2hlZG9zdCIsIm9uZXRlYWNoZXIiLCJvc3R0ZWFjaGVyIiwiZGVsZXRlX21vbmRheV8xIiwiYjYiLCJiNyIsImI4IiwiZGVsZXRlX21vbmRheSIsImRlbGV0ZV90dWVzZGF5IiwiZGVsZXRlX2RheSIsImRheSIsImRlbGV0ZV9kYXlfd2l0aF9udW1iZXIiLCJudW1iZXIiLCJ1c2luZ19lbXBsb3lfdXNlciIsInVfYyIsImVtcGxveV9jb25zdHJhaW50IiwidXNlcl9jb25zdCIsInRsIiwiaGQiLCJ1c2VfdXNlcl9jb25zdHIiLCJhbGdfdHlwZSIsIm51bWJlcl9sZXNzb24iLCJhbGdfY29uc3RhaW50IiwidXNlcl9jb25zdHJhaW50cyIsIm15YXNzb2NvIiwia2V5IiwieHMiLCJ2IiwiYSIsImIiLCJhZGRvIiwiayIsIm1hcCIsIm1hcF9uZXciLCJyZWlmaWVyIiwic3RvcmFnZV9yZWlmaWVyIiwic2hvd2VyIiwic2hvd19zdG9yYWdlIiwic3RyaW5nX2FsZ190eXBlIiwic3RyaW5nIiwidHR0IiwidDEiLCJ0MiIsInQzIiwidXNlX25ld19hbGdfY29uc3QiLCJjb25zdCQwIiwiZ3JvdXAxIiwiZ3JvdXAyIiwidGVhY2hlcjEiLCJyZWxhdGlvbl9mb3JfYWxsX2dyb3VwX29yX3RlYWMiLCJjb25zdGFpbnRzIiwiZXF1YWxfbG9nX3N0ciIsInN0ciIsInNlYXJjaG8iLCJhbnN3ZXIiLCJpbnNlcnRfc2NoZWRfdG9fcGFpciIsInBhaXIiLCJncm91cCIsInRlYWNoZXIiLCJpbnNfc3RvcmUiLCJuYW1lIiwiYXBwZW5kbyIsImFiIiwiaCIsImFiJDAiLCJpbnNlcnRfc3RvcmFnZSIsIm4iLCJpbnNlcnRfc2NoZWRfaW5fc3RvcmFnZSIsImdyb3VwX25hbWUiLCJzdG9yYWdlIiwiaW5pdF9zY2hlZCIsImxpc3RfcGFpciIsImdyb3VwbmFtZSIsInRlYWNoZXJuYW1lIiwic3Viam5hbWUiLCJhdWQiLCJuZXdfc3RvcmFnZSIsImluaXRfc2NoZWRfbmV3IiwidGVzdDEiXSwic291cmNlcyI6WyIvVXNlcnMvYXphdC9EZXNrdG9wL215X3NjaGVkX3Byb2ovX2J1aWxkL2RlZmF1bHQvZGVtbzFwcHgvbGliLm1sIl0sIm1hcHBpbmdzIjoiOzs7OztJOzs7Ozs7Ozs7O0lBTU07Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O2FBSUVBLFFBQVFDLEVBQUVDO01BQUk7b0JBQXVCQzs7VUFBeUI7bUJBQTlESCxRQUFRQyxFQUE2QkU7V0FBUyxxQ0FBcENELEVBQTJCQztVQUFTLG1DQUE0QjtRQUFyQyxtQ0FBcUM7TUFBckM7O09BQWYscUNBQVpELEVBQUZEO01BQWMsbUNBQUg7YUFxRHZCRyxvQkFBb0JDO01BQ3RCO29CQUFRQzs7Ozs7Z0JBQThEOztpQkFBUCwrQkFBdkRBO2lCQUF1RCxRQUF2REE7Z0JBQXVELG9CQUF2RCxXQUF3RTtnQkFBakQ7O2lCQUFQLCtCQURGRDtnQkFDRSxtQ0FBd0Q7Y0FBeEUsbUNBQXdFO1lBQXhFLHNDQUF3RTtVQUF4RSxzQ0FBd0U7UUFBeEUsc0NBQXdFO01BQXhFO3lDQUFIO2FBR0hLLGlCQUFpQkwsRUFBRU07TUFDckI7b0JBQVFMOzs7OztnQkFBdUQ7Z0RBQXZEQSxFQURhSztpQkFDMEMsUUFBdkRMO2dCQUF1RCxvQkFBdkQsV0FBcUU7Z0JBQTlDOztpQkFBUCwrQkFETEQ7Z0JBQ0ssbUNBQXFEO2NBQXJFLG1DQUFxRTtZQUFyRSxzQ0FBcUU7VUFBckUsc0NBQXFFO1FBQXJFLHNDQUFxRTtNQUFyRTt5Q0FBSDthQUdITyxrQkFBa0JQLEVBQUVNO01BQ3RCO29CQUFRTDs7Ozs7Z0JBQXVEO2dEQUF2REMsRUFEY0k7aUJBQ3lDLFFBQXZETDtnQkFBdUQsb0JBQXZELFdBQXFFO2dCQUE5Qzs7aUJBQVAsK0JBREpEO2dCQUNJLG1DQUFxRDtjQUFyRSxtQ0FBcUU7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QXRNUCxTQTJNUWdILGVBQWdCTixVQUE4QkYsUUFHbERIO01BRkYsU0FFRUEsRUFESztNQUMyQjtXQUhaSyxVQWpDaEJELFdBaUNnQkMsVUFBOEJGO09BRzVDLElBOUNGSixlQThDSkMsRUFIa0RHO01BRzVDLHNDQUdrQztJQWpONUMsU0FxTklTLE1BQU01QixXQUFZSTtNQUNwQjttQkFDSWU7O1VBY0U7eUNBZEZBLFFBRmdCZjtXQUliLE9BZER1QixtQkFZRlI7VUFFRyxrQ0FZbUI7UUFkdEIsa0NBY3NCO01BZHRCO3dDQURDOzs7OztPQTMzQkQvSTtPQXFESkk7T0FJQU07T0FJQUU7T0FJQUM7T0FVQVU7T0FVQUM7T0FVQUM7T0FVQUM7T0FVQUM7T0FVQUM7T0FVQUM7T0FVQUM7T0FhQUM7T0FPQUM7T0FlQUk7T0FVQVE7T0FVQUM7T0FVQUM7T0FnQkFDO09BMEJJSTtPQTZEQWM7T0FxTkpZO09BU0FJO09BU0FDO09BU0FDO09BT0FFO09BUUFFO09BMENJRTtPQU1KSTtPQU1JRztPQU1BRTs7T0F5QkpVO09BT0FDO09BUUFDO09BUUFDO09BV0FDO09BOEJBRTtPQUVBSTtPQTBCSUs7T0FZSkU7T0FFQUU7T0FnREFFO09BcUJFSTtPQUdNRTtPQU1GSTtPQU1BRTtPQUlBRztPQWlDQU87T0FVSkM7O1UiLCJzb3VyY2VzQ29udGVudCI6WyJvcGVuIE9DYW5yZW5cbm9wZW4gT0NhbnJlbi5TdGRcblxubGV0IHJlYyBhcHBlbmRvIGEgYiBhYiA9XG4gIGNvbmRlXG4gICAgWyBhID09PSBuaWwgKCkgJiYmIChiID09PSBhYilcbiAgICA7IGZyZXNoIChoIHQgYWInKSAoYSA9PT0gaCAlIHQpIChoICUgYWInID09PSBhYikgKGFwcGVuZG8gdCBiIGFiJylcbiAgICBdXG47O1xuXG5sZXQgcmVjIG1lbWJlcm8geCBsID0gY29uZGUgWyBMaXN0LmNhcm8gbCB4OyBmcmVzaCBkIChMaXN0LmNkcm8gbCBkKSAobWVtYmVybyB4IGQpIF1cblxuKCogbGV0IHJlYyBldmFsbyBtIG4gPVxuICBjb25kZVxuICAgIFsgZnJlc2ggeCAobSA9PT0gdiB4KSAobiA9PT0gbSlcbiAgICA7IGZyZXNoICh4IGwpIChtID09PSBhYnMgeCBsKSAobiA9PT0gbSlcbiAgICA7IGZyZXNoXG4gICAgICAgIChmIGEgZicgYScpXG4gICAgICAgIChtID09PSBhcHAgZiBhKVxuICAgICAgICAoZXZhbG8gZiBmJylcbiAgICAgICAgKGV2YWxvIGEgYScpXG4gICAgICAgIChjb25kZVxuICAgICAgICAgICBbIGZyZXNoICh4IGwgbCcpIChmJyA9PT0gYWJzIHggbCkgKHN1YnN0byBsIHggYScgbCcpIChldmFsbyBsJyBuKVxuICAgICAgICAgICA7IGZyZXNoIChwIHEpIChmJyA9PT0gYXBwIHAgcSkgKG4gPT09IGFwcCBmJyBhJylcbiAgICAgICAgICAgOyBmcmVzaCB4IChmJyA9PT0gdiB4KSAobiA9PT0gYXBwIGYnIGEnKVxuICAgICAgICAgICBdKVxuICAgIF1cbjs7ICopXG4oKiBcbmxldCBhX2xhX3F1aW5lIHEgciBzID0gPyZbIGV2YWxvIChhcHAgcSByKSBzOyBldmFsbyAoYXBwIHIgcykgcTsgZXZhbG8gKGFwcCBzIHEpIHIgXVxuXG5vcGVuIFRlc3RlclxuXG5sZXQgcnVuTCBuID0gcnVuX3IgTGFtLnJlaWZ5IChHVC5zaG93IExhbS5sb2dpYykgblxuKCogbGV0IHJ1bl9leG4gZXRhID0gcnVuX3IgTGFtLnByal9leG4gZXRhICopXG5cbmxldCBydW5fZXhuIGV0YSA9XG4gIHJ1bl9yIChTdGQuTGlzdC5wcmpfZXhuIE9DYW5yZW4ucHJqX2V4bikgKEdULnNob3cgU3RkLkxpc3QuZ3JvdW5kIChHVC5zaG93IEdULmludCkpIGV0YVxuOztcblxubGV0IF8gPSBydW5fZXhuICgtMSkgcXIgcXJoIChSRVBSIChmdW4gcSByIC0+IGFwcGVuZG8gcSByIChsaXN0ICggISEgKSBbIDE7IDI7IDM7IDQgXSkpKVxubGV0IHJlbG8gcyA9IHMgPT09IFN0ZC5MaXN0LmNvbnMgX18gX19cbmxldCB4ID0gR1Quc2hvdyBTdGQuTGlzdC5sb2dpYyAoR1Quc2hvdyBHVC5pbnQpICopXG5cbigqIG1vZHVsZSBQYXJhID0gc3RydWN0XG4gIFslJWRpc3RyaWJcbiAgdHlwZSBub25yZWMgJ2EgdCA9XG4gICAgfCBMZWN0dXJlIG9mICdhXG4gICAgfCBQcmFjdGljZSBvZiAnYVxuICBbQEBkZXJpdmluZyBndCB+cGx1Z2luczp7IGdtYXA7IHNob3cgfV0gKilcbigqIFxuICB0eXBlIG5vbnJlYyAnYSBncm91bmQgPSAnYSB0XVxuZW5kICopXG5cbigqIGxldCBfd2l0aEZyZWUgPVxuICBbJXRlc3RlclxuICAgIHJ1bl9yXG4gICAgICAoUGFyYS5yZWlmeSBPQ2FucmVuLnJlaWZ5KVxuICAgICAgKEdULnNob3cgUGFyYS5sb2dpYyAoR1Quc2hvdyBPQ2FucmVuLmxvZ2ljIEBAIEdULnNob3cgR1Quc3RyaW5nKSlcbiAgICAgIDNcbiAgICAgIChmdW4gcSAtPiBjb25kZSBbIHEgPT09IFBhcmEubGVjdHVyZSBfXzsgcSA9PT0gUGFyYS5wcmFjdGljZSBfXyBdKV1cbjs7ICopXG5cbmxldCBpbnNlcnRfZmlyc3RfbGVzc29uIHEgPVxuICBjb25kZSBbIGZyZXNoIChzIHcgZSByKSAocSA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgczsgdzsgZTsgciBdKSAocyA9PT0gISFcIndlcnR5XCIpIF1cbjs7XG5cbmxldCBpbnNfZmlyc3RfbGVzc29uIHEgbGVzc29uID1cbiAgY29uZGUgWyBmcmVzaCAocyB3IGUgcikgKHEgPT09IFN0ZC5saXN0IEZ1bi5pZCBbIHM7IHc7IGU7IHIgXSkgKHMgPT09IGxlc3NvbikgXVxuOztcblxubGV0IGluc19zZWNvbmRfbGVzc29uIHEgbGVzc29uID1cbiAgY29uZGUgWyBmcmVzaCAocyB3IGUgcikgKHEgPT09IFN0ZC5saXN0IEZ1bi5pZCBbIHM7IHc7IGU7IHIgXSkgKHcgPT09IGxlc3NvbikgXVxuOztcblxubGV0IGluc19tb25kYXlfMSBxIGxlc3NvbiA9XG4gIGNvbmRlXG4gICAgWyBmcmVzaFxuICAgICAgICAoYTEgYTIgYTMgYTQgYTUgYjEgYjIgYjMgYjQpXG4gICAgICAgIChxID09PSBTdGQubGlzdCBGdW4uaWQgWyBhMTsgYTI7IGEzOyBhNDsgYTUgXSlcbiAgICAgICAgKGExID09PSBTdGQubGlzdCBGdW4uaWQgWyBiMTsgYjI7IGIzOyBiNCBdKVxuICAgICAgICAoYjEgPT09IGxlc3NvbilcbiAgICBdXG47O1xuXG5sZXQgaW5zX21vbmRheV8yIHEgbGVzc29uID1cbiAgY29uZGVcbiAgICBbIGZyZXNoXG4gICAgICAgIChhMSBhMiBhMyBhNCBhNSBiMSBiMiBiMyBiNClcbiAgICAgICAgKHEgPT09IFN0ZC5saXN0IEZ1bi5pZCBbIGExOyBhMjsgYTM7IGE0OyBhNSBdKVxuICAgICAgICAoYTEgPT09IFN0ZC5saXN0IEZ1bi5pZCBbIGIxOyBiMjsgYjM7IGI0IF0pXG4gICAgICAgIChiMiA9PT0gbGVzc29uKVxuICAgIF1cbjs7XG5cbmxldCBpbnNfbW9uZGF5XzMgcSBsZXNzb24gPVxuICBjb25kZVxuICAgIFsgZnJlc2hcbiAgICAgICAgKGExIGEyIGEzIGE0IGE1IGIxIGIyIGIzIGI0KVxuICAgICAgICAocSA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYTE7IGEyOyBhMzsgYTQ7IGE1IF0pXG4gICAgICAgIChhMSA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYjE7IGIyOyBiMzsgYjQgXSlcbiAgICAgICAgKGIzID09PSBsZXNzb24pXG4gICAgXVxuOztcblxubGV0IGluc19tb25kYXlfNCBxIGxlc3NvbiA9XG4gIGNvbmRlXG4gICAgWyBmcmVzaFxuICAgICAgICAoYTEgYTIgYTMgYTQgYTUgYjEgYjIgYjMgYjQpXG4gICAgICAgIChxID09PSBTdGQubGlzdCBGdW4uaWQgWyBhMTsgYTI7IGEzOyBhNDsgYTUgXSlcbiAgICAgICAgKGExID09PSBTdGQubGlzdCBGdW4uaWQgWyBiMTsgYjI7IGIzOyBiNCBdKVxuICAgICAgICAoYjQgPT09IGxlc3NvbilcbiAgICBdXG47O1xuXG5sZXQgaW5zX3R1ZXNkYXlfMSBxIGxlc3NvbiA9XG4gIGNvbmRlXG4gICAgWyBmcmVzaFxuICAgICAgICAoYTEgYTIgYTMgYTQgYTUgYjEgYjIgYjMgYjQpXG4gICAgICAgIChxID09PSBTdGQubGlzdCBGdW4uaWQgWyBhMTsgYTI7IGEzOyBhNDsgYTUgXSlcbiAgICAgICAgKGEyID09PSBTdGQubGlzdCBGdW4uaWQgWyBiMTsgYjI7IGIzOyBiNCBdKVxuICAgICAgICAoYjEgPT09IGxlc3NvbilcbiAgICBdXG47O1xuXG5sZXQgaW5zX3R1ZXNkYXlfMiBxIGxlc3NvbiA9XG4gIGNvbmRlXG4gICAgWyBmcmVzaFxuICAgICAgICAoYTEgYTIgYTMgYTQgYTUgYjEgYjIgYjMgYjQpXG4gICAgICAgIChxID09PSBTdGQubGlzdCBGdW4uaWQgWyBhMTsgYTI7IGEzOyBhNDsgYTUgXSlcbiAgICAgICAgKGEyID09PSBTdGQubGlzdCBGdW4uaWQgWyBiMTsgYjI7IGIzOyBiNCBdKVxuICAgICAgICAoYjIgPT09IGxlc3NvbilcbiAgICBdXG47O1xuXG5sZXQgaW5zX3R1ZXNkYXlfMyBxIGxlc3NvbiA9XG4gIGNvbmRlXG4gICAgWyBmcmVzaFxuICAgICAgICAoYTEgYTIgYTMgYTQgYTUgYjEgYjIgYjMgYjQpXG4gICAgICAgIChxID09PSBTdGQubGlzdCBGdW4uaWQgWyBhMTsgYTI7IGEzOyBhNDsgYTUgXSlcbiAgICAgICAgKGEyID09PSBTdGQubGlzdCBGdW4uaWQgWyBiMTsgYjI7IGIzOyBiNCBdKVxuICAgICAgICAoYjMgPT09IGxlc3NvbilcbiAgICBdXG47O1xuXG5sZXQgaW5zX3R1ZXNkYXlfNCBxIGxlc3NvbiA9XG4gIGNvbmRlXG4gICAgWyBmcmVzaFxuICAgICAgICAoYTEgYTIgYTMgYTQgYTUgYjEgYjIgYjMgYjQpXG4gICAgICAgIChxID09PSBTdGQubGlzdCBGdW4uaWQgWyBhMTsgYTI7IGEzOyBhNDsgYTUgXSlcbiAgICAgICAgKGEyID09PSBTdGQubGlzdCBGdW4uaWQgWyBiMTsgYjI7IGIzOyBiNCBdKVxuICAgICAgICAoYjQgPT09IGxlc3NvbilcbiAgICBdXG47O1xuXG5sZXQgaW5zZXJ0X2xlc3NvbiBxIGxlc3NvbiA9XG4gIGNvbmRlXG4gICAgWyBpbnNfbW9uZGF5XzEgcSBsZXNzb25cbiAgICA7IGluc19tb25kYXlfMiBxIGxlc3NvblxuICAgIDsgaW5zX21vbmRheV8zIHEgbGVzc29uXG4gICAgOyBpbnNfbW9uZGF5XzQgcSBsZXNzb25cbiAgICA7IGluc190dWVzZGF5XzEgcSBsZXNzb25cbiAgICA7IGluc190dWVzZGF5XzIgcSBsZXNzb25cbiAgICA7IGluc190dWVzZGF5XzMgcSBsZXNzb25cbiAgICA7IGluc190dWVzZGF5XzQgcSBsZXNzb25cbiAgICBdXG47O1xuXG5sZXQgaW5pdF9zY2hlZF9vbmVfZGF5IHMgPVxuICBjb25kZSBbIGZyZXNoIChxIHcgZSByKSAocyA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgcTsgdzsgZTsgciBdKSBdXG47O1xuXG50eXBlIGlzY2hlZHVsZSA9IHN0cmluZyBpbG9naWMgU3RkLkxpc3QuaW5qZWN0ZWQgU3RkLkxpc3QuaW5qZWN0ZWRcbnR5cGUgc2NoZWR1bGVfbG9naWMgPSBzdHJpbmcgbG9naWMgU3RkLkxpc3QubG9naWMgU3RkLkxpc3QubG9naWNcblxubGV0IGluaXRfc2NoZWRfYV93ZWVrIDogaXNjaGVkdWxlIC0+IGdvYWwgPVxuIGZ1biBxIC0+XG4gIGxldCAoICoqICkgPSAoICUgKSBpblxuICBjb25kZVxuICAgIFsgZnJlc2hcbiAgICAgICAgKHcgZSByIHQgeSlcbiAgICAgICAgKGluaXRfc2NoZWRfb25lX2RheSB3KVxuICAgICAgICAoaW5pdF9zY2hlZF9vbmVfZGF5IGUpXG4gICAgICAgIChpbml0X3NjaGVkX29uZV9kYXkgcilcbiAgICAgICAgKGluaXRfc2NoZWRfb25lX2RheSB0KVxuICAgICAgICAoaW5pdF9zY2hlZF9vbmVfZGF5IHkpXG4gICAgICAgIChxID09PSB3ICoqIGUgKiogciAqKiB0ICoqICE8eSlcbiAgICBdXG47O1xuXG5sZXQgaW5zX3NjaGVkMSBzdWJqIGdyb3VwX3NjaGVkIHRlYWNoZXJfc2NoZWQgY2xhc3Nfc2NoZWQgPVxuICBjb25kZVxuICAgIFsgZnJlc2hcbiAgICAgICAgKGEyIGEzIGE0IGIyIGIzIGI0IGMyIGMzIGM0KVxuICAgICAgICAoZ3JvdXBfc2NoZWQgPT09IFN0ZC5saXN0IEZ1bi5pZCBbIHN1Ymo7IGEyOyBhMzsgYTQgXSlcbiAgICAgICAgKHRlYWNoZXJfc2NoZWQgPT09IFN0ZC5saXN0IEZ1bi5pZCBbIHN1Ymo7IGIyOyBiMzsgYjQgXSlcbiAgICAgICAgKGNsYXNzX3NjaGVkID09PSBTdGQubGlzdCBGdW4uaWQgWyBzdWJqOyBjMjsgYzM7IGM0IF0pXG4gICAgXVxuOztcblxubGV0IGluc19zY2hlZDIgc3ViaiBncm91cF9zY2hlZCB0ZWFjaGVyX3NjaGVkIGNsYXNzX3NjaGVkID1cbiAgY29uZGVcbiAgICBbIGZyZXNoXG4gICAgICAgIChhMiBhMyBhNCBiMiBiMyBiNCBjMiBjMyBjNClcbiAgICAgICAgKGdyb3VwX3NjaGVkID09PSBTdGQubGlzdCBGdW4uaWQgWyBhMjsgc3ViajsgYTM7IGE0IF0pXG4gICAgICAgICh0ZWFjaGVyX3NjaGVkID09PSBTdGQubGlzdCBGdW4uaWQgWyBiMjsgc3ViajsgYjM7IGI0IF0pXG4gICAgICAgIChjbGFzc19zY2hlZCA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYzI7IHN1Ymo7IGMzOyBjNCBdKVxuICAgIF1cbjs7XG5cbmxldCBpbnNfc2NoZWQzIHN1YmogZ3JvdXBfc2NoZWQgdGVhY2hlcl9zY2hlZCBjbGFzc19zY2hlZCA9XG4gIGNvbmRlXG4gICAgWyBmcmVzaFxuICAgICAgICAoYTIgYTMgYTQgYjIgYjMgYjQgYzIgYzMgYzQpXG4gICAgICAgIChncm91cF9zY2hlZCA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYTI7IGEzOyBzdWJqOyBhNCBdKVxuICAgICAgICAodGVhY2hlcl9zY2hlZCA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYjI7IGIzOyBzdWJqOyBiNCBdKVxuICAgICAgICAoY2xhc3Nfc2NoZWQgPT09IFN0ZC5saXN0IEZ1bi5pZCBbIGMyOyBjMzsgc3ViajsgYzQgXSlcbiAgICBdXG47O1xuXG5sZXQgaW5zX3NjaGVkNCBzdWJqIGdyb3VwX3NjaGVkIHRlYWNoZXJfc2NoZWQgY2xhc3Nfc2NoZWQgPVxuICBjb25kZVxuICAgIFsgZnJlc2hcbiAgICAgICAgKGEyIGEzIGE0IGIyIGIzIGI0IGMyIGMzIGM0KVxuICAgICAgICAoZ3JvdXBfc2NoZWQgPT09IFN0ZC5saXN0IEZ1bi5pZCBbIGEyOyBhMzsgYTQ7IHN1YmogXSlcbiAgICAgICAgKHRlYWNoZXJfc2NoZWQgPT09IFN0ZC5saXN0IEZ1bi5pZCBbIGIyOyBiMzsgYjQ7IHN1YmogXSlcbiAgICAgICAgKGNsYXNzX3NjaGVkID09PSBTdGQubGlzdCBGdW4uaWQgWyBjMjsgYzM7IGM0OyBzdWJqIF0pXG4gICAgXVxuOztcblxuKCogbGV0IGluc19zY2hlZF9tb24gc3ViaiBncm91cF9zY2hlZCB0ZWFjaGVyX3NjaGVkIGNsYXNzX3NjaGVkID1cbiAgY29uZGUgXG4gIFsgZnJlc2hcbiAgXG4gIF0gKilcblxubGV0IGluc2VydF9hbGxfc2NoZWQgc3ViaiBncm91cF9zY2hlZCB0ZWFjaGVyX3NjaGVkIGNsYXNzX3NjaGVkID1cbiAgZnJlc2hcbiAgICAoYTEgYTIgYTMgYTQgYTUgYjEgYjIgYjMgYjQgYjUgYzEgYzIgYzMgYzQgYzUpXG4gICAgKGdyb3VwX3NjaGVkID09PSBTdGQubGlzdCBGdW4uaWQgWyBhMTsgYTI7IGEzOyBhNDsgYTUgXSlcbiAgICAodGVhY2hlcl9zY2hlZCA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYjE7IGIyOyBiMzsgYjQ7IGI1IF0pXG4gICAgKGNsYXNzX3NjaGVkID09PSBTdGQubGlzdCBGdW4uaWQgWyBjMTsgYzI7IGMzOyBjNDsgYzUgXSlcbiAgICAoY29uZGVcbiAgICAgICBbIGluc19zY2hlZDEgc3ViaiBhMSBiMSBjMVxuICAgICAgIDsgaW5zX3NjaGVkMiBzdWJqIGExIGIxIGMxXG4gICAgICAgOyBpbnNfc2NoZWQzIHN1YmogYTEgYjEgYzFcbiAgICAgICA7IGluc19zY2hlZDQgc3ViaiBhMSBiMSBjMVxuICAgICAgIDsgaW5zX3NjaGVkMSBzdWJqIGEyIGIyIGMyXG4gICAgICAgOyBpbnNfc2NoZWQyIHN1YmogYTIgYjIgYzJcbiAgICAgICA7IGluc19zY2hlZDMgc3ViaiBhMiBiMiBjMlxuICAgICAgIDsgaW5zX3NjaGVkNCBzdWJqIGEyIGIyIGMyXG4gICAgICAgOyBpbnNfc2NoZWQxIHN1YmogYTMgYjMgYzNcbiAgICAgICA7IGluc19zY2hlZDIgc3ViaiBhMyBiMyBjM1xuICAgICAgIDsgaW5zX3NjaGVkMyBzdWJqIGEzIGIzIGMzXG4gICAgICAgOyBpbnNfc2NoZWQ0IHN1YmogYTMgYjMgYzNcbiAgICAgICA7IGluc19zY2hlZDEgc3ViaiBhNCBiNCBjNFxuICAgICAgIDsgaW5zX3NjaGVkMiBzdWJqIGE0IGI0IGM0XG4gICAgICAgOyBpbnNfc2NoZWQzIHN1YmogYTQgYjQgYzRcbiAgICAgICA7IGluc19zY2hlZDQgc3ViaiBhNCBiNCBjNFxuICAgICAgIF0pXG47O1xuXG5sZXQgcmVjIGluc2VydF9zY2hlZF90b19vbmVfZ3JvdXBcbiAgbGVzc29uc1xuICBhbGxfdGVhY2hlcl9zY2hlZFxuICBzY2hlZF9hbGxfY2xhc3NcbiAgZ3JvdXBfc2NoZWRcbiAgY2xhc3Nfc3VialxuICA9XG4gIGNvbmRlXG4gICAgWyBsZXNzb25zID09PSBMaXN0Lm5pbCAoKVxuICAgIDsgZnJlc2hcbiAgICAgICAgKHRlYWNoZXJfc2NoZWRcbiAgICAgICAgICAgbGVzc29uXG4gICAgICAgICAgIHRhaWxfdGVhY2hlclxuICAgICAgICAgICB0YWlsX2xlc3NvbnNcbiAgICAgICAgICAgc2NoZWRfY2xhc3NcbiAgICAgICAgICAgb3N0XG4gICAgICAgICAgIGNsYXNzX2ZpcnN0XG4gICAgICAgICAgIGNsYXNzX29zdClcbiAgICAgICAgKGFsbF90ZWFjaGVyX3NjaGVkID09PSBMaXN0LmNvbnMgdGVhY2hlcl9zY2hlZCB0YWlsX3RlYWNoZXIpXG4gICAgICAgIChsZXNzb25zID09PSBMaXN0LmNvbnMgbGVzc29uIHRhaWxfbGVzc29ucylcbiAgICAgICAgKHNjaGVkX2FsbF9jbGFzcyA9PT0gTGlzdC5jb25zIHNjaGVkX2NsYXNzIG9zdClcbiAgICAgICAgKGNsYXNzX3N1YmogPT09IExpc3QuY29ucyBjbGFzc19maXJzdCBjbGFzc19vc3QpXG4gICAgICAgIChtZW1iZXJvIGxlc3NvbiBjbGFzc19maXJzdClcbiAgICAgICAgKGluc2VydF9hbGxfc2NoZWQgbGVzc29uIGdyb3VwX3NjaGVkIHRlYWNoZXJfc2NoZWQgc2NoZWRfY2xhc3MpXG4gICAgICAgIChpbnNlcnRfc2NoZWRfdG9fb25lX2dyb3VwXG4gICAgICAgICAgIHRhaWxfbGVzc29uc1xuICAgICAgICAgICB0YWlsX3RlYWNoZXJcbiAgICAgICAgICAgc2NoZWRfYWxsX2NsYXNzXG4gICAgICAgICAgIGdyb3VwX3NjaGVkXG4gICAgICAgICAgIGNsYXNzX3N1YmopXG4gICAgOyBmcmVzaFxuICAgICAgICAoc2NoZWRfZmlyc3RfY2xhc3Mgb3N0IHN1YmpfZmlyc3Qgc3Vial9vc3QpXG4gICAgICAgIChzY2hlZF9hbGxfY2xhc3MgPT09IExpc3QuY29ucyBzY2hlZF9maXJzdF9jbGFzcyBvc3QpXG4gICAgICAgIChjbGFzc19zdWJqID09PSBMaXN0LmNvbnMgc3Vial9maXJzdCBzdWJqX29zdClcbiAgICAgICAgKGluc2VydF9zY2hlZF90b19vbmVfZ3JvdXAgbGVzc29ucyBhbGxfdGVhY2hlcl9zY2hlZCBvc3QgZ3JvdXBfc2NoZWQgc3Vial9vc3QpXG4gICAgXVxuOztcblxuKCogbGV0IHJlYyBpbnNlcnRfc2NoZWQgYWxsX3RlYWNoZXJfc2NoZWQgc2NoZWRfY2xhc3MgZ3JvdXBfc2NoZWQgYWxsX2xlc3NvbnMgPVxuICBjb25kZVxuICAgIFsgYWxsX2xlc3NvbnMgPT09IExpc3QubmlsICgpXG4gICAgOyBmcmVzaFxuICAgICAgICAodGVhY2hlcl9zY2hlZCBsZXNzb24gdGFpbF90ZWFjaGVyIHRhaWxfbGVzc29ucylcbiAgICAgICAgKGFsbF90ZWFjaGVyX3NjaGVkID09PSBMaXN0LmNvbnMgdGVhY2hlcl9zY2hlZCB0YWlsX3RlYWNoZXIpXG4gICAgICAgIChhbGxfbGVzc29ucyA9PT0gTGlzdC5jb25zIGxlc3NvbiB0YWlsX2xlc3NvbnMpXG4gICAgICAgIChpbnNlcnRfbGVzc29uIHRlYWNoZXJfc2NoZWQgbGVzc29uKVxuICAgICAgICAoaW5zZXJ0X2xlc3NvbiBncm91cF9zY2hlZCBsZXNzb24pXG4gICAgICAgIChpbnNlcnRfbGVzc29uIHNjaGVkX2NsYXNzIGxlc3NvbilcbiAgICAgICAgKGluc2VydF9zY2hlZCB0YWlsX3RlYWNoZXIgc2NoZWRfY2xhc3MgZ3JvdXBfc2NoZWQgdGFpbF9sZXNzb25zKVxuICAgIF1cbjs7ICopXG5cbigqIChkZWZpbmUgKHNjaGVkIHN0dWR5cGxhbmFsbGdyb3VwIHNjaGVkYWxsZ3JvdXAgYWxsdGVhY2hlcnNjaGVkIHNjaGVkY2xhc3MgY2xhc3Nlc3N1YmogYWxsbmFtZWdyb3VwIGFsbHRlYWNoZXJuYW1lIGFsbGNsYXNzbnVtYmVyKSA70YHQvtGB0YLQsNCy0LvRj9C10YIg0YDQsNGB0L/QuNGB0LDQvdC40LUg0L3QsCDQstGB0LUg0LPRgNGD0L/Qv9GLLCDQvdC+INGC0L7Qu9GM0LrQviDQv9GA0LDQutGC0LjQutC4XG4gIChjb25kZVxuICAgWyg9PSBzdHVkeXBsYW5hbGxncm91cCAnKCkpIHN1Y2NlZWRdXG4gICBbKGZyZXNoIChhMSBhMiBhMyBuYW1lZ3JvdXAgc2NoZWRvbmUgYzQgYzUpIChjYXJvIHN0dWR5cGxhbmFsbGdyb3VwIGExKSAoY2FybyBzY2hlZGFsbGdyb3VwIHNjaGVkb25lKSAoY2FybyBhbGxuYW1lZ3JvdXAgbmFtZWdyb3VwKSAoY2FybyBhbGx0ZWFjaGVyc2NoZWQgYTMpIChjYXJvIGFsbHRlYWNoZXJuYW1lIGM1KSBcbiAgICAgICAgICAgKHRpbWV0YWJsZW9uZWdyb3VwIGExIHNjaGVkb25lIGEzIHNjaGVkY2xhc3MgY2xhc3Nlc3N1YmogbmFtZWdyb3VwIGM1IGFsbGNsYXNzbnVtYmVyKSlcbiAgICAoZnJlc2ggKGE0IGE1IGE2IGIxIGIyIGIzKSAoY2RybyBzdHVkeXBsYW5hbGxncm91cCBhNCkgKGNkcm8gc2NoZWRhbGxncm91cCBhNSkgKGNkcm8gYWxsdGVhY2hlcnNjaGVkIGE2KSAoY2RybyBhbGxuYW1lZ3JvdXAgYjEpIChjZHJvIGFsbHRlYWNoZXJuYW1lIGIyKVxuICAgICAgICAgICAoc2NoZWQgYTQgYTUgYTYgc2NoZWRjbGFzcyBjbGFzc2Vzc3ViaiBiMSBiMiBhbGxjbGFzc251bWJlcikpXG4gICAgICAgICAgIF1cbiAgICkpICopXG5sZXQgcmVjIHNjaGVkIHN0dWR5cGxhbmFsbGdyb3VwIHNjaGVkYWxsZ3JvdXAgYWxsdGVhY2hlcnNjaGVkIHNjaGVkY2xhc3MgY2xhc3Nlc3N1YmogPVxuICBjb25kZVxuICAgIFsgc3R1ZHlwbGFuYWxsZ3JvdXAgPT09IExpc3QubmlsICgpXG4gICAgOyBzY2hlZGFsbGdyb3VwID09PSBMaXN0Lm5pbCAoKVxuICAgIDsgZnJlc2hcbiAgICAgICAgKHN0dWR5cGxhbm9uZWdyb3VwIHN0dWR5cGxhbm9zdCBzY2hlZG9uZWdyb3VwIHNjaGVkb3N0IG9uZXRlYWNoZXIgb3N0dGVhY2hlcilcbiAgICAgICAgKHN0dWR5cGxhbmFsbGdyb3VwID09PSBMaXN0LmNvbnMgc3R1ZHlwbGFub25lZ3JvdXAgc3R1ZHlwbGFub3N0KVxuICAgICAgICAoc2NoZWRhbGxncm91cCA9PT0gTGlzdC5jb25zIHNjaGVkb25lZ3JvdXAgc2NoZWRvc3QpXG4gICAgICAgIChhbGx0ZWFjaGVyc2NoZWQgPT09IExpc3QuY29ucyBvbmV0ZWFjaGVyIG9zdHRlYWNoZXIpXG4gICAgICAgIChpbnNlcnRfc2NoZWRfdG9fb25lX2dyb3VwXG4gICAgICAgICAgIHN0dWR5cGxhbm9uZWdyb3VwXG4gICAgICAgICAgIG9uZXRlYWNoZXJcbiAgICAgICAgICAgc2NoZWRjbGFzc1xuICAgICAgICAgICBzY2hlZG9uZWdyb3VwXG4gICAgICAgICAgIGNsYXNzZXNzdWJqKVxuICAgICAgICAoc2NoZWQgc3R1ZHlwbGFub3N0IHNjaGVkb3N0IG9zdHRlYWNoZXIgc2NoZWRjbGFzcyBjbGFzc2Vzc3ViailcbiAgICBdXG47O1xuXG4oKiBsZXQgZGVsZXRlX21vbmRheSA9ICopXG5cbigqIGxldCBfd2l0aEZyZWUgPVxuICBbJXRlc3RlclxuICAgIHJ1bl9yXG4gICAgICAoU3RkLkxpc3QucmVpZnkgKFN0ZC5MaXN0LnJlaWZ5IE9DYW5yZW4ucmVpZnkpKVxuICAgICAgKEdULnNob3dcbiAgICAgICAgIFN0ZC5MaXN0LmxvZ2ljXG4gICAgICAgICAoR1Quc2hvdyBTdGQuTGlzdC5sb2dpYyAoR1Quc2hvdyBPQ2FucmVuLmxvZ2ljIEBAIEdULnNob3cgR1Quc3RyaW5nKSkpXG4gICAgICAxXG4gICAgICAoZnVuIHEgciBzIHQgLT5cbiAgICAgICAgaW5pdF9zY2hlZF9hX3dlZWsgcVxuICAgICAgICAmJiYgaW5pdF9zY2hlZF9hX3dlZWsgdFxuICAgICAgICAmJiYgaW5pdF9zY2hlZF9hX3dlZWsgclxuICAgICAgICAmJiYgaW5pdF9zY2hlZF9hX3dlZWsgc1xuICAgICAgICAmJiYgaW5zZXJ0X3NjaGVkX3RvX29uZV9ncm91cFxuICAgICAgICAgICAgICAoU3RkLmxpc3QgRnVuLmlkIFsgISFcIm1hdGFuMVwiOyAhIVwibWF0YW4yXCI7ICEhXCJnZW9tMVwiOyAhIVwiYWxnMVwiIF0pXG4gICAgICAgICAgICAgIChTdGQubGlzdCBGdW4uaWQgWyBxOyBxOyBxOyBxIF0pXG4gICAgICAgICAgICAgIChTdGQubGlzdCBGdW4uaWQgWyBzIF0pXG4gICAgICAgICAgICAgIHJcbiAgICAgICAgICAgICAgKFN0ZC5saXN0XG4gICAgICAgICAgICAgICAgIEZ1bi5pZFxuICAgICAgICAgICAgICAgICBbIFN0ZC5saXN0XG4gICAgICAgICAgICAgICAgICAgICBGdW4uaWRcbiAgICAgICAgICAgICAgICAgICAgIFsgISFcIm1hdGFuMVwiXG4gICAgICAgICAgICAgICAgICAgICA7ICEhXCJnZW9tMVwiXG4gICAgICAgICAgICAgICAgICAgICA7ICEhXCJlbmcxXCJcbiAgICAgICAgICAgICAgICAgICAgIDsgISFcIm1hdGFuM1wiXG4gICAgICAgICAgICAgICAgICAgICA7ICEhXCJtYXRhbjRcIlxuICAgICAgICAgICAgICAgICAgICAgOyAhIVwiZ2VvbTJcIlxuICAgICAgICAgICAgICAgICAgICAgOyAhIVwiYWxnMlwiXG4gICAgICAgICAgICAgICAgICAgICA7ICEhXCJtYXRhbjJcIlxuICAgICAgICAgICAgICAgICAgICAgOyAhIVwibWF0YW42XCJcbiAgICAgICAgICAgICAgICAgICAgIDsgISFcImdlb20yXCJcbiAgICAgICAgICAgICAgICAgICAgIDsgISFcImFsZzFcIlxuICAgICAgICAgICAgICAgICAgICAgXVxuICAgICAgICAgICAgICAgICBdKSldXG47OyAqKVxuXG4oKiBsZXQgX3dpdGhGcmVlID1cbiAgWyV0ZXN0ZXJcbiAgICBydW5fclxuICAgICAgKFN0ZC5MaXN0LnJlaWZ5IChTdGQuTGlzdC5yZWlmeSBPQ2FucmVuLnJlaWZ5KSlcbiAgICAgIChHVC5zaG93XG4gICAgICAgICBTdGQuTGlzdC5sb2dpY1xuICAgICAgICAgKEdULnNob3cgU3RkLkxpc3QubG9naWMgKEdULnNob3cgT0NhbnJlbi5sb2dpYyBAQCBHVC5zaG93IEdULnN0cmluZykpKVxuICAgICAgMTBcbiAgICAgIChmdW4gcSByIHMgdCAtPlxuICAgICAgICBpbml0X3NjaGVkX2Ffd2VlayBxXG4gICAgICAgICYmJiBpbml0X3NjaGVkX2Ffd2VlayB0XG4gICAgICAgICYmJiBpbml0X3NjaGVkX2Ffd2VlayByXG4gICAgICAgICYmJiBpbml0X3NjaGVkX2Ffd2VlayBzXG4gICAgICAgICYmJiBzY2hlZFxuICAgICAgICAgICAgICAoU3RkLmxpc3RcbiAgICAgICAgICAgICAgICAgRnVuLmlkXG4gICAgICAgICAgICAgICAgIFsgU3RkLmxpc3QgRnVuLmlkIFsgISFcIm1hdGFuMVwiOyAhIVwibWF0YW4yXCI7ICEhXCJnZW9tMVwiOyAhIVwiYWxnMVwiIF0gXSlcbiAgICAgICAgICAgICAgKFN0ZC5saXN0IEZ1bi5pZCBbIHEgXSlcbiAgICAgICAgICAgICAgKFN0ZC5saXN0IEZ1bi5pZCBbIFN0ZC5saXN0IEZ1bi5pZCBbIHQ7IHQ7IHQ7IHQgXSBdKVxuICAgICAgICAgICAgICAoU3RkLmxpc3QgRnVuLmlkIFsgcyBdKVxuICAgICAgICAgICAgICAoU3RkLmxpc3RcbiAgICAgICAgICAgICAgICAgRnVuLmlkXG4gICAgICAgICAgICAgICAgIFsgU3RkLmxpc3RcbiAgICAgICAgICAgICAgICAgICAgIEZ1bi5pZFxuICAgICAgICAgICAgICAgICAgICAgWyAhIVwibWF0YW4xXCJcbiAgICAgICAgICAgICAgICAgICAgIDsgISFcImdlb20xXCJcbiAgICAgICAgICAgICAgICAgICAgIDsgISFcImVuZzFcIlxuICAgICAgICAgICAgICAgICAgICAgOyAhIVwibWF0YW4zXCJcbiAgICAgICAgICAgICAgICAgICAgIDsgISFcIm1hdGFuNFwiXG4gICAgICAgICAgICAgICAgICAgICA7ICEhXCJnZW9tMlwiXG4gICAgICAgICAgICAgICAgICAgICA7ICEhXCJhbGcyXCJcbiAgICAgICAgICAgICAgICAgICAgIDsgISFcIm1hdGFuMlwiXG4gICAgICAgICAgICAgICAgICAgICA7ICEhXCJtYXRhbjZcIlxuICAgICAgICAgICAgICAgICAgICAgOyAhIVwiZ2VvbTJcIlxuICAgICAgICAgICAgICAgICAgICAgOyAhIVwiYWxnMVwiXG4gICAgICAgICAgICAgICAgICAgICBdXG4gICAgICAgICAgICAgICAgIF0pKV1cbjs7ICopXG5cbigqIGxldCByZWMgc2NoZWQgc3R1ZHlwbGFuYWxsZ3JvdXAgc2NoZWRhbGxncm91cCBhbGx0ZWFjaGVyc2NoZWQgc2NoZWRjbGFzcyBjbGFzc2Vzc3ViaiAqKVxuKCogbGV0IF93aXRoRnJlZSA9XG4gIFsldGVzdGVyXG4gICAgcnVuX3JcbiAgICAgIChTdGQuTGlzdC5yZWlmeSAoU3RkLkxpc3QucmVpZnkgT0NhbnJlbi5yZWlmeSkpXG4gICAgICAoR1Quc2hvd1xuICAgICAgICAgU3RkLkxpc3QubG9naWNcbiAgICAgICAgIChHVC5zaG93IFN0ZC5MaXN0LmxvZ2ljIChHVC5zaG93IE9DYW5yZW4ubG9naWMgQEAgR1Quc2hvdyBHVC5zdHJpbmcpKSlcbiAgICAgIDEwXG4gICAgICAoZnVuIHEgciBzIC0+XG4gICAgICAgIGluaXRfc2NoZWRfYV93ZWVrIHFcbiAgICAgICAgJiYmIGluaXRfc2NoZWRfYV93ZWVrIHJcbiAgICAgICAgJiYmIGluaXRfc2NoZWRfYV93ZWVrIHNcbiAgICAgICAgJiYmIGluc2VydF9zY2hlZFxuICAgICAgICAgICAgICAoU3RkLmxpc3QgRnVuLmlkIFsgcTsgcTsgcSBdKVxuICAgICAgICAgICAgICByXG4gICAgICAgICAgICAgIHNcbiAgICAgICAgICAgICAgKFN0ZC5saXN0IEZ1bi5pZCBbICEhXCJtYXRhbjFcIjsgISFcImdlb20xXCI7ICEhXCJlbmcxXCIgXSkpXVxuOzsgKilcblxuKCogbGV0IF93aXRoRnJlZSA9XG4gIFsldGVzdGVyXG4gICAgcnVuX3JcbiAgICAgIChTdGQuTGlzdC5yZWlmeSBPQ2FucmVuLnJlaWZ5KVxuICAgICAgKEdULnNob3cgU3RkLkxpc3QubG9naWMgKEdULnNob3cgT0NhbnJlbi5sb2dpYyBAQCBHVC5zaG93IEdULnN0cmluZykpXG4gICAgICAxXG4gICAgICAoZnVuIHEgciBzIC0+IG1lbWJlcm8gISFcIm1hdGFuXCIgKFN0ZC5saXN0IEZ1bi5pZCBbICEhXCJtYXRhblwiOyAhIVwiZ2VvbVwiOyAhIVwiZW5nXCIgXSkpXG4gICAgJiYmIGFwcGVuZG8gcSByIHNdXG47OyAqKVxuKCogbGV0IF93aXRoRnJlZSA9XG4gIFsldGVzdGVyXG4gICAgcnVuX3JcbiAgICAgIChTdGQuTGlzdC5yZWlmeSAoU3RkLkxpc3QucmVpZnkgT0NhbnJlbi5yZWlmeSkpXG4gICAgICAoR1Quc2hvd1xuICAgICAgICAgU3RkLkxpc3QubG9naWNcbiAgICAgICAgIChHVC5zaG93IFN0ZC5MaXN0LmxvZ2ljIChHVC5zaG93IE9DYW5yZW4ubG9naWMgQEAgR1Quc2hvdyBHVC5zdHJpbmcpKSlcbiAgICAgIDFcbiAgICAgIChmdW4gcSByIHMgLT5cbiAgICAgICAgbWVtYmVybyAhIVwibWF0YW5cIiAoU3RkLmxpc3QgRnVuLmlkIFsgISFcImF0YW5cIjsgISFcImdlb21cIjsgISFcImVuZ1wiIF0pXG4gICAgICAgICYmJiBhcHBlbmRvIHEgciBzKV1cbjs7ICopXG4oKiBsZXQgX3dpdGhGcmVlID1cbiAgWyV0ZXN0ZXJcbiAgICBydW5fclxuICAgICAgKFN0ZC5MaXN0LnJlaWZ5IChTdGQuTGlzdC5yZWlmeSBPQ2FucmVuLnJlaWZ5KSlcbiAgICAgIChHVC5zaG93XG4gICAgICAgICBTdGQuTGlzdC5sb2dpY1xuICAgICAgICAgKEdULnNob3cgU3RkLkxpc3QubG9naWMgKEdULnNob3cgT0NhbnJlbi5sb2dpYyBAQCBHVC5zaG93IEdULnN0cmluZykpKVxuICAgICAgMTBcbiAgICAgIChmdW4gcSByIHMgdCAtPlxuICAgICAgICBpbml0X3NjaGVkX2Ffd2VlayBxXG4gICAgICAgICYmJiBTY2hlZF9jb3JlLmluaXRfc2NoZWRfYV93ZWVrIHFcbiAgICAgICAgJiYmIGluaXRfc2NoZWRfYV93ZWVrIHRcbiAgICAgICAgJiYmIGluaXRfc2NoZWRfYV93ZWVrIHNcbiAgICAgICAgJiYmIGluc2VydF9zY2hlZF90b19vbmVfZ3JvdXBcbiAgICAgICAgICAgICAgKFN0ZC5saXN0IEZ1bi5pZCBbICEhXCJtYXRhblwiOyAhIVwiZ2VvbVwiOyAhIVwiZW5nXCIgXSlcbiAgICAgICAgICAgICAgKFN0ZC5saXN0IEZ1bi5pZCBbIHE7IHE7IHEgXSlcbiAgICAgICAgICAgICAgKFN0ZC5saXN0IEZ1bi5pZCBbIHIgXSlcbiAgICAgICAgICAgICAgc1xuICAgICAgICAgICAgICAoU3RkLmxpc3QgRnVuLmlkIFsgISFcIm1hdGFuXCI7ICEhXCJnZW9tXCI7ICEhXCJlbmdcIiBdKSldXG47OyAqKVxuKCogbGV0IHJlYyBpbnNlcnRfc2NoZWRfdG9fb25lX2dyb3VwIGxlc3NvbnMgYWxsX3RlYWNoZXJfc2NoZWQgc2NoZWRfYWxsX2NsYXNzIGdyb3VwX3NjaGVkID1cbiAgY29uZGVcbiAgICBbIGxlc3NvbnMgPT09IExpc3QubmlsICgpOyBmcmVzaCAodGVhY2hlcl9zY2hlZCBsZXNzb24gdGFpbF90ZWFjaGVyIHRhaWxfbGVzc29ucyBzY2hlZF9jbGFzcyBvc3QpIFxuICAgIChhbGxfdGVhY2hlcl9zY2hlZCA9PT0gTGlzdC5jb25zIHRlYWNoZXJfc2NoZWQgdGFpbF90ZWFjaGVyKVxuICAgIChsZXNzb25zID09PSBMaXN0LmNvbnMgbGVzc29uIHRhaWxfbGVzc29ucylcbiAgICAoc2NoZWRfYWxsX2NsYXNzID09PSBMaXN0LmNvbnMgc2NoZWRfY2xhc3Mgb3N0KVxuICAgIChtZW1iZXJvIGxlc3NvbiBzY2hlZF9jbGFzcylcbiAgICAoaW5zZXJ0X2FsbF9zY2hlZCBsZXNzb24gZ3JvdXBfc2NoZWQgdGVhY2hlcl9zY2hlZCBzY2hlZF9jbGFzcylcbiAgICAoaW5zZXJ0X3NjaGVkX3RvX29uZV9ncm91cCB0YWlsX2xlc3NvbnMgdGFpbF90ZWFjaGVyIHNjaGVkX2FsbF9jbGFzcyBncm91cF9zY2hlZCk7XG4gICAgXG4gICAgXG4gICAgIF1cbjs7ICopXG4oKiBsZXQgX3dpdGhGcmVlID0gcnVuTCAxIHEgcWggKFJFUFIgKGZ1biBxIC0+IGV2YWxvIChhcHAgcSAodiB2YXJYKSkgKHYgdmFyWCkpKSAqKVxuXG4oKiBsZXQgX3dpdGhGcmVlID1cbiAgcnVuX3JcbiAgICAoU3RkLkxpc3QucmVpZnkgKFN0ZC5MaXN0LnJlaWZ5IE9DYW5yZW4ucmVpZnkpKVxuICAgIChHVC5zaG93XG4gICAgICAgU3RkLkxpc3QubG9naWNcbiAgICAgICAoR1Quc2hvdyBTdGQuTGlzdC5sb2dpYyAoR1Quc2hvdyBPQ2FucmVuLmxvZ2ljIEBAIEdULnNob3cgR1Quc3RyaW5nKSkpXG4gICAgMTBcbiAgICBxXG5cbmxldCByZWMgc2NoZWQgc3R1ZHlwbGFuYWxsZ3JvdXAgc2NoZWRhbGxncm91cCBhbGx0ZWFjaGVyc2NoZWQgc2NoZWRjbGFzcyBjbGFzc2Vzc3ViaiAgOzsgKilcbnR5cGUgd2Vla19kYXkgPVxuICB8IE1vbmRheVxuICB8IFR1ZXNkYXlcbiAgfCBXZWRuZXNkYXlcbiAgfCBUaHVyc2RheVxuICB8IEZyaWRheVxuXG50eXBlIGdyb3VwX29yX3RlYWNoZXIgPVxuICB8IFRlYWNoZXIgb2YgeyBuYW1lIDogc3RyaW5nIH1cbiAgfCBHcm91cCBvZiB7IG51bWJlciA6IGludCB9XG5cbnR5cGUgdXNlcl9jb25zdHJhaW50cyA9XG4gIHwgR3JvdXBfbm90X2xlYXJuaW5nIG9mXG4gICAgICB7IG51bWJlcl9sZXNzb24gOiBpbnRcbiAgICAgIDsgZGF5IDogd2Vla19kYXlcbiAgICAgIH1cblxudHlwZSB1c2VyX2NvbnN0cmFpbnRzXzEgPVxuICB8IE5vdF9sZWFybmluZyBvZlxuICAgICAgeyBudW1iZXJfbGVzc29uIDogaW50XG4gICAgICA7IGRheSA6IHdlZWtfZGF5XG4gICAgICA7IGdyb3VwX29yX3RlYWNoZXIgOiBncm91cF9vcl90ZWFjaGVyXG4gICAgICB9XG4oKiBsZXQgY29uc3QgPSBHcm91cF9ub3RfbGVhcm5pbmcge251bWJlcl9sZXNzb249MTtkYXk9TW9uZGF5fTsgKilcblxuW0BAQG9jYW1sLndhcm5lcnJvciBcIi0yN1wiXVxuXG4oKiBsZXQgZW1wbG95X2NvbnN0cmFpbnQgdXNlcl9jb25zdCBxID1cbiAgU3RkbGliLkxpc3QuZm9sZF9sZWZ0IChmdW4gYWNjIF8gLT4gYWNjKSBzdWNjZXNzIHVzZXJfY29uc3Rcbjs7ICopXG5sZXQgZGVsZXRlX21vbmRheV8xIHEgPVxuICBjb25kZVxuICAgIFsgZnJlc2hcbiAgICAgICAgKGExIGEyIGEzIGE0IGE1IGIxIGIyIGIzIGI0IGI1IGI2IGI3IGI4KVxuICAgICAgICAocSA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgYTE7IGEyOyBhMzsgYTQ7IGE1IF0pXG4gICAgICAgIChhMSA9PT0gU3RkLmxpc3QgRnVuLmlkIFsgISFcIndpbmRvd1wiOyBiNTsgYjY7IGI3IF0pXG4gICAgXVxuOztcblxubGV0IGRlbGV0ZV9tb25kYXkgcSA9XG4gIGNvbmRlXG4gICAgWyBmcmVzaFxuICAgICAgICAoYTEgYTIgYTMgYTQgYTUgYjEgYjIgYjMgYjQpXG4gICAgICAgIChxID09PSBTdGQubGlzdCBGdW4uaWQgWyBhMTsgYTI7IGEzOyBhNDsgYTUgXSlcbiAgICAgICAgKGExID09PSBTdGQubGlzdCBGdW4uaWQgWyAhIVwid2luZG93XCI7ICEhXCJ3aW5kb3dcIjsgISFcIndpbmRvd1wiOyAhIVwid2luZG93XCIgXSlcbiAgICBdXG47O1xuXG5sZXQgZGVsZXRlX3R1ZXNkYXkgcSA9XG4gIGNvbmRlXG4gICAgWyBmcmVzaFxuICAgICAgICAoYTEgYTIgYTMgYTQgYTUgYjEgYjIgYjMgYjQpXG4gICAgICAgIChxID09PSBTdGQubGlzdCBGdW4uaWQgWyBhMTsgYTI7IGEzOyBhNDsgYTUgXSlcbiAgICAgICAgKGEyID09PSBTdGQubGlzdCBGdW4uaWQgWyAhIVwid2luZG93XCI7ICEhXCJ3aW5kb3dcIjsgISFcIndpbmRvd1wiOyAhIVwid2luZG93XCIgXSlcbiAgICBdXG47O1xuXG5sZXQgZGVsZXRlX2RheSBkYXkgcSA9XG4gIG1hdGNoIGRheSB3aXRoXG4gIHwgTW9uZGF5IC0+IGRlbGV0ZV9tb25kYXkgcVxuICB8IFR1ZXNkYXkgLT4gZGVsZXRlX3R1ZXNkYXkgcVxuICB8IF8gLT4gZmFpbHVyZVxuOztcblxubGV0IGRlbGV0ZV9kYXlfd2l0aF9udW1iZXIgZGF5IG51bWJlciBxID1cbiAgbWF0Y2ggZGF5LCBudW1iZXIgd2l0aFxuICB8IE1vbmRheSwgNSAtPiBkZWxldGVfbW9uZGF5IHFcbiAgfCBUdWVzZGF5LCA1IC0+IGRlbGV0ZV90dWVzZGF5IHFcbiAgfCBNb25kYXksIDEgLT4gZGVsZXRlX21vbmRheV8xIHFcbiAgfCBfLCBfIC0+IGZhaWx1cmVcbjs7XG5cbmxldCB1c2luZ19lbXBsb3lfdXNlciB1X2MgcSA9XG4gIG1hdGNoIHVfYyB3aXRoXG4gIHwgXCJkZWxldGVfbW9uZGF5XCIgLT4gZGVsZXRlX21vbmRheSBxXG4gIHwgXCJkZWxldGVfdHVlc2RheVwiIC0+IGRlbGV0ZV90dWVzZGF5IHFcbiAgfCBfIC0+IGZhaWx1cmVcbjs7XG5cbmxldCBzdHJpbmdfYWxnX3R5cGUgc3RyaW5nID1cbiAgbWF0Y2ggc3RyaW5nIHdpdGhcbiAgKCogbWF0Y2ggc3RyaW5nIHdpdGggKilcbiAgfCBcIkRlbGV0ZV9Nb25kYXlfNV90ZWFjaGVyMVwiIC0+XG4gICAgTm90X2xlYXJuaW5nXG4gICAgICB7IG51bWJlcl9sZXNzb24gPSA1XG4gICAgICA7IGRheSA9IE1vbmRheVxuICAgICAgOyBncm91cF9vcl90ZWFjaGVyID0gVGVhY2hlciB7IG5hbWUgPSBcInRlYWNoZXIxXCIgfVxuICAgICAgfVxuICB8IFwiRGVsZXRlX01vbmRheV8xX3RlYWNoZXIxXCIgLT5cbiAgICBOb3RfbGVhcm5pbmdcbiAgICAgIHsgbnVtYmVyX2xlc3NvbiA9IDFcbiAgICAgIDsgZGF5ID0gTW9uZGF5XG4gICAgICA7IGdyb3VwX29yX3RlYWNoZXIgPSBUZWFjaGVyIHsgbmFtZSA9IFwidGVhY2hlcjFcIiB9XG4gICAgICB9XG4gIHwgXCJEZWxldGVfVHVlc2RheV81X3RlYWNoZXIxXCIgLT5cbiAgICBOb3RfbGVhcm5pbmdcbiAgICAgIHsgbnVtYmVyX2xlc3NvbiA9IDVcbiAgICAgIDsgZGF5ID0gVHVlc2RheVxuICAgICAgOyBncm91cF9vcl90ZWFjaGVyID0gVGVhY2hlciB7IG5hbWUgPSBcInRlYWNoZXIxXCIgfVxuICAgICAgfVxuICB8IF8gLT5cbiAgICBOb3RfbGVhcm5pbmdcbiAgICAgIHsgbnVtYmVyX2xlc3NvbiA9IDFcbiAgICAgIDsgZGF5ID0gTW9uZGF5XG4gICAgICA7IGdyb3VwX29yX3RlYWNoZXIgPSBUZWFjaGVyIHsgbmFtZSA9IFwidGVhY2hlcjJcIiB9XG4gICAgICB9XG47O1xuXG4oKiBsZXQgdXNlX25ld19hbGdfY29uc3QgX2NvbnN0IGdyb3VwMSBncm91cDIgdGVhY2hlcjEgPVxuICBtYXRjaCBfY29uc3Qgd2l0aFxuICB8IE5vdF9sZWFybmluZ3tudW1iZXJfbGVzc29uID0gNSA7IGRheSA9IE1vbmRheTsgZ3JvdXBfb3JfdGVhY2hlcj0gVGVhY2hlciB7IG5hbWU9XCJ0ZWFjaGVyMVwifX0gLT4gZGVsZXRlX2RheV93aXRoX251bWJlciAgTW9uZGF5IDUgdGVhY2hlcjE7XG4gIHwgTm90X2xlYXJuaW5nIHtudW1iZXJfbGVzc29uID0gMSA7IGRheSA9IE1vbmRheTtncm91cF9vcl90ZWFjaGVyPSBUZWFjaGVyIHsgbmFtZT1cInRlYWNoZXIxXCJ9fSAtPiBkZWxldGVfZGF5X3dpdGhfbnVtYmVyICBNb25kYXkgMSB0ZWFjaGVyMTtcbiAgfCBfIC0+IGZhaWx1cmVcbjs7ICopXG5sZXQgcmVjIGVtcGxveV9jb25zdHJhaW50IHVzZXJfY29uc3QgcSA9XG4gIG1hdGNoIHVzZXJfY29uc3Qgd2l0aFxuICB8IFtdIC0+IHN1Y2Nlc3NcbiAgfCBoZCA6OiB0bCAtPiB1c2luZ19lbXBsb3lfdXNlciBoZCBxICYmJiBlbXBsb3lfY29uc3RyYWludCB0bCBxXG47O1xuXG5sZXQgdXNlX3VzZXJfY29uc3RyIGFsZ190eXBlIHEgPVxuICBtYXRjaCBhbGdfdHlwZSB3aXRoXG4gIHwgTm90X2xlYXJuaW5nIHsgbnVtYmVyX2xlc3NvbjsgZGF5OyBncm91cF9vcl90ZWFjaGVyIH0gLT5cbiAgICBkZWxldGVfZGF5X3dpdGhfbnVtYmVyIGRheSBudW1iZXJfbGVzc29uIHFcbjs7XG5cbmxldCByZWMgYWxnX2NvbnN0YWludCB1c2VyX2NvbnN0cmFpbnRzIHEgPVxuICBtYXRjaCB1c2VyX2NvbnN0cmFpbnRzIHdpdGhcbiAgfCBbXSAtPiBzdWNjZXNzXG4gIHwgaGQgOjogdGwgLT4gdXNlX3VzZXJfY29uc3RyIChzdHJpbmdfYWxnX3R5cGUgaGQpIHEgJiYmIGFsZ19jb25zdGFpbnQgdGwgcVxuOztcblxubGV0IHJlYyBteWFzc29jbyBrZXkgeHMgdiA9XG4gIEZyZXNoLnRocmVlIChmdW4gYSBiIHRsIC0+XG4gICAgeHNcbiAgICA9PT0gU3RkLnBhaXIgYSBiICUgdGxcbiAgICAmJiYgY29uZGUgWyBhID09PSBrZXkgJiYmIChiID09PSB2KTsgYSA9Lz0ga2V5ICYmJiBteWFzc29jbyBrZXkgdGwgdiBdKVxuOztcblxubW9kdWxlIElBc3NvYyA9IHN0cnVjdFxuICB0eXBlIGtleSA9IHN0cmluZyBpbG9naWNcbiAgdHlwZSAnYSB0ID0gKGtleSwgJ2EpIFN0ZC5QYWlyLmluamVjdGVkIFN0ZC5MaXN0LmluamVjdGVkXG5cbiAgbGV0IGZpbmRvIDoga2V5IC0+ICdhIGlsb2dpYyB0IC0+ICdhIGlsb2dpYyAtPiBnb2FsID0gbXlhc3NvY29cblxuICBsZXQgYWRkbyBrIHYgbWFwIG1hcF9uZXcgPVxuICAgICgqIFRPRE86IGRvbid0IGFsbG93IGR1cGxpY2F0ZSBrZXlzPyAqKVxuICAgIFN0ZC5MaXN0LmNvbnMgKFN0ZC5wYWlyIGsgdikgbWFwID09PSBtYXBfbmV3XG4gIDs7XG5lbmRcblxuKCogbGV0IHJlYyB1c2VyX2NvbnN0cmFpbnQgdXNlcl9jb25zdCBxID0gY29uZGVcbiBbIHVzZXJfY29uc3QgPT09IG5pbCAoKVxuO1xuZnJlc2goZmlyc3QgbGFzdCkgKHVzZXJfY29uc3QgPT09IExpc3QuY29ucyBmaXJzdCBsYXN0KSAqKVxuKCogKGZpcnN0IHEpIChsYXN0IHEpXSAqKVxuKCog0K3QotCeINCd0KPQltCd0J4g0JfQkNCc0JXQotCn0JjQotCsLCDQotCeINCV0KHQotCsINCR0JXQoNCV0Jwg0KHQn9CY0KHQntCaINCm0JXQm9CV0JksINC/0YDQvtCy0LXRgNGP0LXQvCwg0LXRgdC70Lgg0YbQtdC70Ywg0YLQsNC60LDRjyDRgtC+LCDRgtC+INCy0YvQt9GL0LLQsNC10Lwg0L7Qv9GA0LXQtNC10LvQtdC90L3Rg9GOINGA0LXQu9GP0YbQuNGOLCDRgdC80LXRgdGMINGE0YPQvdC60YbQuNC+0L3QsNC70YzQvdC+0LPQviDQv9GA0L7Qs9GA0LDQvNC80LjRgNC+0LLQsNC90LjRjyDQuCDRgNC10LvRj9GG0LjQvtC90L3QvtCz0L4gKilcbmxldCByZWlmaWVyICgpXG4gIDogKCAnYSBpbG9naWMgU3RkLkxpc3QuaW5qZWN0ZWQgU3RkLkxpc3QuaW5qZWN0ZWQgU3RkLkxpc3QuaW5qZWN0ZWRcbiAgLCAnYSBsb2dpYyBTdGQuTGlzdC5sb2dpYyBTdGQuTGlzdC5sb2dpYyBTdGQuTGlzdC5sb2dpYyApIFJlaWZpZXIudFxuICA9XG4gIFN0ZC5MaXN0LnJlaWZ5IChTdGQuTGlzdC5yZWlmeSAoU3RkLkxpc3QucmVpZnkgT0NhbnJlbi5yZWlmeSkpXG47O1xuXG5sZXQgc3RvcmFnZV9yZWlmaWVyXG4gIDogKCAoSUFzc29jLmtleSwgaXNjaGVkdWxlKSBQYWlyLmdyb3VuZGkgU3RkLkxpc3QuaW5qZWN0ZWRcbiAgLCAoc3RyaW5nIGxvZ2ljLCBzY2hlZHVsZV9sb2dpYykgUGFpci5sb2dpYyBTdGQuTGlzdC5sb2dpYyApIFJlaWZpZXIudFxuICA9XG4gIFN0ZC5MaXN0LnJlaWZ5XG4gICAgKFN0ZC5QYWlyLnJlaWZ5IE9DYW5yZW4ucmVpZnkgKFN0ZC5MaXN0LnJlaWZ5IChTdGQuTGlzdC5yZWlmeSBPQ2FucmVuLnJlaWZ5KSkpXG47O1xuXG5sZXQgc2hvd2VyID1cbiAgR1Quc2hvd1xuICAgIFN0ZC5MaXN0LmxvZ2ljXG4gICAgKEdULnNob3dcbiAgICAgICBTdGQuTGlzdC5sb2dpY1xuICAgICAgIChHVC5zaG93IFN0ZC5MaXN0LmxvZ2ljIChHVC5zaG93IE9DYW5yZW4ubG9naWMgQEAgR1Quc2hvdyBHVC5zdHJpbmcpKSlcbjs7XG5cbmxldCBzaG93X3N0b3JhZ2UgPVxuICBHVC5zaG93XG4gICAgU3RkLkxpc3QubG9naWNcbiAgICAoR1Quc2hvd1xuICAgICAgIFN0ZC5QYWlyLmxvZ2ljXG4gICAgICAgKEdULnNob3cgT0NhbnJlbi5sb2dpYyBAQCBHVC5zaG93IEdULnN0cmluZylcbiAgICAgICAoR1Quc2hvd1xuICAgICAgICAgIFN0ZC5MaXN0LmxvZ2ljXG4gICAgICAgICAgKEdULnNob3cgU3RkLkxpc3QubG9naWMgKEdULnNob3cgT0NhbnJlbi5sb2dpYyBAQCBHVC5zaG93IEdULnN0cmluZykpKSlcbjs7XG5cbmxldCBzdHJpbmdfYWxnX3R5cGUgc3RyaW5nID1cbiAgbWF0Y2ggc3RyaW5nIHdpdGhcbiAgKCogbWF0Y2ggc3RyaW5nIHdpdGggKilcbiAgfCBcIkRlbGV0ZV9Nb25kYXlfNV90ZWFjaGVyMVwiIC0+XG4gICAgTm90X2xlYXJuaW5nXG4gICAgICB7IG51bWJlcl9sZXNzb24gPSA1XG4gICAgICA7IGRheSA9IE1vbmRheVxuICAgICAgOyBncm91cF9vcl90ZWFjaGVyID0gVGVhY2hlciB7IG5hbWUgPSBcInRlYWNoZXIxXCIgfVxuICAgICAgfVxuICB8IFwiRGVsZXRlX01vbmRheV8xX3RlYWNoZXIxXCIgLT5cbiAgICBOb3RfbGVhcm5pbmdcbiAgICAgIHsgbnVtYmVyX2xlc3NvbiA9IDFcbiAgICAgIDsgZGF5ID0gTW9uZGF5XG4gICAgICA7IGdyb3VwX29yX3RlYWNoZXIgPSBUZWFjaGVyIHsgbmFtZSA9IFwidGVhY2hlcjFcIiB9XG4gICAgICB9XG4gIHwgXCJEZWxldGVfVHVlc2RheV81X3RlYWNoZXIxXCIgLT5cbiAgICBOb3RfbGVhcm5pbmdcbiAgICAgIHsgbnVtYmVyX2xlc3NvbiA9IDVcbiAgICAgIDsgZGF5ID0gVHVlc2RheVxuICAgICAgOyBncm91cF9vcl90ZWFjaGVyID0gVGVhY2hlciB7IG5hbWUgPSBcInRlYWNoZXIxXCIgfVxuICAgICAgfVxuICAoKiB8IFt8IFwiZGVsZXRlXCI7IFwiVHVlc2RheVwiOyBuIDsgXCJ0ZWFjaGVyXCJ8XSAtPiBhc3NlcnQgZmFsc2UgICopXG4gIHwgXyAtPlxuICAgIE5vdF9sZWFybmluZ1xuICAgICAgeyBudW1iZXJfbGVzc29uID0gMVxuICAgICAgOyBkYXkgPSBNb25kYXlcbiAgICAgIDsgZ3JvdXBfb3JfdGVhY2hlciA9IFRlYWNoZXIgeyBuYW1lID0gXCJ0ZWFjaGVyMlwiIH1cbiAgICAgIH1cbiAgOztcblxubGV0IHR0dCB0MSB0MiB0MyA9IGNvbmRlIFsgZmFpbHVyZSBdXG5cbmxldCB1c2VfbmV3X2FsZ19jb25zdCBfY29uc3QgZ3JvdXAxIGdyb3VwMiB0ZWFjaGVyMSA9XG4gIG1hdGNoIF9jb25zdCB3aXRoXG4gIHwgTm90X2xlYXJuaW5nXG4gICAgICB7IG51bWJlcl9sZXNzb24gPSA1XG4gICAgICA7IGRheSA9IE1vbmRheVxuICAgICAgOyBncm91cF9vcl90ZWFjaGVyID0gVGVhY2hlciB7IG5hbWUgPSBcInRlYWNoZXIxXCIgfVxuICAgICAgfSAtPiBkZWxldGVfZGF5X3dpdGhfbnVtYmVyIE1vbmRheSA1IHRlYWNoZXIxXG4gIHwgTm90X2xlYXJuaW5nXG4gICAgICB7IG51bWJlcl9sZXNzb24gPSA1XG4gICAgICA7IGRheSA9IFR1ZXNkYXlcbiAgICAgIDsgZ3JvdXBfb3JfdGVhY2hlciA9IFRlYWNoZXIgeyBuYW1lID0gXCJ0ZWFjaGVyMVwiIH1cbiAgICAgIH0gLT4gZGVsZXRlX2RheV93aXRoX251bWJlciBUdWVzZGF5IDUgdGVhY2hlcjFcbiAgfCBOb3RfbGVhcm5pbmdcbiAgICAgIHsgbnVtYmVyX2xlc3NvbiA9IDFcbiAgICAgIDsgZGF5ID0gTW9uZGF5XG4gICAgICA7IGdyb3VwX29yX3RlYWNoZXIgPSBUZWFjaGVyIHsgbmFtZSA9IFwidGVhY2hlcjFcIiB9XG4gICAgICB9IC0+IGRlbGV0ZV9kYXlfd2l0aF9udW1iZXIgTW9uZGF5IDEgdGVhY2hlcjFcbiAgfCBOb3RfbGVhcm5pbmdcbiAgICAgIHsgbnVtYmVyX2xlc3NvbiA9IDE7IGRheSA9IE1vbmRheTsgZ3JvdXBfb3JfdGVhY2hlciA9IEdyb3VwIHsgbnVtYmVyID0gMSB9IH0gLT5cbiAgICBkZWxldGVfZGF5X3dpdGhfbnVtYmVyIE1vbmRheSAxIGdyb3VwMVxuICB8IE5vdF9sZWFybmluZ1xuICAgICAgeyBudW1iZXJfbGVzc29uID0gMTsgZGF5ID0gTW9uZGF5OyBncm91cF9vcl90ZWFjaGVyID0gR3JvdXAgeyBudW1iZXIgPSAyIH0gfSAtPlxuICAgIGRlbGV0ZV9kYXlfd2l0aF9udW1iZXIgTW9uZGF5IDEgZ3JvdXAyXG4gIHwgTm90X2xlYXJuaW5nIHsgbnVtYmVyX2xlc3NvbjsgZGF5OyBncm91cF9vcl90ZWFjaGVyIH0gLT4gZmFpbHVyZVxuOztcblxubGV0IHJlYyByZWxhdGlvbl9mb3JfYWxsX2dyb3VwX29yX3RlYWNoZXIgX2NvbnN0YWludHMgZ3JvdXAxIGdyb3VwMiB0ZWFjaGVyMSA9XG4gIG1hdGNoIF9jb25zdGFpbnRzIHdpdGhcbiAgfCBbXSAtPiBzdWNjZXNzXG4gIHwgaGQgOjogdGwgLT5cbiAgICB1c2VfbmV3X2FsZ19jb25zdCAoc3RyaW5nX2FsZ190eXBlIGhkKSBncm91cDEgZ3JvdXAyIHRlYWNoZXIxXG4gICAgJiYmIHJlbGF0aW9uX2Zvcl9hbGxfZ3JvdXBfb3JfdGVhY2hlciB0bCBncm91cDEgZ3JvdXAyIHRlYWNoZXIxXG47O1xuXG4oKiBTdGQuTGlzdC5hc3NvY28gLSDRjdGC0L4g0LrQsNC6INGE0LDQudC90LQsINC40YnQtdGCINC/0L4g0LrQu9GO0YfRgyDQt9C90LDRh9C10L3QuNC1INCyINGB0L/QuNGB0LrQtSAo0LjQu9C4INCyINC/0LDRgNC1LCDQvdC1INC/0L7QvNC90Y4pICopXG4oKiDQo9GH0LXQsdC90YvQuSDQv9C70LDQvSDRhdGA0LDQvdC40Lwg0LIg0LLQuNC00LUg0LvQuNGB0YLQsCDQv9Cw0YAgKCgobWF0YW4sIGdyb3VwMSksIHZpZGVuc2tpeSksKChhbGcsZ3JvdXAxKSwgenVrb3YpKSwg0YIg0LUg0L7QtNC90L4g0LfQvdCw0YfQtdC90LjQtSAtINCz0YDRg9C/0L/QsCArINC/0YDQtdC00LzQtdGCLCDQtNGA0YPQs9C+0LUgLSDQv9GA0LXQv9C+0LRcbiAgICDQlNCw0LvQtdC1LCDQv9C40YjRgyDRgNC10LvRj9GG0LjRjiwg0LrQvtGC0L7RgNCw0Y8g0L/RgNC40L3QuNC80LDQtdGCINGN0YLQvtGCINC70LjRgdGCINC4INC90LAg0LvQtdGC0YMg0YHQvtC30LTQsNC10YIg0L3QvtCy0YvQtSDQu9C+0LPQuNGH0LXRgdC60LjQtSDQv9C10YDQtdC80LXQvdC90YvQtSDQuCDQstGB0YLQsNCy0LvRj9C10YIg0LjRhSDQsiDRgNCw0YHQv9C40YHQsNC90LjQtSAgKilcblxubGV0IGVxdWFsX2xvZ19zdHIgc3RyID0gY29uZGUgWyAhIVwibWF0YW5cIiA9PT0gISFzdHIgXVxuXG5sZXQgc2VhcmNobyBfY29uc3RhaW50cyBhbnN3ZXIgPVxuICBmcmVzaFxuICAgIChncm91cDEgZ3JvdXAyIHRlYWNoZXIxIHQpXG4gICAgKCogKGFsZ19jb25zdGFpbnQgX2NvbnN0YWludHMgZ3JvdXAxKSAqKVxuICAgICgqIChuZXdfcmVsYXRpb25fY29uc3RhaW50cyBxIHIgcyB0KSAqKVxuICAgIChhbnN3ZXIgPT09IFN0ZC5saXN0IEZ1bi5pZCBbIGdyb3VwMTsgZ3JvdXAyOyB0ZWFjaGVyMTsgdCBdKVxuICAgIChyZWxhdGlvbl9mb3JfYWxsX2dyb3VwX29yX3RlYWNoZXIgX2NvbnN0YWludHMgZ3JvdXAxIGdyb3VwMiB0ZWFjaGVyMSlcbiAgICAoaW5pdF9zY2hlZF9hX3dlZWsgZ3JvdXAxKVxuICAgIChpbml0X3NjaGVkX2Ffd2VlayB0KVxuICAgIChpbml0X3NjaGVkX2Ffd2VlayBncm91cDIpXG4gICAgKGluaXRfc2NoZWRfYV93ZWVrIHRlYWNoZXIxKVxuICAgIChzY2hlZFxuICAgICAgIChTdGQubGlzdFxuICAgICAgICAgIEZ1bi5pZFxuICAgICAgICAgIFsgU3RkLmxpc3QgRnVuLmlkIFsgISFcIm1hdGFuMVwiOyAhIVwibWF0YW4yXCI7ICEhXCJnZW9tMVwiOyAhIVwiYWxnMVwiIF1cbiAgICAgICAgICA7IFN0ZC5saXN0IEZ1bi5pZCBbICEhXCJtYXRhbjNcIjsgISFcIm1hdGFuNFwiOyAhIVwiZ2VvbTJcIjsgISFcImFsZzJcIiBdXG4gICAgICAgICAgXSlcbiAgICAgICAoU3RkLmxpc3QgRnVuLmlkIFsgZ3JvdXAxOyBncm91cDIgXSlcbiAgICAgICAoU3RkLmxpc3RcbiAgICAgICAgICBGdW4uaWRcbiAgICAgICAgICBbIFN0ZC5saXN0IEZ1bi5pZCBbIHRlYWNoZXIxOyB0ZWFjaGVyMTsgdGVhY2hlcjE7IHRlYWNoZXIxIF1cbiAgICAgICAgICA7IFN0ZC5saXN0IEZ1bi5pZCBbIHRlYWNoZXIxOyB0ZWFjaGVyMTsgdGVhY2hlcjE7IHRlYWNoZXIxIF1cbiAgICAgICAgICBdKVxuICAgICAgIChTdGQubGlzdCBGdW4uaWQgWyB0IF0pXG4gICAgICAgKFN0ZC5saXN0XG4gICAgICAgICAgRnVuLmlkXG4gICAgICAgICAgWyBTdGQubGlzdFxuICAgICAgICAgICAgICBGdW4uaWRcbiAgICAgICAgICAgICAgWyAhIVwibWF0YW4xXCJcbiAgICAgICAgICAgICAgOyAhIVwiZ2VvbTFcIlxuICAgICAgICAgICAgICA7ICEhXCJlbmcxXCJcbiAgICAgICAgICAgICAgOyAhIVwibWF0YW4zXCJcbiAgICAgICAgICAgICAgOyAhIVwibWF0YW40XCJcbiAgICAgICAgICAgICAgOyAhIVwiZ2VvbTJcIlxuICAgICAgICAgICAgICA7ICEhXCJhbGcyXCJcbiAgICAgICAgICAgICAgOyAhIVwibWF0YW4yXCJcbiAgICAgICAgICAgICAgOyAhIVwibWF0YW42XCJcbiAgICAgICAgICAgICAgOyAhIVwiZ2VvbTJcIlxuICAgICAgICAgICAgICA7ICEhXCJhbGcxXCJcbiAgICAgICAgICAgICAgXVxuICAgICAgICAgIF0pKVxuOztcblxuKCog0YMg0LLQsNGBINC10YHRgtGMINGD0L3QuNGE0LjQutCw0YbQuNGPIC0g0YDQsNCx0L7RgtCw0LnRgtC1ICopXG4oKiBkYm1zX3JhbmRvbS5yYW5kb20gKilcblxuKCogbGV0IHJlYyBhc3NvY28ga2V5IHhzIHZhbHVlID0gKilcblxubGV0IGluc2VydF9zY2hlZF90b19wYWlyIHBhaXIgPSBjb25kZSBbIGZyZXNoIChncm91cCBzdWJqIHRlYWNoZXIpIHN1Y2Nlc3MgXVxuXG4oKiBzdG9yYWdlIC0gcGFpciBsaXN0IDsgcGFpciA9IChsb2dpY192YXIsIHRlYWNoZXJfbmFtZSkgKilcbigqIGxldCByZWMgbGlzdF9zdHJpbmdfdG9fbG9naWNfbGlzdCBsaXN0IGxvZ2ljID1cbiAgbWF0Y2ggbGlzdCB3aXRoXG4gIHwgW10gLT4gc3VjY2Vzc1xuICB8IGhkOjp0bCAtPiBmcmVzaChhIGIpIChhID09PSAhaGQpIChhcHBlbmRvIClcbiAgOzsgKilcblxuKCogb3BlbiBMaXN0ICopXG4oKiBsZXQgbGlzdF9saXN0X3N0cmluZ190b19sb2dpY19saXN0X2xpc3QgbGlzdCBsb2dpY2xpc3Q9XG4gIGNvbmRlIFtmcmVzaCAoaGQgdGFpbCkgKGxpc3QgPT09IExpc3QuY29ucyBoZCB0YWlsKSAoU3RkbGliLkxpc3QubWFwICghISkgaGRdICopXG5cblxuXG4oKiBsZXQgaW5zZXJ0X2FsbF9zY2hlZCBzdWJqIGdyb3VwX3NjaGVkIHRlYWNoZXJfc2NoZWQgY2xhc3Nfc2NoZWQgPSAqKVxuXG4oKiBcbmxldCBzZWFyY2hvIF9jb25zdGFpbnRzIGFuc3dlciA9XG4gIGZyZXNoIChzdG9yYWdlKSAoaW5pdF9zY2hlZCBbWyhcImItMDdcIixcInZpZGVuXCIpLFwibWF0YW5cIl1dIHN0b3JhZ2UpOyAqKVxuXG4gIGxldCBpbnNfc3RvcmUgcSA9XG4gICAgY29uZGUgW2ZyZXNoIChhMSBuYW1lKSAoaW5pdF9zY2hlZF9hX3dlZWsgYTEpIChxID09PSBTdGQubGlzdCBGdW4uaWQgW1N0ZC5wYWlyIG5hbWUgYTFdKV1cbiAgXG4gICAgbGV0IHJlYyBhcHBlbmRvIGEgYiBhYiA9XG4gICAgICBjb25kZVxuICAgICAgICBbIGEgPT09IG5pbCAoKSAmJiYgKGIgPT09IGFiKVxuICAgICAgICA7IGZyZXNoIChoIHQgYWInKSAoYSA9PT0gaCAlIHQpIChoICUgYWInID09PSBhYikgKGFwcGVuZG8gdCBiIGFiJylcbiAgICAgICAgXVxuICAgIDs7XG4gIGxldCByZWMgaW5zZXJ0X3N0b3JhZ2UgbiBxID1cbiAgICBtYXRjaCBuIHdpdGhcbiAgICB8IDAgLT4gc3VjY2Vzc1xuICAgIHwgMSAtPiBpbnNfc3RvcmUgcVxuICAgIHwgXyAtPiBmcmVzaCAoYSBiKSAoaW5zZXJ0X3N0b3JhZ2UgKG4tMSkgYSkgKGluc19zdG9yZSBiKSAoYXBwZW5kbyBhIGIgcSlcbiAgOztcbiAgbGV0IHJlYyBpbnNlcnRfc2NoZWRfaW5fc3RvcmFnZSBncm91cF9uYW1lIGdyb3VwX3NjaGVkIHN0b3JhZ2UgPVxuICAgIGNvbmRlIFtmcmVzaCAoYTEgYTIpIChMaXN0LmNhcm8gc3RvcmFnZSBhMSkgKGExID09PSBTdGQucGFpciBncm91cF9uYW1lIGdyb3VwX3NjaGVkKTtcbiAgICBmcmVzaCAoYTMpIChMaXN0LmNkcm8gc3RvcmFnZSBhMykgKGluc2VydF9zY2hlZF9pbl9zdG9yYWdlIGdyb3VwX25hbWUgZ3JvdXBfc2NoZWQgYTMpXVxuXG4gIGxldCByZWMgaW5pdF9zY2hlZCAobGlzdF9wYWlyIDogc3RyaW5nIGxpc3QgbGlzdCkgc3RvcmFnZSA9XG4gICAgbWF0Y2ggbGlzdF9wYWlyIHdpdGhcbiAgICB8IFtdIC0+IHN1Y2Nlc3NcbiAgICB8IGhkIDo6IHRsIC0+XG4gICAgICBjb25kZVxuICAgICAgICBbIGZyZXNoXG4gICAgICAgIChncm91cG5hbWUgdGVhY2hlcm5hbWUgc3Viam5hbWUgZ3JvdXBfc2NoZWQgdGVhY2hlcl9zY2hlZCBhdWQgbmV3X3N0b3JhZ2UpXG4gICAgICAgIChpbml0X3NjaGVkX2Ffd2VlayB0ZWFjaGVyX3NjaGVkKVxuICAgICAgICAoaW5pdF9zY2hlZF9hX3dlZWsgZ3JvdXBfc2NoZWQpXG4gICAgICAgIChpbml0X3NjaGVkX2Ffd2VlayBhdWQpXG4gICAgICAgIChTdGQubGlzdCAoICEhICkgaGQgPT09IFN0ZC5saXN0IEZ1bi5pZCBbIGdyb3VwbmFtZTsgdGVhY2hlcm5hbWU7IHN1YmpuYW1lIF0pXG4gICAgICAgIChteWFzc29jbyBncm91cG5hbWUgKHN0b3JhZ2UgOiBpc2NoZWR1bGUgSUFzc29jLnQpIGdyb3VwX3NjaGVkKVxuICAgICAgICAobXlhc3NvY28gdGVhY2hlcm5hbWUgc3RvcmFnZSAodGVhY2hlcl9zY2hlZCA6IGlzY2hlZHVsZSkpXG4gICAgICAgIChpbnNlcnRfYWxsX3NjaGVkIHN1YmpuYW1lIGdyb3VwX3NjaGVkIHRlYWNoZXJfc2NoZWQgYXVkKVxuICAgICAgICAoaW5zZXJ0X3NjaGVkX2luX3N0b3JhZ2UgZ3JvdXBuYW1lIGdyb3VwX3NjaGVkIHN0b3JhZ2UpXG4gICAgICAgIChpbnNlcnRfc2NoZWRfaW5fc3RvcmFnZSB0ZWFjaGVybmFtZSB0ZWFjaGVyX3NjaGVkIHN0b3JhZ2UpXG4gICAgICAgIChpbml0X3NjaGVkIHRsIHN0b3JhZ2UpXG4gICAgICAgICAgICBcbiAgICAgICAgOyBmcmVzaFxuICAgICAgICAgICAgKGdyb3VwbmFtZSB0ZWFjaGVybmFtZSBzdWJqbmFtZSBncm91cF9zY2hlZCB0ZWFjaGVyX3NjaGVkIGF1ZCBuZXdfc3RvcmFnZSlcbiAgICAgICAgICAgIChTdGQubGlzdCAoICEhICkgaGQgPT09IFN0ZC5saXN0IEZ1bi5pZCBbIGdyb3VwbmFtZTsgdGVhY2hlcm5hbWU7IHN1YmpuYW1lIF0pXG4gICAgICAgICAgICAoaW5pdF9zY2hlZF9hX3dlZWsgdGVhY2hlcl9zY2hlZClcbiAgICAgICAgICAgIChpbml0X3NjaGVkX2Ffd2VlayBncm91cF9zY2hlZClcbiAgICAgICAgICAgIChpbml0X3NjaGVkX2Ffd2VlayBhdWQpXG4gICAgICAgICAgICAoaW5zZXJ0X2FsbF9zY2hlZCBzdWJqbmFtZSBncm91cF9zY2hlZCB0ZWFjaGVyX3NjaGVkIGF1ZClcbiAgICAgICAgICAgIChpbnNlcnRfc2NoZWRfaW5fc3RvcmFnZSBncm91cG5hbWUgZ3JvdXBfc2NoZWQgc3RvcmFnZSlcbiAgICAgICAgICAgICAoaW5zZXJ0X3NjaGVkX2luX3N0b3JhZ2UgdGVhY2hlcm5hbWUgdGVhY2hlcl9zY2hlZCBzdG9yYWdlKVxuICAgICAgICAgICAgIChpbml0X3NjaGVkIHRsIHN0b3JhZ2UpXG4gICAgICAgIF07O1xuXG4gICAgICBcblxuXG4gIGxldCByZWMgaW5pdF9zY2hlZF9uZXcgKGxpc3RfcGFpciA6IHN0cmluZyBsaXN0IGxpc3QpIHN0b3JhZ2UgbiA9XG4gICAgbWF0Y2ggbiB3aXRoXG4gICAgfCAwIC0+IHN1Y2Nlc3NcbiAgICB8IG4gLT4gKGluc2VydF9zdG9yYWdlIG4gc3RvcmFnZSkgJiYmIFxuICAgIG1hdGNoIGxpc3RfcGFpciB3aXRoXG4gICAgfCBbXSAtPiBzdWNjZXNzXG4gICAgfCBoZDo6dGwgLT4gKGluaXRfc2NoZWQgbGlzdF9wYWlyIHN0b3JhZ2UpIFxuICAgICAgXG4gICAgIFxuICA7O1xuICBsZXQgdGVzdDEgX2NvbnN0YWludHMgYW5zd2VyID1cbiAgICBjb25kZVxuICAgICAgWyBmcmVzaFxuICAgICAgICAgIChzdG9yYWdlKVxuICAgICAgICAgIChpbml0X3NjaGVkX25ldyBcbiAgICAgICAgICAgIFsgWyBcImItMTBcIjsgXCJ0ZWFjaGVyXCI7IFwibWF0YW5cIiBdXG4gICAgICAgICAgICAgIDsgWyBcImItMTBcIjsgXCJ0ZWFjaGVyXCI7IFwibWF0YW4yXCIgXSBcbiAgICAgICAgICAgICAgOyBbIFwiYi0xMFwiOyBcInRlYWNoZXJcIjsgXCJhbGdcIiBdXG4gICAgICAgICAgICAgOyBbIFwiYi0xMFwiOyBcInRlYWNoZXJcIjsgXCJtYXRhbjNcIiBdXG4gICAgICAgICAgICAgOyBbIFwiYi0xMFwiOyBcInRlYWNoZXJcIjsgXCJtYXRhbjRcIiBdXG4gICAgICAgICAgICAgOyBbIFwiYi0xMFwiOyBcInRlYWNoZXJcIjsgXCJhbGcyXCIgXSBcbiAgICAgICAgICAgICA7IFtcImItMDdcIiA7IFwidmlkZW5cIiA7IFwibWF0YW5cIl1cbiAgICAgICAgICAgICA7IFtcImItMDhcIjsgXCJ0ZWFjaGVyMlwiOyBcImVuZ1wiXVxuICAgICAgICAgICAgIDsgW1wiYi0wOFwiIDsgXCJ0ZWFjaGVyXCI7IFwiZW5nMTBcIl1cbiAgICAgICAgICAgICBdXG4gICAgICAgICAgICAgc3RvcmFnZSAxMClcbiAgICAgICAgICAoc3RvcmFnZSA9PT0gYW5zd2VyKVxuICAgICAgXVxuICA7O1xuICBcbiAgKCogbGV0IHNjaGVkbyBfY29uc3RyYWludHMgPVxuICAgICgqIFsldGVzdGVyIHJ1bl9yIHJlaWZpZXIgc2hvd2VyIDEgKCog0L/RgNC40L3QuNC80LDQtdGCINGA0LDRgdC/0LjRgdCw0L3QuNC1IHF0cnMgKikgc2VhcmNob11cbiAgICAgKilcbiAgICBPQ2FucmVuLnJ1blxuICAgICAgT0NhbnJlbi5xXG4gICAgICAoZnVuIHggLT4gdGVzdDEgX2NvbnN0cmFpbnRzIHgpXG4gICAgICAoZnVuIHJyIC0+IHJyI3JlaWZ5IHN0b3JhZ2VfcmVpZmllcilcbiAgICB8PiBPQ2FucmVuLlN0cmVhbS50YWtlIH5uOjFcbiAgICB8PiBTdGRsaWIuTGlzdC5pdGVyaSAoZnVuIGkgYW5zIC0+IEZvcm1hdC5wcmludGYgXCIlZDogJXNcXG4lIVwiIGkgKHNob3dfc3RvcmFnZSBhbnMpKVxuICA7OyAqKSJdfQ==

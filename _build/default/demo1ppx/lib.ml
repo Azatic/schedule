@@ -918,7 +918,7 @@ let searcho _constaints answer =
       ]
   ;;
   
-  let schedo _constraints =
+  (* let schedo _constraints =
     (* [%tester run_r reifier shower 1 (* принимает расписание qtrs *) searcho]
      *)
     OCanren.run
@@ -927,4 +927,4 @@ let searcho _constaints answer =
       (fun rr -> rr#reify storage_reifier)
     |> OCanren.Stream.take ~n:1
     |> Stdlib.List.iteri (fun i ans -> Format.printf "%d: %s\n%!" i (show_storage ans))
-  ;;
+  ;; *)
