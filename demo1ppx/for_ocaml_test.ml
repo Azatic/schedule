@@ -11,7 +11,7 @@ let schedo _constraints schedule =
 
 let _ =
   schedo
-    [ [ "b-07"; "monday"; "1" ] ]
+    [ [ "b-07"; "monday"; "5" ] ]
     (* [] *)
     [ (* [ [ "b-10"; "teacher"; "matan" ]
     ; [ "b-10"; "teacher"; "matan2" ]
@@ -20,6 +20,7 @@ let _ =
     ; [ "b-10"; "teacher"; "matan4" ]
     ; [ "b-10"; "teacher"; "alg2" ] *)
       [ "b-07"; "viden"; "matan" ]
+    ; [ "b-07"; "viden"; "matan1" ]
       (* ; [ "b-08"; "teacher2"; "eng" ]
     ; [ "b-08"; "teacher"; "eng10" ] *)
     ]
