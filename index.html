@@ -3,14 +3,27 @@
 
 <head>
     <script src="_build/default/demo1ppx/main.bc.js"></script>
-    <script>
-        console.log(myMathLib.generateSched([["b-07", "monday", "3"]], [["b-07", "viden", "geom1"]
-        ]))
-    </script>
 </head>
 
 <body>
+    <script>
+        function string_to_array(str1) {
+            return str1.split(",").map(x => x.split(" "));
+        }
+        // Пример строки:  "b-07 viden matan1,b-07 zhukov alg,b-07 viden matan2,b-08 zhukov subj1,b-08 viden matan3"
 
+        function sched() {
+            var str = document.getElementById("schedule").value;
+            alert(myMathLib.generateSched([["b-07", "monday", "3"]], string_to_array(str)
+            ));
+        }
+
+    </script>
+    <form>
+        <p><input type="text" id="schedule" placeholder="введите учебный план">
+            <input type="submit" value="Найти" onclick="sched()">
+        </p>
+    </form>
 </body>
 
 </html>
