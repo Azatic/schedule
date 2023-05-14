@@ -43,9 +43,10 @@ let reifier ()
   Std.List.reify (Std.List.reify (Std.List.reify OCanren.reify))
 ;;
 
+type ianswer = (IAssoc.key, ischedule) Pair.groundi Std.List.injected
+
 let storage_reifier
-  : ( (IAssoc.key, ischedule) Pair.groundi Std.List.injected
-  , (string logic, schedule_logic) Pair.logic Std.List.logic ) Reifier.t
+  : (ianswer, (string logic, schedule_logic) Pair.logic Std.List.logic) Reifier.t
   =
   Std.List.reify
     (Std.Pair.reify OCanren.reify (Std.List.reify (Std.List.reify OCanren.reify)))

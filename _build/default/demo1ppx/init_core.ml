@@ -79,3 +79,55 @@ let rec init_storage n q =
   | 1 -> init_store q
   | _ -> fresh (a b) (init_storage (n - 1) a) (init_store b) (appendo a b q)
 ;;
+
+let ins_lecture1 subj group1 group2 group3 group4 teacher_sched class_sched =
+  conde
+    [ fresh
+        (a2 a3 a4 b2 b3 b4 c2 c3 c4 d2 d3 d4 e2 e3 e4 f2 f3 f4)
+        (group1 === Std.list Fun.id [ subj; a2; a3; a4 ])
+        (group2 === Std.list Fun.id [ subj; d2; d3; d4 ])
+        (group3 === Std.list Fun.id [ subj; e2; e3; e4 ])
+        (group4 === Std.list Fun.id [ subj; f2; f3; f4 ])
+        (teacher_sched === Std.list Fun.id [ subj; b2; b3; b4 ])
+        (class_sched === Std.list Fun.id [ subj; c2; c3; c4 ])
+    ]
+;;
+
+let ins_lecture2 subj group1 group2 group3 group4 teacher_sched class_sched =
+  conde
+    [ fresh
+        (a2 a3 a4 b2 b3 b4 c2 c3 c4 d2 d3 d4 e2 e3 e4 f2 f3 f4)
+        (group1 === Std.list Fun.id [ a2; subj; a3; a4 ])
+        (group2 === Std.list Fun.id [ d2; subj; d3; d4 ])
+        (group3 === Std.list Fun.id [ e2; subj; e3; e4 ])
+        (group4 === Std.list Fun.id [ f2; subj; f3; f4 ])
+        (teacher_sched === Std.list Fun.id [ b2; subj; b3; b4 ])
+        (class_sched === Std.list Fun.id [ c2; subj; c3; c4 ])
+    ]
+;;
+
+let ins_lecture3 subj group1 group2 group3 group4 teacher_sched class_sched =
+  conde
+    [ fresh
+        (a2 a3 a4 b2 b3 b4 c2 c3 c4 d2 d3 d4 e2 e3 e4 f2 f3 f4)
+        (group1 === Std.list Fun.id [ a2; a3; subj; a4 ])
+        (group2 === Std.list Fun.id [ d2; d3; subj; d4 ])
+        (group3 === Std.list Fun.id [ e2; e3; subj; e4 ])
+        (group4 === Std.list Fun.id [ f2; f3; subj; f4 ])
+        (teacher_sched === Std.list Fun.id [ b2; b3; subj; b4 ])
+        (class_sched === Std.list Fun.id [ c2; c3; subj; c4 ])
+    ]
+;;
+
+let ins_lecture4 subj group1 group2 group3 group4 teacher_sched class_sched =
+  conde
+    [ fresh
+        (a2 a3 a4 b2 b3 b4 c2 c3 c4 d2 d3 d4 e2 e3 e4 f2 f3 f4)
+        (group1 === Std.list Fun.id [ a2; a3; a4; subj ])
+        (group2 === Std.list Fun.id [ d2; d3; d4; subj ])
+        (group3 === Std.list Fun.id [ e2; e3; e4; subj ])
+        (group4 === Std.list Fun.id [ f2; f3; f4; subj ])
+        (teacher_sched === Std.list Fun.id [ b2; b3; b4; subj ])
+        (class_sched === Std.list Fun.id [ c2; c3; c4; subj ])
+    ]
+;;

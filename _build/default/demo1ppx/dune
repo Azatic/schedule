@@ -1,7 +1,7 @@
 (env
- (_
+ (dev
   (flags
-   (:standard -warn-error +5))))
+   (:standard -warn-error +5-33))))
 
 (library
  (name lib1)
@@ -43,7 +43,7 @@
  (modes js exe)
  (flags
   (:standard -rectypes))
- (libraries lib1 js_of_ocaml sched_lib constraint_lib)
+ (libraries lib1 js_of_ocaml sched_lib constraint_lib yojson type_lib)
  (preprocess
   (pps
    OCanren-ppx.ppx_repr

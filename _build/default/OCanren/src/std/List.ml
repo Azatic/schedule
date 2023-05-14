@@ -120,7 +120,7 @@ let rec inj f = function
 | []    -> nil ()
 | x::xs -> cons x (list xs) *)
 
-let rec logic_to_ground_exn f = function
+let rec   logic_to_ground_exn f = function
   | Var (_, _) -> failwith "List.logic_to_ground_exn: variables inside"
   | Value Nil -> []
   | Value (Cons (h, tl)) ->
