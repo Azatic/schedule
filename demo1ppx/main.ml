@@ -13,11 +13,11 @@ open OCanren
   | Var (n, _) -> None
 ;; *)
 
-let schedo _constraints schedule lecture_plan =
+let schedo _constraints schedule lecture_plan number =
   let open OCanren in
   OCanren.run
     OCanren.q
-    (fun x -> test1 _constraints schedule lecture_plan x)
+    (fun x -> test1 _constraints schedule lecture_plan number x)
     (fun rr -> rr#reify storage_reifier)
   |> OCanren.Stream.take ~n:1
   |> Stdlib.List.map (fun storage ->
@@ -228,7 +228,8 @@ let _ =
        method generateSched
          constraints
          (schedule : Js.js_string Js.t Js.js_array Js.t Js.js_array Js.t)
-         lecture_plan =
+         lecture_plan
+         number =
          schedo
            (to_list
               (map
@@ -251,6 +252,7 @@ let _ =
                  |> Js.to_array
                  |> Array.map Js.to_array
                  |> Array.map (Array.map Js.to_string))))
+           number
 
        val zero = 0.
        method shit () = Js.array [| 1; 2; 3 |]

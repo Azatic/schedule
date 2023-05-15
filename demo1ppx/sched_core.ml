@@ -274,11 +274,11 @@ let rec len q =
   | hd :: tl -> 1 + len tl
 ;;
 
-let test1 : _ -> _ -> _ -> ianswer -> goal =
- fun _constaints schedule lecture_plan answer ->
+let test1 : _ -> _ -> _ -> _ -> ianswer -> goal =
+ fun _constaints schedule lecture_plan number answer ->
   fresh
     storage
-    (init_storage 6 storage)
+    (init_storage number storage)
     (use_constraint storage _constaints)
     (init_sched schedule storage)
     (* (init_sched_lecture lecture_plan1 storage) *)
