@@ -13,7 +13,7 @@
             var str = document.getElementById("schedule").value;
             alert(myMathLib.generateSched([["b-07", "monday", "3"]], string_to_array(str)
             ));
-            // alert(myMathLib.generateSched([], string_to_array(str), [["b-07", "b-08", "b-09", "b-10", "viden", "matan5"]]))
+            // alert(myMathLibrateSc.genehed([], string_to_array(str), [["b-07", "b-08", "b-09", "b-10", "viden", "matan5"]]))
             // работает, ответ выходит в консоль
             // document.write(myMathLib.generateSched([["b-07", "monday", "3"]], string_to_array(str)
             // ));
@@ -50,15 +50,13 @@
         console.log(myMathLib.generateSched([],
             [["b-11", "viden1", "geom1"], ["b-11", "viden1", "geom2"], ["b-09", "viden1", "matan3"], ["b-09", "Kosarev", "fp"]],
             []
-
-            // [["b-07", "b-08", "b-09", "b-10", "viden", "matan5"]]
         ))
-        alert((myMathLib.generateSched([],
-            [["b-11", "viden1", "geom1"], ["b-11", "viden1", "geom2"], ["b-09", "viden1", "matan3"], ["b-09", "Kosarev", "fp"]],
-            []
+        // alert((myMathLib.generateSched([],
+        //     [["b-11", "viden1", "geom1"], ["b-11", "viden1", "geom2"], ["b-09", "viden1", "matan3"], ["b-09", "Kosarev", "fp"]],
+        //     []
 
-            // [["b-07", "b-08", "b-09", "b-10", "viden", "matan5"]]
-        )))
+        //     // [["b-07", "b-08", "b-09", "b-10", "viden", "matan5"]]
+        // )))
         // console.log(myMathLib.generateSched([["2021pi-1", "monday", "5"]],
         //     [["2021pi-1", "Solev", "teorver1"]
         //         , ["2021pi-2", "Solev", "teorver2"]
@@ -90,7 +88,36 @@
 </head>
 
 <body>
+    <form>
+        <label>Form 1:</label>
+        <input type="text" style="width: 200px; height: 50px;" name="input1">
+    </form>
+    <form>
+        <label>Form 2:</label>
+        <input type="text" style="width: 200px; height: 50px;" name="input2">
+    </form>
+    <form>
+        <label>Form 3:</label>
+        <input type="text" style="width: 200px; height: 50px;" name="input3">
+    </form>
+    <button onclick="myFunction()">Submit</button>
+    <script>
+        function string_to_array(str1) {
+            return str1.split(",").map(x => x.split(" "));
+        }
+        function myFunction() {
+            var input1 = document.getElementsByName("input1")[0].value;
+            var input2 = document.getElementsByName("input2")[0].value;
+            var input3 = document.getElementsByName("input3")[0].value;
 
+            console.log(input1, input2, string_to_array(input2), string_to_array(input3));
+            // Add your code to handle the inputs here
+            console.log(myMathLib.generateSched(string_to_array(input3), string_to_array(input1), string_to_array(input2)))
+        }
+    // b-07 b-08 b-09 b-10 viden Math
+    // b-07 viden matan1,b-07 zhukov alg,b-07 viden matan2,b-08 zhukov subj1,b-08 viden matan3
+    // b-07 monday 5
+    </script>
 </body>
 
 </html>

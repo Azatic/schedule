@@ -278,7 +278,7 @@ let test1 : _ -> _ -> _ -> ianswer -> goal =
  fun _constaints schedule lecture_plan answer ->
   fresh
     storage
-    (init_storage 4 storage)
+    (init_storage 6 storage)
     (use_constraint storage _constaints)
     (init_sched schedule storage)
     (* (init_sched_lecture lecture_plan1 storage) *)

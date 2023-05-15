@@ -3,3 +3,6 @@ lib: [
   "_build/install/default/lib/OCanren-base-example/dune-package"
   "_build/install/default/lib/OCanren-base-example/opam"
 ]
+doc: [
+  "_build/install/default/doc/OCanren-base-example/README.md"
+]

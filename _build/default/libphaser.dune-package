@@ -1,4 +1,4 @@
 (lang dune 3.6)
 (name libphaser)
-(sections (lib .))
-(files (lib (META dune-package opam)))
+(sections (lib .) (doc ../../doc/libphaser))
+(files (lib (META dune-package opam)) (doc (README.md)))
