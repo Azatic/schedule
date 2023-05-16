@@ -1,0 +1,60 @@
+(library
+ (name myhelpers)
+ (public_name OCanren-ppx.internals)
+ (libraries ppxlib ppxlib.stdppx)
+ (wrapped false)
+ (modules myhelpers))
+
+(executable
+ (public_name pp_fresh)
+ (package OCanren-ppx)
+ (libraries ppx_fresh)
+ (modules pp_fresh))
+
+(executable
+ (public_name pp_repr)
+ (package OCanren-ppx)
+ (libraries ppx_repr)
+ (modules pp_repr))
+
+(executable
+ (public_name pp_distrib)
+ (package OCanren-ppx)
+ (libraries ppx_distrib)
+ (modules pp_distrib))
+
+(executable
+ (public_name pp_deriving_reify)
+ (package OCanren-ppx)
+ (libraries ppx_deriving_reify)
+ (modules pp_deriving_reify))
+
+(executable
+ (public_name pp_ocanren_all)
+ (package OCanren-ppx)
+ (libraries ppx_repr ppx_fresh ppx_distrib)
+ (modules pp_ocanren_all))
+
+(executable
+ (name pp_distrib_gt)
+ (libraries ppx_distrib GT.ppx_all)
+ (modules pp_distrib_gt))
+
+(executable
+ (name pp_distrib_gt_reify)
+ (libraries ppx_distrib GT.ppx_all ppx_deriving_reify)
+ (modules pp_distrib_gt_reify))
+
+(executables
+ (names pp_gt)
+ (package OCanren)
+ (public_names -)
+ (libraries GT.ppx_all)
+ (modules pp_gt))
+
+(cram
+ (deps ./pp_distrib.exe ./pp_deriving_reify.exe))
+
+(documentation
+ (package OCanren-ppx)
+ (mld_files index))

@@ -1,0 +1,157 @@
+package "internals" (
+  directory = "internals"
+  version = "0.3.0"
+  description = ""
+  requires = "ppxlib ppxlib.ast ppxlib.stdppx"
+  archive(byte) = "myhelpers.cma"
+  archive(native) = "myhelpers.cmxa"
+  plugin(byte) = "myhelpers.cma"
+  plugin(native) = "myhelpers.cmxs"
+)
+package "ppx_deriving_reify" (
+  directory = "ppx_deriving_reify"
+  version = "0.3.0"
+  description = ""
+  requires(ppx_driver) = "OCanren-ppx.internals
+                          OCanren-ppx.reify_impl
+                          ppx_expect.collector
+                          ppx_expect.config
+                          ppx_here.runtime-lib
+                          ppx_inline_test.config
+                          ppx_inline_test.runtime-lib
+                          ppxlib
+                          ppxlib.ast
+                          ppxlib.stdppx"
+  archive(ppx_driver,byte) = "ppx_deriving_reify.cma"
+  archive(ppx_driver,native) = "ppx_deriving_reify.cmxa"
+  plugin(ppx_driver,byte) = "ppx_deriving_reify.cma"
+  plugin(ppx_driver,native) = "ppx_deriving_reify.cmxs"
+  # This line makes things transparent for people mixing preprocessors
+  # and normal dependencies
+  requires(-ppx_driver) = ""
+  ppx(-ppx_driver,-custom_ppx) = "./ppx.exe --as-ppx"
+  library_kind = "ppx_rewriter"
+)
+package "ppx_distrib" (
+  directory = "ppx_distrib"
+  version = "0.3.0"
+  description = ""
+  requires(ppx_driver) = "OCanren-ppx.internals
+                          OCanren-ppx.prepare_fully_abstract
+                          OCanren-ppx.reify_impl
+                          ppx_expect.collector
+                          ppx_expect.config
+                          ppx_here.runtime-lib
+                          ppx_inline_test.config
+                          ppx_inline_test.runtime-lib
+                          ppxlib
+                          ppxlib.ast
+                          ppxlib.stdppx"
+  archive(ppx_driver,byte) = "ppx_distrib.cma"
+  archive(ppx_driver,native) = "ppx_distrib.cmxa"
+  plugin(ppx_driver,byte) = "ppx_distrib.cma"
+  plugin(ppx_driver,native) = "ppx_distrib.cmxs"
+  # This line makes things transparent for people mixing preprocessors
+  # and normal dependencies
+  requires(-ppx_driver) = ""
+  ppx(-ppx_driver,-custom_ppx) = "./ppx.exe --as-ppx"
+  library_kind = "ppx_rewriter"
+)
+package "ppx_fresh" (
+  directory = "ppx_fresh"
+  version = "0.3.0"
+  description = ""
+  requires(ppx_driver) = "ppxlib ppxlib.ast ppxlib.stdppx"
+  archive(ppx_driver,byte) = "ppx_fresh.cma"
+  archive(ppx_driver,native) = "ppx_fresh.cmxa"
+  plugin(ppx_driver,byte) = "ppx_fresh.cma"
+  plugin(ppx_driver,native) = "ppx_fresh.cmxs"
+  # This line makes things transparent for people mixing preprocessors
+  # and normal dependencies
+  requires(-ppx_driver) = ""
+  ppx(-ppx_driver,-custom_ppx) = "./ppx.exe --as-ppx"
+  library_kind = "ppx_rewriter"
+)
+package "ppx_repr" (
+  directory = "ppx_repr"
+  version = "0.3.0"
+  description = ""
+  requires(ppx_driver) = "ppxlib ppxlib.ast ppxlib.stdppx"
+  archive(ppx_driver,byte) = "ppx_repr.cma"
+  archive(ppx_driver,native) = "ppx_repr.cmxa"
+  plugin(ppx_driver,byte) = "ppx_repr.cma"
+  plugin(ppx_driver,native) = "ppx_repr.cmxs"
+  # This line makes things transparent for people mixing preprocessors
+  # and normal dependencies
+  requires(-ppx_driver) = ""
+  ppx(-ppx_driver,-custom_ppx) = "./ppx.exe --as-ppx"
+  library_kind = "ppx_rewriter"
+)
+package "ppx_tester" (
+  directory = "ppx_tester"
+  version = "0.3.0"
+  description = ""
+  requires(ppx_driver) = "ppxlib ppxlib.ast"
+  archive(ppx_driver,byte) = "ppx_tester.cma"
+  archive(ppx_driver,native) = "ppx_tester.cmxa"
+  plugin(ppx_driver,byte) = "ppx_tester.cma"
+  plugin(ppx_driver,native) = "ppx_tester.cmxs"
+  # This line makes things transparent for people mixing preprocessors
+  # and normal dependencies
+  requires(-ppx_driver) = ""
+  ppx(-ppx_driver,-custom_ppx) = "./ppx.exe --as-ppx"
+  library_kind = "ppx_rewriter"
+)
+package "ppx_wildcard" (
+  directory = "ppx_wildcard"
+  version = "0.3.0"
+  description = ""
+  requires(ppx_driver) = "base ppxlib ppxlib.ast"
+  archive(ppx_driver,byte) = "ppx_wildcard.cma"
+  archive(ppx_driver,native) = "ppx_wildcard.cmxa"
+  plugin(ppx_driver,byte) = "ppx_wildcard.cma"
+  plugin(ppx_driver,native) = "ppx_wildcard.cmxs"
+  # This line makes things transparent for people mixing preprocessors
+  # and normal dependencies
+  requires(-ppx_driver) = ""
+  ppx(-ppx_driver,-custom_ppx) = "./ppx.exe --as-ppx"
+  library_kind = "ppx_rewriter"
+)
+package "prepare_fully_abstract" (
+  directory = "prepare_fully_abstract"
+  version = "0.3.0"
+  description = ""
+  requires =
+  "OCanren-ppx.internals
+   OCanren-ppx.reify_impl
+   ppx_expect.collector
+   ppx_expect.config
+   ppx_here.runtime-lib
+   ppx_inline_test.config
+   ppx_inline_test.runtime-lib
+   ppxlib
+   ppxlib.ast"
+  archive(byte) = "prepare_fully_abstract.cma"
+  archive(native) = "prepare_fully_abstract.cmxa"
+  plugin(byte) = "prepare_fully_abstract.cma"
+  plugin(native) = "prepare_fully_abstract.cmxs"
+)
+package "reify_impl" (
+  directory = "reify_impl"
+  version = "0.3.0"
+  description = ""
+  requires =
+  "OCanren-ppx.internals
+   ppx_expect.collector
+   ppx_expect.config
+   ppx_here.runtime-lib
+   ppx_inline_test.config
+   ppx_inline_test.runtime-lib
+   ppxlib
+   ppxlib.ast
+   ppxlib.stdppx"
+  archive(byte) = "reify_impl.cma"
+  archive(native) = "reify_impl.cmxa"
+  plugin(byte) = "reify_impl.cma"
+  plugin(native) = "reify_impl.cmxs"
+)

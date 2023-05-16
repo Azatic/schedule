@@ -1,6 +1,20 @@
 <!-- <!DOCTYPE html>
 <html>
-
+ //     2021pi-1 monday 5,
+        //     2021pi-1 Solev teorver1,
+        //          2021pi-2 Solev teorver2,
+        //          2021pi-1 Basov diff1,
+        //          2021pi-2 Basov diff2,
+        //          2021pi-1 Starchak matlog1,
+        //          2021pi-2 Starchak matlog2,
+        //          2021pi-1 Sartasov practice1,
+        //          2021pi-2 Sartasov practice2,
+        //          2022pi-1 Ivanova algebra1,
+        //          2022pi-2 Ivanova algebra2,
+        //          2022pi-1 Dodonov matan1,
+        //          2022pi-2 Dodonov matan2,
+        //          2022pi-1 Kalnitckiy geom1,
+        //          2022pi-2 Kalnitckiy geom2
 <head>
     <script src="_build/default/demo1ppx/main.bc.js"></script>
     <script>
@@ -47,10 +61,10 @@
 <head>
     <script src="main.bc.js"></script>
     <script>
-        console.log(myMathLib.generateSched([],
-            [["b-11", "viden1", "geom1"], ["b-11", "viden1", "geom2"], ["b-09", "viden1", "matan3"], ["b-09", "Kosarev", "fp"], ["b-07", "Kosarev", "fp2"]],
-            [], 5
-        ))
+        // console.log(myMathLib.generateSched([],
+        //     [["b-11", "viden1", "geom1"], ["b-11", "viden1", "geom2"], ["b-09", "viden1", "matan3"], ["b-09", "Kosarev", "fp"], ["b-07", "Kosarev", "fp2"]],
+        //     [], 5
+        // ))
         // alert((myMathLib.generateSched([],
         //     [["b-11", "viden1", "geom1"], ["b-11", "viden1", "geom2"], ["b-09", "viden1", "matan3"], ["b-09", "Kosarev", "fp"]],
         //     []
@@ -89,22 +103,59 @@
 
 <body>
     <form>
-        <label>Form 1:</label>
-        <input type="text" style="width: 200px; height: 50px;" name="input1">
+        <label>План практик:</label>
+        <input type="text" style="width: 200px; height: 50px;" name="input1"
+            value="b-07 viden matan1,b-07 zhukov alg,b-07 viden matan2,b-08 zhukov subj1,b-08 viden matan3">
     </form>
     <form>
-        <label>Form 2:</label>
-        <input type="text" style="width: 200px; height: 50px;" name="input2">
+        <label>План лекций:</label>
+        <input type="text" style="width: 200px; height: 50px;" name="input2" value="b-07 b-08 b-09 b-10 viden Math">
     </form>
     <form>
-        <label>Form 3:</label>
-        <input type="text" style="width: 200px; height: 50px;" name="input3">
+        <label>Ограничения:</label>
+        <input type="text" style="width: 200px; height: 50px;" name="input3" value="b-07 monday 5">
     </form>
     <form>
         <label>Ввести количество групп и преподавателей</label>
-        <input type="text" style="width: 200px; height: 50px;" name="input4">
+        <input type="text" style="width: 200px; height: 50px;" name="input4" value="6">
     </form>
     <button onclick="myFunction()">Submit</button>
+    <!-- <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody id="myTableBody">
+        </tbody>
+    </table> -->
+    <!-- <script>const data = [
+            { name: 'John', age: 25, location: 'New York' },
+            { name: 'Sarah', age: 30, location: 'Los Angeles' },
+            { name: 'Mike', age: 40, location: 'Chicago' },
+        ];
+
+        const tableBody = document.getElementById('myTableBody');
+
+        for (let i = 0; i < data.length; i++) {
+            const row = document.createElement('tr');
+
+            const nameCell = document.createElement('td');
+            nameCell.appendChild(document.createTextNode(data[i].name));
+            row.appendChild(nameCell);
+
+            const ageCell = document.createElement('td');
+            ageCell.appendChild(document.createTextNode(data[i].age));
+            row.appendChild(ageCell);
+
+            const locationCell = document.createElement('td');
+            locationCell.appendChild(document.createTextNode(data[i].location));
+            row.appendChild(locationCell);
+
+            tableBody.appendChild(row);
+        }</script> -->
     <script>
         function string_to_array(str1) {
             return str1.split(",").map(x => x.split(" "));
@@ -116,13 +167,94 @@
             var input4 = document.getElementsByName("input4")[0].value;
             console.log(input1, input2, string_to_array(input2), string_to_array(input3));
             // Add your code to handle the inputs here
-            console.log(myMathLib.generateSched(string_to_array(input3), string_to_array(input1), string_to_array(input2), input4))
+            // console.log(myMathLib.generateSched(string_to_array(input3), string_to_array(input1), string_to_array(input2), input4))
+            const tableBody = document.getElementById('myTableBody');
+            const data = myMathLib.generateSched(string_to_array(input3), string_to_array(input1), string_to_array(input2), input4);
+            const normaldata = data[0];
+            console.log(normaldata);
+            // for (let i = 0; i < normaldata.length; i++) {
+            //     const row = document.createElement('tr');
+
+            //     const nameCell = document.createElement('td');
+            //     nameCell.appendChild(document.createTextNode(normaldata[i].x));
+            //     row.appendChild(nameCell);
+
+            //     const ageCell = document.createElement('td');
+            //     ageCell.appendChild(document.createTextNode('data[i].x'));
+            //     row.appendChild(ageCell);
+
+            //     const locationCell = document.createElement('td');
+            //     locationCell.appendChild(document.createTextNode('data[i].x'));
+            //     row.appendChild(locationCell);
+
+            //     tableBody.appendChild(row);
+            // }
+
+
+            var dsfdata = [
+                ['Name', 'Age', 'Location'],
+                ['John', 25, 'New York'],
+                ['Jane', 30, 'Los Angeles'],
+                ['Bob', 40, 'Chicago'],
+                ['Lisa', 35, 'Houston']
+            ];
+            var pair =
+                ['9:30 - 11:05', '11:15 - 12:50', '13:50 - 15:15', '15:25 - 17:00']
+            var day =
+                ['', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница']
+
+            // create multiple tables using a loop
+            for (var i = 0; i < normaldata.length; i++) {
+                document.write('расписание группы/преподавателя' + '  ' + normaldata[i].x);
+                document.write('<br>')
+                document.write('<table border="1">');
+                for (var k = -1; k < 4; k++) {
+                    document.write('<tr>');
+                    for (var j = -1; j < 5; j++) {
+                        if (j < 0 && k > -1)
+                            document.write('<td width="200" height="50">' + pair[k] + '</td>');
+                        if (j > -1 && k > -1)
+                            document.write('<td width="200" height="50">' + normaldata[i].schedule[j][k] + '</td>');
+                        if (k < 0)
+                            document.write('<td width="200" height="50">' + day[j + 1] + '</td>');
+                        // if (k > -1 && j > -1)
+                        //     document.write('<td width="200" height="50">' + normaldata[i].schedule[j][k] + '</td>');
+                    }
+                    document.write('</tr>');
+                }
+                document.write('</table><br>');
+            }
         }
     // b-07 b-08 b-09 b-10 viden Math
     // b-07 viden matan1,b-07 zhukov alg,b-07 viden matan2,b-08 zhukov subj1,b-08 viden matan3
     // b-07 monday 5
     // 6
     </script>
+
+    <!-- <script>
+        // sample data for tables
+        var data = [
+            ['Name', 'Age', 'Location'],
+            ['John', 25, 'New York'],
+            ['Jane', 30, 'Los Angeles'],
+            ['Bob', 40, 'Chicago'],
+            ['Lisa', 35, 'Houston']
+        ];
+
+        // create multiple tables using a loop
+        for (var i = 0; i < 3; i++) {
+            document.write('<table border="1">');
+            for (var j = 0; j < data.length; j++) {
+                document.write('<tr>');
+                for (var k = 0; k < data[j].length; k++) {
+                    document.write('<td>' + data[j][k] + '</td>');
+                }
+                document.write('</tr>');
+            }
+            document.write('</table><br>');
+        }
+    </script> -->
+
 </body>
 
 </html>
