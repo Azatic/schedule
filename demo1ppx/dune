@@ -61,7 +61,7 @@
  (modules for_ocaml_test)
  (flags
   (:standard -rectypes))
- (libraries lib1 sched_lib)
+ (libraries lib1 sched_lib type_lib)
  (preprocess
   (pps OCanren-ppx.ppx_repr OCanren-ppx.ppx_fresh GT.ppx GT.ppx_all)))
 

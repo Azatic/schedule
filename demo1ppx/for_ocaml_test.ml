@@ -1,14 +1,16 @@
 open Lib
-(* open Sched_core *)
 
-(* let schedo constraints schedule lecture_plan =
+(* open Sched_core *)
+open OCanren
+
+let schedo constraints schedule lecture_plan number =
   OCanren.run
     OCanren.q
-    (fun x -> Sched_core.test1 constraints schedule lecture_plan x)
+    (fun x -> Sched_core.test1 constraints schedule lecture_plan number x)
     (fun rr -> rr#reify storage_reifier)
   |> OCanren.Stream.take ~n:1
-  |> Stdlib.List.map (fun ans -> Js.Unsafe)
-;; *)
+  |> Stdlib.List.iteri (fun i ans -> Format.printf "%d: %s\n%!" i (show_storage ans))
+;;
 
 (* let _ =
   schedo
@@ -66,15 +68,12 @@ let time f x =
   fx
 ;;
 
-(* 
-let t =
-  Sys.time *)
-()
-(* let _ =
+let t = Sys.time ()
+
+let _ =
   (* time *)
   schedo
-    (* [ [ "b-07"; "tuesday"; "5" ]; [ "b-08"; "tuesday"; "5" ] ] *)
-    [ [ "2021pi-1"; "monday"; "5" ] ]
+    [ [ "2021pi-1"; "tuesday"; "4" ] ]
     [ [ "2021pi-1"; "Solev"; "teorver1" ]
     ; [ "2021pi-2"; "Solev"; "teorver2" ]
     ; [ "2021pi-1"; "Basov"; "diff1" ]
@@ -91,7 +90,7 @@ let t =
     ; [ "2022pi-2"; "Kalnitckiy"; "geom2" ]
     ]
     [ [ "2021pi-1"; "2021pi-2"; "zagl1"; "zagl2"; "Sartasov"; "Rpo" ]
-    ; [ "2021pi-1"; "2021pi-2"; "zagl1"; "zagl2"; "Basov"; "Diff1" ]
+      (* ; [ "2021pi-1"; "2021pi-2"; "zagl1"; "zagl2"; "Basov"; "Diff1" ]
     ; [ "2021pi-1"; "2021pi-2"; "zagl1"; "zagl2"; "Starchak"; "Matlog1" ]
     ; [ "2021pi-1"; "2021pi-2"; "zagl1"; "zagl2"; "Burova"; "Math" ]
     ; [ "2022pi-1"; "2022pi-2"; "zagl3"; "zagl4"; "Luciv"; "Arkhitektura" ]
@@ -99,10 +98,10 @@ let t =
     ; [ "2022pi-1"; "2022pi-2"; "zagl3"; "zagl4"; "Kirilenko"; "Programming_base" ]
     ; [ "2022pi-1"; "2022pi-2"; "zagl3"; "zagl4"; "Mokaev"; "Math_disk" ]
     ; [ "2022pi-1"; "2022pi-2"; "zagl3"; "zagl4"; "Sivatckiy"; "Algebra" ]
-    ; [ "2022pi-1"; "2022pi-2"; "zagl3"; "zagl4"; "Kalnitckiy"; "Geom" ]
+    ; [ "2022pi-1"; "2022pi-2"; "zagl3"; "zagl4"; "Kalnitckiy"; "Geom" ] *)
     ]
-;; *)
+    20
+;;
+
 (* без разделения работало за 105 секунд *)
-(* Printf.printf
-    "Execution time: %fs\n%!"
-    (Sys.time () -. t) *)
+Printf.printf "Execution time: %fs\n%!" (Sys.time () -. t)

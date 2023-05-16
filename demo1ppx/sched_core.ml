@@ -68,36 +68,6 @@ let insert_all_sched_lecture subj group1 group2 group3 group4 teacher_sched clas
        ])
 ;;
 
-let insert_all_sched subj group_sched teacher_sched class_sched =
-  fresh
-    (a1 a2 a3 a4 a5 b1 b2 b3 b4 b5 c1 c2 c3 c4 c5)
-    (group_sched === Std.list Fun.id [ a1; a2; a3; a4; a5 ])
-    (teacher_sched === Std.list Fun.id [ b1; b2; b3; b4; b5 ])
-    (class_sched === Std.list Fun.id [ c1; c2; c3; c4; c5 ])
-    (conde
-       [ Init_core.ins_sched1 subj a1 b1 c1
-       ; ins_sched2 subj a1 b1 c1
-       ; ins_sched3 subj a1 b1 c1
-       ; ins_sched4 subj a1 b1 c1
-       ; ins_sched1 subj a2 b2 c2
-       ; ins_sched2 subj a2 b2 c2
-       ; ins_sched3 subj a2 b2 c2
-       ; ins_sched4 subj a2 b2 c2
-       ; ins_sched1 subj a3 b3 c3
-       ; ins_sched2 subj a3 b3 c3
-       ; ins_sched3 subj a3 b3 c3
-       ; ins_sched4 subj a3 b3 c3
-       ; ins_sched1 subj a4 b4 c4
-       ; ins_sched2 subj a4 b4 c4
-       ; ins_sched3 subj a4 b4 c4
-       ; ins_sched4 subj a4 b4 c4
-       ; ins_sched1 subj a5 b5 c5
-       ; ins_sched2 subj a5 b5 c5
-       ; ins_sched3 subj a5 b5 c5
-       ; ins_sched4 subj a5 b5 c5
-       ])
-;;
-
 let rec insert_sched_to_one_group
   lessons
   all_teacher_sched
@@ -121,7 +91,7 @@ let rec insert_sched_to_one_group
         (sched_all_class === List.cons sched_class ost)
         (class_subj === List.cons class_first class_ost)
         (membero lesson class_first)
-        (insert_all_sched lesson group_sched teacher_sched sched_class)
+        (Init_core.insert_all_sched lesson group_sched teacher_sched sched_class)
         (insert_sched_to_one_group
            tail_lessons
            tail_teacher

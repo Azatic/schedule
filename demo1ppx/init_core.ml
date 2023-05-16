@@ -20,7 +20,7 @@ let init_sched_a_week : Type_core.ischedule -> goal =
     ]
 ;;
 
-let ins_sched1 subj group_sched teacher_sched class_sched =
+let insert_lesson_to_first_pair subj group_sched teacher_sched class_sched =
   conde
     [ fresh
         (a2 a3 a4 b2 b3 b4 c2 c3 c4)
@@ -30,7 +30,7 @@ let ins_sched1 subj group_sched teacher_sched class_sched =
     ]
 ;;
 
-let ins_sched2 subj group_sched teacher_sched class_sched =
+let insert_lesson_to_second_pair subj group_sched teacher_sched class_sched =
   conde
     [ fresh
         (a2 a3 a4 b2 b3 b4 c2 c3 c4)
@@ -40,7 +40,7 @@ let ins_sched2 subj group_sched teacher_sched class_sched =
     ]
 ;;
 
-let ins_sched3 subj group_sched teacher_sched class_sched =
+let insert_lesson_to_third_pair subj group_sched teacher_sched class_sched =
   conde
     [ fresh
         (a2 a3 a4 b2 b3 b4 c2 c3 c4)
@@ -50,7 +50,7 @@ let ins_sched3 subj group_sched teacher_sched class_sched =
     ]
 ;;
 
-let ins_sched4 subj group_sched teacher_sched class_sched =
+let insert_lesson_to_fourth_pair subj group_sched teacher_sched class_sched =
   conde
     [ fresh
         (a2 a3 a4 b2 b3 b4 c2 c3 c4)
@@ -130,4 +130,34 @@ let ins_lecture4 subj group1 group2 group3 group4 teacher_sched class_sched =
         (teacher_sched === Std.list Fun.id [ b2; b3; b4; subj ])
         (class_sched === Std.list Fun.id [ c2; c3; c4; subj ])
     ]
+;;
+
+let insert_all_sched subj group_sched teacher_sched class_sched =
+  fresh
+    (a1 a2 a3 a4 a5 b1 b2 b3 b4 b5 c1 c2 c3 c4 c5)
+    (group_sched === Std.list Fun.id [ a1; a2; a3; a4; a5 ])
+    (teacher_sched === Std.list Fun.id [ b1; b2; b3; b4; b5 ])
+    (class_sched === Std.list Fun.id [ c1; c2; c3; c4; c5 ])
+    (conde
+       [ insert_lesson_to_first_pair subj a1 b1 c1
+       ; insert_lesson_to_second_pair subj a1 b1 c1
+       ; insert_lesson_to_third_pair subj a1 b1 c1
+       ; insert_lesson_to_second_pair subj a1 b1 c1
+       ; insert_lesson_to_first_pair subj a2 b2 c2
+       ; insert_lesson_to_second_pair subj a2 b2 c2
+       ; insert_lesson_to_third_pair subj a2 b2 c2
+       ; insert_lesson_to_second_pair subj a2 b2 c2
+       ; insert_lesson_to_first_pair subj a3 b3 c3
+       ; insert_lesson_to_second_pair subj a3 b3 c3
+       ; insert_lesson_to_third_pair subj a3 b3 c3
+       ; insert_lesson_to_second_pair subj a3 b3 c3
+       ; insert_lesson_to_first_pair subj a4 b4 c4
+       ; insert_lesson_to_second_pair subj a4 b4 c4
+       ; insert_lesson_to_third_pair subj a4 b4 c4
+       ; insert_lesson_to_second_pair subj a4 b4 c4
+       ; insert_lesson_to_first_pair subj a5 b5 c5
+       ; insert_lesson_to_second_pair subj a5 b5 c5
+       ; insert_lesson_to_third_pair subj a5 b5 c5
+       ; insert_lesson_to_second_pair subj a5 b5 c5
+       ])
 ;;
