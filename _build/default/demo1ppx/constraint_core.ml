@@ -82,14 +82,13 @@ let delete_friday q group =
 ;;
 
 let rec myassoco key xs v =
-  Fresh.three (fun a b tl ->
-    xs
-    === Std.pair a b % tl
-    &&& conde
-          [ a === key &&& (b === v)
-          ; a =/= key &&& myassoco key tl v
-          ; xs === List.nil () &&& failure
-          ])
+  conde
+    [ xs === List.nil () &&& failure
+    ; Fresh.three (fun a b tl ->
+        xs
+        === Std.pair a b % tl
+        &&& conde [ a === key &&& (b === v); a =/= key &&& myassoco key tl v ])
+    ]
 ;;
 
 let delete_day n q group =
