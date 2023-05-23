@@ -33,7 +33,7 @@
             var input2 = document.getElementsByName("input2")[0].value;
             var input3 = document.getElementsByName("input3")[0].value;
             const tableBody = document.getElementById('myTableBody');
-            const data = myMathLib.generateSched(string_to_array(input3), string_to_array(input1), string_to_array(input2));
+            const data = mySchedLib.generateSched(string_to_array(input3), string_to_array(input1), string_to_array(input2));
             const normaldata = data[0];
             console.log(normaldata);
             const pair =
