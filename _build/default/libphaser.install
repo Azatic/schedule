@@ -1,8 +1,0 @@
-lib: [
-  "_build/install/default/lib/libphaser/META"
-  "_build/install/default/lib/libphaser/dune-package"
-  "_build/install/default/lib/libphaser/opam"
-]
-doc: [
-  "_build/install/default/doc/libphaser/README.md"
-]

@@ -6,11 +6,11 @@ type key_desc = string
 
 open OCanren
 
-let schedo _constraints schedule lecture_plan (* number *) =
+let schedo _constraints schedule lecture_plan =
   let open OCanren in
   OCanren.run
     OCanren.q
-    (fun x -> test1 _constraints schedule lecture_plan (* number  *) x)
+    (fun x -> test1 _constraints schedule lecture_plan x)
     (fun rr -> rr#reify storage_reifier)
   |> OCanren.Stream.take ~n:1
   |> Stdlib.List.map (fun storage ->
@@ -36,9 +36,6 @@ let schedo _constraints schedule lecture_plan (* number *) =
             object%js
               val x = Js.string a
 
-              (* val schedule =
-                   Js.array (Array.of_list [ "adsf"; "sdf" ]) |> Js.array_map Js.string *)
-
               val schedule =
                 Js.array (Array.of_list b |> Array.map Array.of_list)
                 |> Js.array_map Js.array
@@ -62,7 +59,7 @@ let _ =
        method generateSched
          constraints
          (schedule : Js.js_string Js.t Js.js_array Js.t Js.js_array Js.t)
-         lecture_plan (* number *) =
+         lecture_plan =
          schedo
            (to_list
               (map
@@ -85,6 +82,5 @@ let _ =
                  |> Js.to_array
                  |> Array.map Js.to_array
                  |> Array.map (Array.map Js.to_string))))
-       (* number *)
     end)
 ;;

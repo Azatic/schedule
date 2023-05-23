@@ -8,11 +8,11 @@
     <form>
         <label>План практик:</label>
         <input type="text" style="width: 200px; height: 50px;" name="input1"
-            value="b-07 viden matan1,b-07 zhukov alg,b-07 viden matan2,b-08 zhukov subj1,b-08 viden matan3">
+            value="b-07 Videnskiy matan1,b-07 Zhukov alg,b-07 Videnskiy matan2,b-08 Zhukov subj1,b-08 Videnskiy matan3">
     </form>
     <form>
         <label>План лекций:</label>
-        <input type="text" style="width: 200px; height: 50px;" name="input2" value="b-07 b-08 b-09 b-10 viden Math">
+        <input type="text" style="width: 200px; height: 50px;" name="input2" value="b-07 b-08 b-09 b-10 Videnskiy Math">
     </form>
     <form>
         <label>Ограничения:</label>
@@ -21,7 +21,12 @@
     <button onclick="myFunction()">Подтвердить</button>
     <script>
         function string_to_array(str1) {
-            return str1.split(",").map(x => x.split(" "));
+            if (str1 != "") {
+                return str1.split(",").map(x => x.split(" "));
+            }
+            else {
+                return [];
+            }
         }
         function myFunction() {
             var input1 = document.getElementsByName("input1")[0].value;
@@ -47,15 +52,12 @@
                             document.write('<td width="200" height="50">' + normaldata[i].schedule[j][k] + '</td>');
                         if (k < 0)
                             document.write('<td width="200" height="50">' + day[j + 1] + '</td>');
-                        // if (k > -1 && j > -1)
-                        //     document.write('<td width="200" height="50">' + normaldata[i].schedule[j][k] + '</td>');
                     }
                     document.write('</tr>');
                 }
                 document.write('</table><br>');
             }
         }
-        // style="border-collapse: collapse; border: 1px solid black;
     </script>
 </body>
 

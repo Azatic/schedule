@@ -105,12 +105,10 @@ let rec use_constraint storage list_pair_constraint =
   match list_pair_constraint with
   | [] -> success
   | hd :: tl ->
-    conde
-      [ fresh
-          (group_name sched day number)
-          (Std.list ( !! ) hd === Std.list Fun.id [ group_name; day; number ])
-          (myassoco group_name storage sched)
-          (delete_day day number sched)
-      ]
-    &&& use_constraint storage tl
+    fresh
+      (group_name sched day number)
+      (Std.list ( !! ) hd === Std.list Fun.id [ group_name; day; number ])
+      (myassoco group_name storage sched)
+      (delete_day day number sched)
+      (use_constraint storage tl)
 ;;

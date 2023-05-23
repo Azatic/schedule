@@ -11,10 +11,10 @@ let insert_second_session schedule subj =
   schedule === Std.list Fun.id [ __; subj; __; __ ]
 ;;
 
-let insert_thurd_session schedule subj = schedule === Std.list Fun.id [ __; __; __; subj ]
+let insert_third_session schedule subj = schedule === Std.list Fun.id [ __; __; subj; __ ]
 
 let insert_fourth_session schedule subj =
-  schedule === Std.list Fun.id [ __; __; subj; __ ]
+  schedule === Std.list Fun.id [ __; __; __; subj ]
 ;;
 
 let init_sched_a_week : Type_core.ischedule -> goal =
@@ -32,49 +32,39 @@ let init_sched_a_week : Type_core.ischedule -> goal =
 ;;
 
 let insert_lesson_to_first_session subj group_sched teacher_sched class_sched =
-  conde
-    [ fresh
-        a2
-        (insert_first_session group_sched subj)
-        (insert_first_session teacher_sched subj)
-        (insert_first_session class_sched subj)
-    ]
+  fresh
+    a2
+    (insert_first_session group_sched subj)
+    (insert_first_session teacher_sched subj)
+    (insert_first_session class_sched subj)
 ;;
 
 let insert_lesson_to_second_session subj group_sched teacher_sched class_sched =
-  conde
-    [ fresh
-        a2
-        (insert_second_session group_sched subj)
-        (insert_second_session teacher_sched subj)
-        (insert_second_session class_sched subj)
-    ]
+  fresh
+    a2
+    (insert_second_session group_sched subj)
+    (insert_second_session teacher_sched subj)
+    (insert_second_session class_sched subj)
 ;;
 
 let insert_lesson_to_third_session subj group_sched teacher_sched class_sched =
-  conde
-    [ fresh
-        a2
-        (insert_thurd_session group_sched subj)
-        (insert_thurd_session teacher_sched subj)
-        (insert_thurd_session class_sched subj)
-    ]
+  fresh
+    a2
+    (insert_third_session group_sched subj)
+    (insert_third_session teacher_sched subj)
+    (insert_third_session class_sched subj)
 ;;
 
 let insert_lesson_to_fourth_session subj group_sched teacher_sched class_sched =
-  conde
-    [ fresh
-        a2
-        (insert_fourth_session group_sched subj)
-        (insert_fourth_session teacher_sched subj)
-        (insert_fourth_session class_sched subj)
-    ]
+  fresh
+    a2
+    (insert_fourth_session group_sched subj)
+    (insert_fourth_session teacher_sched subj)
+    (insert_fourth_session class_sched subj)
 ;;
 
 let init_store q =
-  conde
-    [ fresh (a1 name) (init_sched_a_week a1) (q === Std.list Fun.id [ Std.pair name a1 ])
-    ]
+  fresh (a1 name) (init_sched_a_week a1) (q === Std.list Fun.id [ Std.pair name a1 ])
 ;;
 
 let rec appendo a b ab =
@@ -88,59 +78,51 @@ let rec init_storage n q =
   match n with
   | 0 -> success
   | 1 -> init_store q
-  | _ -> fresh (a b) (init_storage (n - 1) a) (init_store b) (appendo a b q)
+  | n -> fresh (a b) (init_store b) (init_storage (n - 1) a) (appendo a b q)
 ;;
 
 let ins_lecture1 subj group1 group2 group3 group4 teacher_sched class_sched =
-  conde
-    [ fresh
-        (a2 a3 a4 b2 b3 b4 c2 c3 c4 d2 d3 d4 e2 e3 e4 f2 f3 f4)
-        (group1 === Std.list Fun.id [ subj; a2; a3; a4 ])
-        (group2 === Std.list Fun.id [ subj; d2; d3; d4 ])
-        (group3 === Std.list Fun.id [ subj; e2; e3; e4 ])
-        (group4 === Std.list Fun.id [ subj; f2; f3; f4 ])
-        (teacher_sched === Std.list Fun.id [ subj; b2; b3; b4 ])
-        (class_sched === Std.list Fun.id [ subj; c2; c3; c4 ])
-    ]
+  fresh
+    a2
+    (group1 === Std.list Fun.id [ subj; __; __; __ ])
+    (group2 === Std.list Fun.id [ subj; __; __; __ ])
+    (group3 === Std.list Fun.id [ subj; __; __; __ ])
+    (group4 === Std.list Fun.id [ subj; __; __; __ ])
+    (teacher_sched === Std.list Fun.id [ subj; __; __; __ ])
+    (class_sched === Std.list Fun.id [ subj; __; __; __ ])
 ;;
 
 let ins_lecture2 subj group1 group2 group3 group4 teacher_sched class_sched =
-  conde
-    [ fresh
-        (a2 a3 a4 b2 b3 b4 c2 c3 c4 d2 d3 d4 e2 e3 e4 f2 f3 f4)
-        (group1 === Std.list Fun.id [ a2; subj; a3; a4 ])
-        (group2 === Std.list Fun.id [ d2; subj; d3; d4 ])
-        (group3 === Std.list Fun.id [ e2; subj; e3; e4 ])
-        (group4 === Std.list Fun.id [ f2; subj; f3; f4 ])
-        (teacher_sched === Std.list Fun.id [ b2; subj; b3; b4 ])
-        (class_sched === Std.list Fun.id [ c2; subj; c3; c4 ])
-    ]
+  fresh
+    a2
+    (group1 === Std.list Fun.id [ __; subj; __; __ ])
+    (group2 === Std.list Fun.id [ __; subj; __; __ ])
+    (group3 === Std.list Fun.id [ __; subj; __; __ ])
+    (group4 === Std.list Fun.id [ __; subj; __; __ ])
+    (teacher_sched === Std.list Fun.id [ __; subj; __; __ ])
+    (class_sched === Std.list Fun.id [ __; subj; __; __ ])
 ;;
 
 let ins_lecture3 subj group1 group2 group3 group4 teacher_sched class_sched =
-  conde
-    [ fresh
-        (a2 a3 a4 b2 b3 b4 c2 c3 c4 d2 d3 d4 e2 e3 e4 f2 f3 f4)
-        (group1 === Std.list Fun.id [ a2; a3; subj; a4 ])
-        (group2 === Std.list Fun.id [ d2; d3; subj; d4 ])
-        (group3 === Std.list Fun.id [ e2; e3; subj; e4 ])
-        (group4 === Std.list Fun.id [ f2; f3; subj; f4 ])
-        (teacher_sched === Std.list Fun.id [ b2; b3; subj; b4 ])
-        (class_sched === Std.list Fun.id [ c2; c3; subj; c4 ])
-    ]
+  fresh
+    a2
+    (group1 === Std.list Fun.id [ __; __; subj; __ ])
+    (group2 === Std.list Fun.id [ __; __; subj; __ ])
+    (group3 === Std.list Fun.id [ __; __; subj; __ ])
+    (group4 === Std.list Fun.id [ __; __; subj; __ ])
+    (teacher_sched === Std.list Fun.id [ __; __; subj; __ ])
+    (class_sched === Std.list Fun.id [ __; __; subj; __ ])
 ;;
 
 let ins_lecture4 subj group1 group2 group3 group4 teacher_sched class_sched =
-  conde
-    [ fresh
-        (a2 a3 a4 b2 b3 b4 c2 c3 c4 d2 d3 d4 e2 e3 e4 f2 f3 f4)
-        (group1 === Std.list Fun.id [ a2; a3; a4; subj ])
-        (group2 === Std.list Fun.id [ d2; d3; d4; subj ])
-        (group3 === Std.list Fun.id [ e2; e3; e4; subj ])
-        (group4 === Std.list Fun.id [ f2; f3; f4; subj ])
-        (teacher_sched === Std.list Fun.id [ b2; b3; b4; subj ])
-        (class_sched === Std.list Fun.id [ c2; c3; c4; subj ])
-    ]
+  fresh
+    a2
+    (group1 === Std.list Fun.id [ __; __; __; subj ])
+    (group2 === Std.list Fun.id [ __; __; __; subj ])
+    (group3 === Std.list Fun.id [ __; __; __; subj ])
+    (group4 === Std.list Fun.id [ __; __; __; subj ])
+    (teacher_sched === Std.list Fun.id [ __; __; __; subj ])
+    (class_sched === Std.list Fun.id [ __; __; __; subj ])
 ;;
 
 let insert_lesson subj group_sched teacher_sched class_sched =
