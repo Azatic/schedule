@@ -1,0 +1,65 @@
+name: Build and test
+
+on:
+  push:
+    branches:
+      - "main"
+      - "staging"
+
+  pull_request:
+    branches:
+      - "*"
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-20.04
+        ocaml-compiler:
+          - 4.14.0
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - run: echo "LOCAL_PATH=$HOME/.local/bin" >> $GITHUB_ENV
+
+      - name: Setup path
+        run: |
+          mkdir -p "$LOCAL_PATH"
+          echo "$LOCAL_PATH" >> $GITHUB_PATH
+
+      - name: Setup just
+        run: |
+          \curl \
+            --proto '=https' \
+            --tlsv1.2 \
+            -sSf \
+            https://just.systems/install.sh \
+          | bash -s -- \
+            --to "$LOCAL_PATH" \
+            --tag 1.13.0
+
+      - name: Use OCaml ${{ matrix.ocaml-compiler }}
+        uses: ocaml/setup-ocaml@v2
+        with:
+          ocaml-compiler: ${{ matrix.ocaml-compiler }}
+          dune-cache: true
+          cache-prefix: v1-${{ matrix.os }}
+
+      - name: Build and test
+        run: |
+          opam exec -- just clean
+          opam exec -- just build
+          opam exec -- just test
+
+      - name: Send coverage
+        run: |
+          opam install bisect_ppx
+          opam exec -- just send_coverage
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
