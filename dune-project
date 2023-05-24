@@ -9,8 +9,8 @@
 (authors "<author>")
 
 (package
- (name OCanren-base-example) ; FIXME and regenerate .opam file using 'dune build @install'
- (synopsis "OCanren demo projects")
+ (name OCanren-schedule) ; FIXME and regenerate .opam file using 'dune build @install'
+ (synopsis "OCanren Schedule project")
  (version 0.1)
  (maintainers "<empty>")
  (depends
@@ -27,6 +27,13 @@
   ))
 
 (package
- (name libphaser)
- (synopsis "Bindings to Javascript Phaser")
- (depends ppx_inline_test js_of_ocaml-ppx))
+ (name schedule_lib))
+
+(package
+ (name type_lib))
+
+(package
+ (name constraint_lib))
+
+(package
+ (name init_lib))

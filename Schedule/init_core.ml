@@ -32,7 +32,7 @@ let init_sched_a_week q =
 
 let insert_lesson_to_first_session subj group_sched teacher_sched class_sched =
   fresh
-    a2
+    ()
     (insert_first_session group_sched subj)
     (insert_first_session teacher_sched subj)
     (insert_first_session class_sched subj)
@@ -40,7 +40,7 @@ let insert_lesson_to_first_session subj group_sched teacher_sched class_sched =
 
 let insert_lesson_to_second_session subj group_sched teacher_sched class_sched =
   fresh
-    a2
+    ()
     (insert_second_session group_sched subj)
     (insert_second_session teacher_sched subj)
     (insert_second_session class_sched subj)
@@ -48,7 +48,7 @@ let insert_lesson_to_second_session subj group_sched teacher_sched class_sched =
 
 let insert_lesson_to_third_session subj group_sched teacher_sched class_sched =
   fresh
-    a2
+    ()
     (insert_third_session group_sched subj)
     (insert_third_session teacher_sched subj)
     (insert_third_session class_sched subj)
@@ -56,7 +56,7 @@ let insert_lesson_to_third_session subj group_sched teacher_sched class_sched =
 
 let insert_lesson_to_fourth_session subj group_sched teacher_sched class_sched =
   fresh
-    a2
+    ()
     (insert_fourth_session group_sched subj)
     (insert_fourth_session teacher_sched subj)
     (insert_fourth_session class_sched subj)
@@ -82,7 +82,7 @@ let rec init_storage n q =
 
 let ins_lecture1 subj group1 group2 group3 group4 teacher_sched class_sched =
   fresh
-    a2
+    ()
     (insert_first_session group1 subj)
     (insert_first_session group2 subj)
     (insert_first_session group3 subj)
@@ -93,7 +93,7 @@ let ins_lecture1 subj group1 group2 group3 group4 teacher_sched class_sched =
 
 let ins_lecture2 subj group1 group2 group3 group4 teacher_sched class_sched =
   fresh
-    a2
+    ()
     (insert_second_session group1 subj)
     (insert_second_session group2 subj)
     (insert_second_session group3 subj)
@@ -104,7 +104,7 @@ let ins_lecture2 subj group1 group2 group3 group4 teacher_sched class_sched =
 
 let ins_lecture3 subj group1 group2 group3 group4 teacher_sched class_sched =
   fresh
-    a2
+    ()
     (insert_third_session group1 subj)
     (insert_third_session group2 subj)
     (insert_third_session group3 subj)
@@ -115,7 +115,7 @@ let ins_lecture3 subj group1 group2 group3 group4 teacher_sched class_sched =
 
 let ins_lecture4 subj group1 group2 group3 group4 teacher_sched class_sched =
   fresh
-    a2
+    ()
     (insert_fourth_session group1 subj)
     (insert_fourth_session group2 subj)
     (insert_fourth_session group3 subj)

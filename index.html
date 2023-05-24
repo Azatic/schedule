@@ -18,6 +18,10 @@
         <label>Ограничения:</label>
         <input type="text" style="width: 200px; height: 50px;" name="input3" value="b-07 monday 5">
     </form>
+    <form>
+        <label>Неформальные ограничения:</label>
+        <input type="text" style="width: 200px; height: 50px;" name="input4" value="b-07 b-08 Videnskiy matan1">
+    </form>
     <button onclick="myFunction()">Подтвердить</button>
     <script>
         function string_to_array(str1) {
@@ -33,8 +37,9 @@
             var input1 = document.getElementsByName("input1")[0].value;
             var input2 = document.getElementsByName("input2")[0].value;
             var input3 = document.getElementsByName("input3")[0].value;
+            var input4 = document.getElementsByName("input4")[0].value;
             const tableBody = document.getElementById('myTableBody');
-            const data = myMathLib.generateSched(string_to_array(input3), string_to_array(input1), string_to_array(input2));
+            const data = mySchedLib.generateSched(string_to_array(input3), string_to_array(input1), string_to_array(input2), string_to_array(input4));
             const normaldata = data[0];
             console.log(normaldata);
             const pair =
@@ -48,11 +53,11 @@
                     document.write('<tr>');
                     for (var j = -1; j < 5; j++) {
                         if (j < 0 && k > -1)
-                            document.write('<td width="200" height="75">' + pair[k] + '</td>');
+                            document.write('<td width="200" height="100">' + pair[k] + '</td>');
                         if (j > -1 && k > -1)
-                            document.write('<td width="200" height="75">' + normaldata[i].schedule[j][k] + '</td>');
+                            document.write('<td width="200" height="100">' + normaldata[i].schedule[j][k] + '</td>');
                         if (k < 0)
-                            document.write('<td width="200" height="75">' + day[j + 1] + '</td>');
+                            document.write('<td width="200" height="100">' + day[j + 1] + '</td>');
                     }
                     document.write('</tr>');
                 }

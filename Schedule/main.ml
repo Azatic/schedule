@@ -45,10 +45,11 @@ let func schedule lecture_plan storage =
   |> Js.array
 ;;
 
-let schedo1 constraints schedule lecture_plan =
+let schedo constraints schedule lecture_plan no_formal_constr =
   OCanren.run
     OCanren.q
-    (fun x -> Sched_core.test1 constraints schedule lecture_plan x)
+    (fun x ->
+      Sched_core.generate_schedule constraints schedule lecture_plan no_formal_constr x)
     (fun rr -> rr#reify storage_reifier)
   |> OCanren.Stream.take ~n:1
   |> List.map (func schedule lecture_plan)
@@ -64,13 +65,14 @@ open Array
 
 let _ =
   Js.export
-    "myMathLib"
+    "mySchedLib"
     (object%js
        method generateSched
          constraints
          (schedule : Js.js_string Js.t Js.js_array Js.t Js.js_array Js.t)
-         lecture_plan =
-         schedo1
+         lecture_plan
+         no_formal_constr =
+         schedo
            (to_list
               (map
                  to_list
@@ -89,6 +91,13 @@ let _ =
               (map
                  to_list
                  (lecture_plan
+                 |> Js.to_array
+                 |> Array.map Js.to_array
+                 |> Array.map (Array.map Js.to_string))))
+           (to_list
+              (map
+                 to_list
+                 (no_formal_constr
                  |> Js.to_array
                  |> Array.map Js.to_array
                  |> Array.map (Array.map Js.to_string))))

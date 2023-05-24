@@ -4,8 +4,6 @@ open Constraint_core
 open Init_core
 open Type_core
 
-let rec membero x l = conde [ List.caro l x; fresh d (List.cdro l d) (membero x d) ]
-
 [@@@ocaml.warnerror "-27"]
 
 let rec myassoco key xs v =
@@ -24,7 +22,7 @@ let rec init_sched (list_session : int list list) storage =
   | [] -> success
   | hd :: tl ->
     fresh
-      (groupname teachername subjname group_sched teacher_sched aud new_storage)
+      (groupname teachername subjname group_sched teacher_sched aud)
       (init_sched_a_week teacher_sched)
       (init_sched_a_week group_sched)
       (init_sched_a_week aud)
@@ -56,8 +54,7 @@ let rec init_sched_lecture list_session_lecture storage =
          group3
          group4
          teacher_sched
-         aud
-         new_storage)
+         aud)
       (init_sched_a_week teacher_sched)
       (init_sched_a_week group1)
       (init_sched_a_week group2)
@@ -82,16 +79,10 @@ let rec init_sched_lecture list_session_lecture storage =
       (init_sched_lecture tl storage)
 ;;
 
-let rec init_sched_new list_session storage n =
-  match n with
-  | 0 -> success
-  | n -> init_sched list_session storage
-;;
-
 let rec len q =
   match q with
   | [] -> 0
-  | hd :: tl -> 1 + len tl
+  | _ :: tl -> 1 + len tl
 ;;
 
 let rec remove_duplicates l =
@@ -119,11 +110,12 @@ let nth l n =
     nth_aux l n)
 ;;
 
+
 let list_group_and_teacher schedule itog =
   let open List in
   remove_duplicates
     (match schedule with
-     | hd1 :: hd2 :: tl -> itog :: hd1 :: hd2
+     | hd1 :: hd2 :: _ -> itog :: hd1 :: hd2
      | _ -> itog :: [])
 ;;
 
@@ -131,7 +123,7 @@ let list_group_and_teacher_lec lecture_plan itog =
   let open List in
   remove_duplicates
     (match lecture_plan with
-     | hd1 :: hd2 :: hd3 :: hd4 :: hd5 :: tl -> itog :: hd1 :: hd2 :: hd3 :: hd4 :: hd5
+     | hd1 :: hd2 :: hd3 :: hd4 :: hd5 :: _ -> itog :: hd1 :: hd2 :: hd3 :: hd4 :: hd5
      | _ -> itog :: [])
 ;;
 
@@ -142,14 +134,14 @@ let list_of_group_and_teacher schedule lecture_plan =
           (Stdlib.List.map
              (fun x : string list ->
                match x with
-               | hd1 :: hd2 :: tl -> [ hd1; hd2 ]
+               | hd1 :: hd2 :: _ -> [ hd1; hd2 ]
                | _ -> [])
              schedule
             : string list list)
           (Stdlib.List.map
              (fun x : string list ->
                match x with
-               | hd1 :: hd2 :: hd3 :: hd4 :: hd5 :: tl -> [ hd1; hd2; hd3; hd4; hd5 ]
+               | hd1 :: hd2 :: hd3 :: hd4 :: hd5 :: _ -> [ hd1; hd2; hd3; hd4; hd5 ]
                | _ -> [])
              lecture_plan
             : string list list)))
@@ -162,14 +154,14 @@ let list_of_lesson schedule lecture_plan =
           (Stdlib.List.map
              (fun x : string list ->
                match x with
-               | hd1 :: hd2 :: tl -> tl
+               | _ :: _ :: tl -> tl
                | _ -> [])
              schedule
             : string list list)
           (Stdlib.List.map
              (fun x : string list ->
                match x with
-               | hd1 :: hd2 :: hd3 :: hd4 :: hd5 :: tl -> tl
+               | _ :: _ :: _ :: _ :: _ :: tl -> tl
                | _ -> [])
              lecture_plan
             : string list list)))
@@ -203,6 +195,20 @@ let list_list_string_to_int_for_constr constraints dict =
     constraints
 ;;
 
+let list_list_string_to_int_for_no_constr constraints dict lesson_dict =
+  Stdlib.List.map
+    (fun x ->
+      match x with
+      | [ hd1; hd2; tl; subj ] ->
+        [ Stdlib.List.assoc hd1 dict
+        ; Stdlib.List.assoc hd2 dict
+        ; Stdlib.List.assoc tl dict
+        ; Stdlib.List.assoc subj lesson_dict
+        ]
+      | _ -> [])
+    constraints
+;;
+
 let list_list_string_to_int_for_lecture schedule_plan dict lesson_dict =
   Stdlib.List.map
     (fun x ->
@@ -219,7 +225,7 @@ let list_list_string_to_int_for_lecture schedule_plan dict lesson_dict =
     schedule_plan
 ;;
 
-let test1 _constaints schedule lecture_plan answer =
+let generate_schedule1 _constaints schedule lecture_plan no_formal_constr answer =
   let dict_teacher_and_group =
     list_str_to_dictionary (list_of_group_and_teacher schedule lecture_plan)
   in
@@ -230,6 +236,12 @@ let test1 _constaints schedule lecture_plan answer =
     (use_constraint
        storage
        (list_list_string_to_int_for_constr _constaints dict_teacher_and_group))
+    (use_no_formal_constraints
+       storage
+       (list_list_string_to_int_for_no_constr
+          no_formal_constr
+          dict_teacher_and_group
+          dict_lesson))
     (init_sched
        (list_list_string_to_int schedule dict_teacher_and_group dict_lesson)
        storage)
@@ -240,4 +252,41 @@ let test1 _constaints schedule lecture_plan answer =
           dict_lesson)
        storage)
     (answer === storage)
+;;
+
+let generate_schedule2 _constaints schedule lecture_plan no_formal_constr answer =
+  let dict_teacher_and_group =
+    list_str_to_dictionary (list_of_group_and_teacher schedule lecture_plan)
+  in
+  let dict_lesson = list_str_to_dictionary (list_of_lesson schedule lecture_plan) in
+  fresh
+    storage
+    (init_storage (len (list_of_group_and_teacher schedule lecture_plan)) storage)
+    (use_constraint
+       storage
+       (list_list_string_to_int_for_constr _constaints dict_teacher_and_group))
+    (init_sched_lecture
+       (list_list_string_to_int_for_lecture
+          lecture_plan
+          dict_teacher_and_group
+          dict_lesson)
+       storage)
+    (use_no_formal_constraints
+       storage
+       (list_list_string_to_int_for_no_constr
+          no_formal_constr
+          dict_teacher_and_group
+          dict_lesson))
+    (init_sched
+       (list_list_string_to_int schedule dict_teacher_and_group dict_lesson)
+       storage)
+    (answer === storage)
+;;
+
+(* let test2 _constaints schedule lecture_plan answer = *)
+
+let generate_schedule _constaints schedule lecture_plan no_formal_constr answer =
+  if len schedule > 2 * len lecture_plan
+  then generate_schedule1 _constaints schedule lecture_plan no_formal_constr answer
+  else generate_schedule2 _constaints schedule lecture_plan no_formal_constr answer
 ;;

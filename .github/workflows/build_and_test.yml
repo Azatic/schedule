@@ -4,19 +4,26 @@ on:
   push:
     branches:
       - "main"
-      - "staging"
 
   pull_request:
     branches:
       - "*"
 
+env:
+  OPAMROOT: /home/user/.opam
+  OPAMYES: true
+
 jobs:
   build:
+
+    container:
+      image: kakadu18/ocaml:fp2022
+
     strategy:
       fail-fast: false
       matrix:
         os:
-          - ubuntu-20.04
+          - ubuntu-22.04
         ocaml-compiler:
           - 4.14.0
 
@@ -24,42 +31,48 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - run: echo "LOCAL_PATH=$HOME/.local/bin" >> $GITHUB_ENV
+      # - name: Bis
+      #   run: opam install bisect_ppx --yes
 
-      - name: Setup path
+      - name: Add submodules
+        run: git submodule  update --init
+
+      - run: sudo apt-get install libipc-system-simple-perl libstring-shellquote-perl -y
+
+      - name: Add OCanren dependensais
         run: |
-          mkdir -p "$LOCAL_PATH"
-          echo "$LOCAL_PATH" >> $GITHUB_PATH
-
-      - name: Setup just
-        run: |
-          \curl \
-            --proto '=https' \
-            --tlsv1.2 \
-            -sSf \
-            https://just.systems/install.sh \
-          | bash -s -- \
-            --to "$LOCAL_PATH" \
-            --tag 1.13.0
-
-      - name: Use OCaml ${{ matrix.ocaml-compiler }}
-        uses: ocaml/setup-ocaml@v2
-        with:
-          ocaml-compiler: ${{ matrix.ocaml-compiler }}
-          dune-cache: true
-          cache-prefix: v1-${{ matrix.os }}
+          opam install OCanren --deps-only --yes --with-test
+          opam install js_of_ocaml js_of_ocaml-ppx mtime.1.4.0 --yes 
+          opam install bisect_ppx
 
       - name: Build and test
         run: |
-          opam exec -- just clean
-          opam exec -- just build
-          opam exec -- just test
+          opam exec -- dune build --profile=release
+          opam exec -- dune test --profile=release Schedule
 
       - name: Send coverage
         run: |
-          opam install bisect_ppx
-          opam exec -- just send_coverage
+          opam exec -- make send_coverage
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # - name: Send coverage
+      #   run: 
+      #     opam exec -- make send_coverage
+      #   env:
+      #     COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Send coverage
+      #   run: |
+      #     opam exec -- make send_coverage
+      #   env:
+      #     COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # - name: Send coverage report to Coveralls
+      #   run: 
+
+      #     opam exec -- bisect-ppx-report send-to Coveralls --coverage-path $BISECT_DIR
+      #   env:
+      #     BISECT_DIR: /tmp/schedcov
+      #     COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -46,50 +46,50 @@
 
   $ ./for_ocaml_test.exe
   2021pi-1
-   teorver1 diff1 Rpo
-    Diff1 adf
-    Matlog1 
+   adf Rpo Diff1
+   teorver1 Matlog1 adf
+   diff1  
      
   adf adf adf adf
-  Solev
-   teorver1 teorver2 
-     
-     
-     
-     
   2021pi-2
-    teorver2 Rpo
-    Diff1 
+   diff2 Rpo Diff1
     Matlog1 
-     
-     
-  Basov
-    diff1 
-    Diff1 
-     
+   teorver2  
      
      
   zagl1
-     Rpo
-    Diff1 
+    Rpo Diff1
     Matlog1 
+     
      
      
   zagl2
-     Rpo
-    Diff1 
+    Rpo Diff1
     Matlog1 
      
      
+     
   Sartasov
-     Rpo
+    Rpo 
      
      
+     
+     
+  Basov
+   diff2  Diff1
+     
+   diff1  
      
      
   Starchak
      
-     
     Matlog1 
+     
+     
+     
+  Solev
+     
+   teorver1  
+   teorver2  
      
      
