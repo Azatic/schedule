@@ -24,7 +24,12 @@
  (name sched_lib)
  (modules sched_core)
  (flags (-rectypes))
- (libraries OCanren OCanren.tester constraint_lib init_lib)
+ (libraries
+  OCanren
+  OCanren.tester
+  OCanren-ppx.ppx_wildcard
+  constraint_lib
+  init_lib)
  (inline_tests)
  (wrapped false)
  (preprocess
@@ -48,7 +53,7 @@
   (pps
    OCanren-ppx.ppx_repr
    OCanren-ppx.ppx_fresh
-   ;OCanren-ppx.ppx_wildcard
+   OCanren-ppx.ppx_wildcard
    OCanren-ppx.ppx_tester
    OCanren-ppx.ppx_distrib
    OCanren-ppx.ppx_deriving_reify
