@@ -1,24 +1,3 @@
-open List
-
-let list_of_group_or_teacher schedule lecture_plan =
-  concat
-    (append
-       (map
-          (fun x : string list ->
-            match x with
-            | hd1 :: hd2 :: tl -> [ hd1; hd2 ]
-            | _ -> [])
-          schedule
-         : string list list)
-       (map
-          (fun x : string list ->
-            match x with
-            | hd1 :: hd2 :: hd3 :: hd4 :: hd5 :: tl -> [ hd1; hd2; hd3; hd4; hd5 ]
-            | _ -> [])
-          lecture_plan
-         : string list list))
-;;
-
 open OCanren
 open OCanren.Std
 open Constraint_core
@@ -40,26 +19,7 @@ let rec myassoco key xs v =
           ])
 ;;
 
-let rec new_assoco key xs v =
-  fresh
-    (a b tl all para)
-    (init_sched_a_week b)
-    (para === Std.list Fun.id [ a; b ])
-    (appendo para tl xs)
-    (conde
-       [ a === key &&& (b === v)
-       ; a =/= key &&& new_assoco key tl v
-       ; xs === List.nil () &&& failure
-       ])
-;;
-
-let insert_sched_to_session session = conde [ fresh (group subj teacher) success ]
-
-let rec insert_sched_in_storage group_name group_sched storage =
-  fresh a1 (myassoco group_name storage a1) (a1 === group_sched)
-;;
-
-let rec init_sched (list_session : string list list) storage =
+let rec init_sched (list_session : int list list) storage =
   match list_session with
   | [] -> success
   | hd :: tl ->
@@ -70,17 +30,17 @@ let rec init_sched (list_session : string list list) storage =
       (init_sched_a_week aud)
       (Std.list ( !! ) hd === Std.list Fun.id [ groupname; teachername; subjname ])
       (myassoco groupname storage group_sched)
-      (myassoco teachername storage (teacher_sched : ischedule))
+      (myassoco teachername storage teacher_sched)
       (Init_core.insert_lesson subjname group_sched teacher_sched aud)
-      (debug_var storage (Fun.flip Type_core.storage_reifier) (function
+      (* (debug_var storage (Fun.flip Type_core.storage_reifier) (function
         | [ s ] ->
-          Printf.printf "%s\n%!" (String.concat " " hd);
+          Printf.printf "%s\n%!" (String.Stdlib.List.concat " " hd);
           success
-        | _ -> failwith "should not happen"))
+        | _ -> failwith "should not happen")) *)
       (init_sched tl storage)
 ;;
 
-let rec init_sched_lecture (list_session_lecture : string list list) storage =
+let rec init_sched_lecture list_session_lecture storage =
   match list_session_lecture with
   | [] -> success
   | hd :: tl ->
@@ -114,15 +74,15 @@ let rec init_sched_lecture (list_session_lecture : string list list) storage =
       (myassoco group4name storage group4)
       (myassoco teachername storage teacher_sched)
       (Init_core.insert_lecture subjname group1 group2 group3 group4 teacher_sched aud)
-      (debug_var storage (Fun.flip Type_core.storage_reifier) (function
+      (* (debug_var storage (Fun.flip Type_core.storage_reifier) (function
         | [ s ] ->
-          Printf.printf "%s\n%!" (String.concat " " hd);
+          Printf.printf "%s\n%!" (String.Stdlib.List.concat " " hd);
           success
-        | _ -> failwith "should not happen"))
+        | _ -> failwith "should not happen")) *)
       (init_sched_lecture tl storage)
 ;;
 
-let rec init_sched_new (list_session : string list list) storage n =
+let rec init_sched_new list_session storage n =
   match n with
   | 0 -> success
   | n -> init_sched list_session storage
@@ -159,41 +119,125 @@ let nth l n =
     nth_aux l n)
 ;;
 
-let rec append a b =
-  match a with
-  | [] -> b
-  | h :: t -> h :: append t b
-;;
-
 let list_group_and_teacher schedule itog =
   let open List in
-  match schedule with
-  | hd1 :: hd2 :: tl -> append (append itog hd1) hd2
-  | _ -> append itog []
+  remove_duplicates
+    (match schedule with
+     | hd1 :: hd2 :: tl -> itog :: hd1 :: hd2
+     | _ -> itog :: [])
 ;;
 
 let list_group_and_teacher_lec lecture_plan itog =
   let open List in
-  match lecture_plan with
-  | hd1 :: hd2 :: hd3 :: hd4 :: hd5 :: tl ->
-    append (append (append (append (append itog hd1) hd2) hd3) hd4) hd5
-  | _ -> append itog []
+  remove_duplicates
+    (match lecture_plan with
+     | hd1 :: hd2 :: hd3 :: hd4 :: hd5 :: tl -> itog :: hd1 :: hd2 :: hd3 :: hd4 :: hd5
+     | _ -> itog :: [])
 ;;
 
-let rec map f l =
-  match l with
-  | [] -> []
-  | h :: t -> f h :: map f t
+let list_of_group_and_teacher schedule lecture_plan =
+  remove_duplicates
+    (Stdlib.List.concat
+       (Stdlib.List.append
+          (Stdlib.List.map
+             (fun x : string list ->
+               match x with
+               | hd1 :: hd2 :: tl -> [ hd1; hd2 ]
+               | _ -> [])
+             schedule
+            : string list list)
+          (Stdlib.List.map
+             (fun x : string list ->
+               match x with
+               | hd1 :: hd2 :: hd3 :: hd4 :: hd5 :: tl -> [ hd1; hd2; hd3; hd4; hd5 ]
+               | _ -> [])
+             lecture_plan
+            : string list list)))
 ;;
 
-let test1 : _ -> _ -> _ -> ianswer -> goal =
- fun _constaints (schedule : string list list) lecture_plan answer ->
+let list_of_lesson schedule lecture_plan =
+  remove_duplicates
+    (Stdlib.List.concat
+       (Stdlib.List.append
+          (Stdlib.List.map
+             (fun x : string list ->
+               match x with
+               | hd1 :: hd2 :: tl -> tl
+               | _ -> [])
+             schedule
+            : string list list)
+          (Stdlib.List.map
+             (fun x : string list ->
+               match x with
+               | hd1 :: hd2 :: hd3 :: hd4 :: hd5 :: tl -> tl
+               | _ -> [])
+             lecture_plan
+            : string list list)))
+;;
+
+let list_str_to_dictionary sched = Stdlib.List.mapi (fun x i -> i, x) sched
+let anti_list_str_to_int sched = Stdlib.List.mapi (fun x i -> x, i) sched
+
+let list_list_string_to_int schedule_plan dict lesson_dict =
+  Stdlib.List.map
+    (fun x ->
+      match x with
+      | [ hd1; hd2; tl ] ->
+        [ Stdlib.List.assoc hd1 dict
+        ; Stdlib.List.assoc hd2 dict
+        ; Stdlib.List.assoc tl lesson_dict
+        ]
+      | _ -> [])
+    schedule_plan
+;;
+
+let list_list_string_to_int_for_constr constraints dict =
+  let xs = [ "monday", 1; "tuesday", 2; "wednesday", 3; "thursday", 4; "friday", 5 ] in
+  let xs2 = [ "1", 1; "2", 2; "3", 3; "4", 4; "5", 5 ] in
+  Stdlib.List.map
+    (fun x ->
+      match x with
+      | [ hd1; hd2; tl ] ->
+        [ Stdlib.List.assoc hd1 dict; Stdlib.List.assoc hd2 xs; Stdlib.List.assoc tl xs2 ]
+      | _ -> [])
+    constraints
+;;
+
+let list_list_string_to_int_for_lecture schedule_plan dict lesson_dict =
+  Stdlib.List.map
+    (fun x ->
+      match x with
+      | [ hd1; hd2; hd3; hd4; hd5; tl ] ->
+        [ Stdlib.List.assoc hd1 dict
+        ; Stdlib.List.assoc hd2 dict
+        ; Stdlib.List.assoc hd3 dict
+        ; Stdlib.List.assoc hd4 dict
+        ; Stdlib.List.assoc hd5 dict
+        ; Stdlib.List.assoc tl lesson_dict
+        ]
+      | _ -> [])
+    schedule_plan
+;;
+
+let test1 _constaints schedule lecture_plan answer =
+  let dict_teacher_and_group =
+    list_str_to_dictionary (list_of_group_and_teacher schedule lecture_plan)
+  in
+  let dict_lesson = list_str_to_dictionary (list_of_lesson schedule lecture_plan) in
   fresh
     storage
-    (init_storage
-       (len (remove_duplicates (list_of_group_or_teacher schedule lecture_plan)))
-       answer)
-    (use_constraint answer _constaints)
-    (init_sched_lecture lecture_plan answer)
-    (init_sched schedule answer)
+    (init_storage (len (list_of_group_and_teacher schedule lecture_plan)) storage)
+    (use_constraint
+       storage
+       (list_list_string_to_int_for_constr _constaints dict_teacher_and_group))
+    (init_sched
+       (list_list_string_to_int schedule dict_teacher_and_group dict_lesson)
+       storage)
+    (init_sched_lecture
+       (list_list_string_to_int_for_lecture
+          lecture_plan
+          dict_teacher_and_group
+          dict_lesson)
+       storage)
+    (answer === storage)
 ;;

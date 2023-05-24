@@ -29,6 +29,7 @@
             }
         }
         function myFunction() {
+            t = performance.now()
             var input1 = document.getElementsByName("input1")[0].value;
             var input2 = document.getElementsByName("input2")[0].value;
             var input3 = document.getElementsByName("input3")[0].value;
@@ -47,16 +48,17 @@
                     document.write('<tr>');
                     for (var j = -1; j < 5; j++) {
                         if (j < 0 && k > -1)
-                            document.write('<td width="200" height="50">' + pair[k] + '</td>');
+                            document.write('<td width="200" height="75">' + pair[k] + '</td>');
                         if (j > -1 && k > -1)
-                            document.write('<td width="200" height="50">' + normaldata[i].schedule[j][k] + '</td>');
+                            document.write('<td width="200" height="75">' + normaldata[i].schedule[j][k] + '</td>');
                         if (k < 0)
-                            document.write('<td width="200" height="50">' + day[j + 1] + '</td>');
+                            document.write('<td width="200" height="75">' + day[j + 1] + '</td>');
                     }
                     document.write('</tr>');
                 }
                 document.write('</table><br>');
             }
+            console.log((performance.now() - t) / 1000)
         }
     </script>
 </body>

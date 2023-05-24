@@ -1,6 +1,4 @@
-(* open Lib *)
-
-(* open Sched_core *)
+open Sched_core
 open OCanren
 open Type_core
 
@@ -13,13 +11,57 @@ let schedo constraints schedule lecture_plan =
   |> Stdlib.List.iteri (fun i ans -> Format.printf "%d: %s\n%!" i (show_storage ans))
 ;;
 
+let func schedule lecture_plan storage =
+  (* print_endline (show_storage storage); *)
+  let storage =
+    storage
+    |> OCanren.Std.List.logic_to_ground_exn (function
+         | OCanren.Value (a, b) ->
+           ( List.assoc
+               (OCanren.from_logic a)
+               (anti_list_str_to_int
+                  (remove_duplicates (list_of_group_and_teacher schedule lecture_plan)))
+           , OCanren.Std.List.logic_to_ground_exn
+               (OCanren.Std.List.logic_to_ground_exn
+                  Fun.(
+                    fun x ->
+                      match x with
+                      | Value x ->
+                        List.assoc
+                          x
+                          (Stdlib.List.append
+                             (anti_list_str_to_int
+                                (remove_duplicates (list_of_lesson schedule lecture_plan)))
+                             [ -1, "adf" ])
+                      | Var _ -> ""))
+               b )
+         | Var _ -> failwith "should not happend. (DONT DO THIS)")
+  in
+  storage
+;;
+
+let schedo1 constraints schedule lecture_plan =
+  OCanren.run
+    OCanren.q
+    (fun x -> Sched_core.test1 constraints schedule lecture_plan x)
+    (fun rr -> rr#reify storage_reifier)
+  |> OCanren.Stream.take ~n:1
+  |> List.map (func schedule lecture_plan)
+  |> Stdlib.List.iter (fun ans ->
+       List.iter
+         (fun (x, y) ->
+           print_endline x;
+           (* List.iter (fun x -> List.iter (fun z -> Format.printf "%s" z) x) y) *)
+           List.iter (fun x -> print_endline @@ String.concat " " x) y)
+         ans)
+;;
+
 let t = Sys.time ()
 
 let _ =
   (* time *)
-  schedo
-    (* [ [ "2021pi-1"; "tuesday"; "4" ] ] *)
-    []
+  schedo1
+    [ [ "2021pi-1"; "tuesday"; "4" ]; [ "2021pi-1"; "friday"; "5" ] ]
     [ [ "2021pi-1"; "Solev"; "teorver1" ]
     ; [ "2021pi-2"; "Solev"; "teorver2" ]
     ; [ "2021pi-1"; "Basov"; "diff1" ]
@@ -34,8 +76,8 @@ let _ =
     ; [ "2022pi-2"; "Dodonov"; "matan2" ]
     ; [ "2022pi-1"; "Kalnitckiy"; "geom1" ]
     ; [ "2022pi-2"; "Kalnitckiy"; "geom2" ]
-    ; [ "2020pi-2"; "Grigoriev"; "Graph_theory1" ]
-    ; [ "2020pi-1"; "Grigoriev"; "Graph_theory2" ]
+      (* ; [ "2020pi-2"; "Grigoriev"; "Graph_theory1" ] *)
+      (* ; [ "2020pi-1"; "Grigoriev"; "Graph_theory2" ] *)
     ]
     [ [ "2021pi-1"; "2021pi-2"; "zagl1"; "zagl2"; "Sartasov"; "Rpo" ]
     ; [ "2021pi-1"; "2021pi-2"; "zagl1"; "zagl2"; "Basov"; "Diff1" ]
@@ -47,30 +89,12 @@ let _ =
     ; [ "2022pi-1"; "2022pi-2"; "zagl3"; "zagl4"; "Mokaev"; "Math_disk" ]
     ; [ "2022pi-1"; "2022pi-2"; "zagl3"; "zagl4"; "Sivatckiy"; "Algebra" ]
     ; [ "2022pi-1"; "2022pi-2"; "zagl3"; "zagl4"; "Kalnitckiy"; "Geom" ]
-    ; [ "2020pi-1"; "2020pi-2"; "zagl5"; "zagl6"; "Telik"; "Zelenchuk" ]
-    ; [ "2020pi-1"; "2020pi-2"; "zagl5"; "zagl6"; "Telik"; "Zelenchuk" ]
-    ; [ "2020pi-1"; "2020pi-2"; "zagl5"; "zagl6"; "Prog"; "Litvinov" ]
-    ; [ "2020pi-1"; "2020pi-2"; "zagl5"; "zagl6"; "Graph"; "Grigoriev" ]
+    ; [ "2020pi-1"; "2020pi-2"; "zagl5"; "zagl6"; "Zelenchuk"; "Telik" ]
+    ; [ "2020pi-1"; "2020pi-2"; "zagl5"; "zagl6"; "Zelenchuk"; "Telik1" ]
+      (* ; [ "2020pi-1"; "2020pi-2"; "zagl5"; "zagl6";  "Litvinov";"Prog" ] *)
+      (* ; [ "2020pi-1"; "2020pi-2"; "zagl5"; "zagl6"; "Graph"; "Grigoriev" ] *)
     ]
 ;;
 
 (* без разделения работало за 105 секунд *)
 Printf.printf "Execution time: %fs\n%!" (Sys.time () -. t)
-
-open OCanren
-open OCanren.Std
-
-let rec appendo a b ab =
-  conde
-    [ a === nil () &&& (b === ab)
-    ; fresh (h t ab') (a === h % t) (h % ab' === ab) (appendo t b ab')
-    ]
-;;
-
-open Tester
-
-let run_exn eta =
-  run_r (Std.List.prj_exn OCanren.prj_exn) (GT.show Std.List.ground (GT.show GT.int)) eta
-;;
-
-let _ = run_exn (-1) qr qrh (REPR (fun q r -> appendo q r (list ( !! ) [ 1; 2; 3; 4 ])))

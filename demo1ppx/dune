@@ -67,10 +67,27 @@
   (pps OCanren-ppx.ppx_repr OCanren-ppx.ppx_fresh GT.ppx GT.ppx_all)))
 
 (library
+ (name type_lib)
+ (modules type_core)
+ (flags (-rectypes))
+ (libraries OCanren OCanren.tester)
+ (inline_tests)
+ (wrapped false)
+ (preprocess
+  (pps
+   OCanren-ppx.ppx_repr
+   OCanren-ppx.ppx_fresh
+   OCanren-ppx.ppx_distrib
+   OCanren-ppx.ppx_wildcard
+   GT.ppx
+   GT.ppx_all
+   ppx_inline_test)))
+
+(library
  (name constraint_lib)
  (modules constraint_core)
  (flags (-rectypes))
- (libraries OCanren OCanren.tester init_lib)
+ (libraries OCanren OCanren.tester init_lib type_lib)
  (inline_tests)
  (wrapped false)
  (preprocess
@@ -88,23 +105,6 @@
  (modules init_core)
  (flags (-rectypes))
  (libraries OCanren OCanren.tester type_lib)
- (inline_tests)
- (wrapped false)
- (preprocess
-  (pps
-   OCanren-ppx.ppx_repr
-   OCanren-ppx.ppx_fresh
-   OCanren-ppx.ppx_distrib
-   OCanren-ppx.ppx_wildcard
-   GT.ppx
-   GT.ppx_all
-   ppx_inline_test)))
-
-(library
- (name type_lib)
- (modules type_core)
- (flags (-rectypes))
- (libraries OCanren OCanren.tester)
  (inline_tests)
  (wrapped false)
  (preprocess
@@ -140,8 +140,11 @@
 ;    GT.ppx_all
 ;    ppx_inline_test)))
 
+; (cram
+;  (deps %{bin:for_ocaml_test}))
+
 (cram
- (deps %{bin:for_ocaml_test}))
+ (deps ./for_ocaml_test.exe))
 
 ;  (executable
 ;  (name for_test)
