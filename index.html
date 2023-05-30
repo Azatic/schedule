@@ -18,6 +18,10 @@
         <label>Ограничения:</label>
         <input type="text" style="width: 200px; height: 50px;" name="input3" value="b-07 monday 5">
     </form>
+    <form>
+        <label>Неформальные ограничения:</label>
+        <input type="text" style="width: 200px; height: 50px;" name="input4" value="b-07 b-08 Videnskiy matan">
+    </form>
     <button onclick="myFunction()">Подтвердить</button>
     <script>
         function string_to_array(str1) {
@@ -32,8 +36,9 @@
             var input1 = document.getElementsByName("input1")[0].value;
             var input2 = document.getElementsByName("input2")[0].value;
             var input3 = document.getElementsByName("input3")[0].value;
+            var input4 = document.getElementsByName("input4")[0].value;
             const tableBody = document.getElementById('myTableBody');
-            const data = mySchedLib.generateSched(string_to_array(input3), string_to_array(input1), string_to_array(input2));
+            const data = mySchedLib.generateSched(string_to_array(input3), string_to_array(input1), string_to_array(input2), string_to_array(input4));
             const normaldata = data[0];
             console.log(normaldata);
             const pair =
