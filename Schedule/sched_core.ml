@@ -283,8 +283,6 @@ let generate_schedule2 _constaints schedule lecture_plan no_formal_constr answer
     (answer === storage)
 ;;
 
-(* let test2 _constaints schedule lecture_plan answer = *)
-
 let generate_schedule _constaints schedule lecture_plan no_formal_constr answer =
   if len schedule > 2 * len lecture_plan
   then generate_schedule1 _constaints schedule lecture_plan no_formal_constr answer

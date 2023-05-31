@@ -3,7 +3,6 @@ open OCanren
 open Type_core
 
 let func schedule lecture_plan storage =
-  (* print_endline (show_storage storage); *)
   let storage =
     storage
     |> OCanren.Std.List.logic_to_ground_exn (function
@@ -81,85 +80,9 @@ let _ =
     ; [ "2022pi-1"; "2022pi-2"; "zagl3"; "zagl4"; "Mokaev"; "Math_disk" ]
     ; [ "2022pi-1"; "2022pi-2"; "zagl3"; "zagl4"; "Sivatckiy"; "Algebra" ]
     ; [ "2022pi-1"; "2022pi-2"; "zagl3"; "zagl4"; "Kalnitckiy"; "Geom" ]
-      (* ; [ "2020pi-1"; "2020pi-2"; "zagl5"; "zagl6"; "Zelenchuk"; "Telik" ]
-    ; [ "2020pi-1"; "2020pi-2"; "zagl5"; "zagl6"; "Zelenchuk"; "Telik1" ]
-    ; [ "2020pi-1"; "2020pi-2"; "zagl5"; "zagl6"; "Litvinov"; "Prog" ]
-    ; [ "2020pi-1"; "2020pi-2"; "zagl5"; "zagl6"; "Grigoriev"; "Graph" ] *)
     ]
     []
 ;;
 
-(* без разделения работало за 157 секунд *)
+(*  157 *)
 Printf.printf "Execution time: %fs\n%!" (Sys.time () -. t)
-
-(* Констрейнт: например, у двух групп будет мат анализ практика
-   нужно, во-первых поставить им пары в разное время, во-вторых, когда у 1 группы матан, вторая отдыхает, 
-   когда у второй группы матан, 1 группа отдыхает *)
-(* open Core.Std
-   open Core_bench.Std *)
-(* utop #     #require "core";;
-   open Core;; *)
-(* open Core_bench *)
-(* open Core
-open Core_bench
-
-let main () =
-  Random.self_init ();
-  let x = Random.float 10.0 in
-  let y = Random.float 10.0 in
-  Core.Command.run
-    (Bench.make_command
-       [ Bench.Test.create ~name:"Float add" (fun () -> ignore (x +. y))
-       ; Bench.Test.create ~name:"Float mul" (fun () -> ignore (x *. y))
-       ; Bench.Test.create ~name:"Float div" (fun () -> ignore (x /. y))
-       ])
-;;
-
-let _ = main () *)
-(* let test =
-  schedo
-    [ [ "2021pi-1"; "tuesday"; "4" ]; [ "2021pi-1"; "friday"; "5" ] ]
-    [ [ "2021pi-1"; "Solev"; "teorver1" ]
-    ; [ "2021pi-2"; "Solev"; "teorver2" ]
-    ; [ "2021pi-1"; "Basov"; "diff1" ]
-    ; [ "2021pi-2"; "Basov"; "diff2" ]
-    ; [ "2021pi-1"; "Starchak"; "matlog1" ]
-    ; [ "2021pi-2"; "Starchak"; "matlog2" ]
-    ; [ "2021pi-1"; "Sartasov"; "practice1" ]
-    ; [ "2021pi-2"; "Sartasov"; "practice2" ]
-    ; [ "2022pi-1"; "Ivanova"; "algebra1" ]
-    ; [ "2022pi-2"; "Ivanova"; "algebra2" ]
-    ; [ "2022pi-1"; "Dodonov"; "matan1" ]
-    ; [ "2022pi-2"; "Dodonov"; "matan2" ]
-    ; [ "2022pi-1"; "Kalnitckiy"; "geom1" ]
-    ; [ "2022pi-2"; "Kalnitckiy"; "geom2" ]
-      (* ; [ "2020pi-2"; "Grigoriev"; "Graph_theory1" ] *)
-      (* ; [ "2020pi-1"; "Grigoriev"; "Graph_theory2" ] *)
-    ]
-    [ [ "2021pi-1"; "2021pi-2"; "zagl1"; "zagl2"; "Sartasov"; "Rpo" ]
-    ; [ "2021pi-1"; "2021pi-2"; "zagl1"; "zagl2"; "Basov"; "Diff1" ]
-    ; [ "2021pi-1"; "2021pi-2"; "zagl1"; "zagl2"; "Starchak"; "Matlog1" ]
-    ; [ "2021pi-1"; "2021pi-2"; "zagl1"; "zagl2"; "Burova"; "Math" ]
-    ; [ "2022pi-1"; "2022pi-2"; "zagl3"; "zagl4"; "Luciv"; "Arkhitektura" ]
-    ; [ "2022pi-1"; "2022pi-2"; "zagl3"; "zagl4"; "Luciv"; "Algorithm" ]
-    ; [ "2022pi-1"; "2022pi-2"; "zagl3"; "zagl4"; "Kirilenko"; "Programming_base" ]
-    ; [ "2022pi-1"; "2022pi-2"; "zagl3"; "zagl4"; "Mokaev"; "Math_disk" ]
-    ; [ "2022pi-1"; "2022pi-2"; "zagl3"; "zagl4"; "Sivatckiy"; "Algebra" ]
-    ; [ "2022pi-1"; "2022pi-2"; "zagl3"; "zagl4"; "Kalnitckiy"; "Geom" ]
-    ; [ "2020pi-1"; "2020pi-2"; "zagl5"; "zagl6"; "Zelenchuk"; "Telik" ]
-    ; [ "2020pi-1"; "2020pi-2"; "zagl5"; "zagl6"; "Zelenchuk"; "Telik1" ]
-      (* ; [ "2020pi-1"; "2020pi-2"; "zagl5"; "zagl6";  "Litvinov";"Prog" ] *)
-      (* ; [ "2020pi-1"; "2020pi-2"; "zagl5"; "zagl6";"Grigoriev"; "Graph"  ] *)
-    ]
-    [ [ "2021pi-2"; "2021pi-1"; "Basov"; "diff2" ] ]
-;; *)
-
-open Benchmark
-
-(* let _ = Benchmark.latency1 Int64.one (fun x -> x) 5000 *)
-
-(* let () =
-  let res = throughputN ~repeat:10 1000 [ "functor", (fun () -> test), () ] in
-  print_endline "Functor vesus records vesus passing as arg:";
-  tabulate res
-;; *)

@@ -2,3 +2,8 @@ _build
 .DS_Store
 main.bc.js
 _coverage
+type_lib.opam
+constraint_lib.opam
+init_lib.opam
+OCanren-schedule.opam
+schedule_lib.opam
