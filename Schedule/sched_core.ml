@@ -110,7 +110,6 @@ let nth l n =
     nth_aux l n)
 ;;
 
-
 let list_group_and_teacher schedule itog =
   let open List in
   remove_duplicates

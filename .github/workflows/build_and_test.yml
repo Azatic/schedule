@@ -33,9 +33,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # - name: Bis
-      #   run: opam install bisect_ppx --yes
-
       - name: Add submodules
         run: git submodule  update --init
 
@@ -57,22 +54,3 @@ jobs:
           opam exec -- make send_coverage
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # - name: Send coverage
-      #   run: 
-      #     opam exec -- make send_coverage
-      #   env:
-      #     COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      # - name: Send coverage
-      #   run: |
-      #     opam exec -- make send_coverage
-      #   env:
-      #     COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # - name: Send coverage report to Coveralls
-      #   run: 
-
-      #     opam exec -- bisect-ppx-report send-to Coveralls --coverage-path $BISECT_DIR
-      #   env:
-      #     BISECT_DIR: /tmp/schedcov
-      #     COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
