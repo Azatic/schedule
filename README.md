@@ -16,3 +16,6 @@
 
 "Имя_группы день_недели номер_пары"
 
+Ccылка на githubpages:
+https://azatic.github.io/schedule/
+
