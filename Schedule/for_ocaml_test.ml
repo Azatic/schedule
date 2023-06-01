@@ -51,7 +51,10 @@ let schedo constraints schedule lecture_plan no_formal_constr =
 
 let _ =
   schedo
-    [ [ "2021pi-1"; "tuesday"; "4" ]; [ "2021pi-1"; "friday"; "5" ] ]
+    [ [ "2021pi-1"; "tuesday"; "4" ]
+    ; [ "2021pi-1"; "friday"; "5" ]
+    ; [ "2021pi-1"; "thursday"; "5" ]
+    ]
     [ [ "2021pi-1"; "Solev"; "teorver1" ]
     ; [ "2021pi-2"; "Solev"; "teorver2" ]
     ; [ "2021pi-1"; "Basov"; "diff1" ]
@@ -63,5 +66,5 @@ let _ =
     ; [ "2021pi-1"; "2021pi-2"; "zagl1"; "zagl2"; "Starchak"; "Matlog1" ]
     ; [ "2021pi-1"; "2021pi-2"; "zagl1"; "zagl2"; "Burova"; "Math" ]
     ]
-    []
+    [ [ "2021pi-2"; "2021pi-1"; "Basov"; "diff2" ] ]
 ;;
