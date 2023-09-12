@@ -10,10 +10,10 @@ let rec myassoco key xs v =
   Fresh.three (fun a b tl ->
     xs
     === Std.pair a b % tl
-    &&& conde
-          [ a === key &&& (b === v)
-          ; a =/= key &&& myassoco key tl v
-          ; xs === List.nil () &&& failure
+    &&&& condeep
+          [ a === key &&&& (b === v)
+          ; a =/= key &&&& myassoco key tl v
+          ; xs === List.nil () &&&& failure
           ])
 ;;
 
@@ -22,21 +22,23 @@ let rec init_sched (list_session : int list list) storage =
   | [] -> success
   | hd :: tl ->
     fresh
-      (groupname teachername subjname group_sched teacher_sched aud)
-      (init_sched_a_week teacher_sched)
-      (init_sched_a_week group_sched)
-      (init_sched_a_week aud)
-      (Std.list ( !! ) hd === Std.list Fun.id [ groupname; teachername; subjname ])
-      (myassoco groupname storage group_sched)
-      (myassoco teachername storage teacher_sched)
-      (Init_core.insert_lesson subjname group_sched teacher_sched aud)
+      (groupname teachername subjname group_sched teacher_sched aud) 
+      (init_sched_a_week teacher_sched &&&&
+      (init_sched_a_week group_sched)&&&&
+      (init_sched_a_week aud)&&&&
+      (Std.list ( !! ) hd === Std.list Fun.id [ groupname; teachername; subjname ])&&&&
+      (myassoco groupname storage group_sched)&&&&
+      (myassoco teachername storage teacher_sched)&&&&
+      (Init_core.insert_lesson subjname group_sched teacher_sched aud)&&&&
       (* (debug_var storage (Fun.flip Type_core.storage_reifier) (function
-        | [ s ] ->
-          Printf.printf "%s\n%!" (String.Stdlib.List.concat " " hd);
-          success
-        | _ -> failwith "should not happen")) *)
-      (init_sched tl storage)
+         | [ s ] ->
+         Printf.printf "%s\n%!" (String.Stdlib.List.concat " " hd);
+         success
+         | _ -> failwith "should not happen")) *)
+      (init_sched tl storage))
 ;;
+
+
 
 let rec init_sched_lecture list_session_lecture storage =
   match list_session_lecture with
@@ -55,29 +57,30 @@ let rec init_sched_lecture list_session_lecture storage =
          group4
          teacher_sched
          aud)
-      (init_sched_a_week teacher_sched)
-      (init_sched_a_week group1)
-      (init_sched_a_week group2)
-      (init_sched_a_week group3)
-      (init_sched_a_week group4)
-      (init_sched_a_week aud)
+      (init_sched_a_week teacher_sched&&&&
+      (init_sched_a_week group1)&&&&
+      (init_sched_a_week group2)&&&&
+      (init_sched_a_week group3)&&&&
+      (init_sched_a_week group4)&&&&
+      (init_sched_a_week aud)&&&&
       (Std.list ( !! ) hd
-      === Std.list
-            Fun.id
-            [ group1name; group2name; group3name; group4name; teachername; subjname ])
-      (myassoco group1name storage group1)
-      (myassoco group2name storage group2)
-      (myassoco group3name storage group3)
-      (myassoco group4name storage group4)
-      (myassoco teachername storage teacher_sched)
-      (Init_core.insert_lecture subjname group1 group2 group3 group4 teacher_sched aud)
+       === Std.list
+             Fun.id
+             [ group1name; group2name; group3name; group4name; teachername; subjname ])&&&&
+      (myassoco group1name storage group1)&&&&
+      (myassoco group2name storage group2)&&&&
+      (myassoco group3name storage group3)&&&&
+      (myassoco group4name storage group4)&&&&
+      (myassoco teachername storage teacher_sched)&&&&
+      (Init_core.insert_lecture subjname group1 group2 group3 group4 teacher_sched aud)&&&&
       (* (debug_var storage (Fun.flip Type_core.storage_reifier) (function
-        | [ s ] ->
-          Printf.printf "%s\n%!" (String.Stdlib.List.concat " " hd);
-          success
-        | _ -> failwith "should not happen")) *)
-      (init_sched_lecture tl storage)
+         | [ s ] ->
+         Printf.printf "%s\n%!" (String.Stdlib.List.concat " " hd);
+         success
+         | _ -> failwith "should not happen")) *)
+      (init_sched_lecture tl storage))
 ;;
+
 
 let rec len q =
   match q with

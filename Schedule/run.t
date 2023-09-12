@@ -46,16 +46,16 @@
 
   $ ./for_ocaml_test.exe
   2021pi-1
-  matlog1 adf Rpo Diff1
-   teorver1 Matlog1 adf
-   diff1 Math 
-  adf adf adf adf
+   teorver1 Rpo Diff1
+   diff1 Matlog1 adf
+   matlog1 Math 
+   practice1  
   adf adf adf adf
   2021pi-2
    diff2 Rpo Diff1
-    Matlog1 
-   teorver2 Math 
-     
+   teorver2 Matlog1 
+    Math 
+   matlog2  
      
   zagl1
     Rpo Diff1
@@ -73,19 +73,19 @@
     Rpo 
      
      
-     
+   practice1  
      
   Basov
    diff2  Diff1
-     
    diff1  
      
      
+     
   Starchak
-  matlog1   
+     
     Matlog1 
-     
-     
+   matlog1  
+   matlog2  
      
   Burova
      
@@ -93,9 +93,69 @@
     Math 
      
      
-  Solev
+  2022pi-1
+   matan1 Arkhitektura Algorithm
+    Programming_base Math_disk
+    Algebra Geom
      
+     
+  2022pi-2
+    Arkhitektura Algorithm
+   matan2 Programming_base Math_disk
+    Algebra Geom
+     
+     
+  zagl3
+    Arkhitektura Algorithm
+    Programming_base Math_disk
+    Algebra Geom
+     
+     
+  zagl4
+    Arkhitektura Algorithm
+    Programming_base Math_disk
+    Algebra Geom
+     
+     
+  Luciv
+    Arkhitektura Algorithm
+     
+     
+     
+     
+  Kirilenko
+     
+    Programming_base 
+     
+     
+     
+  Mokaev
+     
+     Math_disk
+     
+     
+     
+  Sivatckiy
+     
+     
+    Algebra 
+     
+     
+  Kalnitckiy
+     
+     
+     Geom
+     
+     
+  Solev
    teorver1  
    teorver2  
+     
+     
+     
+  Dodonov
+   matan1  
+   matan2  
+     
      
      
